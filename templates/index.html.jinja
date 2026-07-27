@@ -1,0 +1,142 @@
+<!-- GENERATED FILE — edit templates/index.html.jinja + data/overview.json, then rerun scripts/generate_pages.py -->
+{% from "_nav.html.jinja" import render_nav %}
+{% from "_units.html.jinja" import unit %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pacific Coast Bike Tour — Los Altos to Los Angeles</title>
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="description" content="An {{ total_days }}-day, {{ stats.distance_mi }}+ mile bike tour down the California coast from Los Altos to Los Angeles, {{ trip_dates }}.">
+
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#F2EFE9">
+  <script>
+    try {
+      if (localStorage.getItem("pcgf-units") === "metric") document.documentElement.classList.add("metric");
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="top-band">
+    <header>
+      <h1 class="site-title"><a href="index.html">Pacific Coast Bike Tour</a></h1>
+      <p class="site-tagline">The "LA to LA" ride: Los Altos to Los Angeles.</p>
+    </header>
+
+    {{ render_nav('home') }}
+  </div>
+
+  <main id="main">
+
+    <div class="day-title">
+      <div class="day-title__number">
+        <span class="day-title__label">{{ total_days }} days &middot; {{ trip_dates }}</span>
+      </div>
+      <h2 class="day-title__route town-route">
+        <span class="town-name">Los Altos</span>
+        <span class="arrow">&rarr;</span>
+        <span class="town-name">Los Angeles</span>
+      </h2>
+    </div>
+
+    
+
+    <div class="stat-row overview-stats">
+      <dl class="stat-item">
+        <dt class="stat-label">Distance mapped</dt>
+        <dd class="stat-value">{{ unit(stats.distance_mi, 'mi', stats.distance_km, 'km') }}</dd>
+      </dl>
+      <dl class="stat-item">
+        <dt class="stat-label">Elevation gain</dt>
+        <dd class="stat-value">{{ unit(stats.gain_ft, 'ft', stats.gain_m, 'm') }}</dd>
+      </dl>
+      <dl class="stat-item">
+        <dt class="stat-label">Riding days</dt>
+        <dd class="stat-value">{{ known_days }}<span class="stat-unit">of {{ total_days }} mapped</span></dd>
+      </dl>
+      <dl class="stat-item">
+        <dt class="stat-label">Riders</dt>
+        <dd class="stat-value">{{ riders|length }}<span class="stat-unit">+ {{ sag|length }} SAG</span></dd>
+      </dl>
+      <button type="button" class="unit-toggle" id="unit-toggle" aria-pressed="false" aria-label="Toggle between imperial and metric units">
+        <span class="unit-toggle__option" data-unit="imperial">mi</span>
+        <span class="unit-toggle__option" data-unit="metric">km</span>
+      </button>
+    </div>
+
+    <div class="route-section route-section--single">
+      <figure class="map-card">
+        <div id="map" class="map-card__map" role="region" aria-label="Map of the mapped days of the route, Los Altos toward Los Angeles"></div>
+        <figcaption class="map-card__caption">Days 1&ndash;5 and 7&ndash;8 as currently mapped. Day 6 (Oceano to Santa Barbara) is still being planned.</figcaption>
+      </figure>
+    </div>
+
+    <h2 class="section-heading">Day by day</h2>
+    <div class="day-grid">
+      {% for d in days %}
+      <a class="day-card{% if d.pending %} day-card--pending{% endif %}" href="day-{{ d.day }}.html">
+        <div class="day-card__body">
+          <div class="day-card__number">
+            <span>Day {{ d.day }}</span>
+            <span class="day-card__date">{{ d.date_label }}</span>
+          </div>
+          <div class="day-card__route">
+            {{ d.towns.start }} <span class="arrow">&rarr;</span> {{ d.towns.end }}
+          </div>
+          {% if d.pending %}
+          <div class="day-card__stat day-card__stat--pending">Route TBD</div>
+          {% else %}
+          <div class="day-card__stat">{{ unit(d.distance_mi, 'mi', d.distance_km, 'km') }} &middot; {{ unit(d.gain_ft, 'ft', d.gain_m, 'm') }} gain</div>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <p>Eight of us are riding California's Pacific Coast this September, traveling from Los Altos to Los Angeles over eight days, September 5 to 12, 2026. Following one of the most scenic cycling routes in North America, we'll climb coastal headlands, descend into seaside towns, and cover the route one day at a time.</p>
+
+    <p>The tour is hotel-based, allowing us to travel light. A minimally supported SAG vehicle, driven by two of our spouses, transports our luggage between overnight stops while carrying ride essentials such as snacks, water, and morale boosts.</p>
+
+    <p>This site documents the journey, including the route, daily stages, elevation profiles leading up to our departure. Ride photos to come soon.</p>
+
+    <p>A self-supported bike tour down the California coast, loosely inspired by Adventure Cycling's Pacific Coast route &mdash; see how our planned days line up against it on the <a href="compare.html">route comparison page</a>.</p>
+    <h2 class="section-heading">Who's riding</h2>
+    <div class="roster">
+      <div class="roster-group">
+        <h3 class="roster-group__label">Riders</h3>
+        <ul class="roster-list" role="list">
+          {% for name in riders %}
+          <li>{{ name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="roster-group">
+        <h3 class="roster-group__label">SAG car</h3>
+        <ul class="roster-list" role="list">
+          {% for name in sag %}
+          <li>{{ name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    window.__days = {{ days_json|safe }};
+  </script>
+  <script src="js/map.js"></script>
+  <script src="js/units.js"></script>
+</body>
+
+</html>

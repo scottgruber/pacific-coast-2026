@@ -1,0 +1,939 @@
+/* Pacific Coast Bike Tour — Los Altos to Los Angeles
+   Design tokens, a small reset, base element defaults, and the editorial
+   components used on the day pages, overview page, and route-comparison
+   page. "Punk Coastal" palette + Tofino type system — see style-guide.html
+   for the full specimen. Component styles reference tokens throughout, not
+   hardcoded colors, except the two route colors noted where JS reads them. */
+
+/* Fonts ------------------------------------------------------------------ */
+
+/* Tofino — self-hosted, licensed copies in fonts/. A "West Coast Swiss"
+   variable family: wght 100-900, wdth 50-125 (Condensed to Wide), plus an
+   ital axis. Tofino Text is a separate text-optimized cut (wght 300-700
+   only) for small-size legibility in body copy. */
+@font-face {
+  font-family: 'Tofino Variable';
+  src: url('../fonts/TofinoVariable.woff2') format('woff2'),
+       url('../fonts/TofinoVariable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 50% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tofino Text Variable';
+  src: url('../fonts/TofinoTextVariable.woff2') format('woff2'),
+       url('../fonts/TofinoTextVariable.ttf') format('truetype');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tokens --------------------------------------------------------------- */
+
+:root {
+  /* Body / legibility-critical copy — Tofino Text. */
+  --font-family-default: 'Tofino Text Variable', 'Helvetica Neue', Arial, sans-serif;
+  /* Headlines, subheads, big numbers, stamps — Tofino Variable, dialed
+     loud (Black/Condensed) or quiet (Bold/Regular width) per component
+     via font-weight + font-stretch. */
+  --font-family-display: 'Tofino Variable', 'Helvetica Neue', Arial, sans-serif;
+
+  --font-size-display-x-large: 4.3em; /* 68.8px */
+  --font-size-display-large: 3.583em; /* 57.328px */
+  --font-size-display: 2.986em; /* 47.78px */
+  --font-size-xxx-large: 2.488em; /* 39.81px */
+  --font-size-xx-large: 2.074em; /* 33.18px */
+  --font-size-x-large: 1.728em; /* 27.65px */
+  --font-size-large: 1.44em; /* 23.04px */
+  --font-size-medium: 1.2em; /* 19.02px */
+  --font-size-default: 1em; /* 16px */
+  --font-size-small: 0.833em; /* 13.33px */
+  --font-size-x-small: 0.694em; /* 11.11px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-text: 1.5;
+  --line-height-heading: 1.2;
+  --line-height-heading-alt: 1;
+
+  /* Color — "Punk Coastal" palette. Bleached Salt + Deep Fog carry almost
+     everything: every AA/AAA-safe text pairing runs through these two,
+     since neither Pacific Blue-Gray nor the three accent colors clear
+     4.5:1 as small text on Salt (checked against WCAG 2.1 contrast math —
+     see style-guide.html's contrast-check grid). Pacific Blue-Gray reads
+     as too pale to pull its weight as a fill, so it's been dialed back to
+     a minor presence (map/compare-page use only) rather than the card
+     surface color. Rust / Riot Pink / Acid Yellow are sharp accent hits —
+     Acid Yellow is the one accent that holds AAA text contrast (paired
+     with Deep Fog), so it carries every badge/CTA fill; Rust and Riot
+     Pink stay large-graphic-only (route lines, big stat numerals,
+     decorative underlines) at AA-large rather than as small text. */
+  --color-background: #F2EFE9; /* Bleached Salt */
+  --color-text-default: #2B2E33; /* Deep Fog — all text; 11.9:1 on Salt (AAA) */
+  --color-text-muted: rgba(43, 46, 51, 0.62); /* Deep Fog, translucent */
+  --color-base: #2B2E33; /* Deep Fog — text set on top of Acid Yellow fills (AAA) */
+  --color-ink-alt: #1A2B23; /* Kelp Black-Green — site title text, favicon; 12.9:1 on Salt (AAA) */
+
+  --color-surface: rgba(43, 46, 51, 0.05); /* Deep Fog tint — card fills, keeps Deep Fog text AAA */
+  --color-surface-border: rgba(43, 46, 51, 0.22); /* Deep Fog, translucent */
+
+  --color-theme: #E8FF3E; /* Acid Yellow — the only accent used as a text-bearing FILL (badges, active states, CTAs); 11.9:1 with Deep Fog text (AAA) */
+  --color-accent-rust: #E8542B; /* Rust Sunset — route line, big stat numerals, decorative lines/borders (large-graphic only, AA) */
+  --color-accent-pink: #FF2E88; /* Riot Pink — secondary route line, rare stamp accents */
+
+  --color-text-link: var(--color-text-default);
+  --color-text-link-hover: var(--color-text-default);
+  --color-accent-line: var(--color-accent-rust); /* decorative underlines/borders on Salt */
+  --color-nav: var(--color-text-default);
+
+  /* The two route layers on the comparison map + its legend swatches; read
+     directly by js/compare.js via getComputedStyle so recoloring here
+     recolors the map too. Also read by js/map.js for the day/overview
+     route line (kept the same "our route" color as the compare page). */
+  --color-route-planned: var(--color-accent-rust);
+  --color-route-reference: var(--color-accent-pink);
+
+  /* Borders */
+  --border-width-hairline: 0.5px;
+  --border-width-thin: 1px;
+  --border-width-thick: 2px;
+  --border-radius: 0.25rem;
+
+  /* Layout */
+  --editorial-max-width: 72rem;
+  --editorial-gutter: 1.5rem;
+
+  /* Spacing */
+  --spacing-x-small: 0.25rem;
+  --spacing-small: 0.5rem;
+  --spacing-default: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 3rem;
+
+  --duration-quickly: 0.2s;
+  --duration-slowly: 1s;
+}
+
+/* Reset & base elements ------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: var(--font-family-default);
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+figure,
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: var(--line-height-text);
+  background-color: var(--color-background);
+  background-image: radial-gradient(rgba(43, 46, 51, 0.06) 1px, transparent 1px);
+  background-size: 6px 6px;
+  color: var(--color-text-default);
+  font-weight: var(--font-weight-regular);
+}
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Subhead recipe: Tofino Bold, Medium-to-Wide — the default for every
+   heading unless a component dials in the louder display treatment.
+   font-size: inherit is load-bearing — without it, browsers apply their
+   own UA default (h1: 2em, h2: 1.5em, etc.), which silently doubles (or
+   more) every em-based --font-size-* token set on a heading's children. */
+h1, h2, h3, h4 {
+  font-size: inherit;
+  text-wrap: balance;
+  font-family: var(--font-family-display);
+  font-weight: 700;
+  font-stretch: 108%;
+  letter-spacing: 0.01em;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: var(--border-width-thick) solid var(--color-accent-line);
+  outline-offset: 2px;
+  border-radius: var(--border-radius);
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+::selection,
+::-moz-selection {
+  background-color: var(--color-theme);
+  color: var(--color-base);
+  text-shadow: none;
+}
+
+/* Skip link ---------------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: var(--spacing-medium);
+  z-index: 100;
+  padding: 0.5em 1em;
+  background: var(--color-theme);
+  color: var(--color-base);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--border-radius);
+  transition: top var(--duration-quickly) ease;
+}
+
+.skip-link:focus {
+  top: var(--spacing-medium);
+}
+
+/* Site header ------------------------------------------------------------ */
+
+.top-band {
+  padding-block-end: var(--spacing-small);
+}
+
+header, nav {
+  max-width: var(--editorial-max-width);
+  margin-inline: auto;
+  padding-inline: var(--editorial-gutter);
+}
+
+header {
+  padding-block-start: var(--spacing-medium);
+}
+
+.site-title {
+  margin: 0;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: var(--color-ink-alt);
+  font-size: var(--font-size-display);
+  font-weight: 800;
+  font-stretch: 110%;
+  letter-spacing: 0.01em;
+}
+
+/* Understated subtitle directly under the site title — body font, muted,
+   no competition with the display headline above it. */
+.site-tagline {
+  margin: 0.3em 0 0;
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+/* Shared page shell ------------------------------------------------------ */
+
+main {
+  max-width: var(--editorial-max-width);
+  margin-inline: auto;
+  padding-inline: var(--editorial-gutter);
+  padding-block-end: var(--spacing-large);
+}
+
+/* Site nav ---------------------------------------------------------------- */
+
+.site-nav {
+  margin-block-start: var(--spacing-small);
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--spacing-small) var(--spacing-medium);
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: baseline;
+  color: var(--color-nav);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3em 0.7em;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--duration-quickly) ease, color var(--duration-quickly) ease;
+}
+
+/* Hover and current-page share one device — a Rust underline, same as
+   the day-pager links — instead of a filled pill, which was the one
+   remaining "loud fill" hover in the nav and stood out against the
+   underline language used everywhere else. Focus stays on a solid Acid
+   Yellow fill: it's the one state that must guarantee AAA contrast for
+   keyboard users, so it keeps the fill rather than a decorative line. */
+.site-nav a:hover {
+  text-decoration-color: var(--color-accent-line);
+}
+
+.site-nav a:focus-visible {
+  background: var(--color-theme);
+  color: var(--color-base);
+  text-decoration-color: transparent;
+  border-radius: var(--border-radius);
+}
+
+.site-nav a[aria-current="page"] {
+  text-decoration-color: var(--color-accent-line);
+}
+
+/* Imperial/metric toggle — see js/units.js. Flips visibility of the
+   .unit-pair spans via a class on <html>. */
+
+.unit-toggle {
+  display: inline-flex;
+  margin-top: var(--spacing-small);
+  width: fit-content;
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--color-surface);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.unit-toggle__option {
+  padding: 0.3em 0.9em;
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  transition: background var(--duration-quickly) ease, color var(--duration-quickly) ease;
+}
+
+.unit-toggle[aria-pressed="false"] .unit-toggle__option[data-unit="imperial"],
+.unit-toggle[aria-pressed="true"] .unit-toggle__option[data-unit="metric"] {
+  background: var(--color-accent-rust);
+  color: var(--color-base);
+}
+
+.unit-pair__metric {
+  display: none;
+}
+
+html.metric .unit-pair__imperial {
+  display: none;
+}
+
+html.metric .unit-pair__metric {
+  display: inline;
+}
+
+/* Day / page title --------------------------------------------------------- */
+
+.day-title {
+  margin-block: var(--spacing-large) var(--spacing-medium);
+}
+
+.day-title__number {
+  margin-bottom: var(--spacing-x-small);
+}
+
+/* Eyebrow kicker, from the style guide's .eyebrow — Book/Regular weight
+   and tighter tracking, the deliberate contrast to the wide, heavy
+   headings around it. Rust directly on the text (same AA-large tradeoff
+   as the big stat numerals below, accepted deliberately rather than muted). */
+.day-title__label {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-default);
+  font-weight: 450;
+  font-stretch: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-rust);
+}
+
+/* Display/hero recipe: Tofino Black at a Medium-to-Wide width and open,
+   roomy tracking — big and confident rather than tightly condensed (see
+   tofino.losttype.com's own specimen treatment). */
+.day-title__route {
+  margin: 0;
+  font-size: var(--font-size-display-large);
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-stretch: 110%;
+  letter-spacing: 0.02em;
+  line-height: var(--line-height-heading);
+  color: var(--color-text-default);
+  text-wrap: balance;
+}
+
+.town-route {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.town-route .arrow {
+  color: var(--color-accent-line);
+}
+
+.lede {
+  font-size: var(--font-size-medium);
+  color: var(--color-text-default);
+  max-width: 42rem;
+  margin-block-end: var(--spacing-medium);
+}
+
+.lede a {
+  color: var(--color-text-link);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-line);
+  text-decoration-thickness: 0.12em;
+}
+
+.lede a:hover,
+.lede a:focus-visible {
+  color: var(--color-text-link-hover);
+  text-decoration-thickness: 0.2em;
+}
+
+.section-heading {
+  font-size: var(--font-size-x-large);
+  color: var(--color-text-default);
+  margin-block: var(--spacing-large) var(--spacing-medium);
+}
+
+/* Pending-route notice ------------------------------------------------------ */
+
+.pending-notice {
+  border: var(--border-width-thin) dashed var(--color-surface-border);
+  border-radius: var(--border-radius);
+  background: var(--color-surface);
+  padding: var(--spacing-medium);
+  margin-block: var(--spacing-medium) var(--spacing-large);
+  color: var(--color-text-muted);
+  max-width: 42rem;
+}
+
+.pending-notice strong {
+  color: var(--color-text-default);
+}
+
+.pending-notice a {
+  color: var(--color-text-link);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-line);
+  text-decoration-thickness: 0.12em;
+}
+
+.pending-notice a:hover,
+.pending-notice a:focus-visible {
+  color: var(--color-text-link-hover);
+  text-decoration-thickness: 0.2em;
+}
+
+/* Stat row --------------------------------------------------------------- */
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-medium) var(--spacing-large);
+  padding-block: var(--spacing-medium);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+  border-bottom: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+@media (min-width: 40em) {
+  .stat-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.15em;
+}
+
+/* Display/hero recipe again — "big numbers" get the loud black treatment
+   plus a hit of Rust, the one place body-scale text leans on an accent
+   color directly (AA-large: 3.4:1 on Salt, checked in style-guide.html). */
+.stat-item .stat-value {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xxx-large);
+  font-weight: 800;
+  font-stretch: 110%;
+  letter-spacing: 0.01em;
+  line-height: var(--line-height-heading-alt);
+  color: var(--color-accent-rust);
+}
+
+/* Deliberate contrast to the numeral: tight/negative tracking + condensed
+   width above gives way to open/positive tracking + normal width here —
+   the same small-caps "tag" treatment as .stat-label, not a shrunken
+   continuation of the numeral. font-stretch must be reset explicitly:
+   Tofino Text's @font-face only declares normal width, so leaving the
+   inherited 65% on it was silently tripping the system-font fallback. */
+.stat-item .stat-value .stat-unit {
+  font-family: var(--font-family-default);
+  font-stretch: normal;
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-default);
+  margin-inline-start: 0.3em;
+}
+
+.stat-item .stat-label {
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+/* Route section: map + elevation ------------------------------------------ */
+
+.route-section {
+  display: grid;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+}
+
+@media (min-width: 60em) {
+  .route-section {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .route-section--single {
+    grid-template-columns: 1fr;
+  }
+}
+
+.route-aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.map-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.map-card__map {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.map-card--tall .map-card__map {
+  aspect-ratio: 16 / 10;
+}
+
+@media (min-width: 60em) {
+  .route-section:not(.route-section--single) .map-card__map {
+    flex: 1 1 auto;
+    aspect-ratio: auto;
+  }
+}
+
+.map-card__caption {
+  padding: var(--spacing-small) var(--spacing-default);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.elevation-card,
+.climb-card {
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  padding: var(--spacing-default);
+}
+
+.elevation-card h2,
+.climb-card h2,
+.map-card h2 {
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  font-stretch: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-small);
+  font-family: var(--font-family-default);
+}
+
+.elevation-card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.elevation-card__summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-small) var(--spacing-medium);
+  margin-top: var(--spacing-small);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.elevation-card__summary strong {
+  color: var(--color-text-default);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Climb list ---------------------------------------------------------------- */
+
+.climb-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.climb-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5em;
+  font-size: var(--font-size-small);
+  padding-block: var(--spacing-x-small);
+  border-bottom: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+.climb-list li:last-child {
+  border-bottom: none;
+}
+
+.climb-list__mile {
+  color: var(--color-text-muted);
+}
+
+.climb-list__stat {
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-text-default);
+}
+
+/* Plain, matching climb-list__mile/__stat — the stamp treatment (Black
+   Condensed Italic on Acid Yellow) reads fine as a one-off flourish but
+   turns into noise repeated 5-8 times down a list; one row should read as
+   one consistent data line, not one column shouting over the other two. */
+.climb-list__grade {
+  color: var(--color-text-default);
+}
+
+/* Prev/next day footer nav ------------------------------------------------- */
+
+.day-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-large);
+  padding-top: var(--spacing-medium);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+.day-pager a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  text-decoration: none;
+  color: var(--color-text-default);
+  max-width: 45%;
+}
+
+.day-pager a.next {
+  text-align: right;
+  align-items: flex-end;
+  margin-inline-start: auto;
+}
+
+.day-pager .day-pager__label {
+  font-size: var(--font-size-x-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.day-pager .day-pager__title {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-medium);
+  font-weight: 700;
+  font-stretch: 108%;
+  letter-spacing: 0.01em;
+  color: var(--color-text-default);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.12em;
+  transition: text-decoration-color var(--duration-quickly) ease;
+}
+
+.day-pager a:hover .day-pager__title,
+.day-pager a:focus-visible .day-pager__title {
+  text-decoration-color: var(--color-accent-line);
+}
+
+/* Overview page: whole-route hero + day card grid ------------------------- */
+
+.overview-stats {
+  margin-block: var(--spacing-medium) var(--spacing-large);
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-medium) var(--spacing-large);
+}
+
+@media (min-width: 40em) {
+  .day-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  .day-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  text-decoration: none;
+  color: var(--color-text-default);
+  transition: border-color var(--duration-quickly) ease, transform var(--duration-quickly) ease;
+}
+
+.day-card:hover,
+.day-card:focus-visible {
+  border-color: var(--color-accent-line);
+  transform: translateY(-2px);
+}
+
+.day-card--pending {
+  border-style: dashed;
+}
+
+.day-card__body {
+  padding: var(--spacing-default);
+}
+
+.day-card__number {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-x-small);
+  color: var(--color-text-default);
+  margin-bottom: 0.4em;
+  font-family: var(--font-family-display);
+  font-weight: 700;
+  font-stretch: 108%;
+  letter-spacing: 0.01em;
+}
+
+.day-card__date {
+  font-size: var(--font-size-x-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.day-card__route {
+  font-size: var(--font-size-medium);
+  font-family: var(--font-family-display);
+  font-weight: 700;
+  font-stretch: 108%;
+  letter-spacing: 0.01em;
+  color: var(--color-text-default);
+  line-height: var(--line-height-heading);
+  margin-bottom: 0.5em;
+}
+
+.day-card__route .arrow {
+  color: var(--color-accent-line);
+}
+
+.day-card__stat {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.day-card__stat--pending {
+  display: inline-block;
+  font-family: var(--font-family-display);
+  font-weight: 800;
+  font-stretch: 65%;
+  font-style: italic;
+  font-variation-settings: 'ital' 1;
+  background: var(--color-theme);
+  color: var(--color-base);
+  padding: 0.1em 0.6em;
+  border-radius: 999px;
+}
+
+/* Roster ------------------------------------------------------------------- */
+
+.roster {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-large);
+  margin-block: var(--spacing-medium) var(--spacing-large);
+}
+
+@media (min-width: 40em) {
+  .roster {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.roster-group__label {
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent-rust);
+  font-family: var(--font-family-default);
+  margin-bottom: var(--spacing-small);
+}
+
+.roster-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  margin: 0;
+  padding: 0;
+}
+
+.roster-list li {
+  font-size: var(--font-size-medium);
+  color: var(--color-text-default);
+}
+
+/* Compare page: layer toggles ------------------------------------------------ */
+
+.compare-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium);
+  margin-block: var(--spacing-medium) var(--spacing-large);
+}
+
+.compare-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.6em 1em;
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  font-size: var(--font-size-small);
+  cursor: pointer;
+}
+
+.compare-toggle input {
+  accent-color: var(--color-theme);
+}
+
+.compare-toggle__swatch {
+  display: inline-block;
+  width: 1.5em;
+  height: 0.35em;
+  border-radius: 999px;
+}
+
+.compare-toggle--planned .compare-toggle__swatch {
+  background: var(--color-route-planned);
+}
+
+.compare-toggle--reference .compare-toggle__swatch {
+  background: var(--color-route-reference);
+}
+
+/* Leaflet popup theming ------------------------------------------------------ */
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--color-background);
+  color: var(--color-text-default);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+}
+
+/* Visually-hidden accessible text ------------------------------------------ */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

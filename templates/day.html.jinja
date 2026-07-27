@@ -1,0 +1,155 @@
+<!-- GENERATED FILE — edit templates/day.html.jinja + data/day-N.json, then rerun scripts/generate_pages.py -->
+{% from "_nav.html.jinja" import render_nav %}
+{% from "_units.html.jinja" import unit %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day {{ day }}: {{ towns.start }} to {{ towns.end }} — Pacific Coast Bike Tour</title>
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="description" content="Day {{ day }}: {{ towns.start }} to {{ towns.end }}{% if stats %} — {{ stats.distance_mi }} miles{% endif %} on the Pacific Coast Bike Tour, {{ date_label }}.">
+
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#F2EFE9">
+  <script>
+    try {
+      if (localStorage.getItem("pcgf-units") === "metric") document.documentElement.classList.add("metric");
+    } catch (e) {}
+  </script>
+  {% if not pending %}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  {% endif %}
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="top-band">
+    <header>
+      <h1 class="site-title"><a href="index.html">Pacific Coast Bike Tour</a></h1>
+      <p class="site-tagline">The "LA to LA" ride: Los Altos to Los Angeles.</p>
+    </header>
+
+    {{ render_nav('day-' ~ day) }}
+  </div>
+
+  <main id="main">
+
+    <div class="day-title">
+      <div class="day-title__number">
+        <span class="day-title__label">Day {{ day }} &middot; {{ date_label }}</span>
+      </div>
+      <h2 class="day-title__route town-route">
+        <span class="town-name">{{ towns.start }}</span>
+        <span class="arrow">&rarr;</span>
+        <span class="town-name">{{ towns.end }}</span>
+      </h2>
+    </div>
+
+    {% if pending %}
+    <div class="pending-notice">
+      <p><strong>Route not mapped yet.</strong> Day {{ day }} runs {{ towns.start }} to {{ towns.end }} — the GPX track is still being planned. Check back once it's ready, or see the <a href="compare.html">reference route</a> for a rough idea of the corridor.</p>
+    </div>
+    {% else %}
+
+    <div class="stat-row">
+      <dl class="stat-item">
+        <dt class="stat-label">Distance</dt>
+        <dd class="stat-value">{{ unit(stats.distance_mi, 'mi', stats.distance_km, 'km') }}</dd>
+      </dl>
+      <dl class="stat-item">
+        <dt class="stat-label">Elevation gain</dt>
+        <dd class="stat-value">{{ unit(elevation.gain_ft, 'ft', elevation.gain_m, 'm') }}</dd>
+      </dl>
+      <dl class="stat-item">
+        <dt class="stat-label">Elevation loss</dt>
+        <dd class="stat-value">{{ unit(elevation.loss_ft, 'ft', elevation.loss_m, 'm') }}</dd>
+      </dl>
+      <dl class="stat-item">
+        <dt class="stat-label">Max elevation</dt>
+        <dd class="stat-value">{{ unit(elevation.max_ft, 'ft', elevation.max_m, 'm') }}</dd>
+      </dl>
+      <button type="button" class="unit-toggle" id="unit-toggle" aria-pressed="false" aria-label="Toggle between imperial and metric units">
+        <span class="unit-toggle__option" data-unit="imperial">mi</span>
+        <span class="unit-toggle__option" data-unit="metric">km</span>
+      </button>
+    </div>
+
+    <div class="route-section">
+      <figure class="map-card">
+        <div id="map" class="map-card__map" role="region" aria-label="Map of Day {{ day }}'s route, {{ towns.start }} to {{ towns.end }}"></div>
+        <figcaption class="map-card__caption">{{ towns.start }} &rarr; {{ towns.end }}</figcaption>
+      </figure>
+      <aside class="route-aside" aria-label="Route notes">
+        <figure class="elevation-card">
+          <h2>Elevation profile</h2>
+          {{ elevation_svg|safe }}
+          <figcaption class="elevation-card__summary">
+            <span>Climbed <strong>{{ unit(elevation.gain_ft, 'ft', elevation.gain_m, 'm') }}</strong></span>
+            <span>Descended <strong>{{ unit(elevation.loss_ft, 'ft', elevation.loss_m, 'm') }}</strong></span>
+          </figcaption>
+        </figure>
+        {% if elevation.climbs %}
+        <div class="climb-card">
+          <h2>Notable climbs</h2>
+          <ul class="climb-list" role="list">
+            {% for c in elevation.climbs %}
+            <li>
+              <span class="climb-list__mile unit-pair"><span class="unit-pair__imperial">mi {{ c.start_mi }}&ndash;{{ c.end_mi }}</span><span class="unit-pair__metric">km {{ c.start_km }}&ndash;{{ c.end_km }}</span></span>
+              <span class="climb-list__stat">{{ unit(c.gain_ft, 'ft', c.gain_m, 'm') }}</span>
+              <span class="climb-list__grade">{{ c.avg_gradient_pct }}% avg</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </aside>
+    </div>
+
+    {% endif %}
+
+    <nav class="day-pager" aria-label="Previous and next day">
+      {% if prev_day %}
+      <a class="prev" href="day-{{ prev_day }}.html">
+        <span class="day-pager__label">&larr; Previous</span>
+        <span class="day-pager__title">Day {{ prev_day }}</span>
+      </a>
+      {% else %}
+      <a class="prev" href="index.html">
+        <span class="day-pager__label">&larr; Back</span>
+        <span class="day-pager__title">Overview</span>
+      </a>
+      {% endif %}
+      {% if next_day %}
+      <a class="next" href="day-{{ next_day }}.html">
+        <span class="day-pager__label">Next &rarr;</span>
+        <span class="day-pager__title">Day {{ next_day }}</span>
+      </a>
+      {% else %}
+      <a class="next" href="index.html">
+        <span class="day-pager__label">Next &rarr;</span>
+        <span class="day-pager__title">Whole route</span>
+      </a>
+      {% endif %}
+    </nav>
+
+  </main>
+
+  {% if not pending %}
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    window.__route = {{ route_json|safe }};
+    window.__towns = {{ towns_json|safe }};
+    window.__waypoints = {{ waypoints_json|safe }};
+  </script>
+  <script src="js/map.js"></script>
+  {% endif %}
+  <script src="js/units.js"></script>
+</body>
+
+</html>

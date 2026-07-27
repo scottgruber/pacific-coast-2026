@@ -1,0 +1,14 @@
+{% macro render_nav(current) -%}
+<nav class="site-nav" aria-label="Site">
+  <ul role="list">
+    {% for n in range(1, 9) -%}
+    <li>
+      <a href="day-{{ n }}.html"{% if current == 'day-' ~ n %} aria-current="page"{% endif %}>Day {{ n }}</a>
+    </li>
+    {% endfor -%}
+    <li>
+      <a href="compare.html"{% if current == 'compare' %} aria-current="page"{% endif %}>Compare routes</a>
+    </li>
+  </ul>
+</nav>
+{%- endmacro %}

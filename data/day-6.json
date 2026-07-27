@@ -1,0 +1,14 @@
+{
+  "day": 6,
+  "pending": true,
+  "date": "2026-09-10",
+  "date_label": "Thursday, September 10",
+  "towns": {
+    "start": "Oceano",
+    "end": "Santa Barbara"
+  },
+  "stats": null,
+  "elevation": null,
+  "route": null,
+  "waypoints": []
+}

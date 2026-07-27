@@ -1,0 +1,3 @@
+{% macro unit(imperial_val, imperial_unit, metric_val, metric_unit) -%}
+<span class="unit-pair"><span class="unit-pair__imperial">{{ imperial_val }}<span class="stat-unit">{{ imperial_unit }}</span></span><span class="unit-pair__metric">{{ metric_val }}<span class="stat-unit">{{ metric_unit }}</span></span></span>
+{%- endmacro %}
