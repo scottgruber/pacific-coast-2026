@@ -61,10 +61,10 @@ MI_TO_M = MI_TO_KM * 1000.0
 # How many times steeper than true 1:1 mi/ft scale the chart is allowed to
 # draw slopes. Some exaggeration is unavoidable for a road elevation profile
 # to be legible at all (real coastal elevation change is tiny relative to
-# miles traveled) — 6-12x is the typical range for this kind of chart.
-# Chosen at the top of that range so charts stay as tall/legible as
-# defensible without turning gentle grades into spike charts.
-TARGET_VERTICAL_EXAGGERATION = 12
+# miles traveled). Set above the typical 6-12x range so a climb reads as a
+# clear shape at a glance — this chart's job is quick visual gut-check
+# ("there's a climb here") for mental trip prep, not precise gradient-reading.
+TARGET_VERTICAL_EXAGGERATION = 20
 ELEVATION_CHART_WIDTH = 600
 ELEVATION_CHART_PAD = 6
 ELEVATION_CHART_MIN_HEIGHT = 40

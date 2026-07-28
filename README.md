@@ -86,13 +86,15 @@ of truth.
 
 Remote: `git@github.com:scottgruber/pacific-coast-2026.git`
 
-## Deploying to scottgruber.me/bike-tour/pacific-coast/2026
+## Deploying to scottgruber.me/bike-tours/pacific-coast/2026
 
 This repo is the source of truth (templates, scripts, data, gpx tracks).
-`scottgruber.me/bike-tour/pacific-coast/2026/` is a plain copy of `build/`'s
+`scottgruber.me/bike-tours/pacific-coast/2026/` is a plain copy of `build/`'s
 output, published inside the `scottgruber.me` git repo, which is deployed by
 sshing into the server and running `git pull` — the same pattern `huandao`
-uses for `scottgruber.me/huandao`.
+uses for `scottgruber.me/bike-tours/taiwan-huandao/2023`. (Previously this
+lived at `scottgruber.me/bike-tour/pacific-coast/2026` — singular — renamed
+to the plural `bike-tours/<trip>/<year>` convention used going forward.)
 
 **1. Regenerate the build:**
 
@@ -104,8 +106,8 @@ python3 scripts/generate_pages.py
 **2. Copy `build/`'s output (resolving the symlinks) into the scottgruber.me repo:**
 
 ```bash
-mkdir -p ~/Sites/scottgruber.me/bike-tour/pacific-coast/2026
-rsync -aL build/ ~/Sites/scottgruber.me/bike-tour/pacific-coast/2026/
+mkdir -p ~/Sites/scottgruber.me/bike-tours/pacific-coast/2026
+rsync -aL build/ ~/Sites/scottgruber.me/bike-tours/pacific-coast/2026/
 ```
 
 (`-L` follows the symlinks so `css`/`js`/`fonts`/`icon.svg` get copied as
@@ -115,7 +117,7 @@ real files rather than links pointing outside the scottgruber.me repo.)
 
 ```bash
 cd ~/Sites/scottgruber.me
-git add bike-tour/pacific-coast
+git add bike-tours/pacific-coast
 git commit -m "Update Pacific Coast Bike Tour site"
 git push
 ```
