@@ -92,6 +92,7 @@
             <span>Climbed <strong>{{ unit(elevation.gain_ft, 'ft', elevation.gain_m, 'm') }}</strong></span>
             <span>Descended <strong>{{ unit(elevation.loss_ft, 'ft', elevation.loss_m, 'm') }}</strong></span>
           </figcaption>
+          <p class="elevation-card__note">Vertical scale exaggerated ~{{ elevation_exaggeration }}&times; for readability.</p>
         </figure>
         {% if elevation.climbs %}
         <div class="climb-card">

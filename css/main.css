@@ -638,6 +638,12 @@ html.metric .unit-pair__metric {
   font-weight: var(--font-weight-bold);
 }
 
+.elevation-card__note {
+  margin-top: var(--spacing-x-small);
+  font-size: var(--font-size-x-small);
+  color: var(--color-text-muted);
+}
+
 /* Climb list ---------------------------------------------------------------- */
 
 .climb-list {

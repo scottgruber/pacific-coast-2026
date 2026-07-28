@@ -8,6 +8,7 @@ build` previews exactly what gets deployed, at any subpath. build/ itself is
 gitignored and fully regeneratable from source.
 """
 import json
+import math
 import os
 import shutil
 from pathlib import Path
@@ -55,34 +56,87 @@ def with_m(d, ft_key, m_key):
     d[m_key] = round(d[ft_key] / 3.28084)
 
 
-def build_elevation_svg(profile, day, width=600, height=140, pad=6):
+MI_TO_M = MI_TO_KM * 1000.0
+
+# How many times steeper than true 1:1 mi/ft scale the chart is allowed to
+# draw slopes. Some exaggeration is unavoidable for a road elevation profile
+# to be legible at all (real coastal elevation change is tiny relative to
+# miles traveled) — 6-12x is the typical range for this kind of chart.
+# Chosen at the top of that range so charts stay as tall/legible as
+# defensible without turning gentle grades into spike charts.
+TARGET_VERTICAL_EXAGGERATION = 12
+ELEVATION_CHART_WIDTH = 600
+ELEVATION_CHART_PAD = 6
+ELEVATION_CHART_MIN_HEIGHT = 40
+ELEVATION_CHART_MAX_HEIGHT = 160
+
+
+def build_elevation_svg(profile, day, shared_min_e, shared_max_e):
+    """Render the elevation sparkline against a shared elevation scale
+    (shared_min_e..shared_max_e, in meters) common to every day page, rather
+    than each day auto-fitting its own min/max to a fixed chart height. That
+    auto-fit was the source of wildly inconsistent, misleadingly steep-
+    looking profiles: a day with a small elevation range got stretched just
+    as tall as the hilliest day. With a shared Y-axis domain, a flat day
+    actually looks flat, and only the real outlier climbs stand out.
+
+    The X axis still auto-fits each day's own distance to a fixed chart
+    width (a shorter day's chart still spans the full width) — only the
+    elevation domain is shared. Holding both the elevation domain AND the
+    chart height fixed across every day would let vertical exaggeration
+    balloon on the longer days (the more real miles compressed into the
+    same width, the steeper a fixed-height chart draws every slope) — up
+    around 20-40x for this route, which is exactly the "spike chart"
+    problem this replaces. Instead, height is solved for per day so every
+    chart renders at the *same* TARGET_VERTICAL_EXAGGERATION: longer days
+    get a shorter, wider-looking band; shorter days get a taller one. That
+    keeps relative steepness comparable across days without secretly
+    varying how exaggerated each one is.
+    """
     dists = [p["d_mi"] for p in profile]
     eles = [p["ele_m"] for p in profile]
     min_e, max_e = min(eles), max(eles)
-    span_e = max(max_e - min_e, 1.0)
+    span_e = max(shared_max_e - shared_min_e, 1.0)
     max_d = max(dists) or 1.0
+    max_d_m = max_d * MI_TO_M
+
+    width, pad = ELEVATION_CHART_WIDTH, ELEVATION_CHART_PAD
+    x_px_per_m = (width - 2 * pad) / max_d_m
+    y_px_per_m = TARGET_VERTICAL_EXAGGERATION * x_px_per_m
+    height = 2 * pad + y_px_per_m * span_e
+    height = max(ELEVATION_CHART_MIN_HEIGHT, min(ELEVATION_CHART_MAX_HEIGHT, height))
+    height = round(height)
 
     def px(d):
         return pad + (d / max_d) * (width - 2 * pad)
 
     def py(e):
-        return (height - pad) - ((e - min_e) / span_e) * (height - 2 * pad)
+        return (height - pad) - ((e - shared_min_e) / span_e) * (height - 2 * pad)
 
     pts = [(px(d), py(e)) for d, e in zip(dists, eles)]
     line = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
     area = line + f" L{pts[-1][0]:.1f},{height - pad} L{pts[0][0]:.1f},{height - pad} Z"
 
-    return (
+    svg = (
         f'<svg viewBox="0 0 {width} {height}" role="img" '
         f'aria-labelledby="elev-title-{day} elev-desc-{day}">'
         f'<title id="elev-title-{day}">Elevation profile for Day {day}</title>'
         f'<desc id="elev-desc-{day}">Ranges from {min_e:.0f}m to {max_e:.0f}m '
-        f'elevation over {max_d:.1f} miles.</desc>'
+        f'elevation over {max_d:.1f} miles, plotted on a shared '
+        f'{shared_min_e:.0f}–{shared_max_e:.0f}m scale used for every day.</desc>'
         f'<path d="{area}" fill="var(--color-accent-rust)" fill-opacity="0.18" stroke="none"/>'
         f'<path d="{line}" fill="none" stroke="var(--color-accent-rust)" stroke-width="2" '
         f'stroke-linejoin="round" stroke-linecap="round"/>'
         f"</svg>"
     )
+
+    # Recompute the *actual* exaggeration from the final (clamped, rounded)
+    # height, in case the min/max height clamp ever kicks in — should equal
+    # TARGET_VERTICAL_EXAGGERATION exactly under normal circumstances.
+    actual_y_px_per_m = (height - 2 * pad) / span_e
+    exaggeration = round(actual_y_px_per_m / x_px_per_m)
+
+    return {"svg": svg, "exaggeration": exaggeration, "height": height}
 
 
 def load_day(n):
@@ -114,6 +168,15 @@ def main():
 
     trip_dates = f"{fmt_date(trip_start)}–{fmt_date(trip_end)}, {trip_start[:4]}"
 
+    # Shared elevation scale for every day's elevation chart — 0 up to the
+    # highest point reached on any day (padded a bit, rounded to a clean
+    # number), rather than each day auto-fitting to its own min/max. See
+    # build_elevation_svg()'s docstring for why.
+    known_days = [d for d in days if not d["pending"]]
+    trip_max_m = max(d["elevation"]["max_m"] for d in known_days)
+    shared_min_e = 0.0
+    shared_max_e = math.ceil(trip_max_m * 1.1 / 50.0) * 50.0
+
     # Day pages ---------------------------------------------------------
     day_template = env.get_template("day.html.jinja")
     for d in days:
@@ -141,10 +204,14 @@ def main():
                 with_km(c, "end_mi", "end_km")
                 climbs.append(c)
             elevation["climbs"] = climbs
+            elev_chart = build_elevation_svg(
+                d["elevation"]["profile"], n, shared_min_e, shared_max_e
+            )
             ctx.update({
                 "stats": stats,
                 "elevation": elevation,
-                "elevation_svg": build_elevation_svg(d["elevation"]["profile"], n),
+                "elevation_svg": elev_chart["svg"],
+                "elevation_exaggeration": elev_chart["exaggeration"],
                 "route_json": json.dumps(d["route"]),
                 "towns_json": json.dumps(d["towns"]),
                 "waypoints_json": json.dumps(d["waypoints"]),
