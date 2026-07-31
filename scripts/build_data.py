@@ -11,9 +11,6 @@ Peucker) and a resampled/smoothed elevation profile per day, plus the same
 for the Pacific-Coast-Section-4-SF-SB-Southbound.gpx reference track, and
 writes data/day-N.json + data/reference.json + data/overview.json.
 
-Day 6 (Oceano to Santa Barbara) has no GPX yet, so it's written as a
-pending placeholder — town names only, no route or stats.
-
 Re-run this whenever a GPX file changes, then re-run generate_pages.py to
 refresh the HTML.
 """
@@ -42,7 +39,7 @@ M_TO_FT = 3.28084
 # name in this list instead of being duplicated per day.
 STOPS = [
     "Los Altos", "Santa Cruz", "Monterey", "Big Sur", "San Simeon",
-    "Oceano", "Santa Barbara", "Oxnard", "Santa Monica",
+    "Oceano", "Solvang", "Ventura", "Santa Monica",
 ]
 
 TOWNS = {n: {"start": STOPS[n - 1], "end": STOPS[n]} for n in range(1, len(STOPS))}
@@ -53,11 +50,11 @@ GPX_FILES = {
     3: "Day-3-Monterey-to-Big-Sur.gpx",
     4: "Day-4-Big-Sur-to-San-Simeon.gpx",
     5: "Day-5-San-Simeon-to-Oceano.gpx",
-    # Day 6 (Oceano to Santa Barbara): no GPX yet.
-    7: "Day-7-Santa-Barbara-to-Oxnard.gpx",
-    8: "Day-8-Oxnard-to-Santa-Monica.gpx",
+    6: "Day-6-Oceano-to-Solvang.gpx",
+    7: "Day-7-Solvang-to-Ventura.gpx",
+    8: "Day-8-Ventura-to-Santa-Monica.gpx",
 }
-PENDING_DAYS = [6]
+PENDING_DAYS = []
 ALL_DAYS = sorted(set(GPX_FILES) | set(PENDING_DAYS))
 
 REFERENCE_GPX = GPX_DIR / "Pacific-Coast-Section-4-SF-SB-Southbound.gpx"

@@ -16,8 +16,8 @@ plain HTML in `build/`. No server-side code runs on the deployed site.
 
 ```
 .
-├── gpx/                    Day-N-*.gpx tracks (Day 6 not mapped yet) plus
-│                            the Pacific-Coast-Section-4-SF-SB-Southbound.gpx
+├── gpx/                    Day-N-*.gpx tracks plus the
+│                            Pacific-Coast-Section-4-SF-SB-Southbound.gpx
 │                            reference track it's loosely based on
 ├── css/
 │   └── main.css             all site styles, one file — color/type tokens
@@ -133,14 +133,6 @@ exit
 
 Steps 2–4 only need repeating when the built HTML or its source assets
 actually changed.
-
-## Day 6
-
-Oceano to Santa Barbara doesn't have a GPX track yet — `build_data.py`
-writes it as a pending placeholder (town names only), and both the day
-page and the day-grid card on the overview show a "route not mapped yet"
-state instead of stats. Once `gpx/Day-6-Oceano-to-Santa-Barbara.gpx` exists,
-add it to `GPX_FILES` in `scripts/build_data.py` and rebuild.
 
 ## Roster
 
