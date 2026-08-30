@@ -60,6 +60,8 @@ SAMPLE_INTERVAL_MI = 1.0
 # Near samples catch roadside banks and cuttings; far ones catch ridgelines.
 HORIZON_DISTANCES_M = [100, 200, 400, 800, 1600, 3200]
 ELEVATION_BATCH = 100
+# Terrain does not change; elevations are cached so re-runs cost nothing.
+ELEVATION_CACHE = ROOT / "data" / ".elevation-cache.json"
 # Woodland this close to the road shades it. Roughly two mature tree heights,
 # which is about how far a canopy throws shade with the sun well off vertical.
 CANOPY_WITHIN_M = 30
@@ -172,9 +174,9 @@ def sun_position(dt_utc, lat, lon):
 
 # --- data sources ---------------------------------------------------------
 
-def get_json(url, attempts=4, data=None):
+def get_json(url, attempts=7, data=None):
     req = urllib.request.Request(url, data=data, headers={"User-Agent": USER_AGENT})
-    delay = 15
+    delay = 20
     for attempt in range(1, attempts + 1):
         try:
             with urllib.request.urlopen(req, timeout=120) as r:
@@ -184,22 +186,48 @@ def get_json(url, attempts=4, data=None):
                 raise
             print(f"      {e.code}, waiting {delay}s", flush=True)
             time.sleep(delay)
-            delay *= 2
+            delay = min(delay * 2, 300)
     raise RuntimeError("unreachable")
 
 
+def _load_elevation_cache():
+    if ELEVATION_CACHE.exists():
+        try:
+            return json.loads(ELEVATION_CACHE.read_text())
+        except ValueError:
+            return {}
+    return {}
+
+
 def elevations(points):
-    """Ground elevation in metres for a list of (lat, lon), batched."""
-    out = []
-    for i in range(0, len(points), ELEVATION_BATCH):
-        chunk = points[i:i + ELEVATION_BATCH]
+    """Ground elevation in metres for a list of (lat, lon), batched and cached.
+
+    The cache matters more than it looks. Terrain does not move, sample points
+    are deterministic for a given route, and re-running at a different hour
+    only changes the horizon probes - so without this, every re-run refetched
+    hundreds of identical points and walked straight into a 429."""
+    cache = _load_elevation_cache()
+    key = lambda p: f"{p[0]:.5f},{p[1]:.5f}"  # noqa: E731
+
+    missing = [p for p in points if key(p) not in cache]
+    unique = list({key(p): p for p in missing}.values())
+    if unique:
+        print(f"      {len(points) - len(missing)} cached, fetching {len(unique)}",
+              flush=True)
+    for i in range(0, len(unique), ELEVATION_BATCH):
+        chunk = unique[i:i + ELEVATION_BATCH]
         q = urllib.parse.urlencode({
             "latitude": ",".join(f"{p[0]:.5f}" for p in chunk),
             "longitude": ",".join(f"{p[1]:.5f}" for p in chunk),
         })
-        out.extend(get_json(f"{ELEVATION_API}?{q}")["elevation"])
-        time.sleep(0.5)
-    return out
+        got = get_json(f"{ELEVATION_API}?{q}")["elevation"]
+        for p, e in zip(chunk, got):
+            cache[key(p)] = e
+        # Written after every batch so a rate limit later costs nothing
+        # already paid for.
+        ELEVATION_CACHE.write_text(json.dumps(cache))
+        time.sleep(1.0)
+    return [cache[key(p)] for p in points]
 
 
 def woodland(route):

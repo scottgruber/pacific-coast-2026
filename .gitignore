@@ -5,3 +5,6 @@ build/
 
 # Secrets — keys that must never ship to the browser or the repo.
 .env
+
+# Derived terrain cache for build_shade.py — regenerable, not worth history.
+data/.elevation-cache.json
