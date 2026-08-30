@@ -1,6 +1,7 @@
 <!-- GENERATED FILE — edit templates/day.html.jinja + data/day-N.json, then rerun scripts/generate_pages.py -->
 {% from "_nav.html.jinja" import render_nav %}
 {% from "_units.html.jinja" import unit %}
+{% from "_icons.html.jinja" import icon_map, icon_external, icon_conditions %}
 <!doctype html>
 <html lang="en">
 
@@ -8,7 +9,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Day {{ day }}: {{ towns.start }} to {{ towns.end }} — Pacific Coast Bike Tour</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
   <meta name="description" content="Day {{ day }}: {{ towns.start }} to {{ towns.end }}{% if stats %} — {{ stats.distance_mi }} miles{% endif %} on the Pacific Coast Bike Tour, {{ date_label }}.">
 
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -82,12 +83,69 @@
     <div class="route-section">
       <figure class="map-card">
         <div id="map" class="map-card__map" role="region" aria-label="Map of Day {{ day }}'s route, {{ towns.start }} to {{ towns.end }}"></div>
-        <figcaption class="map-card__caption">{{ towns.start }} &rarr; {{ towns.end }}</figcaption>
+        <figcaption class="map-card__caption">
+          <span>{{ towns.start }} &rarr; {{ towns.end }}</span>
+          <span class="map-card__hint">Switch basemap (elevation / vegetation / plain) top-right; click any point for Google&nbsp;Maps, Apple&nbsp;Maps or Street&nbsp;View.</span>
+        </figcaption>
+
+        <div class="route-actions">
+          <a class="btn btn--primary" href="gpx/{{ gpx }}" download>
+            {{ icon_map() }}
+            <span>Download GPX &mdash; Day {{ day }}</span>
+          </a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin={{ towns.start|urlencode }},CA&amp;destination={{ towns.end|urlencode }},CA&amp;travelmode=bicycling" target="_blank" rel="noopener">
+            {{ icon_external() }}
+            <span>Open in Google Maps</span>
+          </a>
+          <a class="btn" href="https://maps.apple.com/?saddr={{ towns.start|urlencode }},CA&amp;daddr={{ towns.end|urlencode }},CA&amp;dirflg=b" target="_blank" rel="noopener">
+            {{ icon_external() }}
+            <span>Open in Apple Maps</span>
+          </a>
+        </div>
+
+        {% if options %}
+        <div class="route-options">
+          <h2>Route options still being decided</h2>
+          <p class="route-options__note">Day {{ day }} has {{ options|length }} candidate tracks. Choose one to highlight it on the map and see its elevation profile — the day&rsquo;s stats above stay on the current pick either way.</p>
+          <ul class="route-options__list" role="list">
+            {% for o in options %}
+            <li class="route-option{% if o.primary %} route-option--primary{% endif %}" data-route-option="{{ o.index }}">
+              <div class="route-option__head">
+                <input type="radio" name="day-{{ day }}-route" id="route-opt-{{ day }}-{{ o.index }}"
+                  value="{{ o.index }}" data-route-toggle {% if o.primary %}checked{% endif %}>
+                <label class="route-option__label" for="route-opt-{{ day }}-{{ o.index }}">{{ o.label }}</label>
+                {% if o.primary %}<span class="route-option__badge">Current pick</span>{% endif %}
+              </div>
+              <p class="route-option__stats">
+                {{ unit(o.distance_mi, 'mi', o.distance_km, 'km') }} &middot;
+                {{ unit(o.gain_ft, 'ft', o.gain_m, 'm') }} climbing
+              </p>
+              {% if o.note %}<p class="route-option__note">{{ o.note }}</p>{% endif %}
+              <a class="btn btn--sm" href="gpx/{{ o.gpx }}" download>
+                {{ icon_map() }}
+                <span>Download GPX &mdash; {{ o.label }}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
       </figure>
       <aside class="route-aside" aria-label="Route notes">
         <figure class="elevation-card">
           <h2>Elevation profile</h2>
+          {% if options %}
+          {% for o in options %}
+          <div class="elevation-card__chart" data-elevation-for="{{ o.index }}" {% if not o.primary %}hidden{% endif %}>
+            {{ o.svg|safe }}
+            {% if not o.primary %}
+            <p class="elevation-card__preview">Previewing <strong>{{ o.label }}</strong> &mdash; {{ unit(o.distance_mi, 'mi', o.distance_km, 'km') }}, {{ unit(o.gain_ft, 'ft', o.gain_m, 'm') }} climbing. The figures below are the current pick&rsquo;s.</p>
+            {% endif %}
+          </div>
+          {% endfor %}
+          {% else %}
           {{ elevation_svg|safe }}
+          {% endif %}
           <figcaption class="elevation-card__summary">
             <span>Climbed <strong>{{ unit(elevation.gain_ft, 'ft', elevation.gain_m, 'm') }}</strong></span>
             <span>Descended <strong>{{ unit(elevation.loss_ft, 'ft', elevation.loss_m, 'm') }}</strong></span>
@@ -108,6 +166,37 @@
           </ul>
         </div>
         {% endif %}
+
+        {# Live values replace each slot's fallback link once its fetch
+           succeeds; a failed request leaves the working link in place. #}
+        <div class="conditions-card" data-conditions data-lat="{{ end_lat }}" data-lon="{{ end_lon }}">
+          <h2>{{ icon_conditions() }} Conditions</h2>
+          <p class="conditions-card__note">Near {{ towns.end }}, where the day ends.</p>
+
+          <div class="conditions-block">
+            <h3 class="conditions-block__title">Air quality</h3>
+            <div data-conditions-aqi>
+              <ul class="conditions-list" role="list">
+                <li><a href="https://fire.airnow.gov/#10/{{ end_lat }}/{{ end_lon }}" target="_blank" rel="noopener">AirNow smoke map {{ icon_external() }}</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="conditions-block">
+            <h3 class="conditions-block__title">Weather</h3>
+            <div data-conditions-weather>
+              <ul class="conditions-list" role="list">
+                <li><a href="https://forecast.weather.gov/MapClick.php?lat={{ end_lat }}&amp;lon={{ end_lon }}" target="_blank" rel="noopener">NWS forecast {{ icon_external() }}</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <ul class="conditions-list conditions-list--more" role="list">
+            <li><a href="https://www.windy.com/{{ end_lat }}/{{ end_lon }}?{{ end_lat }},{{ end_lon }},10" target="_blank" rel="noopener">Wind map {{ icon_external() }}</a></li>
+            <li><a href="https://fire.airnow.gov/#10/{{ end_lat }}/{{ end_lon }}" target="_blank" rel="noopener">Smoke map {{ icon_external() }}</a></li>
+            <li><a href="https://www.fire.ca.gov/incidents" target="_blank" rel="noopener">CAL FIRE incidents {{ icon_external() }}</a></li>
+          </ul>
+        </div>
       </aside>
     </div>
 
@@ -147,10 +236,14 @@
     window.__route = {{ route_json|safe }};
     window.__towns = {{ towns_json|safe }};
     window.__waypoints = {{ waypoints_json|safe }};
+    window.__options = {{ options_json|safe }};
   </script>
-  <script src="js/map.js"></script>
+  <script src="{{ asset('js/config.js') }}"></script>
+  <script src="{{ asset('js/basemap.js') }}"></script>
+  <script src="{{ asset('js/map.js') }}"></script>
+  <script src="{{ asset('js/conditions.js') }}"></script>
   {% endif %}
-  <script src="js/units.js"></script>
+  <script src="{{ asset('js/units.js') }}"></script>
 </body>
 
 </html>

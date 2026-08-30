@@ -2,10 +2,7 @@
 // route (window.__planned_days) and the Adventure Cycling reference track
 // (window.__reference_route) — so it's easy to see where they diverge.
 (function () {
-  var TILE_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-  var TILE_ATTRIBUTION =
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors ' +
-    '&copy; <a href="https://carto.com/attributions">CARTO</a>';
+  var BASE = window.PCGF_BASEMAP;
 
   function cssVar(name, fallback) {
     var v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -20,13 +17,9 @@
     var referenceColor = cssVar("--color-route-reference", "#FF2E88");
 
     var map = L.map(el, { scrollWheelZoom: false });
-    L.tileLayer(TILE_URL, { attribution: TILE_ATTRIBUTION, subdomains: "abcd", maxZoom: 19 }).addTo(map);
-
-    if (typeof ResizeObserver !== "undefined") {
-      new ResizeObserver(function () {
-        map.invalidateSize();
-      }).observe(el);
-    }
+    BASE.addTiles(map);
+    BASE.observeResize(el, map);
+    BASE.enablePointHandoff(map);
 
     var plannedLayer = L.layerGroup();
     (window.__planned_days || []).forEach(function (d) {

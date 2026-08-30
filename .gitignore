@@ -2,3 +2,6 @@
 .claude/settings.local.json
 __pycache__/
 build/
+
+# Secrets — keys that must never ship to the browser or the repo.
+.env

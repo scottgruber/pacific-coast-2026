@@ -1,0 +1,15 @@
+{# Inline SVG icons. Kept inline rather than as an icon font or sprite sheet so
+   they inherit currentColor and need no extra request. All are decorative —
+   the adjacent text carries the meaning — hence aria-hidden. #}
+
+{% macro icon_map() -%}
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3 3 5.4v15.2L9 18l6 2.6 6-2.4V3l-6 2.4L9 3Z"/><path d="M9 3v15"/><path d="M15 5.4v15.2"/></svg>
+{%- endmacro %}
+
+{% macro icon_external() -%}
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1.6 1.6 0 0 1-1.6 1.6H5.6A1.6 1.6 0 0 1 4 19V8.2A1.6 1.6 0 0 1 5.6 6.6H10"/></svg>
+{%- endmacro %}
+
+{% macro icon_conditions() -%}
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 18a3.5 3.5 0 0 0 0-7 5 5 0 0 0-9.6-1.6A4 4 0 0 0 7 18Z"/></svg>
+{%- endmacro %}

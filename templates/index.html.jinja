@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pacific Coast Bike Tour — Los Altos to Los Angeles</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
   <meta name="description" content="An {{ total_days }}-day, {{ stats.distance_mi }}+ mile bike tour down the California coast from Los Altos to Los Angeles, {{ trip_dates }}.">
 
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -135,8 +135,10 @@
   <script>
     window.__days = {{ days_json|safe }};
   </script>
-  <script src="js/map.js"></script>
-  <script src="js/units.js"></script>
+  <script src="{{ asset('js/config.js') }}"></script>
+  <script src="{{ asset('js/basemap.js') }}"></script>
+  <script src="{{ asset('js/map.js') }}"></script>
+  <script src="{{ asset('js/units.js') }}"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Compare routes — Pacific Coast Bike Tour</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
   <meta name="description" content="How our planned Los Altos-to-Los Angeles route compares to Adventure Cycling's Pacific Coast Section 4 reference track.">
 
   <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -76,8 +76,10 @@
     window.__planned_days = {{ planned_days_json|safe }};
     window.__reference_route = {{ reference_route_json|safe }};
   </script>
-  <script src="js/compare.js"></script>
-  <script src="js/units.js"></script>
+  <script src="{{ asset('js/config.js') }}"></script>
+  <script src="{{ asset('js/basemap.js') }}"></script>
+  <script src="{{ asset('js/compare.js') }}"></script>
+  <script src="{{ asset('js/units.js') }}"></script>
 </body>
 
 </html>

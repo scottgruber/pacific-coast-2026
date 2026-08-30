@@ -588,6 +588,11 @@ html.metric .unit-pair__metric {
   .route-section:not(.route-section--single) .map-card__map {
     flex: 1 1 auto;
     aspect-ratio: auto;
+    /* The card is a flex column that also holds the download buttons and any
+       route options, so the map has no intrinsic height here. Without a floor
+       it can measure near-zero on first layout and Leaflet fits the route at a
+       uselessly low zoom. */
+    min-height: 26rem;
   }
 }
 
@@ -942,4 +947,344 @@ html.metric .unit-pair__metric {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Route actions, options, conditions
+   ------------------------------------------------------------------------ */
+
+/* Buttons sit inside the map card, below the caption, so downloading the
+   track and jumping to a full map app stay next to the map they belong to. */
+.route-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-small);
+  padding: 0 var(--spacing-default) var(--spacing-default);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-background);
+  color: var(--color-text-default);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  border-color: var(--color-text-default);
+}
+
+/* Acid Yellow fill with Deep Fog text — the site's one text-bearing accent
+   fill, reserved for the primary action on the page. */
+.btn--primary {
+  background: var(--color-theme);
+  border-color: var(--color-theme);
+  color: var(--color-base);
+}
+
+.btn--primary:hover,
+.btn--primary:focus-visible {
+  border-color: var(--color-text-default);
+}
+
+.btn--sm {
+  padding: 0.4rem 0.7rem;
+  font-size: var(--font-size-x-small);
+}
+
+.icon {
+  width: 1.05em;
+  height: 1.05em;
+  flex: none;
+}
+
+.map-card__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.map-card__hint {
+  font-size: var(--font-size-x-small);
+  color: var(--color-text-muted);
+}
+
+/* Days with more than one candidate track. */
+.route-options {
+  padding: 0 var(--spacing-default) var(--spacing-default);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+  padding-top: var(--spacing-default);
+}
+
+.route-options__note {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--spacing-small);
+}
+
+.route-options__list {
+  display: grid;
+  gap: var(--spacing-small);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 40em) {
+  .route-options__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.route-option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) dashed var(--color-surface-border);
+  background: var(--color-background);
+}
+
+/* The current pick gets a solid border matching its solid line on the map;
+   alternates stay dashed, matching their dashed line. */
+.route-option--primary {
+  border-style: solid;
+  border-color: var(--color-route-planned);
+}
+
+.route-option__head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.route-option__label {
+  font-weight: 600;
+}
+
+.route-option__badge {
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--border-radius);
+  background: var(--color-theme);
+  color: var(--color-base);
+  font-size: var(--font-size-x-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.route-option__stats {
+  margin: 0;
+  font-size: var(--font-size-small);
+}
+
+.route-option__note {
+  margin: 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+/* Live conditions — external links for now. */
+.conditions-card {
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  padding: var(--spacing-default);
+}
+
+.conditions-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+}
+
+.conditions-card__note {
+  margin: 0 0 var(--spacing-small);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.conditions-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.conditions-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: var(--font-size-small);
+}
+
+/* Click-a-point handoff popup. */
+.map-handoff {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.map-handoff__coords {
+  margin: 0 0 0.15rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+}
+
+/* Live conditions (js/conditions.js)
+   ------------------------------------------------------------------------ */
+
+.conditions-block {
+  padding-top: var(--spacing-small);
+  margin-top: var(--spacing-small);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+.conditions-block:first-of-type {
+  border-top: 0;
+  margin-top: 0;
+}
+
+.conditions-block__title {
+  margin: 0 0 0.35rem;
+  font-size: var(--font-size-x-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.conditions-live__head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.conditions-live__label {
+  font-size: var(--font-size-small);
+}
+
+/* AQI categories use the EPA's own scale. These are fills carrying text, so
+   each pairs with a deliberately chosen foreground rather than inheriting —
+   the yellow and orange bands need dark text to stay legible. */
+.aqi-badge,
+.wx-temp {
+  font-family: var(--font-family-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.aqi-badge {
+  padding: 0.15em 0.4em;
+  border-radius: var(--border-radius);
+  background: var(--color-surface);
+  color: var(--color-text-default);
+}
+
+.aqi-badge--good { background: #A8E05F; color: #1A2B23; }
+.aqi-badge--moderate { background: #FDD64B; color: #2B2E33; }
+.aqi-badge--sensitive { background: #FE9B57; color: #2B2E33; }
+.aqi-badge--unhealthy { background: #FE6A69; color: #2B2E33; }
+.aqi-badge--very-unhealthy { background: #A97ABC; color: #FFFFFF; }
+.aqi-badge--hazardous { background: #A87383; color: #FFFFFF; }
+
+.conditions-live__source,
+.conditions-live__meta {
+  margin: 0.35rem 0 0;
+  font-size: var(--font-size-x-small);
+  color: var(--color-text-muted);
+}
+
+/* A reading from a distant station is the failure mode worth shouting about:
+   it looks authoritative but may describe air nobody on the route is in. */
+.conditions-live__warn {
+  margin: 0.4rem 0 0;
+  padding: 0.4rem 0.55rem;
+  border-radius: var(--border-radius);
+  border-left: var(--border-width-thick) solid var(--color-accent-rust);
+  background: var(--color-surface);
+  font-size: var(--font-size-x-small);
+}
+
+.wx-stats {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.wx-stats li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: var(--font-size-small);
+}
+
+.wx-stats__label {
+  color: var(--color-text-muted);
+}
+
+.wx-stats__value {
+  text-align: right;
+}
+
+.conditions-list--more {
+  margin-top: var(--spacing-small);
+  padding-top: var(--spacing-small);
+  border-top: var(--border-width-hairline) solid var(--color-surface-border);
+}
+
+/* Route option switching (day pages with undecided routes)
+   ------------------------------------------------------------------------ */
+
+.route-option__head input[type="radio"] {
+  margin: 0;
+  accent-color: var(--color-route-planned);
+}
+
+.route-option__head label {
+  cursor: pointer;
+}
+
+/* The dashed border marks "not currently previewed"; the selected option gets
+   a solid border matching its now-solid line on the map. Only one option is
+   ever selected, and selection is preview only — the "Current pick" badge, not
+   the selection, marks the route the day's stats come from. */
+.route-option--selected {
+  border-style: solid;
+  border-color: var(--color-route-planned);
+}
+
+.route-option:not(.route-option--selected) {
+  border-style: dashed;
+  border-color: var(--color-surface-border);
+}
+
+.elevation-card__chart[hidden] {
+  display: none;
+}
+
+/* Makes it unmistakable that the chart above belongs to a previewed
+   alternate while the figures below it do not. */
+.elevation-card__preview {
+  margin: 0.4rem 0 0;
+  padding: 0.4rem 0.55rem;
+  border-radius: var(--border-radius);
+  border-left: var(--border-width-thick) solid var(--color-route-reference);
+  background: var(--color-surface);
+  font-size: var(--font-size-x-small);
 }
