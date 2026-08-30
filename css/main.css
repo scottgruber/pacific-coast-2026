@@ -1288,3 +1288,73 @@ html.metric .unit-pair__metric {
   background: var(--color-surface);
   font-size: var(--font-size-x-small);
 }
+
+/* Afternoon shade card
+   ------------------------------------------------------------------------ */
+
+.shade-card {
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  padding: var(--spacing-default);
+}
+
+.shade-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+}
+
+.shade-card__lede {
+  margin: 0 0 var(--spacing-small);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.shade-stats {
+  display: grid;
+  gap: var(--spacing-small);
+  margin: 0;
+}
+
+@media (min-width: 30em) {
+  .shade-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.shade-stats dt {
+  font-size: var(--font-size-x-small);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.shade-stats dd {
+  margin: 0.1rem 0 0;
+  font-size: var(--font-size-small);
+}
+
+.shade-stats strong {
+  font-family: var(--font-family-display);
+  font-size: 1.35rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-accent-rust);
+}
+
+.shade-card__note,
+.shade-card__source {
+  margin: var(--spacing-small) 0 0;
+  font-size: var(--font-size-x-small);
+  color: var(--color-text-muted);
+}
+
+/* A near-shadeless day is a planning fact, not a footnote. */
+.shade-card__warn {
+  margin: var(--spacing-small) 0 0;
+  padding: 0.4rem 0.55rem;
+  border-radius: var(--border-radius);
+  border-left: var(--border-width-thick) solid var(--color-accent-rust);
+  background: var(--color-background);
+  font-size: var(--font-size-x-small);
+}

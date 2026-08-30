@@ -182,6 +182,10 @@ def main():
     overview = json.loads((DATA_DIR / "overview.json").read_text())
     reference = json.loads((DATA_DIR / "reference.json").read_text())
     roster = json.loads((DATA_DIR / "roster.json").read_text())
+    # Optional: written by build_shade.py, which is far too slow to run on
+    # every build. Days without an entry simply omit the shade card.
+    shade_path = DATA_DIR / "shade.json"
+    shade = json.loads(shade_path.read_text()) if shade_path.exists() else {}
 
     trip_start = overview["trip_start"]
     trip_end = overview["trip_end"]
@@ -235,6 +239,7 @@ def main():
             # Candidate tracks for days still deciding. The one matching the
             # day's primary GPX is flagged so the page can badge it and the map
             # can skip redrawing it under the main route line.
+            day_shade = shade.get(str(n), {})
             options = []
             for i, o in enumerate(d.get("options", [])):
                 o = dict(o)
@@ -249,6 +254,10 @@ def main():
                 chart = build_elevation_svg(o.pop("profile"), f"{n}-opt{i}", shared_min_e, shared_max_e)
                 o["svg"] = chart["svg"]
                 o["exaggeration"] = chart["exaggeration"]
+                # Shade is keyed by option label, with the day's chosen line
+                # stored under "primary".
+                key = "primary" if o["primary"] else o["label"]
+                o["shade"] = day_shade.get(key)
                 options.append(o)
             # Conditions links are anchored on where the day finishes.
             end_lat, end_lon = d["route"][-1]
@@ -259,6 +268,7 @@ def main():
                 "elevation_exaggeration": elev_chart["exaggeration"],
                 "gpx": d["gpx"],
                 "options": options,
+                "shade": day_shade.get("primary"),
                 "end_lat": round(end_lat, 4),
                 "end_lon": round(end_lon, 4),
                 "route_json": json.dumps(d["route"]),

@@ -1,7 +1,7 @@
 <!-- GENERATED FILE — edit templates/day.html.jinja + data/day-N.json, then rerun scripts/generate_pages.py -->
 {% from "_nav.html.jinja" import render_nav %}
 {% from "_units.html.jinja" import unit %}
-{% from "_icons.html.jinja" import icon_map, icon_external, icon_conditions %}
+{% from "_icons.html.jinja" import icon_map, icon_external, icon_conditions, icon_shade %}
 <!doctype html>
 <html lang="en">
 
@@ -118,7 +118,8 @@
               </div>
               <p class="route-option__stats">
                 {{ unit(o.distance_mi, 'mi', o.distance_km, 'km') }} &middot;
-                {{ unit(o.gain_ft, 'ft', o.gain_m, 'm') }} climbing
+                {{ unit(o.gain_ft, 'ft', o.gain_m, 'm') }} climbing{% if o.shade %} &middot;
+                <strong>{{ o.shade.pct_canopy }}%</strong> shaded{% endif %}
               </p>
               {% if o.note %}<p class="route-option__note">{{ o.note }}</p>{% endif %}
               <a class="btn btn--sm" href="gpx/{{ o.gpx }}" download>
@@ -164,6 +165,44 @@
             </li>
             {% endfor %}
           </ul>
+        </div>
+        {% endif %}
+
+        {% if shade %}
+        <div class="shade-card">
+          <h2>{{ icon_shade() }} Afternoon shade</h2>
+          <p class="shade-card__lede">
+            Measured at <strong>{{ shade.hour_local }}:00</strong> on {{ date_label }},
+            with the sun {{ shade.sun_elevation_deg }}&deg; above the horizon.
+          </p>
+          <dl class="shade-stats">
+            <div>
+              <dt>Tree cover</dt>
+              <dd><strong>{{ shade.pct_canopy }}%</strong> of the route</dd>
+            </div>
+            <div>
+              <dt>Blocked by terrain</dt>
+              <dd><strong>{{ shade.pct_terrain }}%</strong> of the route</dd>
+            </div>
+          </dl>
+          {% if shade.pct_terrain == 0 %}
+          <p class="shade-card__note">
+            Terrain shades nothing at this hour &mdash; the sun is still too high for
+            a ridge to block it. Tree cover is the only shade on offer while you
+            are riding.
+          </p>
+          {% endif %}
+          {% if shade.pct_canopy <= 10 %}
+          <p class="shade-card__warn">
+            Effectively an unshaded day. Start early and carry more water than the
+            distance suggests.
+          </p>
+          {% endif %}
+          <p class="shade-card__source">
+            Tree cover from OpenStreetMap, within 30&nbsp;m of the road; terrain from a
+            horizon-angle test against elevation data. Both are estimates &mdash;
+            unmapped woodland reads as no shade.
+          </p>
         </div>
         {% endif %}
 
