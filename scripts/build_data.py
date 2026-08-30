@@ -37,8 +37,12 @@ M_TO_FT = 3.28084
 
 # Ride order — day N starts where day N-1 ended, so each stop is a single
 # name in this list instead of being duplicated per day.
+#
+# Days 3-5 were rerouted inland in Aug 2026 after a Big Sur fire closed the
+# coast route (Monterey-Big Sur-San Simeon-Oceano). The superseded tracks are
+# kept in gpx/fire-hazard/ rather than deleted, in case the coast reopens.
 STOPS = [
-    "Los Altos", "Santa Cruz", "Monterey", "Big Sur", "San Simeon",
+    "Los Altos", "Santa Cruz", "Monterey", "King City", "Paso Robles",
     "Oceano", "Solvang", "Ventura", "Santa Monica",
 ]
 
@@ -47,13 +51,39 @@ TOWNS = {n: {"start": STOPS[n - 1], "end": STOPS[n]} for n in range(1, len(STOPS
 GPX_FILES = {
     1: "Day-1-Los-Altos-to-Santa-Cruz.gpx",
     2: "Day-2-Santa-Cruz-to-Monterey.gpx",
-    3: "Day-3-Monterey-to-Big-Sur.gpx",
-    4: "Day-4-Big-Sur-to-San-Simeon.gpx",
-    5: "Day-5-San-Simeon-to-Oceano.gpx",
+    3: "Day-3-Monterey_to_King_City-via-Carmel-Valley.gpx",
+    4: "Day-4-King_City_to_Paso_Robles.gpx",
+    5: "Day-5-Paso_Robles_to_Oceano.gpx",
     6: "Day-6-Oceano-to-Solvang.gpx",
     7: "Day-7-Solvang-to-Ventura.gpx",
     8: "Day-8-Ventura-to-Santa-Monica.gpx",
 }
+
+# Days where more than one candidate track is still in play. The file named in
+# GPX_FILES above is the primary (it drives the day's headline stats and
+# elevation chart); everything listed here is drawn and offered alongside it so
+# the options can be compared before one is committed to.
+ROUTE_OPTIONS = {
+    3: [
+        {"label": "Via Carmel Valley",
+         "file": "Day-3-Monterey_to_King_City-via-Carmel-Valley.gpx",
+         "note": "Carmel Valley Road inland — longer, more tree cover."},
+        {"label": "Alternate 1",
+         "file": "Day-3-Monterey_to_King_City-Alt-1-.gpx",
+         "note": "Shorter inland line, more exposed."},
+    ],
+    5: [
+        {"label": "Highway 41",
+         "file": "Day-5-Paso_Robles_to_Oceano.gpx",
+         "note": "Paved throughout via Atascadero and Morro Bay. Steadier grades "
+                 "— the main climb averages 5.4% — but ~19 mi on highways."},
+        {"label": "Quieter inland",
+         "file": "Day-5-Paso_Robles_to_Oceano-Alt-Quieter.gpx",
+         "note": "Also fully paved, with roughly twice the back-road mileage, "
+                 "but steeper: sustained pitches to ~9%. Skips Atascadero."},
+    ],
+}
+
 PENDING_DAYS = []
 ALL_DAYS = sorted(set(GPX_FILES) | set(PENDING_DAYS))
 
@@ -88,10 +118,12 @@ def parse_gpx(path):
     waypoints = []
     for wpt in root.findall(NS + "wpt"):
         name_el = wpt.find(NS + "name")
+        type_el = wpt.find(NS + "type")
         waypoints.append({
             "lat": float(wpt.get("lat")),
             "lon": float(wpt.get("lon")),
             "name": name_el.text.strip() if name_el is not None and name_el.text else "",
+            "type": type_el.text.strip() if type_el is not None and type_el.text else "",
         })
     return pts, waypoints
 
@@ -264,13 +296,74 @@ def elevation_profile(pts, interval_m, smoothing_window):
     }
 
 
+SERVICE_WAYPOINT_TYPES = {"Water", "Toilets"}
+TURN_CUE_WAYPOINT_TYPES = {"Dot"}
+
+
+def longest_water_gap(pts, services):
+    """Longest stretch, in miles, with no mapped drinking water — counting the
+    day's start and finish as known stops.
+
+    This is the number that matters for planning an inland day in September,
+    and it is not visible from a list of waypoints. It reflects OSM coverage,
+    not the ground: a long gap means nobody has mapped anything there."""
+    total = sum(haversine_m(a[:2], b[:2]) for a, b in zip(pts, pts[1:])) * M_TO_MI
+    cum = [0.0]
+    for a, b in zip(pts, pts[1:]):
+        cum.append(cum[-1] + haversine_m(a[:2], b[:2]) * M_TO_MI)
+    stops = [0.0]
+    for w in services:
+        if w["type"] != "Water":
+            continue
+        d = [haversine_m((w["lat"], w["lon"]), p[:2]) for p in pts]
+        stops.append(cum[d.index(min(d))])
+    stops.append(total)
+    stops.sort()
+    return round(max(b - a for a, b in zip(stops, stops[1:])), 1)
+
+
+def build_route_option(opt):
+    """Summarize one candidate track for a day that has several.
+
+    Carries its own polyline, headline numbers and elevation profile, so the
+    day page can redraw both the map line and the elevation chart when a
+    visitor previews a different option. The day's *official* stats still come
+    from the primary track — previewing an option never changes them."""
+    pts, _ = parse_gpx(GPX_DIR / opt["file"])
+    elevation = elevation_profile(pts, ELEV_RESAMPLE_INTERVAL_M, ELEV_SMOOTHING_WINDOW)
+    return {
+        "label": opt["label"],
+        "note": opt.get("note", ""),
+        "gpx": opt["file"],
+        "route": simplify_route(pts, RDP_TOLERANCE_M),
+        "distance_mi": elevation["distance_mi"],
+        "gain_ft": elevation["gain_ft"],
+        "loss_ft": elevation["loss_ft"],
+        "max_ft": elevation["max_ft"],
+        "profile": elevation["profile"],
+    }
+
+
 def build_day(n):
     pts, waypoints = parse_gpx(GPX_DIR / GPX_FILES[n])
     route = simplify_route(pts, RDP_TOLERANCE_M)
     elevation = elevation_profile(pts, ELEV_RESAMPLE_INTERVAL_M, ELEV_SMOOTHING_WINDOW)
-    # First/last wpt are the day's start/end (lodging); anything in between
-    # is a real waypoint worth marking on the map (e.g. a landmark rest stop).
-    mid_waypoints = waypoints[1:-1] if len(waypoints) > 2 else []
+    # Waypoints arrive from three sources and mean different things, so they
+    # are split by <type> rather than by position. The old first/last-is-lodging
+    # heuristic silently turned RideWithGPS turn cues into map markers — days 3
+    # and 4 were rendering dozens of dots labelled "Right" and "Left".
+    #
+    #   Dot             - RideWithGPS turn cues. Never shown; the map is not a
+    #                     cue sheet, and the head unit already has them.
+    #   Water/Toilets   - added by scripts/add_services.py from OpenStreetMap.
+    #   GENERIC (other) - lodging and landmarks. First/last are the day's start
+    #                     and end, so only the ones in between are marked.
+    services = [w for w in waypoints if w["type"] in SERVICE_WAYPOINT_TYPES]
+    landmarks = [w for w in waypoints
+                 if w["type"] not in SERVICE_WAYPOINT_TYPES
+                 and w["type"] not in TURN_CUE_WAYPOINT_TYPES]
+    mid_waypoints = landmarks[1:-1] if len(landmarks) > 2 else []
+    options = [build_route_option(o) for o in ROUTE_OPTIONS.get(n, [])]
     date = TRIP_START + datetime.timedelta(days=n - 1)
     data = {
         "day": n,
@@ -278,10 +371,14 @@ def build_day(n):
         "date": date.isoformat(),
         "date_label": date.strftime("%A, %B %-d"),
         "towns": TOWNS[n],
+        "gpx": GPX_FILES[n],
         "stats": {"distance_mi": elevation["distance_mi"]},
         "elevation": elevation,
         "route": route,
+        "options": options,
         "waypoints": mid_waypoints,
+        "services": services,
+        "water_gap_mi": longest_water_gap(pts, services),
         "route_point_count_raw": len(pts),
     }
     (DATA_DIR / f"day-{n}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2))
@@ -298,9 +395,11 @@ def build_pending_day(n):
         "date": date.isoformat(),
         "date_label": date.strftime("%A, %B %-d"),
         "towns": TOWNS[n],
+        "gpx": None,
         "stats": None,
         "elevation": None,
         "route": None,
+        "options": [],
         "waypoints": [],
     }
     (DATA_DIR / f"day-{n}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2))

@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<gpx creator="Garmin Connect" version="1.1"
-  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd"
-  xmlns:ns3="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"
-  xmlns="http://www.topografix.com/GPX/1/1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+<?xml version='1.0' encoding='UTF-8'?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" creator="Garmin Connect" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd">
   <metadata>
     <name>Day 2: Santa Cruz to Monterey</name>
     <link href="connect.garmin.com">
@@ -11,7 +7,7 @@
     </link>
     <time>2026-07-03T18:20:10.000Z</time>
   </metadata>
-  <wpt lat="36.9850233" lon="-122.0230909">
+  <wpt lat="36.98502327315509" lon="-122.02309082262218"><name>START — Santa Cruz</name><sym>Flag, Blue</sym><type>Start</type></wpt><wpt lat="36.9850233" lon="-122.0230909">
     <ele>0.0</ele>
     <name>Comfort Inn San</name>
     <type>GENERIC</type>
@@ -21,7 +17,7 @@
     <name>Mariposa Inn an</name>
     <type>GENERIC</type>
   </wpt>
-  <trk>
+  <wpt lat="36.984901" lon="-122.021169"><name>Toilets (mi 0.0)</name><cmt>Toilets at mile 0.0, 0.11 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="36.990699" lon="-121.975936"><name>Water (mi 3.1)</name><cmt>Water at mile 3.1, 0.18 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="36.986535" lon="-121.978203"><name>Toilets (mi 3.1)</name><cmt>Toilets at mile 3.1, 0.14 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="36.985727" lon="-121.954818"><name>Water (mi 4.5)</name><cmt>Water at mile 4.5, 0.18 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="36.987781" lon="-121.932907"><name>Toilets (mi 5.5)</name><cmt>Toilets at mile 5.5, 0.17 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="36.981533" lon="-121.934411"><name>Water (mi 6.1)</name><cmt>Water at mile 6.1, 0.15 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="36.972059" lon="-121.911849"><name>Water (mi 7.7)</name><cmt>Water at mile 7.7, 0.24 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="36.972284" lon="-121.913421"><name>Water (mi 7.7)</name><cmt>Water at mile 7.7, 0.25 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="36.942984" lon="-121.864309"><name>Toilets (mi 12.8)</name><cmt>Toilets at mile 12.8, 0.21 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="36.932465" lon="-121.861953"><name>Water (mi 13.7)</name><cmt>Water at mile 13.7, 0.08 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="36.815614" lon="-121.790022"><name>Toilets (mi 26.1)</name><cmt>Toilets at mile 26.1, 0.23 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="36.691643" lon="-121.801892"><name>Toilets (mi 36.3)</name><cmt>Toilets at mile 36.3, 0.21 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="36.610085" lon="-121.859348"><name>Toilets (mi 43.8)</name><cmt>Toilets at mile 43.8, 0.05 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="36.600481" lon="-121.884284"><name>Water (mi 45.8)</name><cmt>Water at mile 45.8, 0.02 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="36.597769" lon="-121.886433"><name>Water (mi 45.9)</name><cmt>Water at mile 45.9, 0.20 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="36.603384" lon="-121.889528"><name>Water (mi 46.1)</name><cmt>Water at mile 46.1, 0.16 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="36.597559" lon="-121.894356"><name>Water (mi 46.5)</name><cmt>Water at mile 46.5, 0.13 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="36.597425" lon="-121.894516"><name>Toilets (mi 46.5)</name><cmt>Toilets at mile 46.5, 0.13 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="36.58420242369175" lon="-121.90184516832232"><name>FINISH — Monterey</name><sym>Flag, Green</sym><type>Finish</type></wpt><trk>
     <name>Day 2: Santa Cruz to Monterey</name>
     <trkseg>
       <trkpt lat="36.98502327315509" lon="-122.02309082262218">

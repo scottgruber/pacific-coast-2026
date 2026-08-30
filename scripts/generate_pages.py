@@ -7,6 +7,7 @@ symlinks to css/, js/, and the icon) so `python3 -m http.server --directory
 build` previews exactly what gets deployed, at any subpath. build/ itself is
 gitignored and fully regeneratable from source.
 """
+import hashlib
 import json
 import math
 import os
@@ -31,6 +32,8 @@ def ensure_build_symlinks():
         "css": "../css",
         "js": "../js",
         "fonts": "../fonts",
+        "gpx": "../gpx",
+        "api": "../api",
         "icon.svg": "../icon.svg",
     }
     for name, target in links.items():
@@ -139,6 +142,27 @@ def build_elevation_svg(profile, day, shared_min_e, shared_max_e):
     return {"svg": svg, "exaggeration": exaggeration, "height": height}
 
 
+# Cache busting -----------------------------------------------------------
+#
+# Returning visitors were being served stale css/js after a deploy — the HTML
+# revalidates but the assets sat in browser cache, so a new Mapbox token in
+# config.js went unseen until a hard reload. Appending a content hash gives
+# each asset a new URL whenever its bytes change, so browsers fetch the new
+# file automatically and keep caching the unchanged ones.
+_asset_versions = {}
+
+
+def asset(rel):
+    """Return `rel` with a ?v=<content hash> suffix for cache busting."""
+    if rel not in _asset_versions:
+        f = ROOT / rel
+        _asset_versions[rel] = (
+            hashlib.sha256(f.read_bytes()).hexdigest()[:10] if f.exists() else ""
+        )
+    v = _asset_versions[rel]
+    return f"{rel}?v={v}" if v else rel
+
+
 def load_day(n):
     return json.loads((DATA_DIR / f"day-{n}.json").read_text())
 
@@ -152,6 +176,7 @@ def main():
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    env.globals["asset"] = asset
 
     days = [load_day(n) for n in range(1, 9)]
     overview = json.loads((DATA_DIR / "overview.json").read_text())
@@ -207,14 +232,41 @@ def main():
             elev_chart = build_elevation_svg(
                 d["elevation"]["profile"], n, shared_min_e, shared_max_e
             )
+            # Candidate tracks for days still deciding. The one matching the
+            # day's primary GPX is flagged so the page can badge it and the map
+            # can skip redrawing it under the main route line.
+            options = []
+            for i, o in enumerate(d.get("options", [])):
+                o = dict(o)
+                o["primary"] = o["gpx"] == d["gpx"]
+                o["index"] = i
+                with_km(o, "distance_mi", "distance_km")
+                with_m(o, "gain_ft", "gain_m")
+                with_m(o, "loss_ft", "loss_m")
+                # Each option gets its own chart on the same shared elevation
+                # scale as every other day, so switching between them compares
+                # like with like rather than rescaling under the reader.
+                chart = build_elevation_svg(o.pop("profile"), f"{n}-opt{i}", shared_min_e, shared_max_e)
+                o["svg"] = chart["svg"]
+                o["exaggeration"] = chart["exaggeration"]
+                options.append(o)
+            # Conditions links are anchored on where the day finishes.
+            end_lat, end_lon = d["route"][-1]
             ctx.update({
                 "stats": stats,
                 "elevation": elevation,
                 "elevation_svg": elev_chart["svg"],
                 "elevation_exaggeration": elev_chart["exaggeration"],
+                "gpx": d["gpx"],
+                "options": options,
+                "end_lat": round(end_lat, 4),
+                "end_lon": round(end_lon, 4),
                 "route_json": json.dumps(d["route"]),
                 "towns_json": json.dumps(d["towns"]),
                 "waypoints_json": json.dumps(d["waypoints"]),
+                "options_json": json.dumps([
+                    {k: v for k, v in o.items() if k != "svg"} for o in options
+                ]),
             })
         html = day_template.render(**ctx)
         (BUILD_DIR / f"day-{n}.html").write_text(html)

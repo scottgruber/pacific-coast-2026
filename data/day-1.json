@@ -7,6 +7,7 @@
     "start": "Los Altos",
     "end": "Santa Cruz"
   },
+  "gpx": "Day-1-Los-Altos-to-Santa-Cruz.gpx",
   "stats": {
     "distance_mi": 44.8
   },
@@ -5631,6 +5632,167 @@
       -122.02309
     ]
   ],
-  "waypoints": [],
+  "options": [],
+  "waypoints": [
+    {
+      "lat": 37.3863329,
+      "lon": -122.1134766,
+      "name": "230 Chateau Dr",
+      "type": "GENERIC"
+    },
+    {
+      "lat": 36.98502,
+      "lon": -122.02309,
+      "name": "Comfort Inn San",
+      "type": "GENERIC"
+    }
+  ],
+  "services": [
+    {
+      "lat": 37.386952,
+      "lon": -122.109507,
+      "name": "Toilets (mi 0.1)",
+      "type": "Toilets"
+    },
+    {
+      "lat": 37.327518,
+      "lon": -122.050711,
+      "name": "Water (mi 6.8)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.326179,
+      "lon": -122.044682,
+      "name": "Water (mi 7.2)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.324034,
+      "lon": -122.044546,
+      "name": "Water (mi 7.2)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.324052,
+      "lon": -122.044536,
+      "name": "Toilets (mi 7.2)",
+      "type": "Toilets"
+    },
+    {
+      "lat": 37.324264,
+      "lon": -122.038747,
+      "name": "Water (mi 7.5)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.295764,
+      "lon": -122.038452,
+      "name": "Water (mi 9.5)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.265787,
+      "lon": -122.028881,
+      "name": "Water (mi 11.8)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.265873,
+      "lon": -122.030166,
+      "name": "Water (mi 11.8)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.266517,
+      "lon": -122.030995,
+      "name": "Water (mi 11.8)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.265498,
+      "lon": -122.029803,
+      "name": "Toilets (mi 11.8)",
+      "type": "Toilets"
+    },
+    {
+      "lat": 37.244371,
+      "lon": -122.003011,
+      "name": "Water (mi 14.1)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.225146,
+      "lon": -121.978663,
+      "name": "Water (mi 16.2)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.225101,
+      "lon": -121.978479,
+      "name": "Toilets (mi 16.2)",
+      "type": "Toilets"
+    },
+    {
+      "lat": 37.221168,
+      "lon": -121.982024,
+      "name": "Water (mi 16.6)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.221678,
+      "lon": -121.983977,
+      "name": "Water (mi 16.6)",
+      "type": "Water"
+    },
+    {
+      "lat": 37.19577,
+      "lon": -121.98529,
+      "name": "Toilets (mi 19.4)",
+      "type": "Toilets"
+    },
+    {
+      "lat": 37.061164,
+      "lon": -121.941664,
+      "name": "Toilets (mi 34.9)",
+      "type": "Toilets"
+    },
+    {
+      "lat": 37.016785,
+      "lon": -121.952911,
+      "name": "Restroom (mi 38.4)",
+      "type": "Toilets"
+    },
+    {
+      "lat": 36.994421,
+      "lon": -121.961448,
+      "name": "Water (mi 40.0)",
+      "type": "Water"
+    },
+    {
+      "lat": 36.985727,
+      "lon": -121.954818,
+      "name": "Water (mi 40.5)",
+      "type": "Water"
+    },
+    {
+      "lat": 36.990699,
+      "lon": -121.975936,
+      "name": "Water (mi 41.6)",
+      "type": "Water"
+    },
+    {
+      "lat": 36.986535,
+      "lon": -121.978203,
+      "name": "Toilets (mi 41.6)",
+      "type": "Toilets"
+    },
+    {
+      "lat": 36.979137,
+      "lon": -122.014505,
+      "name": "Toilets (mi 43.8)",
+      "type": "Toilets"
+    }
+  ],
+  "water_gap_mi": 23.6,
   "route_point_count_raw": 8324
 }
