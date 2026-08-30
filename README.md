@@ -148,3 +148,145 @@ tokens at the top of `css/main.css` (`--color-background`, `--color-theme`,
 for the two lines on the compare-page map — `js/compare.js` reads those two
 at runtime via `getComputedStyle`, so changing them in CSS recolors the map
 too. No other file hardcodes color.
+
+## Maps and the Mapbox token
+
+Basemaps come from Mapbox as raster tiles (the Static Tiles API), driven by
+`js/basemap.js` — one module shared by the day pages, the overview map and the
+compare page, so the tile source and the layer switcher are defined once. Three
+styles are offered, because the two things this route actually needs checking
+are shade and climbing:
+
+| Layer | Mapbox style | What it's for |
+| --- | --- | --- |
+| Plain | `mapbox/light-v11` | reading town and road names |
+| Vegetation | `mapbox/satellite-streets-v12` | tree cover, visible directly in imagery |
+| Elevation | `mapbox/outdoors-v12` | contour lines and hillshade |
+
+Clicking anywhere on a map drops a pin and offers that point to Google Maps,
+Apple Maps or Street View. Neither Google nor Apple lets a third-party site
+embed an interactive map or Street View without a paid, billed key, so handing
+the coordinate off is the practical substitute.
+
+### The token
+
+The public token lives in `js/config.js` as `MAPBOX_TOKEN`. It must be a
+**public** token (starts with `pk.`), restricted to this site's domain under
+Account → Tokens → URL restrictions in Mapbox. A public token is visible in
+page source by design; the URL restriction is what protects it.
+
+Never put a **secret** token (`sk.`) in this repo. Secret tokens cannot be
+URL-restricted, carry account-management scopes, and are for server-side/CLI
+use only. A public token needs only the default `styles:tiles`, `styles:read`
+and `fonts:read` scopes — `styles:list` / `fonts:list` are for enumerating an
+account's styles and are not used for rendering.
+
+With the token left empty, the maps fall back to CARTO's keyless tiles, so the
+site still builds and renders — just on the rate-limited basemap with no layer
+switcher.
+
+## Route options
+
+`ROUTE_OPTIONS` in `scripts/build_data.py` lists candidate tracks for days
+where the route isn't settled. The file named in `GPX_FILES` is the primary —
+it drives the day's headline stats and elevation chart, and draws as the solid
+line. Everything else in `ROUTE_OPTIONS` draws dashed and gets its own download
+button and distance/climbing summary, so the options can be compared before one
+is committed to. Day 3 currently carries two.
+
+Superseded tracks (the original Big Sur coast routing for days 3–5, closed by
+fire) are kept in `gpx/fire-hazard/` rather than deleted, in case the coast
+reopens before the trip.
+
+On a day with options, the page shows a radio switcher. Selecting one makes its
+line solid and on top, dashes the others, and swaps the elevation chart — and
+nothing else. The stat row, the climb list and the whole-trip totals on the
+index always reflect the primary, because selection is a **preview**, not a
+decision. Committing to a route means changing `GPX_FILES` and rebuilding; the
+"Current pick" badge, not the current selection, marks which one that is. A
+preview note under an alternate's chart says so explicitly, so a chart from one
+route is never read against numbers from another.
+
+## Cache busting
+
+`generate_pages.py` exposes an `asset()` helper to the templates, which appends
+a short content hash to every local `css/` and `js/` URL
+(`js/config.js?v=81974b1363`). Returning visitors were otherwise being served
+stale JavaScript after a deploy — a new Mapbox token in `config.js` went unseen
+until a hard reload, and the map silently fell back to CARTO tiles. The hash
+changes only when a file's bytes change, so unchanged assets stay cached.
+
+Reference assets through `asset()` in templates, never as a bare path, or they
+will not be busted.
+
+## Conditions data
+
+Each day page shows live air quality and weather for where the day finishes,
+fetched on load by `js/conditions.js`. Both degrade safely: the card ships with
+working external links, and each section is only replaced once its own fetch
+succeeds, so a failure or a slow network leaves the links rather than blanking
+the panel.
+
+**Weather** comes straight from the National Weather Service
+(`api.weather.gov`) — no key, CORS open, so it stays client-side. It takes
+three hops: the grid point for the coordinate, that grid's forecast, then the
+nearest station's latest observation (the forecast payload carries no
+humidity).
+
+**Air quality** goes through `api/airnow.php`. It does not call AirNow from the
+browser, and must not: unlike a Mapbox public token, an AirNow key cannot be
+restricted to a domain, and its rate limit is enforced per key. A published key
+lets anyone drain the hourly quota, after which AirNow returns nothing until the
+next hour.
+
+Every reading names the reporting station and its distance from the day's
+endpoint. That is deliberate, not decoration — AirNow's network is sparse
+inland along this route (Monterey has no station within 75 miles at all, so
+Day 2 falls back to its link), and smoke varies sharply over short distances. A
+bare AQI number would imply a precision the reading does not have. Readings from
+more than 20 miles away are flagged in the UI as a regional signal only.
+
+The proxy caches for 10 minutes per rounded coordinate, refuses coordinates
+outside the route's bounding box (so it can't be used as a general-purpose AQI
+proxy on this key), and — if AirNow is unreachable or rate-limiting — re-serves
+the last cached reading flagged `stale`, which the page labels with its age.
+Showing a reading a few minutes old beats an empty panel when someone is
+checking for smoke.
+
+### Deploying the proxy
+
+`api/` is symlinked into `build/`, so `rsync -aL` copies `airnow.php` into the
+published tree as a real file. The web root is
+`/var/www/scottgruber.me/html`, so put the key **one level above it**, by hand,
+once — never through git:
+
+```bash
+# on the server, NOT in any git repo
+echo 'AIRNOW_API_KEY=<your-key>' > /var/www/scottgruber.me/airnow.env
+chmod 600 /var/www/scottgruber.me/airnow.env
+```
+
+`airnow.php` resolves the key in this order: the `AIRNOW_API_KEY` environment
+variable (if you would rather set it in the php-fpm pool or vhost), then
+`dirname(DOCUMENT_ROOT) . '/airnow.env'` as above, then the repo's gitignored
+`.env` — that last one is for local development only and must never resolve on
+the server. The deploy rsyncs into a public git repo, so a `.env` inside the
+published tree would be committed and served over HTTP. Nothing puts it there
+today; keep it that way.
+
+Local preview runs `php -S` (see `.claude/launch.json`) rather than
+`python3 -m http.server`, so the proxy actually executes. A static server would
+serve `airnow.php` as source text instead of running it.
+
+### Not yet pulled in
+
+| Layer | Source | Notes |
+| --- | --- | --- |
+| Tree cover / shade | Sentinel-2 NDVI, or the USFS Tree Canopy Cover raster | sample the raster along the track; NDVI needs a cloud-free scene |
+| Afternoon aspect | derived, not fetched | compute bearing per track segment and cross it with a DEM (USGS 3DEP, or Mapbox Terrain-RGB tiles, which the token already covers) — a westward slope in late afternoon is the exposed case |
+
+Neither is a live feed. Aspect in particular is a computation: it falls out of
+the GPX plus an elevation raster, so it could be precomputed in
+`build_data.py` and baked into `data/day-N.json` exactly like the climb
+detection already is — which would let the two Day 3 alternates be compared on
+shade with numbers rather than by eye.
