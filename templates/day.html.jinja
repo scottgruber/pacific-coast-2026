@@ -244,6 +244,10 @@
     {% if notes or towns_through %}
     <section class="brief" aria-labelledby="brief-heading">
       <h2 id="brief-heading">The day at a glance</h2>
+      {% if notes and notes.region %}
+      <p class="brief__region">{{ notes.region }}</p>
+      {% endif %}
+
       <div class="brief__cols">
         {% if notes and notes.highlights %}
         <div class="brief-card brief-card--good">

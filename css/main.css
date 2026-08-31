@@ -1573,3 +1573,15 @@ html.metric .unit-pair__metric {
   padding-left: 0;
   font-size: var(--font-size-small);
 }
+
+/* Regional background, above the highlight/caution pair. Set wider and
+   quieter than the cards: it is context to read once, not a checklist. */
+.brief__region {
+  max-width: 46rem;
+  margin: 0 0 var(--spacing-default);
+  font-size: var(--font-size-small);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  border-left: var(--border-width-thick) solid var(--color-surface-border);
+  padding-left: var(--spacing-default);
+}
