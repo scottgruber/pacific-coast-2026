@@ -1,0 +1,23 @@
+{
+  "_comment": "Hand-picked POIs that OpenStreetMap misses or tags in a way add_services.py does not match. Merged into the GPX and the day pages on every add_services run, and never thinned — if it is in here, somebody chose it deliberately. Keyed by day. type must be one of Water, Toilets, Food, Store, Scenic, Historic; sym is a Garmin symbol name.",
+  "6": [
+    {
+      "name": "Los Olivos Wine Merchant & Cafe",
+      "lat": 34.6649614,
+      "lon": -120.1153533,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "Los Olivos, on Grand Avenue."
+    }
+  ],
+  "5": [
+    {
+      "name": "Dutchman's Seafood House",
+      "lat": 35.365104,
+      "lon": -120.853206,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "Morro Bay Embarcadero, at the harbour."
+    }
+  ]
+}

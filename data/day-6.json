@@ -5884,6 +5884,14 @@
       "mile": 16.9
     },
     {
+      "lat": 34.664961,
+      "lon": -120.115353,
+      "name": "Los Olivos Wine Merchant & Cafe (mi 52.9)",
+      "type": "Food",
+      "label": "Los Olivos Wine Merchant & Cafe",
+      "mile": 52.9
+    },
+    {
       "lat": 34.608023,
       "lon": -120.122861,
       "name": "Toilets (mi 57.0)",

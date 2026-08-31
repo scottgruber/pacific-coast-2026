@@ -158,6 +158,35 @@ def overpass(bbox, attempts=5):
     raise RuntimeError("unreachable")
 
 
+def manual_pois(day, route):
+    """Hand-picked POIs from data/manual-pois.json.
+
+    OSM coverage is uneven and its tagging is not always what you would guess -
+    the Los Olivos cafe is mapped, but not under any amenity value this script
+    queries, so it never appeared. Anything listed here is merged in verbatim
+    and exempt from thinning: it is there because somebody chose it."""
+    path = DATA_DIR / "manual-pois.json"
+    if not path.exists():
+        return []
+    entries = json.loads(path.read_text()).get(str(day), [])
+    cum = [0.0]
+    for a, b in zip(route, route[1:]):
+        cum.append(cum[-1] + haversine_mi(a, b))
+    out = []
+    for e in entries:
+        dists = [haversine_mi((e["lat"], e["lon"]), (p[0], p[1])) for p in route]
+        offset = min(dists)
+        i = dists.index(offset)
+        out.append({
+            "lat": e["lat"], "lon": e["lon"], "name": e["name"],
+            "type": e["type"], "sym": e.get("sym", "Flag, Blue"),
+            "customers_only": False, "fee": False, "manual": True,
+            "note": e.get("note", ""),
+            "mile": round(cum[i], 1), "offset_mi": round(offset, 2),
+        })
+    return out
+
+
 def route_of(day):
     """The simplified polyline from data/day-N.json — accurate enough to
     measure offsets and mile markers, and far cheaper than the raw track."""
@@ -263,13 +292,18 @@ def write_waypoints(path, services):
         ET.SubElement(wpt, NS + "name").text = f"{label} (mi {s['mile']:.1f})"
         off = f", {s['offset_mi']:.2f} mi off route" if s["offset_mi"] >= 0.02 else ""
         notes = ""
+        if s.get("note"):
+            notes += " " + s["note"]
         if s.get("customers_only"):
             notes += " Customers only."
         if s.get("fee"):
             notes += " Fee."
+        # Provenance matters on the device: an OSM-derived point may be stale
+        # or mistagged, whereas a hand-picked one was chosen deliberately.
+        source = ("Added by hand." if s.get("manual")
+                  else "Mapped in OpenStreetMap; not verified on the ground.")
         ET.SubElement(wpt, NS + "cmt").text = (
-            f"{kind} at mile {s['mile']:.1f}{off}.{notes} Mapped in "
-            f"OpenStreetMap; not verified on the ground."
+            f"{kind} at mile {s['mile']:.1f}{off}.{notes} {source}"
         )
         ET.SubElement(wpt, NS + "desc").text = kind
         ET.SubElement(wpt, NS + "sym").text = s["sym"]
@@ -294,7 +328,8 @@ def main():
 
     for day in days:
         route = route_of(day)
-        services = find_services(route)
+        services = find_services(route) + manual_pois(day, route)
+        services.sort(key=lambda s: s["mile"])
         counts = {}
         for s in services:
             counts[s["type"]] = counts.get(s["type"], 0) + 1
