@@ -493,8 +493,11 @@ for local development only and must never resolve on a server. The deploy
 rsyncs into a public repo, so a `.env` inside the published tree would be
 committed and served. Nothing puts it there; keep it that way.
 
-After deploying, confirm the key file is not reachable over HTTP — requesting
-it should 404, not 200.
+Confirm once that the key file is not reachable over HTTP — requesting it
+should 404, not 200. This was checked and is correct. It is a property of the
+webserver's configuration, not of the site's contents, so it does not need
+re-checking on every deploy — only after the server config, the document root
+or the hosting changes.
 
 Local preview runs `php -S` (see `.claude/launch.json`) rather than
 `python3 -m http.server`, so the proxy actually executes. A static server would
