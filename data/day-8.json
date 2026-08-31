@@ -5656,6 +5656,15 @@
   ],
   "options": [],
   "waypoints": [],
+  "lodging": {
+    "name": "Ocean Lodge Santa Monica Beach Hotel",
+    "address": "1667 Ocean Ave, Santa Monica, CA 90401",
+    "lat": 34.0102762,
+    "lon": -118.492959,
+    "town": "Santa Monica",
+    "gap_mi": 0.3,
+    "gap_km": 0.4
+  },
   "services": [
     {
       "lat": 34.278495,
@@ -5663,7 +5672,9 @@
       "name": "Kwiki Mart (mi 0.0)",
       "type": "Store",
       "label": "Kwiki Mart",
-      "mile": 0.0
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.278038,
@@ -5671,7 +5682,9 @@
       "name": "Mary Mitchell House (mi 0.0)",
       "type": "Historic",
       "label": "Mary Mitchell House",
-      "mile": 0.0
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.281007,
@@ -5679,7 +5692,9 @@
       "name": "Starbucks (mi 0.1)",
       "type": "Food",
       "label": "Starbucks",
-      "mile": 0.1
+      "mile": 0.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.280992,
@@ -5687,7 +5702,9 @@
       "name": "Dargan's Irish Pub & Restaurant (mi 0.1)",
       "type": "Winery",
       "label": "Dargan's Irish Pub & Restaurant",
-      "mile": 0.1
+      "mile": 0.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.281099,
@@ -5695,7 +5712,9 @@
       "name": "Toilets (mi 0.1)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 0.1
+      "mile": 0.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.279745,
@@ -5703,7 +5722,9 @@
       "name": "California Street Mini Park (mi 0.2)",
       "type": "Park",
       "label": "California Street Mini Park",
-      "mile": 0.2
+      "mile": 0.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.275748,
@@ -5711,7 +5732,9 @@
       "name": "Water (mi 0.4)",
       "type": "Water",
       "label": "Water",
-      "mile": 0.4
+      "mile": 0.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.269459,
@@ -5719,7 +5742,9 @@
       "name": "Water (mi 1.5)",
       "type": "Water",
       "label": "Water",
-      "mile": 1.5
+      "mile": 1.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.196949,
@@ -5727,7 +5752,9 @@
       "name": "Oxnard Shores Park (mi 7.2)",
       "type": "Park",
       "label": "Oxnard Shores Park",
-      "mile": 7.2
+      "mile": 7.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.178965,
@@ -5735,7 +5762,9 @@
       "name": "Ox & Ocean (mi 8.6)",
       "type": "Food",
       "label": "Ox & Ocean",
-      "mile": 8.6
+      "mile": 8.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.176575,
@@ -5743,7 +5772,9 @@
       "name": "Allan's Liquor (mi 10.9)",
       "type": "Winery",
       "label": "Allan's Liquor",
-      "mile": 10.9
+      "mile": 10.9,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.156026,
@@ -5751,7 +5782,9 @@
       "name": "Grocery Outlet (mi 12.2)",
       "type": "Store",
       "label": "Grocery Outlet",
-      "mile": 12.2
+      "mile": 12.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.147956,
@@ -5759,7 +5792,9 @@
       "name": "Port Hueneme Historical Museum (mi 12.8)",
       "type": "Historic",
       "label": "Port Hueneme Historical Museum",
-      "mile": 12.8
+      "mile": 12.8,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.086069,
@@ -5767,7 +5802,9 @@
       "name": "Toilets (mi 24.6)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 24.6
+      "mile": 24.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.073026,
@@ -5775,7 +5812,9 @@
       "name": "Water (mi 26.1)",
       "type": "Water",
       "label": "Water",
-      "mile": 26.1
+      "mile": 26.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.044631,
@@ -5783,7 +5822,9 @@
       "name": "Toilets (mi 31.1)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 31.1
+      "mile": 31.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.046525,
@@ -5791,7 +5832,9 @@
       "name": "Water (mi 31.3)",
       "type": "Water",
       "label": "Water",
-      "mile": 31.3
+      "mile": 31.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.035239,
@@ -5799,7 +5842,9 @@
       "name": "Food (mi 35.6)",
       "type": "Food",
       "label": "Food",
-      "mile": 35.6
+      "mile": 35.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.031665,
@@ -5807,7 +5852,9 @@
       "name": "Chevron (mi 36.6)",
       "type": "Store",
       "label": "Chevron",
-      "mile": 36.6
+      "mile": 36.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.031359,
@@ -5815,7 +5862,9 @@
       "name": "Malibu Brewing Company (mi 36.8)",
       "type": "Winery",
       "label": "Malibu Brewing Company",
-      "mile": 36.8
+      "mile": 36.8,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.027694,
@@ -5823,7 +5872,9 @@
       "name": "Toilets (mi 37.1)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 37.1
+      "mile": 37.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.016574,
@@ -5831,7 +5882,9 @@
       "name": "Water (mi 38.3)",
       "type": "Water",
       "label": "Water",
-      "mile": 38.3
+      "mile": 38.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.032091,
@@ -5839,7 +5892,9 @@
       "name": "Water (mi 43.0)",
       "type": "Water",
       "label": "Water",
-      "mile": 43.0
+      "mile": 43.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.032131,
@@ -5847,7 +5902,9 @@
       "name": "Toilets (mi 43.0)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 43.0
+      "mile": 43.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.034394,
@@ -5855,7 +5912,9 @@
       "name": "Store (mi 43.5)",
       "type": "Store",
       "label": "Store",
-      "mile": 43.5
+      "mile": 43.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.034246,
@@ -5863,7 +5922,9 @@
       "name": "Starbucks (mi 46.2)",
       "type": "Food",
       "label": "Starbucks",
-      "mile": 46.2
+      "mile": 46.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.035533,
@@ -5871,7 +5932,9 @@
       "name": "Legacy Park (mi 46.4)",
       "type": "Park",
       "label": "Legacy Park",
-      "mile": 46.4
+      "mile": 46.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.039826,
@@ -5879,7 +5942,9 @@
       "name": "Colony House Liquor (mi 47.7)",
       "type": "Winery",
       "label": "Colony House Liquor",
-      "mile": 47.7
+      "mile": 47.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.037354,
@@ -5887,7 +5952,9 @@
       "name": "Country Liquor (mi 49.4)",
       "type": "Store",
       "label": "Country Liquor",
-      "mile": 49.4
+      "mile": 49.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.038895,
@@ -5895,7 +5962,9 @@
       "name": "Chevron (mi 54.2)",
       "type": "Store",
       "label": "Chevron",
-      "mile": 54.2
+      "mile": 54.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.039113,
@@ -5903,7 +5972,9 @@
       "name": "Starbucks (mi 54.3)",
       "type": "Food",
       "label": "Starbucks",
-      "mile": 54.3
+      "mile": 54.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.039179,
@@ -5911,7 +5982,9 @@
       "name": "Toilets (mi 54.6)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 54.6
+      "mile": 54.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.037823,
@@ -5919,7 +5992,9 @@
       "name": "Water (mi 55.1)",
       "type": "Water",
       "label": "Water",
-      "mile": 55.1
+      "mile": 55.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.039861,
@@ -5927,7 +6002,9 @@
       "name": "Palisades-Asilomar Park (mi 55.2)",
       "type": "Park",
       "label": "Palisades-Asilomar Park",
-      "mile": 55.2
+      "mile": 55.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.03138,
@@ -5935,7 +6012,9 @@
       "name": "Long Wharf in Santa Monica (mi 56.1)",
       "type": "Historic",
       "label": "Long Wharf in Santa Monica",
-      "mile": 56.1
+      "mile": 56.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.026305,
@@ -5943,7 +6022,9 @@
       "name": "Water (mi 56.9)",
       "type": "Water",
       "label": "Water",
-      "mile": 56.9
+      "mile": 56.9,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.015253,
@@ -5951,7 +6032,9 @@
       "name": "The Coco Club (mi 58.0)",
       "type": "Winery",
       "label": "The Coco Club",
-      "mile": 58.0
+      "mile": 58.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.015369,
@@ -5959,7 +6042,9 @@
       "name": "Water (mi 58.0)",
       "type": "Water",
       "label": "Water",
-      "mile": 58.0
+      "mile": 58.0,
+      "hand_picked": false,
+      "detour_mi": null
     }
   ],
   "water_gap_mi": 24.7,

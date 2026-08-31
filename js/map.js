@@ -93,6 +93,14 @@
       .addTo(map)
       .bindPopup(window.__towns.start);
 
+    // The night's hotel gets its own marker only when the route stops short of
+    // the door — build_data.py sets gap_mi on exactly those days. On the rest
+    // the hotel is the finish, within a couple of hundred feet, and a second
+    // dot would land on top of the first: at any zoom that fits the day, the
+    // two are the same pixel. There it names the finish marker instead.
+    var hotel = window.__lodging;
+    var hotelIsFinish = hotel && !hotel.gap_mi;
+
     L.circleMarker(end, {
       radius: 7,
       color: "#fff",
@@ -101,7 +109,23 @@
       fillOpacity: 1,
     })
       .addTo(map)
-      .bindPopup(window.__towns.end);
+      .bindPopup(hotelIsFinish
+        ? window.__towns.end + " — " + hotel.name
+        : window.__towns.end);
+
+    if (hotel && hotel.gap_mi) {
+      // Hollow rather than filled, so it reads as a destination rather than as
+      // one more stop: every other dot on this map is solid.
+      L.circleMarker([hotel.lat, hotel.lon], {
+        radius: 6,
+        color: "#E8542B",
+        weight: 3,
+        fillColor: "#fff",
+        fillOpacity: 1,
+      })
+        .addTo(map)
+        .bindPopup(hotel.name);
+    }
 
     (window.__waypoints || []).forEach(function (w) {
       L.circleMarker([w.lat, w.lon], {

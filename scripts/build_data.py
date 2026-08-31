@@ -122,11 +122,13 @@ def parse_gpx(path):
     for wpt in root.findall(NS + "wpt"):
         name_el = wpt.find(NS + "name")
         type_el = wpt.find(NS + "type")
+        cmt_el = wpt.find(NS + "cmt")
         waypoints.append({
             "lat": float(wpt.get("lat")),
             "lon": float(wpt.get("lon")),
             "name": name_el.text.strip() if name_el is not None and name_el.text else "",
             "type": type_el.text.strip() if type_el is not None and type_el.text else "",
+            "cmt": cmt_el.text.strip() if cmt_el is not None and cmt_el.text else "",
         })
     return pts, waypoints
 
@@ -317,6 +319,29 @@ def _service_types():
                 "Winery", "Picnic"}
 
 
+# The provenance sentence add_services.py stamps into a hand-picked stop's
+# <cmt>. Imported for the same reason as the type list above: two copies of a
+# literal string in two scripts is one edit away from disagreeing.
+def _hand_picked_mark():
+    try:
+        import add_services
+        return add_services.HAND_PICKED_MARK
+    except Exception:
+        return "Added by hand."
+
+
+# The quarter-mile screen add_services.py applies to scraped stops. Imported
+# for the same reason as the two above.
+def _max_offset_mi():
+    try:
+        import add_services
+        return add_services.MAX_OFFSET_MI
+    except Exception:
+        return 0.25
+
+
+MAX_OFFSET_MI = _max_offset_mi()
+HAND_PICKED_MARK = _hand_picked_mark()
 SERVICE_WAYPOINT_TYPES = _service_types()
 # The day's own start and finish, added by prepare_gpx.py for the head unit.
 # They are already the ends of the drawn line, so they are not marked again.
@@ -368,6 +393,54 @@ def build_route_option(opt):
     }
 
 
+# Scraped stops are capped at a quarter mile off route, so their offset is
+# never worth mentioning. Hand-picked ones skip that filter, which means one
+# can sit miles away — and on the page it would look exactly like a stop you
+# ride past. Surface the offset for those, and only those.
+def far_off_route(cmt):
+    """Miles off route, if that is far enough to be worth warning about."""
+    m = re.search(r", ([\d.]+) mi off route", cmt)
+    if not m:
+        return None
+    off = float(m.group(1))
+    return round(off, 1) if off > MAX_OFFSET_MI else None
+
+
+# data/lodging.json is keyed by town rather than by day, because a hotel is the
+# end of one day and the start of the next - one entry, so the two can never
+# drift apart. Los Altos is absent: day 1 starts from home.
+def load_lodging():
+    path = DATA_DIR / "lodging.json"
+    if not path.exists():
+        return {}
+    return {k: v for k, v in json.loads(path.read_text()).items()
+            if not k.startswith("_")}
+
+
+LODGING = load_lodging()
+
+# Most days were drawn to finish at the hotel door. Where one wasn't, the gap
+# is worth stating rather than leaving a reader to assume the route ends at the
+# bed - the last half mile of a 60-mile day is the one you want to know about.
+# Below this, "at the finish" is true enough and the number is just noise. In
+# miles rather than feet, because every other distance on the site is, and a
+# gap this small only survives rounding to one decimal above ~0.05 mi.
+LODGING_GAP_NOTABLE_MI = 0.1
+
+
+def lodging_for(town, endpoint):
+    """The night's hotel, with how far it sits from where the route stops."""
+    hotel = LODGING.get(town)
+    if not hotel:
+        return None
+    gap_m = haversine_m((hotel["lat"], hotel["lon"]), endpoint[:2])
+    gap_mi = gap_m * M_TO_MI
+    notable = gap_mi >= LODGING_GAP_NOTABLE_MI
+    return dict(hotel, town=town,
+                gap_mi=round(gap_mi, 1) if notable else None,
+                gap_km=round(gap_m / 1000.0, 1) if notable else None)
+
+
 def build_day(n):
     pts, waypoints = parse_gpx(GPX_DIR / GPX_FILES[n])
     route = simplify_route(pts, RDP_TOLERANCE_M)
@@ -391,6 +464,12 @@ def build_day(n):
         # page can sort by distance and show the label on its own.
         m = re.match(r"^(.*?)\s*\(mi ([\d.]+)\)$", w["name"])
         w["label"], w["mile"] = (m.group(1), float(m.group(2))) if m else (w["name"], 0.0)
+        # add_services.py stamps provenance and offset into the comment, for
+        # the head unit. The page needs both, so read them back out rather than
+        # re-reading manual-pois.json: the GPX is what was actually built.
+        cmt = w.pop("cmt", "")
+        w["hand_picked"] = HAND_PICKED_MARK in cmt
+        w["detour_mi"] = far_off_route(cmt)
         services.append(w)
     services.sort(key=lambda x: x["mile"])
     landmarks = [w for w in waypoints
@@ -412,6 +491,7 @@ def build_day(n):
         "route": route,
         "options": options,
         "waypoints": mid_waypoints,
+        "lodging": lodging_for(TOWNS[n]["end"], pts[-1]),
         "services": services,
         "water_gap_mi": longest_water_gap(pts, services),
         "route_point_count_raw": len(pts),
@@ -436,6 +516,7 @@ def build_pending_day(n):
         "route": None,
         "options": [],
         "waypoints": [],
+        "lodging": LODGING.get(TOWNS[n]["end"]),
     }
     (DATA_DIR / f"day-{n}.json").write_text(json.dumps(data, ensure_ascii=False, indent=2))
     print(f"day {n}: pending (no GPX yet)")

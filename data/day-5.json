@@ -18237,6 +18237,15 @@
     }
   ],
   "waypoints": [],
+  "lodging": {
+    "name": "Dune Surfer Inn",
+    "address": "1252 Pacific Blvd, Oceano, CA 93445",
+    "lat": 35.1069709,
+    "lon": -120.6237625,
+    "town": "Oceano",
+    "gap_mi": null,
+    "gap_km": null
+  },
   "services": [
     {
       "lat": 35.638703,
@@ -18244,7 +18253,9 @@
       "name": "7-Eleven (mi 0.0)",
       "type": "Store",
       "label": "7-Eleven",
-      "mile": 0.0
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.639935,
@@ -18252,7 +18263,9 @@
       "name": "KFC (mi 0.0)",
       "type": "Food",
       "label": "KFC",
-      "mile": 0.0
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.632393,
@@ -18260,7 +18273,9 @@
       "name": "Toilets (mi 0.3)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 0.3
+      "mile": 0.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.592621,
@@ -18268,7 +18283,9 @@
       "name": "Vina Robles (mi 3.3)",
       "type": "Winery",
       "label": "Vina Robles",
-      "mile": 3.3
+      "mile": 3.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.550093,
@@ -18276,7 +18293,9 @@
       "name": "Store (mi 6.3)",
       "type": "Store",
       "label": "Store",
-      "mile": 6.3
+      "mile": 6.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.546838,
@@ -18284,7 +18303,9 @@
       "name": "Toilets (mi 6.8)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 6.8
+      "mile": 6.8,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.491761,
@@ -18292,7 +18313,9 @@
       "name": "Toilets (mi 13.7)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 13.7
+      "mile": 13.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.489291,
@@ -18300,7 +18323,9 @@
       "name": "Atascadero Historical Museum (mi 13.8)",
       "type": "Historic",
       "label": "Atascadero Historical Museum",
-      "mile": 13.8
+      "mile": 13.8,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.489885,
@@ -18308,7 +18333,9 @@
       "name": "Dark Nectar Coffee (mi 13.8)",
       "type": "Food",
       "label": "Dark Nectar Coffee",
-      "mile": 13.8
+      "mile": 13.8,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.489788,
@@ -18316,7 +18343,9 @@
       "name": "Barley & Boar (mi 13.8)",
       "type": "Winery",
       "label": "Barley & Boar",
-      "mile": 13.8
+      "mile": 13.8,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.488982,
@@ -18324,7 +18353,9 @@
       "name": "Colony Market & Deli (mi 13.9)",
       "type": "Store",
       "label": "Colony Market & Deli",
-      "mile": 13.9
+      "mile": 13.9,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.457529,
@@ -18332,7 +18363,9 @@
       "name": "Three Bridges Oak Preserve Trailhead (mi 17.0)",
       "type": "Park",
       "label": "Three Bridges Oak Preserve Trailhead",
-      "mile": 17.0
+      "mile": 17.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.36939,
@@ -18340,7 +18373,9 @@
       "name": "Toilets (mi 31.0)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 31.0
+      "mile": 31.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.369233,
@@ -18348,7 +18383,9 @@
       "name": "La Parisienne French Bakery (mi 31.0)",
       "type": "Food",
       "label": "La Parisienne French Bakery",
-      "mile": 31.0
+      "mile": 31.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.369017,
@@ -18356,7 +18393,9 @@
       "name": "Morro Bay House of Jerky (mi 31.0)",
       "type": "Store",
       "label": "Morro Bay House of Jerky",
-      "mile": 31.0
+      "mile": 31.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.364249,
@@ -18364,7 +18403,9 @@
       "name": "Morro Bay Wine Seller (mi 31.3)",
       "type": "Winery",
       "label": "Morro Bay Wine Seller",
-      "mile": 31.3
+      "mile": 31.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.365104,
@@ -18372,7 +18413,19 @@
       "name": "Dutchman's Seafood House (mi 31.3)",
       "type": "Food",
       "label": "Dutchman's Seafood House",
-      "mile": 31.3
+      "mile": 31.3,
+      "hand_picked": true,
+      "detour_mi": null
+    },
+    {
+      "lat": 35.368007,
+      "lon": -120.854207,
+      "name": "Giovanni's Fish Market (mi 31.3)",
+      "type": "Food",
+      "label": "Giovanni's Fish Market",
+      "mile": 31.3,
+      "hand_picked": true,
+      "detour_mi": 0.3
     },
     {
       "lat": 35.366349,
@@ -18380,7 +18433,9 @@
       "name": "Morro Bay City Park (mi 31.7)",
       "type": "Park",
       "label": "Morro Bay City Park",
-      "mile": 31.7
+      "mile": 31.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.311277,
@@ -18388,7 +18443,9 @@
       "name": "Ralphs (mi 36.6)",
       "type": "Store",
       "label": "Ralphs",
-      "mile": 36.6
+      "mile": 36.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.310876,
@@ -18396,7 +18453,9 @@
       "name": "Ascendo (mi 36.6)",
       "type": "Food",
       "label": "Ascendo",
-      "mile": 36.6
+      "mile": 36.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.265065,
@@ -18404,7 +18463,9 @@
       "name": "Water (mi 44.4)",
       "type": "Water",
       "label": "Water",
-      "mile": 44.4
+      "mile": 44.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.263937,
@@ -18412,7 +18473,9 @@
       "name": "Toilets (mi 44.7)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 44.7
+      "mile": 44.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.257704,
@@ -18420,7 +18483,9 @@
       "name": "Nautical Bean Espresso Cafe (mi 45.3)",
       "type": "Food",
       "label": "Nautical Bean Espresso Cafe",
-      "mile": 45.3
+      "mile": 45.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.258463,
@@ -18428,7 +18493,9 @@
       "name": "Grocery Outlet (mi 45.3)",
       "type": "Store",
       "label": "Grocery Outlet",
-      "mile": 45.3
+      "mile": 45.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.254861,
@@ -18436,7 +18503,9 @@
       "name": "Water (mi 45.4)",
       "type": "Water",
       "label": "Water",
-      "mile": 45.4
+      "mile": 45.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.185782,
@@ -18444,7 +18513,9 @@
       "name": "Toilets (mi 51.2)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 51.2
+      "mile": 51.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.182805,
@@ -18452,7 +18523,9 @@
       "name": "Avila Valley Barn (mi 51.5)",
       "type": "Store",
       "label": "Avila Valley Barn",
-      "mile": 51.5
+      "mile": 51.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.169049,
@@ -18460,7 +18533,9 @@
       "name": "South Palisades Park (mi 52.6)",
       "type": "Park",
       "label": "South Palisades Park",
-      "mile": 52.6
+      "mile": 52.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.165052,
@@ -18468,7 +18543,9 @@
       "name": "Marisol (mi 53.1)",
       "type": "Food",
       "label": "Marisol",
-      "mile": 53.1
+      "mile": 53.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.160432,
@@ -18476,7 +18553,9 @@
       "name": "Water (mi 53.3)",
       "type": "Water",
       "label": "Water",
-      "mile": 53.3
+      "mile": 53.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.154442,
@@ -18484,7 +18563,9 @@
       "name": "Water (mi 54.6)",
       "type": "Water",
       "label": "Water",
-      "mile": 54.6
+      "mile": 54.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.144189,
@@ -18492,7 +18573,9 @@
       "name": "Price Street Market (mi 56.0)",
       "type": "Store",
       "label": "Price Street Market",
-      "mile": 56.0
+      "mile": 56.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.142776,
@@ -18500,7 +18583,9 @@
       "name": "Sans Liege (mi 56.2)",
       "type": "Winery",
       "label": "Sans Liege",
-      "mile": 56.2
+      "mile": 56.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.141123,
@@ -18508,7 +18593,19 @@
       "name": "Toilets (mi 56.2)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 56.2
+      "mile": 56.2,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 35.140062,
+      "lon": -120.642349,
+      "name": "Splash Cafe (mi 56.3)",
+      "type": "Food",
+      "label": "Splash Cafe",
+      "mile": 56.3,
+      "hand_picked": true,
+      "detour_mi": null
     },
     {
       "lat": 35.13909,
@@ -18516,7 +18613,9 @@
       "name": "Water (mi 56.6)",
       "type": "Water",
       "label": "Water",
-      "mile": 56.6
+      "mile": 56.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.107386,
@@ -18524,7 +18623,9 @@
       "name": "Old Juan’s Cantina (mi 59.0)",
       "type": "Food",
       "label": "Old Juan’s Cantina",
-      "mile": 59.0
+      "mile": 59.0,
+      "hand_picked": false,
+      "detour_mi": null
     }
   ],
   "water_gap_mi": 44.5,

@@ -214,6 +214,16 @@ def map_links(label, lat, lon):
             f"https://maps.apple.com/?q={q}&ll={ll}")
 
 
+def with_map_links(lodging):
+    """The night's hotel, plus map URLs. Named, so both maps resolve the
+    listing rather than dropping an unlabelled pin on a car park."""
+    if not lodging:
+        return None
+    out = dict(lodging)
+    out["google"], out["apple"] = map_links(out["name"], out["lat"], out["lon"])
+    return out
+
+
 def group_services(services):
     """Bucket a day's POIs by type, in SERVICE_GROUPS order, each sorted by
     distance along the route. Empty groups are dropped."""
@@ -341,6 +351,8 @@ def main():
                 "options": options,
                 "shade": day_shade.get("primary"),
                 "services": group_services(d.get("services", [])),
+                "lodging": with_map_links(d.get("lodging")),
+                "lodging_json": json.dumps(d.get("lodging")),
                 "towns_through": towns_by_day.get(str(n), []),
                 "notes": notes.get(str(n)),
                 "end_lat": round(end_lat, 4),

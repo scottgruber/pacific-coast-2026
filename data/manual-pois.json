@@ -1,13 +1,29 @@
 {
   "_comment": "Hand-picked POIs and hand-removed ones. 'exclude' drops a stop by name, per day, after somebody has looked at it - OSM tagging cannot tell you whether a place is worth stopping at. Everything else here is added verbatim and never thinned. Re-run scripts/add_services.py then scripts/prepare_gpx.py to apply changes. type must be one of Water, Toilets, Food, Store, Winery, Picnic, Scenic, Historic.",
-  "6": [
+  "2": [
     {
-      "name": "Los Olivos Wine Merchant & Cafe",
-      "lat": 34.6649614,
-      "lon": -120.1153533,
+      "name": "Steamer Lane Supply",
+      "lat": 36.9532385,
+      "lon": -122.0260906,
       "type": "Food",
       "sym": "Restaurant",
-      "note": "Los Olivos, on Grand Avenue."
+      "note": "698 West Cliff Dr, Santa Cruz, above Steamer Lane. Coffee and breakfast burritos; opens 08:00. A detour west out of town, not a stop on the line south."
+    },
+    {
+      "name": "Stagnaro Bros. Seafood",
+      "lat": 36.9582635,
+      "lon": -122.0177795,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "Santa Cruz Wharf. Clam chowder and fresh seafood. A detour out onto the wharf, not a stop on the line south."
+    },
+    {
+      "name": "Captain + Stoker",
+      "lat": 36.5994191,
+      "lon": -121.891808,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "398 E Franklin St, Monterey. Coffee and pastries; opens 6:30 weekdays, 7:30 weekends."
     }
   ],
   "5": [
@@ -18,6 +34,50 @@
       "type": "Food",
       "sym": "Restaurant",
       "note": "Morro Bay Embarcadero, at the harbour."
+    },
+    {
+      "name": "Giovanni's Fish Market",
+      "lat": 35.3680071,
+      "lon": -120.8542074,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "1001 Front St, Morro Bay Embarcadero. Fish tacos, chowder, oysters."
+    },
+    {
+      "name": "Splash Cafe",
+      "lat": 35.1400616,
+      "lon": -120.642349,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "195 Pomeroy Ave, Pismo Beach, a block off the pier. Clam chowder."
+    }
+  ],
+  "6": [
+    {
+      "name": "Los Olivos Wine Merchant & Cafe",
+      "lat": 34.6649614,
+      "lon": -120.1153533,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "Los Olivos, on Grand Avenue."
+    }
+  ],
+  "7": [
+    {
+      "name": "Boathouse at Hendry's Beach",
+      "lat": 34.4032101,
+      "lon": -119.7437913,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "2981 Cliff Dr, Santa Barbara, on Arroyo Burro beach. Open 7:30."
+    },
+    {
+      "name": "Chad's Cafe",
+      "lat": 34.4098927,
+      "lon": -119.6921939,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "216 W Cabrillo Blvd, Santa Barbara, across from the beach. Breakfast until 14:30."
     }
   ],
   "exclude": {

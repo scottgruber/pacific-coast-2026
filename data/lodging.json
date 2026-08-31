@@ -1,0 +1,51 @@
+{
+  "_comment": "Where each night is spent. HAND-MAINTAINED - no script writes here. Keyed by the town name in build_data.STOPS, not by day, because a hotel is the end of one day and the start of the next: writing it once means the two can never disagree. 'address' is shown as-is; 'lat'/'lon' drive the map marker and the map links, and are what the day page measures its 'x ft from the finish' against. A town with no entry simply shows no card for that night: Los Altos because day 1 starts from home. Leave a town out until its hotel is confirmed, and do not fill one in from a map lookup in the meantime - an unconfirmed address published as fact is worse than a blank, and the blank is what prompts somebody to go and confirm it.",
+  "Santa Cruz": {
+    "name": "Comfort Inn (North)",
+    "address": "110 Plymouth St, Santa Cruz, CA 95060",
+    "lat": 36.9848728,
+    "lon": -122.0229538
+  },
+  "Monterey": {
+    "name": "Mariposa Inn and Suites",
+    "address": "1386 Munras Ave, Monterey, CA 93940",
+    "lat": 36.5840601,
+    "lon": -121.9020392
+  },
+  "King City": {
+    "name": "Keefer's Inn",
+    "address": "615 Canal St, King City, CA 93930",
+    "lat": 36.2020756,
+    "lon": -121.1281933
+  },
+  "Paso Robles": {
+    "name": "Holiday Inn Express & Suites Paso Robles",
+    "address": "2455 Riverside Ave, Paso Robles, CA 93446",
+    "lat": 35.640735,
+    "lon": -120.6887886
+  },
+  "Oceano": {
+    "name": "Dune Surfer Inn",
+    "address": "1252 Pacific Blvd, Oceano, CA 93445",
+    "lat": 35.1069709,
+    "lon": -120.6237625
+  },
+  "Solvang": {
+    "name": "The Hadsten Solvang, Tapestry Collection by Hilton",
+    "address": "1450 Mission Dr, Solvang, CA 93463",
+    "lat": 34.5953117,
+    "lon": -120.1461882
+  },
+  "Ventura": {
+    "name": "Amanzi Hotel, an Ascend Collection Hotel",
+    "address": "298 S Chestnut St, Ventura, CA 93001",
+    "lat": 34.2775402,
+    "lon": -119.2906382
+  },
+  "Santa Monica": {
+    "name": "Ocean Lodge Santa Monica Beach Hotel",
+    "address": "1667 Ocean Ave, Santa Monica, CA 90401",
+    "lat": 34.0102762,
+    "lon": -118.492959
+  }
+}

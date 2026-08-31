@@ -2,6 +2,14 @@
    they inherit currentColor and need no extra request. All are decorative —
    the adjacent text carries the meaning — hence aria-hidden. #}
 
+{% macro icon_star() -%}
+<svg class="icon icon--star" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" focusable="false"><path d="m12 3.4 2.6 5.6 6 .8-4.4 4.2 1.1 6.1L12 17.2 6.7 20.1l1.1-6.1L3.4 9.8l6-.8Z"/></svg>
+{%- endmacro %}
+
+{% macro icon_bed() -%}
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 18V7"/><path d="M3 13h18v5"/><path d="M21 18v-4a3 3 0 0 0-3-3h-7v2"/><circle cx="7.5" cy="9.5" r="2"/></svg>
+{%- endmacro %}
+
 {% macro icon_map() -%}
 <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3 3 5.4v15.2L9 18l6 2.6 6-2.4V3l-6 2.4L9 3Z"/><path d="M9 3v15"/><path d="M15 5.4v15.2"/></svg>
 {%- endmacro %}

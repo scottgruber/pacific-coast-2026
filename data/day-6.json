@@ -5826,6 +5826,15 @@
   ],
   "options": [],
   "waypoints": [],
+  "lodging": {
+    "name": "The Hadsten Solvang, Tapestry Collection by Hilton",
+    "address": "1450 Mission Dr, Solvang, CA 93463",
+    "lat": 34.5953117,
+    "lon": -120.1461882,
+    "town": "Solvang",
+    "gap_mi": null,
+    "gap_km": null
+  },
   "services": [
     {
       "lat": 35.107386,
@@ -5833,7 +5842,9 @@
       "name": "Old Juan’s Cantina (mi 0.0)",
       "type": "Food",
       "label": "Old Juan’s Cantina",
-      "mile": 0.0
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.109481,
@@ -5841,7 +5852,9 @@
       "name": "Toilets (mi 0.0)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 0.0
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.106793,
@@ -5849,7 +5862,9 @@
       "name": "Johnson’s Market & Gifts (mi 0.0)",
       "type": "Store",
       "label": "Johnson’s Market & Gifts",
-      "mile": 0.0
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.10196,
@@ -5857,7 +5872,9 @@
       "name": "Oceano WW2 Memorial (mi 0.5)",
       "type": "Historic",
       "label": "Oceano WW2 Memorial",
-      "mile": 0.5
+      "mile": 0.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.021922,
@@ -5865,7 +5882,9 @@
       "name": "Cowgirl Cafe (mi 12.1)",
       "type": "Food",
       "label": "Cowgirl Cafe",
-      "mile": 12.1
+      "mile": 12.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.995781,
@@ -5873,7 +5892,9 @@
       "name": "Santa Maria Brewing Company (mi 16.1)",
       "type": "Winery",
       "label": "Santa Maria Brewing Company",
-      "mile": 16.1
+      "mile": 16.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.985294,
@@ -5881,7 +5902,9 @@
       "name": "Toilets (mi 16.9)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 16.9
+      "mile": 16.9,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.852801,
@@ -5889,7 +5912,9 @@
       "name": "Winery Riverbench (mi 33.5)",
       "type": "Winery",
       "label": "Winery Riverbench",
-      "mile": 33.5
+      "mile": 33.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.730777,
@@ -5897,7 +5922,9 @@
       "name": "Koehler Vinyard (mi 47.4)",
       "type": "Winery",
       "label": "Koehler Vinyard",
-      "mile": 47.4
+      "mile": 47.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.664961,
@@ -5905,7 +5932,9 @@
       "name": "Los Olivos Wine Merchant & Cafe (mi 52.9)",
       "type": "Food",
       "label": "Los Olivos Wine Merchant & Cafe",
-      "mile": 52.9
+      "mile": 52.9,
+      "hand_picked": true,
+      "detour_mi": null
     },
     {
       "lat": 34.622261,
@@ -5913,7 +5942,9 @@
       "name": "Buttonwood Farm Winery & Vineyard (mi 55.9)",
       "type": "Winery",
       "label": "Buttonwood Farm Winery & Vineyard",
-      "mile": 55.9
+      "mile": 55.9,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.607541,
@@ -5921,7 +5952,9 @@
       "name": "Sunny Fields Park (mi 57.0)",
       "type": "Park",
       "label": "Sunny Fields Park",
-      "mile": 57.0
+      "mile": 57.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.608023,
@@ -5929,7 +5962,9 @@
       "name": "Toilets (mi 57.0)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 57.0
+      "mile": 57.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.600144,
@@ -5937,7 +5972,9 @@
       "name": "Nielsen's (mi 57.7)",
       "type": "Store",
       "label": "Nielsen's",
-      "mile": 57.7
+      "mile": 57.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.594315,
@@ -5945,7 +5982,9 @@
       "name": "Mission Santa Inés (mi 58.1)",
       "type": "Historic",
       "label": "Mission Santa Inés",
-      "mile": 58.1
+      "mile": 58.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.596359,
@@ -5953,7 +5992,9 @@
       "name": "The Coffee House (mi 58.1)",
       "type": "Food",
       "label": "The Coffee House",
-      "mile": 58.1
+      "mile": 58.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.595877,
@@ -5961,7 +6002,9 @@
       "name": "Water (mi 58.8)",
       "type": "Water",
       "label": "Water",
-      "mile": 58.8
+      "mile": 58.8,
+      "hand_picked": false,
+      "detour_mi": null
     }
   ],
   "water_gap_mi": 58.7,

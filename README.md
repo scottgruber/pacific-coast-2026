@@ -44,6 +44,7 @@ each number comes from, for readers rather than maintainers.
 │   ├── towns.json           towns each day passes through (build_towns.py)
 │   ├── roster.json          riders + SAG crew          — HAND-MAINTAINED
 │   ├── notes.json           per-day highlights/cautions — HAND-MAINTAINED
+│   ├── lodging.json         the hotel for each night    — HAND-MAINTAINED
 │   └── manual-pois.json     stops OSM misses            — HAND-MAINTAINED
 ├── js/
 │   ├── config.js            Mapbox public token (see "Maps and the Mapbox token")
@@ -81,7 +82,7 @@ deployable output: the rendered HTML plus symlinks (`css`, `js`, `fonts`,
 self-contained folder you can serve from any path.
 
 Three files under `data/` are hand-maintained and never written by a script:
-`roster.json`, `notes.json` and `manual-pois.json`. Edits there survive any
+`roster.json`, `notes.json`, `lodging.json` and `manual-pois.json`. Edits there survive any
 rebuild.
 
 ## Building
@@ -267,7 +268,7 @@ route is never read against numbers from another.
 
 ## Route notes and hand-picked stops
 
-Two files under `data/` hold judgement rather than measurement, and no script
+Three files under `data/` hold judgement rather than measurement, and no script
 ever writes to them:
 
 `notes.json` — per-day "worth looking up for" and "what to watch for" lines,
@@ -292,6 +293,62 @@ deliberate pick is distinguishable from a scraped one on the device.
 
 `type` must be one of Water, Toilets, Food, Store, Winery, Picnic, Scenic or
 Historic. `sym` is a Garmin symbol name.
+
+Every entry here is drawn with a star on the day page. The star means the same
+thing as the "Added by hand" comment on the device: somebody looked this place
+up and chose it, as against the Overpass query returning whatever happened to
+be tagged nearby. It is not a claim that anyone has eaten there or checked the
+opening hours — nothing on the site is verified on the ground, and the note
+above the stops list says so.
+
+The flag is not a third field to keep in step: `add_services.py` stamps
+`HAND_PICKED_MARK` into the waypoint's `<cmt>`, and `build_data.py` reads that
+same constant back out of the GPX. The built track is what the page describes,
+so the two cannot disagree. The offset comes back out of the same comment.
+
+A hand-picked entry also skips the quarter-mile screen, which is the point of
+the file — but it means a stop here can sit a mile or two off the line and look,
+in a list of stops you ride past, exactly like one you don't have to detour for.
+Anything past `MAX_OFFSET_MI` therefore prints its distance under the name
+("1.8 mi off route"). Scraped stops never trip it; they were filtered on that
+same number before they got here. If a stop needs that line, it is worth asking
+whether it should be in the file at all: the two Santa Cruz wharf and West Cliff
+places are there because somebody asked for them by name, knowing the detour.
+
+## Lodging
+
+`data/lodging.json` is where each night is spent, keyed by the town name in
+`build_data.STOPS` rather than by day number. A hotel is the end of one day and
+the start of the next, so keying it by town means it is written once and the two
+days cannot disagree — the same reason `STOPS` holds each town once.
+
+A town with no entry shows no card for that night, and everything downstream
+degrades quietly: no marker, no distance, and the finish marker keeps its plain
+town-name popup. Los Altos has no entry because day 1 starts from home.
+
+Leave a town out until its hotel is actually confirmed, and **do not fill one in
+from a map lookup** in the meantime. An unconfirmed address published as fact is
+worse than a blank — the blank is what prompts somebody to go and confirm it,
+and everything else on this site is careful to say which numbers nobody has
+checked.
+
+```json
+{ "Ventura": { "name": "...", "address": "...", "lat": 0.0, "lon": 0.0 } }
+```
+
+`lat`/`lon` are not decoration. They place the map marker, they build the Google
+and Apple Maps links, and `build_data.py` measures them against the last point
+of the day's track. Most days were drawn to the hotel door, so that distance is
+a few dozen feet and goes unmentioned; where it is `LODGING_GAP_NOTABLE_MI` or
+more, the day page prints it ("0.6 mi past where the route stops") and the map
+draws the hotel as a separate hollow marker. Below the threshold no second
+marker is drawn at all — at any zoom that fits a day's route, it would land on
+the same pixel as the finish dot — and the finish marker's own popup names the
+hotel instead.
+
+So if a hotel changes, only the coordinate has to be right for the page to stay
+honest about the last half mile. Getting the address right but the coordinate
+wrong will silently move the marker and the distance.
 
 ### Removing a stop
 

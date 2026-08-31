@@ -5162,9 +5162,19 @@
       "lat": 36.5842,
       "lon": -121.90185,
       "name": "Mariposa Inn an",
-      "type": "GENERIC"
+      "type": "GENERIC",
+      "cmt": ""
     }
   ],
+  "lodging": {
+    "name": "Mariposa Inn and Suites",
+    "address": "1386 Munras Ave, Monterey, CA 93940",
+    "lat": 36.5840601,
+    "lon": -121.9020392,
+    "town": "Monterey",
+    "gap_mi": null,
+    "gap_km": null
+  },
   "services": [
     {
       "lat": 36.985049,
@@ -5172,7 +5182,9 @@
       "name": "Grant Park (mi 0.0)",
       "type": "Park",
       "label": "Grant Park",
-      "mile": 0.0
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.984901,
@@ -5180,7 +5192,9 @@
       "name": "Toilets (mi 0.0)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 0.0
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.983579,
@@ -5188,7 +5202,9 @@
       "name": "noodle time (mi 0.1)",
       "type": "Food",
       "label": "noodle time",
-      "mile": 0.1
+      "mile": 0.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.983487,
@@ -5196,7 +5212,9 @@
       "name": "Valero (mi 0.1)",
       "type": "Store",
       "label": "Valero",
-      "mile": 0.1
+      "mile": 0.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.982044,
@@ -5204,7 +5222,9 @@
       "name": "Grog Shop (mi 0.5)",
       "type": "Winery",
       "label": "Grog Shop",
-      "mile": 0.5
+      "mile": 0.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.978397,
@@ -5212,7 +5232,29 @@
       "name": "Santa Cruz Bicentennial Monument (mi 0.5)",
       "type": "Historic",
       "label": "Santa Cruz Bicentennial Monument",
-      "mile": 0.5
+      "mile": 0.5,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 36.953238,
+      "lon": -122.026091,
+      "name": "Steamer Lane Supply (mi 0.5)",
+      "type": "Food",
+      "label": "Steamer Lane Supply",
+      "mile": 0.5,
+      "hand_picked": true,
+      "detour_mi": 1.8
+    },
+    {
+      "lat": 36.958264,
+      "lon": -122.01778,
+      "name": "Stagnaro Bros. Seafood (mi 0.5)",
+      "type": "Food",
+      "label": "Stagnaro Bros. Seafood",
+      "mile": 0.5,
+      "hand_picked": true,
+      "detour_mi": 1.5
     },
     {
       "lat": 36.990699,
@@ -5220,7 +5262,9 @@
       "name": "Water (mi 3.1)",
       "type": "Water",
       "label": "Water",
-      "mile": 3.1
+      "mile": 3.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.985727,
@@ -5228,7 +5272,9 @@
       "name": "Water (mi 4.5)",
       "type": "Water",
       "label": "Water",
-      "mile": 4.5
+      "mile": 4.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.989187,
@@ -5236,7 +5282,9 @@
       "name": "AJ's Market (mi 5.5)",
       "type": "Store",
       "label": "AJ's Market",
-      "mile": 5.5
+      "mile": 5.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.987781,
@@ -5244,7 +5292,9 @@
       "name": "Toilets (mi 5.5)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 5.5
+      "mile": 5.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.981533,
@@ -5252,7 +5302,9 @@
       "name": "Water (mi 6.1)",
       "type": "Water",
       "label": "Water",
-      "mile": 6.1
+      "mile": 6.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.984658,
@@ -5260,7 +5312,9 @@
       "name": "Bangkok West (mi 6.3)",
       "type": "Food",
       "label": "Bangkok West",
-      "mile": 6.3
+      "mile": 6.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.972059,
@@ -5268,7 +5322,9 @@
       "name": "Water (mi 7.7)",
       "type": "Water",
       "label": "Water",
-      "mile": 7.7
+      "mile": 7.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.977833,
@@ -5276,7 +5332,9 @@
       "name": "Sante Archangeli Family Wines (mi 8.6)",
       "type": "Winery",
       "label": "Sante Archangeli Family Wines",
-      "mile": 8.6
+      "mile": 8.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.976468,
@@ -5284,7 +5342,9 @@
       "name": "Palm Deli (mi 9.5)",
       "type": "Store",
       "label": "Palm Deli",
-      "mile": 9.5
+      "mile": 9.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.947342,
@@ -5292,7 +5352,9 @@
       "name": "First High Altitude Aeroplane Flights (mi 12.6)",
       "type": "Historic",
       "label": "First High Altitude Aeroplane Flights",
-      "mile": 12.6
+      "mile": 12.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.942984,
@@ -5300,7 +5362,9 @@
       "name": "Toilets (mi 12.8)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 12.8
+      "mile": 12.8,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.932465,
@@ -5308,7 +5372,9 @@
       "name": "Water (mi 13.7)",
       "type": "Water",
       "label": "Water",
-      "mile": 13.7
+      "mile": 13.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.831494,
@@ -5316,7 +5382,9 @@
       "name": "Store (mi 24.6)",
       "type": "Store",
       "label": "Store",
-      "mile": 24.6
+      "mile": 24.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.815614,
@@ -5324,7 +5392,9 @@
       "name": "Toilets (mi 26.1)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 26.1
+      "mile": 26.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.799589,
@@ -5332,7 +5402,9 @@
       "name": "The Whole Enchilada (mi 27.2)",
       "type": "Food",
       "label": "The Whole Enchilada",
-      "mile": 27.2
+      "mile": 27.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.798951,
@@ -5340,7 +5412,9 @@
       "name": "Shakespeare Society of America (mi 27.4)",
       "type": "Historic",
       "label": "Shakespeare Society of America",
-      "mile": 27.4
+      "mile": 27.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.779612,
@@ -5348,7 +5422,9 @@
       "name": "Thistle Hut (mi 28.8)",
       "type": "Store",
       "label": "Thistle Hut",
-      "mile": 28.8
+      "mile": 28.8,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.693133,
@@ -5356,7 +5432,9 @@
       "name": "Walmart Supercenter (mi 36.3)",
       "type": "Store",
       "label": "Walmart Supercenter",
-      "mile": 36.3
+      "mile": 36.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.691643,
@@ -5364,7 +5442,9 @@
       "name": "Toilets (mi 36.3)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 36.3
+      "mile": 36.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.690627,
@@ -5372,7 +5452,9 @@
       "name": "Marina City Park (mi 36.5)",
       "type": "Park",
       "label": "Marina City Park",
-      "mile": 36.5
+      "mile": 36.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.686725,
@@ -5380,7 +5462,9 @@
       "name": "Starbucks (mi 36.6)",
       "type": "Food",
       "label": "Starbucks",
-      "mile": 36.6
+      "mile": 36.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.680091,
@@ -5388,7 +5472,9 @@
       "name": "English Ales Brewery (mi 37.2)",
       "type": "Winery",
       "label": "English Ales Brewery",
-      "mile": 37.2
+      "mile": 37.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.622523,
@@ -5396,7 +5482,9 @@
       "name": "Panera Bread (mi 41.9)",
       "type": "Food",
       "label": "Panera Bread",
-      "mile": 41.9
+      "mile": 41.9,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.623247,
@@ -5404,7 +5492,9 @@
       "name": "7-Eleven (mi 41.9)",
       "type": "Store",
       "label": "7-Eleven",
-      "mile": 41.9
+      "mile": 41.9,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.610085,
@@ -5412,7 +5502,9 @@
       "name": "Toilets (mi 43.8)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 43.8
+      "mile": 43.8,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.600481,
@@ -5420,7 +5512,9 @@
       "name": "Water (mi 45.8)",
       "type": "Water",
       "label": "Water",
-      "mile": 45.8
+      "mile": 45.8,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.601752,
@@ -5428,7 +5522,9 @@
       "name": "London Bridge Pub (mi 46.1)",
       "type": "Winery",
       "label": "London Bridge Pub",
-      "mile": 46.1
+      "mile": 46.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.602917,
@@ -5436,7 +5532,19 @@
       "name": "Monterey Customhouse (mi 46.1)",
       "type": "Historic",
       "label": "Monterey Customhouse",
-      "mile": 46.1
+      "mile": 46.1,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 36.599419,
+      "lon": -121.891808,
+      "name": "Captain + Stoker (mi 46.1)",
+      "type": "Food",
+      "label": "Captain + Stoker",
+      "mile": 46.1,
+      "hand_picked": true,
+      "detour_mi": null
     },
     {
       "lat": 36.596504,
@@ -5444,7 +5552,9 @@
       "name": "Trader Joe's (mi 46.5)",
       "type": "Store",
       "label": "Trader Joe's",
-      "mile": 46.5
+      "mile": 46.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.59729,
@@ -5452,7 +5562,9 @@
       "name": "Monterey State Historic Park (mi 46.5)",
       "type": "Park",
       "label": "Monterey State Historic Park",
-      "mile": 46.5
+      "mile": 46.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.583458,
@@ -5460,7 +5572,9 @@
       "name": "Starbucks (mi 47.6)",
       "type": "Food",
       "label": "Starbucks",
-      "mile": 47.6
+      "mile": 47.6,
+      "hand_picked": false,
+      "detour_mi": null
     }
   ],
   "water_gap_mi": 32.1,

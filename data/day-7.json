@@ -9027,9 +9027,19 @@
       "lat": 34.406056,
       "lon": -119.734583,
       "name": "Picnic Area (mi 49.6)",
-      "type": "Picnic"
+      "type": "Picnic",
+      "cmt": "Picnic at mile 49.6, 0.09 mi off route. Mapped in OpenStreetMap; not verified on the ground."
     }
   ],
+  "lodging": {
+    "name": "Amanzi Hotel, an Ascend Collection Hotel",
+    "address": "298 S Chestnut St, Ventura, CA 93001",
+    "lat": 34.2775402,
+    "lon": -119.2906382,
+    "town": "Ventura",
+    "gap_mi": null,
+    "gap_km": null
+  },
   "services": [
     {
       "lat": 34.597982,
@@ -9037,7 +9047,9 @@
       "name": "Hans Christian Andersen Park (mi 0.1)",
       "type": "Park",
       "label": "Hans Christian Andersen Park",
-      "mile": 0.1
+      "mile": 0.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.596187,
@@ -9045,7 +9057,9 @@
       "name": "Good Seed Coffee Roasters (mi 0.2)",
       "type": "Food",
       "label": "Good Seed Coffee Roasters",
-      "mile": 0.2
+      "mile": 0.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.595376,
@@ -9053,7 +9067,9 @@
       "name": "Sevtap Winery (mi 0.2)",
       "type": "Winery",
       "label": "Sevtap Winery",
-      "mile": 0.2
+      "mile": 0.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.599027,
@@ -9061,7 +9077,9 @@
       "name": "Toilets (mi 0.2)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 0.2
+      "mile": 0.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.5954,
@@ -9069,7 +9087,9 @@
       "name": "Peassants Deli & Market (mi 0.2)",
       "type": "Store",
       "label": "Peassants Deli & Market",
-      "mile": 0.2
+      "mile": 0.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.594315,
@@ -9077,7 +9097,9 @@
       "name": "Mission Santa Inés (mi 0.6)",
       "type": "Historic",
       "label": "Mission Santa Inés",
-      "mile": 0.6
+      "mile": 0.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.595877,
@@ -9085,7 +9107,9 @@
       "name": "Water (mi 0.6)",
       "type": "Water",
       "label": "Water",
-      "mile": 0.6
+      "mile": 0.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.533325,
@@ -9093,7 +9117,9 @@
       "name": "Toilets (mi 7.1)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 7.1
+      "mile": 7.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.487767,
@@ -9101,7 +9127,9 @@
       "name": "Fremont Foxon Historical Marker (mi 14.5)",
       "type": "Park",
       "label": "Fremont Foxon Historical Marker",
-      "mile": 14.5
+      "mile": 14.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.484965,
@@ -9109,7 +9137,9 @@
       "name": "Toilets (mi 14.7)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 14.7
+      "mile": 14.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.471915,
@@ -9117,7 +9147,9 @@
       "name": "Water (mi 15.6)",
       "type": "Water",
       "label": "Water",
-      "mile": 15.6
+      "mile": 15.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.463103,
@@ -9125,7 +9157,9 @@
       "name": "Toilets (mi 24.6)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 24.6
+      "mile": 24.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.465598,
@@ -9133,7 +9167,9 @@
       "name": "Water (mi 27.9)",
       "type": "Water",
       "label": "Water",
-      "mile": 27.9
+      "mile": 27.9,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.465465,
@@ -9141,7 +9177,9 @@
       "name": "Food (mi 28.1)",
       "type": "Food",
       "label": "Food",
-      "mile": 28.1
+      "mile": 28.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.43144,
@@ -9149,7 +9187,9 @@
       "name": "Toilets (mi 35.1)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 35.1
+      "mile": 35.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.431331,
@@ -9157,7 +9197,9 @@
       "name": "Site of WWII Japanese Attack (mi 35.2)",
       "type": "Historic",
       "label": "Site of WWII Japanese Attack",
-      "mile": 35.2
+      "mile": 35.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.43065,
@@ -9165,7 +9207,9 @@
       "name": "Sandpiper Grill (mi 35.6)",
       "type": "Food",
       "label": "Sandpiper Grill",
-      "mile": 35.6
+      "mile": 35.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.429688,
@@ -9173,7 +9217,9 @@
       "name": "Indo China Market (mi 37.7)",
       "type": "Store",
       "label": "Indo China Market",
-      "mile": 37.7
+      "mile": 37.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.429719,
@@ -9181,7 +9227,9 @@
       "name": "BevMo! (mi 37.7)",
       "type": "Winery",
       "label": "BevMo!",
-      "mile": 37.7
+      "mile": 37.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.425442,
@@ -9189,7 +9237,9 @@
       "name": "Water (mi 38.1)",
       "type": "Water",
       "label": "Water",
-      "mile": 38.1
+      "mile": 38.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.415053,
@@ -9197,7 +9247,9 @@
       "name": "Children's Park (mi 39.0)",
       "type": "Park",
       "label": "Children's Park",
-      "mile": 39.0
+      "mile": 39.0,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.414965,
@@ -9205,7 +9257,9 @@
       "name": "Water (mi 39.1)",
       "type": "Water",
       "label": "Water",
-      "mile": 39.1
+      "mile": 39.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.41642,
@@ -9213,7 +9267,9 @@
       "name": "Toilets (mi 40.1)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 40.1
+      "mile": 40.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.415262,
@@ -9221,7 +9277,9 @@
       "name": "Water (mi 40.3)",
       "type": "Water",
       "label": "Water",
-      "mile": 40.3
+      "mile": 40.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.414874,
@@ -9229,7 +9287,9 @@
       "name": "Courtyard Cafe (mi 40.7)",
       "type": "Food",
       "label": "Courtyard Cafe",
-      "mile": 40.7
+      "mile": 40.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.417068,
@@ -9237,7 +9297,9 @@
       "name": "Water (mi 41.3)",
       "type": "Water",
       "label": "Water",
-      "mile": 41.3
+      "mile": 41.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.440346,
@@ -9245,7 +9307,9 @@
       "name": "Eller's Donuts (mi 45.7)",
       "type": "Food",
       "label": "Eller's Donuts",
-      "mile": 45.7
+      "mile": 45.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.440023,
@@ -9253,7 +9317,9 @@
       "name": "Speedway (mi 46.1)",
       "type": "Store",
       "label": "Speedway",
-      "mile": 46.1
+      "mile": 46.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.436608,
@@ -9261,7 +9327,9 @@
       "name": "Toilets (mi 46.7)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 46.7
+      "mile": 46.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.401869,
@@ -9269,7 +9337,19 @@
       "name": "Douglas Family Preserve (mi 49.3)",
       "type": "Park",
       "label": "Douglas Family Preserve",
-      "mile": 49.3
+      "mile": 49.3,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 34.40321,
+      "lon": -119.743791,
+      "name": "Boathouse at Hendry's Beach (mi 49.3)",
+      "type": "Food",
+      "label": "Boathouse at Hendry's Beach",
+      "mile": 49.3,
+      "hand_picked": true,
+      "detour_mi": 0.3
     },
     {
       "lat": 34.402502,
@@ -9277,7 +9357,9 @@
       "name": "Vons (mi 50.2)",
       "type": "Store",
       "label": "Vons",
-      "mile": 50.2
+      "mile": 50.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.401712,
@@ -9285,7 +9367,9 @@
       "name": "The Cliff Room (mi 50.4)",
       "type": "Winery",
       "label": "The Cliff Room",
-      "mile": 50.4
+      "mile": 50.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.397085,
@@ -9293,7 +9377,9 @@
       "name": "Toilets (mi 51.7)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 51.7
+      "mile": 51.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.404064,
@@ -9301,7 +9387,9 @@
       "name": "West Campus Cafeteria (mi 52.1)",
       "type": "Food",
       "label": "West Campus Cafeteria",
-      "mile": 52.1
+      "mile": 52.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.404392,
@@ -9309,7 +9397,19 @@
       "name": "Water (mi 52.1)",
       "type": "Water",
       "label": "Water",
-      "mile": 52.1
+      "mile": 52.1,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 34.409893,
+      "lon": -119.692194,
+      "name": "Chad's Cafe (mi 52.9)",
+      "type": "Food",
+      "label": "Chad's Cafe",
+      "mile": 52.9,
+      "hand_picked": true,
+      "detour_mi": null
     },
     {
       "lat": 34.410211,
@@ -9317,7 +9417,9 @@
       "name": "Water (mi 53.2)",
       "type": "Water",
       "label": "Water",
-      "mile": 53.2
+      "mile": 53.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.418522,
@@ -9325,7 +9427,9 @@
       "name": "Tri-County Produce (mi 54.2)",
       "type": "Store",
       "label": "Tri-County Produce",
-      "mile": 54.2
+      "mile": 54.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.420057,
@@ -9333,7 +9437,9 @@
       "name": "Toilets (mi 57.5)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 57.5
+      "mile": 57.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.421452,
@@ -9341,7 +9447,9 @@
       "name": "Point Market (mi 59.1)",
       "type": "Store",
       "label": "Point Market",
-      "mile": 59.1
+      "mile": 59.1,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.406801,
@@ -9349,7 +9457,9 @@
       "name": "Padaro Beach Grill (mi 62.4)",
       "type": "Food",
       "label": "Padaro Beach Grill",
-      "mile": 62.4
+      "mile": 62.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.405042,
@@ -9357,7 +9467,9 @@
       "name": "Store (mi 63.4)",
       "type": "Store",
       "label": "Store",
-      "mile": 63.4
+      "mile": 63.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.398302,
@@ -9365,7 +9477,9 @@
       "name": "Sunburst Wine Bar (mi 64.2)",
       "type": "Winery",
       "label": "Sunburst Wine Bar",
-      "mile": 64.2
+      "mile": 64.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.398752,
@@ -9373,7 +9487,9 @@
       "name": "Toilets (mi 64.2)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 64.2
+      "mile": 64.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.383516,
@@ -9381,7 +9497,9 @@
       "name": "Carpinteria Bluffs III (mi 66.5)",
       "type": "Park",
       "label": "Carpinteria Bluffs III",
-      "mile": 66.5
+      "mile": 66.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.355797,
@@ -9389,7 +9507,9 @@
       "name": "Shoals Restaurant (mi 70.7)",
       "type": "Food",
       "label": "Shoals Restaurant",
-      "mile": 70.7
+      "mile": 70.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.345545,
@@ -9397,7 +9517,9 @@
       "name": "Water (mi 72.5)",
       "type": "Water",
       "label": "Water",
-      "mile": 72.5
+      "mile": 72.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.345569,
@@ -9405,7 +9527,9 @@
       "name": "Toilets (mi 72.5)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 72.5
+      "mile": 72.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.286119,
@@ -9413,7 +9537,9 @@
       "name": "Emma Wood State Beach (mi 79.7)",
       "type": "Park",
       "label": "Emma Wood State Beach",
-      "mile": 79.7
+      "mile": 79.7,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.281569,
@@ -9421,7 +9547,9 @@
       "name": "Water (mi 80.4)",
       "type": "Water",
       "label": "Water",
-      "mile": 80.4
+      "mile": 80.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.280337,
@@ -9429,7 +9557,9 @@
       "name": "Toilets (mi 80.6)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 80.6
+      "mile": 80.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.282391,
@@ -9437,7 +9567,9 @@
       "name": "Vons (mi 81.4)",
       "type": "Store",
       "label": "Vons",
-      "mile": 81.4
+      "mile": 81.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.281422,
@@ -9445,7 +9577,9 @@
       "name": "Burger King (mi 81.4)",
       "type": "Food",
       "label": "Burger King",
-      "mile": 81.4
+      "mile": 81.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.281324,
@@ -9453,7 +9587,9 @@
       "name": "Mission Chumash Barracks (mi 81.4)",
       "type": "Historic",
       "label": "Mission Chumash Barracks",
-      "mile": 81.4
+      "mile": 81.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.280978,
@@ -9461,7 +9597,9 @@
       "name": "Paddy's (mi 81.4)",
       "type": "Winery",
       "label": "Paddy's",
-      "mile": 81.4
+      "mile": 81.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 34.276051,
@@ -9469,7 +9607,9 @@
       "name": "Water (mi 82.3)",
       "type": "Water",
       "label": "Water",
-      "mile": 82.3
+      "mile": 82.3,
+      "hand_picked": false,
+      "detour_mi": null
     }
   ],
   "water_gap_mi": 19.3,

@@ -1,7 +1,7 @@
 <!-- GENERATED FILE — edit templates/day.html.jinja + data/day-N.json, then rerun scripts/generate_pages.py -->
 {% from "_nav.html.jinja" import render_nav %}
 {% from "_units.html.jinja" import unit %}
-{% from "_icons.html.jinja" import icon_map, icon_external, icon_conditions, icon_shade %}
+{% from "_icons.html.jinja" import icon_map, icon_external, icon_conditions, icon_shade, icon_star, icon_bed %}
 <!doctype html>
 <html lang="en">
 
@@ -133,6 +133,22 @@
         {% endif %}
       </figure>
       <aside class="route-aside" aria-label="Route notes">
+        {% if lodging %}
+        <section class="lodging" aria-labelledby="lodging-heading">
+          <h2 id="lodging-heading">{{ icon_bed() }} Tonight &mdash; {{ lodging.town }}</h2>
+          <p class="lodging__name">
+            <a href="{{ lodging.google }}" target="_blank" rel="noopener">{{ lodging.name }}</a>
+            <a class="lodging__apple" href="{{ lodging.apple }}"
+               target="_blank" rel="noopener" aria-label="{{ lodging.name }} in Apple Maps">&#8599;</a>
+          </p>
+          <p class="lodging__address">{{ lodging.address }}</p>
+          {#- Most days were drawn to the hotel door, so silence means "at the
+              finish". Only a gap worth riding gets a number. -#}
+          {% if lodging.gap_mi %}
+          <p class="lodging__gap">{{ unit(lodging.gap_mi, 'mi', lodging.gap_km, 'km') }} past where the route stops.</p>
+          {% endif %}
+        </section>
+        {% endif %}
         <figure class="elevation-card">
           <h2>Elevation profile</h2>
           {% if options %}
@@ -291,7 +307,11 @@
         Mapped in OpenStreetMap and carried in the GPX as waypoints, so they show on a
         head unit too. Distances are miles from the start. Tap a name for Google Maps,
         or the arrow for Apple Maps. Not verified on the ground &mdash; opening hours
-        and whether a tap actually runs are anyone&rsquo;s guess.
+        and whether a tap actually runs are anyone&rsquo;s guess. A
+        {{ icon_star() }}<span class="visually-hidden">star</span> marks a stop somebody
+        picked by hand and vouched for, rather than one the OpenStreetMap query happened
+        to return. Everything else here is within a quarter mile of the line; the few
+        that are further say how far.
       </p>
       <div class="stops__groups">
         {% for g in services %}
@@ -301,8 +321,19 @@
             {% for s in g.stops %}
             <li>
               <span class="stop__mile">{{ '%.1f'|format(s.mile) }}</span>
-              <a class="stop__name" href="{{ s.google }}"
-                 target="_blank" rel="noopener">{{ s.label }}</a>
+              {#- Name and star share one grid cell: the row's three columns are
+                  mile / name / Apple arrow, and a fourth child would push the
+                  arrow out of place on every row that has no star. -#}
+              <span class="stop__label">
+                <a class="stop__name" href="{{ s.google }}"
+                   target="_blank" rel="noopener">{{ s.label }}</a>
+                {%- if s.hand_picked %}
+                <span class="stop__star">{{ icon_star() }}<span class="visually-hidden">Hand-picked</span></span>
+                {%- endif %}
+                {%- if s.detour_mi %}
+                <span class="stop__detour">{{ s.detour_mi }} mi off route</span>
+                {%- endif %}
+              </span>
               <a class="stop__apple" href="{{ s.apple }}"
                  target="_blank" rel="noopener" aria-label="{{ s.label }} in Apple Maps">&#8599;</a>
             </li>
@@ -349,6 +380,7 @@
     window.__towns = {{ towns_json|safe }};
     window.__waypoints = {{ waypoints_json|safe }};
     window.__options = {{ options_json|safe }};
+    window.__lodging = {{ lodging_json|safe }};
   </script>
   <script src="{{ asset('js/config.js') }}"></script>
   <script src="{{ asset('js/basemap.js') }}"></script>

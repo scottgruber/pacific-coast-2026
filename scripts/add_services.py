@@ -50,6 +50,11 @@ TIMEOUT_S = 120
 # Overpass is free and shared. Be a good citizen between days.
 SLEEP_BETWEEN_DAYS_S = 12
 
+# Stamped into a hand-picked stop's <cmt> so provenance survives into the GPX,
+# where the head unit shows it, and back out again in build_data.py, where it
+# becomes the star on the day page. Change it here and both follow.
+HAND_PICKED_MARK = "Added by hand."
+
 # What to look for, and how each is presented. Ordered by resupply value
 # within a category: when several fall close together only the best survives
 # thinning, so a supermarket beats a corner shop and a shop beats a cafe.
@@ -396,7 +401,7 @@ def write_waypoints(path, services):
             notes += " Fee."
         # Provenance matters on the device: an OSM-derived point may be stale
         # or mistagged, whereas a hand-picked one was chosen deliberately.
-        source = ("Added by hand." if s.get("manual")
+        source = (HAND_PICKED_MARK if s.get("manual")
                   else "Mapped in OpenStreetMap; not verified on the ground.")
         ET.SubElement(wpt, NS + "cmt").text = (
             f"{kind} at mile {s['mile']:.1f}{off}.{notes} {source}"

@@ -603,7 +603,8 @@ html.metric .unit-pair__metric {
 }
 
 .elevation-card,
-.climb-card {
+.climb-card,
+.lodging {
   border-radius: var(--border-radius);
   border: var(--border-width-thin) solid var(--color-surface-border);
   background: var(--color-surface);
@@ -612,6 +613,7 @@ html.metric .unit-pair__metric {
 
 .elevation-card h2,
 .climb-card h2,
+.lodging h2,
 .map-card h2 {
   font-size: var(--font-size-small);
   font-weight: 600;
@@ -621,6 +623,38 @@ html.metric .unit-pair__metric {
   color: var(--color-text-muted);
   margin-bottom: var(--spacing-small);
   font-family: var(--font-family-default);
+}
+
+/* The night's hotel, in the route aside beside the elevation profile. Shares
+   the card and heading rules above, so it needs only its own contents. */
+.lodging h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+}
+
+.lodging__name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.lodging__apple {
+  text-decoration: none;
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+.lodging__address,
+.lodging__gap {
+  margin: 0.15rem 0 0;
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+/* Only rendered when the route stops short of the door, so it is a fact about
+   the ride rather than a footnote — give it the accent the water card uses. */
+.lodging__gap {
+  color: var(--color-accent-rust);
 }
 
 .elevation-card svg {
@@ -1439,6 +1473,40 @@ html.metric .unit-pair__metric {
   font-variant-numeric: tabular-nums;
   color: var(--color-text-muted);
   text-align: right;
+}
+
+.stop__label {
+  min-width: 0;
+}
+
+/* A hand-picked stop gets a star: somebody looked it up and vouched for it,
+   as against the OpenStreetMap query returning whatever was tagged nearby.
+   Rust rather than the text colour so it reads at a glance down a list, and
+   sized in em so it tracks the name it sits beside. */
+.stop__star {
+  color: var(--color-accent-rust);
+}
+
+/* Only ever appears on a hand-picked stop: those skip the quarter-mile
+   screen, so one can sit miles off the line while looking, in a list, exactly
+   like a stop you ride past. */
+.stop__detour {
+  color: var(--color-text-muted);
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+.stop__star .icon {
+  width: 0.85em;
+  height: 0.85em;
+  vertical-align: -0.05em;
+}
+
+.stops__note .icon--star {
+  width: 0.9em;
+  height: 0.9em;
+  color: var(--color-accent-rust);
+  vertical-align: -0.08em;
 }
 
 .stop__apple {

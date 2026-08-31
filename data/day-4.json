@@ -6475,6 +6475,15 @@
   ],
   "options": [],
   "waypoints": [],
+  "lodging": {
+    "name": "Holiday Inn Express & Suites Paso Robles",
+    "address": "2455 Riverside Ave, Paso Robles, CA 93446",
+    "lat": 35.640735,
+    "lon": -120.6887886,
+    "town": "Paso Robles",
+    "gap_mi": 0.2,
+    "gap_km": 0.4
+  },
   "services": [
     {
       "lat": 36.206815,
@@ -6482,7 +6491,9 @@
       "name": "King City Station (mi 0.3)",
       "type": "Historic",
       "label": "King City Station",
-      "mile": 0.3
+      "mile": 0.3,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.205937,
@@ -6490,7 +6501,9 @@
       "name": "Toilets (mi 0.4)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 0.4
+      "mile": 0.4,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 36.192344,
@@ -6498,7 +6511,9 @@
       "name": "Pine Canyon Store (mi 1.6)",
       "type": "Store",
       "label": "Pine Canyon Store",
-      "mile": 1.6
+      "mile": 1.6,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.742187,
@@ -6506,7 +6521,9 @@
       "name": "Orange Cat Organic Cafe (mi 48.2)",
       "type": "Food",
       "label": "Orange Cat Organic Cafe",
-      "mile": 48.2
+      "mile": 48.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.74141,
@@ -6514,7 +6531,9 @@
       "name": "Oak Hill Market (mi 48.2)",
       "type": "Store",
       "label": "Oak Hill Market",
-      "mile": 48.2
+      "mile": 48.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.742957,
@@ -6522,7 +6541,9 @@
       "name": "Toilets (mi 48.2)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 48.2
+      "mile": 48.2,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.638703,
@@ -6530,7 +6551,9 @@
       "name": "7-Eleven (mi 62.5)",
       "type": "Store",
       "label": "7-Eleven",
-      "mile": 62.5
+      "mile": 62.5,
+      "hand_picked": false,
+      "detour_mi": null
     },
     {
       "lat": 35.639935,
@@ -6538,7 +6561,9 @@
       "name": "KFC (mi 62.5)",
       "type": "Food",
       "label": "KFC",
-      "mile": 62.5
+      "mile": 62.5,
+      "hand_picked": false,
+      "detour_mi": null
     }
   ],
   "water_gap_mi": 62.6,
