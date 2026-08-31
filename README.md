@@ -290,8 +290,64 @@ deliberate pick is distinguishable from a scraped one on the device.
            "type": "Food", "sym": "Restaurant", "note": "..." } ] }
 ```
 
-`type` must be one of Water, Toilets, Food, Store, Scenic, Historic. `sym` is a
-Garmin symbol name.
+`type` must be one of Water, Toilets, Food, Store, Winery, Picnic, Scenic or
+Historic. `sym` is a Garmin symbol name.
+
+### Removing a stop
+
+No filter can tell you whether somewhere is worth stopping at. OSM will happily
+report a rock formation as a tourist attraction, a bare place-name marker as a
+historic site, and a roadside memorial to a named individual as somewhere to
+visit. `add_services.py` screens out what it can — see "Stops" below — but the
+rest needs a human who has looked.
+
+Add the name under `exclude` in the same file, keyed by day. Matched
+case-insensitively against the label shown on the page:
+
+```json
+{
+  "exclude": {
+    "5": ["MB"],
+    "7": ["Jude Martin Keefer", "Lil' Toot Boat Tours"]
+  }
+}
+```
+
+### Applying changes
+
+After editing either section:
+
+```bash
+python3 scripts/add_services.py 5 6   # day numbers optional; omit for all
+python3 scripts/prepare_gpx.py 5 6
+python3 scripts/build_data.py
+python3 scripts/generate_pages.py
+```
+
+Pass day numbers to spare the Overpass rate limit when only one day changed.
+
+To see what a day currently lists:
+
+```bash
+python3 -c "import json;d=json.load(open('data/day-5.json'));[print(f\"{s['type']:<9} mi {s['mile']:5.1f}  {s['label']}\") for s in d['services']]"
+```
+
+### What the filters already screen out
+
+- Toilets with restricted access, and any operated by a school, college,
+  church or club.
+- Scenic, historic and picnic entries with no positive evidence they are
+  somewhere you can stop — they need a Wikipedia or Wikidata entry, or to be a
+  park or museum, or to have facilities such as benches, water or opening
+  hours. When in doubt they are left out.
+- Anything more than a quarter mile off the route.
+- Clusters: one stop per category per 1.5–2.5 miles, keeping the most useful
+  member. Water is thinned only at half a mile, so no isolated source is lost.
+
+Stops with generic names ("Picnic", "Toilets") link to their coordinate rather
+than a map search. A search for a common word can resolve somewhere else
+entirely — this is how a "Picnic" link on day 5 once opened fifty miles up the
+coast.
 
 ## Shade
 
