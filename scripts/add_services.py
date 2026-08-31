@@ -94,6 +94,21 @@ CATEGORIES = {
                                         priority=3, spacing_mi=3.0, named_only=True),
 }
 
+# amenity=toilets says a toilet exists, not that a passing cyclist may use it.
+# Auditing the route turned up private units, permit-only beach facilities, and
+# six separate toilet nodes inside Santa Barbara City College - none of them
+# any use on a ride, and a waypoint that sends someone onto a school campus is
+# worse than no waypoint at all.
+#
+# access=customers is kept and labelled: buying a coffee is a fair trade, and
+# in practice a cafe is the most reliable restroom on any of these routes.
+BLOCKED_ACCESS = {"private", "no", "permit", "key", "military", "delivery"}
+CUSTOMER_ACCESS = {"customers", "customer"}
+# Matched against name and operator. A toilet run by one of these is on
+# somebody's campus, not by the road.
+BLOCKED_OPERATOR_WORDS = ("school", "college", "university", "academy",
+                          "church", "private", "country club")
+
 SERVICE_TYPES = {k: v["type"] for k, v in CATEGORIES.items()}
 ALL_TYPES = sorted({v["type"] for v in CATEGORIES.values()})
 
@@ -107,7 +122,7 @@ QUERY = """[out:json][timeout:120];
   node["historic"~"^(monument|memorial|ruins|building)$"](%(bbox)s);
   way["historic"~"^(monument|memorial|ruins|building)$"](%(bbox)s);
 );
-out center;"""
+out center tags;"""
 
 
 def haversine_mi(a, b):
@@ -182,6 +197,16 @@ def find_services(route):
         name = (tags.get("name") or "").strip()
         if cfg.get("named_only") and not name:
             continue
+
+        # Access filtering, for toilets above all.
+        access = (tags.get("access") or "").strip().lower()
+        if access in BLOCKED_ACCESS:
+            continue
+        blob = f"{name} {tags.get('operator', '')}".lower()
+        if any(w in blob for w in BLOCKED_OPERATOR_WORDS):
+            continue
+        customers_only = access in CUSTOMER_ACCESS
+        fee = (tags.get("fee") or "").strip().lower() == "yes"
         dists = [haversine_mi((lat, lon), (p[0], p[1])) for p in route]
         offset_mi = min(dists)
         if offset_mi > MAX_OFFSET_MI:
@@ -190,6 +215,7 @@ def find_services(route):
         found.append({
             "lat": lat, "lon": lon, "name": name,
             "type": cfg["type"], "sym": cfg["sym"],
+            "customers_only": customers_only, "fee": fee,
             "priority": cfg["priority"], "spacing_mi": cfg["spacing_mi"],
             "mile": round(cum[i], 1), "offset_mi": round(offset_mi, 2),
         })
@@ -236,9 +262,14 @@ def write_waypoints(path, services):
         label = s["name"] or kind
         ET.SubElement(wpt, NS + "name").text = f"{label} (mi {s['mile']:.1f})"
         off = f", {s['offset_mi']:.2f} mi off route" if s["offset_mi"] >= 0.02 else ""
+        notes = ""
+        if s.get("customers_only"):
+            notes += " Customers only."
+        if s.get("fee"):
+            notes += " Fee."
         ET.SubElement(wpt, NS + "cmt").text = (
-            f"{kind} at mile {s['mile']:.1f}{off}. Mapped in OpenStreetMap; "
-            f"not verified on the ground."
+            f"{kind} at mile {s['mile']:.1f}{off}.{notes} Mapped in "
+            f"OpenStreetMap; not verified on the ground."
         )
         ET.SubElement(wpt, NS + "desc").text = kind
         ET.SubElement(wpt, NS + "sym").text = s["sym"]

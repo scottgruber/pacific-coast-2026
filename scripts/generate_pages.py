@@ -12,6 +12,7 @@ import json
 import math
 import os
 import shutil
+import urllib.parse
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
@@ -174,6 +175,29 @@ SERVICE_GROUPS = [
 ]
 
 
+def map_links(label, lat, lon):
+    """Google and Apple Maps URLs for a stop.
+
+    Both take the place name as well as the coordinate, which matters: a bare
+    lat/lon drops a pin on a blank spot with no name, hours, or photos, while
+    the name resolves to the actual listing. Apple takes them as separate
+    parameters (`q` labels the pin, `ll` places it); Google has no equivalent,
+    so the name and coordinate go into one query string, which resolves to the
+    POI when it is listed and falls back to the coordinate when it is not.
+
+    A generic label ("Toilets", "Water") is no help to either, so those fall
+    back to the coordinate alone rather than searching for the word."""
+    ll = f"{lat:.5f},{lon:.5f}"
+    generic = label.strip().lower() in {"water", "toilets", "food", "store",
+                                        "scenic", "historic", ""}
+    if generic:
+        return (f"https://www.google.com/maps/search/?api=1&query={ll}",
+                f"https://maps.apple.com/?q={ll}&ll={ll}")
+    name = urllib.parse.quote(label)
+    return (f"https://www.google.com/maps/search/?api=1&query={urllib.parse.quote(label + ' ' + ll)}",
+            f"https://maps.apple.com/?q={name}&ll={ll}")
+
+
 def group_services(services):
     """Bucket a day's POIs by type, in SERVICE_GROUPS order, each sorted by
     distance along the route. Empty groups are dropped."""
@@ -183,7 +207,7 @@ def group_services(services):
         if not stops:
             continue
         for s in stops:
-            s["ll"] = f"{s['lat']:.5f},{s['lon']:.5f}"
+            s["google"], s["apple"] = map_links(s["label"], s["lat"], s["lon"])
         # Not "items": Jinja resolves g.items to the dict's own .items method.
         out.append({"key": key.lower(), "label": label, "stops": stops})
     return out
@@ -212,6 +236,11 @@ def main():
     # every build. Days without an entry simply omit the shade card.
     shade_path = DATA_DIR / "shade.json"
     shade = json.loads(shade_path.read_text()) if shade_path.exists() else {}
+    towns_path = DATA_DIR / "towns.json"
+    towns_by_day = json.loads(towns_path.read_text()) if towns_path.exists() else {}
+    # Hand-maintained prose, never generated — see the note inside the file.
+    notes_path = DATA_DIR / "notes.json"
+    notes = json.loads(notes_path.read_text()) if notes_path.exists() else {}
 
     trip_start = overview["trip_start"]
     trip_end = overview["trip_end"]
@@ -296,6 +325,8 @@ def main():
                 "options": options,
                 "shade": day_shade.get("primary"),
                 "services": group_services(d.get("services", [])),
+                "towns_through": towns_by_day.get(str(n), []),
+                "notes": notes.get(str(n)),
                 "end_lat": round(end_lat, 4),
                 "end_lon": round(end_lon, 4),
                 "route_json": json.dumps(d["route"]),

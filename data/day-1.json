@@ -5772,8 +5772,8 @@
       "mile": 11.8
     },
     {
-      "lat": 37.265873,
-      "lon": -122.030166,
+      "lat": 37.265998,
+      "lon": -122.029946,
       "name": "Water (mi 11.8)",
       "type": "Water",
       "label": "Water",
@@ -5882,14 +5882,6 @@
       "type": "Store",
       "label": "Summit Store",
       "mile": 29.1
-    },
-    {
-      "lat": 37.061164,
-      "lon": -121.941664,
-      "name": "Toilets (mi 34.9)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 34.9
     },
     {
       "lat": 37.05886,

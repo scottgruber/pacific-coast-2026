@@ -1437,3 +1437,84 @@ html.metric .unit-pair__metric {
   font-size: 1.05em;
   line-height: 1;
 }
+
+/* Day brief: highlights, cautions, towns
+   ------------------------------------------------------------------------ */
+
+.brief {
+  margin-top: var(--spacing-large, 2rem);
+  padding-top: var(--spacing-default);
+  border-top: var(--border-width-thin) solid var(--color-surface-border);
+}
+
+.brief__cols {
+  display: grid;
+  gap: var(--spacing-default);
+  margin-bottom: var(--spacing-default);
+}
+
+@media (min-width: 46em) {
+  .brief__cols {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.brief-card {
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  padding: var(--spacing-default);
+}
+
+/* The two cards say opposite things, so they are edged differently rather
+   than relying on the heading alone to tell them apart. */
+.brief-card--good { border-left: var(--border-width-thick) solid var(--color-accent-pink); }
+.brief-card--watch { border-left: var(--border-width-thick) solid var(--color-accent-rust); }
+
+.brief-card h3,
+.towns h3 {
+  margin: 0 0 var(--spacing-small);
+  font-size: var(--font-size-x-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.brief-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.4rem;
+  font-size: var(--font-size-small);
+}
+
+.towns__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+}
+
+.towns__list li {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  font-size: var(--font-size-small);
+}
+
+.towns__mile {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-x-small);
+}
+
+.towns__off {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-x-small);
+}

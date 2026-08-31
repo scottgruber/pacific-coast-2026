@@ -1,0 +1,84 @@
+{
+  "_comment": "Hand-maintained per-day notes. Not generated — build_data.py never touches this file, so edits here survive a rebuild. 'watch' items are things to plan around; 'highlights' are things worth looking up for. Every figure quoted here came from data/day-N.json, data/shade.json or the route analysis, so if a route changes, re-check the numbers.",
+  "1": {
+    "highlights": [
+      "Leaves Los Altos through the Santa Cruz Mountains — the redwood miles are the shadiest of the whole trip at 18%.",
+      "Descends to the coast at Santa Cruz; Capitola is a short detour off the end."
+    ],
+    "watch": [
+      "The one sustained climb is mi 22.5–24.8, 639 ft at 5.3%. It comes when legs are fresh but it is the day's crux.",
+      "Mountain roads are narrow with blind bends — ride single file where there is no shoulder."
+    ]
+  },
+  "2": {
+    "highlights": [
+      "Flat coastal day along Monterey Bay, the gentlest climbing of the trip at 1,640 ft.",
+      "Moss Landing sits right on the route at roughly halfway — a good lunch stop."
+    ],
+    "watch": [
+      "Nothing steeper than 3.5%, so the day is about wind rather than gradient. Afternoon headwinds along the bay are normal."
+    ]
+  },
+  "3": {
+    "highlights": [
+      "Carmel Valley Village is on the route early; Carmel-by-the-Sea is 0.6 mi off.",
+      "The shadiest of the inland days at 24% tree cover — three times the alternate route."
+    ],
+    "watch": [
+      "Longest day so far at 70.5 mi with 3,987 ft. The long grind is mi 30.5–34.3, 825 ft at 4.1%.",
+      "Only two mapped water points, and a 57 mi stretch without one. Carry for the whole day.",
+      "Carmel Valley Road is narrow with fast traffic and little shoulder in places."
+    ]
+  },
+  "4": {
+    "highlights": [
+      "Remote oak country through Jolon and the Nacimiento backcountry — the quietest riding of the trip, with almost no traffic.",
+      "Lake Nacimiento appears on the descent toward Paso Robles."
+    ],
+    "watch": [
+      "The hardest day: 62.6 mi, 4,005 ft, and only 4% shade. Start as early as you can.",
+      "No mapped water anywhere on the route, and effectively nothing between mile 1 and mile 48. This is the day the SAG car matters most.",
+      "Steepest sustained pitch of the trip at mi 42.2–43.8, 639 ft at 7.5% — and it comes late."
+    ]
+  },
+  "5": {
+    "highlights": [
+      "Crosses the coast range on Highway 41 and drops to Morro Bay, then runs south past Los Osos.",
+      "Templeton and Los Osos are both on the route; Morro Rock is the landmark at the coast."
+    ],
+    "watch": [
+      "The Highway 41 climb is mi 17.6–19.0, 388 ft at 5.4% — steady rather than steep.",
+      "Highway 41 over the grade is two lanes with modest shoulders and carries truck traffic between US-101 and Highway 1."
+    ]
+  },
+  "6": {
+    "highlights": [
+      "The best day for small towns: Arroyo Grande Village, Nipomo, Sisquoc, Los Olivos and Ballard are all on or near the route.",
+      "Finishes in Solvang, with Los Olivos only a few miles before it."
+    ],
+    "watch": [
+      "No mapped tree cover anywhere on the route — 0%. Shops and cafés are frequent, but shade is not.",
+      "Late climb at mi 43.5–44.4, 301 ft at 6.6%, when the day is nearly done."
+    ]
+  },
+  "7": {
+    "highlights": [
+      "The coastal miles are the prettiest of the trip: Gaviota, Refugio, El Capitán, then Santa Barbara and Carpinteria.",
+      "Best-served day by far — 35 water points and the shortest dry stretch at 19 mi."
+    ],
+    "watch": [
+      "Longest day of the trip at 82.4 mi, but the climbing is front-loaded: the hardest pitch is mi 4.4–5.2 at 5.9%, and it eases after.",
+      "Sections of US-101 through the Gaviota corridor are ridden on the freeway shoulder."
+    ]
+  },
+  "8": {
+    "highlights": [
+      "Final day down the coast through Ventura and Malibu into Santa Monica.",
+      "Second-flattest day of the trip at 1,661 ft."
+    ],
+    "watch": [
+      "Pacific Coast Highway traffic is heavy and fast, especially through Malibu on a Saturday.",
+      "Only real climb is mi 38.6–39.3, 185 ft at 5.1%."
+    ]
+  }
+}

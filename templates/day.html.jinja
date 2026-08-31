@@ -241,6 +241,45 @@
 
     {% endif %}
 
+    {% if notes or towns_through %}
+    <section class="brief" aria-labelledby="brief-heading">
+      <h2 id="brief-heading">The day at a glance</h2>
+      <div class="brief__cols">
+        {% if notes and notes.highlights %}
+        <div class="brief-card brief-card--good">
+          <h3>Worth looking up for</h3>
+          <ul role="list">
+            {% for h in notes.highlights %}<li>{{ h }}</li>{% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        {% if notes and notes.watch %}
+        <div class="brief-card brief-card--watch">
+          <h3>What to watch for</h3>
+          <ul role="list">
+            {% for w in notes.watch %}<li>{{ w }}</li>{% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+
+      {% if towns_through %}
+      <div class="towns">
+        <h3>Towns along the way</h3>
+        <ol class="towns__list" role="list">
+          {% for t in towns_through %}
+          <li>
+            <span class="towns__mile">{{ '%.0f'|format(t.mile) }}</span>
+            <span class="towns__name">{{ t.name }}</span>
+            {% if t.offset_mi >= 0.5 %}<span class="towns__off">{{ '%.1f'|format(t.offset_mi) }} mi off</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+      {% endif %}
+    </section>
+    {% endif %}
+
     {% if services %}
     <section class="stops" aria-labelledby="stops-heading">
       <h2 id="stops-heading">Stops along the way</h2>
@@ -258,9 +297,9 @@
             {% for s in g.stops %}
             <li>
               <span class="stop__mile">{{ '%.1f'|format(s.mile) }}</span>
-              <a class="stop__name" href="https://www.google.com/maps/search/?api=1&amp;query={{ s.ll }}"
+              <a class="stop__name" href="{{ s.google }}"
                  target="_blank" rel="noopener">{{ s.label }}</a>
-              <a class="stop__apple" href="https://maps.apple.com/?q={{ s.ll }}"
+              <a class="stop__apple" href="{{ s.apple }}"
                  target="_blank" rel="noopener" aria-label="{{ s.label }} in Apple Maps">&#8599;</a>
             </li>
             {% endfor %}

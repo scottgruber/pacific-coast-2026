@@ -9217,14 +9217,6 @@
       "mile": 39.2
     },
     {
-      "lat": 34.418027,
-      "lon": -119.856383,
-      "name": "Water (mi 39.4)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 39.4
-    },
-    {
       "lat": 34.417611,
       "lon": -119.85284,
       "name": "Water (mi 39.7)",
@@ -9697,11 +9689,11 @@
       "mile": 81.4
     },
     {
-      "lat": 34.281168,
-      "lon": -119.298562,
-      "name": "Old Mission Church Foundation (mi 81.4)",
+      "lat": 34.281324,
+      "lon": -119.298772,
+      "name": "Mission Chumash Barracks (mi 81.4)",
       "type": "Historic",
-      "label": "Old Mission Church Foundation",
+      "label": "Mission Chumash Barracks",
       "mile": 81.4
     },
     {

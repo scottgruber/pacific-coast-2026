@@ -5860,14 +5860,6 @@
       "mile": 0.5
     },
     {
-      "lat": 35.028217,
-      "lon": -120.498091,
-      "name": "Toilets (mi 11.4)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 11.4
-    },
-    {
       "lat": 35.021922,
       "lon": -120.488489,
       "name": "Cowgirl Cafe (mi 12.1)",
@@ -5890,14 +5882,6 @@
       "type": "Toilets",
       "label": "Toilets",
       "mile": 16.9
-    },
-    {
-      "lat": 34.638839,
-      "lon": -120.114181,
-      "name": "Ballard School (mi 54.9)",
-      "type": "Historic",
-      "label": "Ballard School",
-      "mile": 54.9
     },
     {
       "lat": 34.608023,
