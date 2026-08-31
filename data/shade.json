@@ -1,4 +1,518 @@
 {
+ "1": {
+  "primary": {
+   "date": "2026-09-05",
+   "hour_local": 15,
+   "label": "primary",
+   "pct_any_shade": 18,
+   "pct_canopy": 18,
+   "pct_terrain": 0,
+   "samples": [
+    {
+     "canopy": false,
+     "horizon_deg": 1.5,
+     "mile": 0.0,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.7,
+     "mile": 1.04,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 2.8,
+     "mile": 3.8,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.7,
+     "mile": 4.89,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.3,
+     "mile": 6.12,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.9,
+     "mile": 7.15,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.9,
+     "mile": 8.9,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.6,
+     "mile": 9.98,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.2,
+     "mile": 11.76,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 8.3,
+     "mile": 12.88,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.7,
+     "mile": 13.89,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 7.1,
+     "mile": 15.01,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.7,
+     "mile": 16.23,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 14.5,
+     "mile": 17.26,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 5.5,
+     "mile": 18.28,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 5.1,
+     "mile": 19.31,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.6,
+     "mile": 20.32,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 8.5,
+     "mile": 21.35,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 13.5,
+     "mile": 22.36,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 10.6,
+     "mile": 23.38,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 15.6,
+     "mile": 24.39,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.2,
+     "mile": 25.39,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 26.4,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 27.48,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 28.78,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 12.4,
+     "mile": 29.79,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 30.8,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 31.83,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.8,
+     "mile": 32.88,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 20.8,
+     "mile": 33.92,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.1,
+     "mile": 34.92,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.4,
+     "mile": 36.04,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.7,
+     "mile": 37.16,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.4,
+     "mile": 38.21,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 2.7,
+     "mile": 39.3,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 8.0,
+     "mile": 40.37,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 41.62,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.9,
+     "mile": 42.66,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 43.75,
+     "terrain_shade": false
+    }
+   ],
+   "sun_azimuth_deg": 227,
+   "sun_elevation_deg": 49.9
+  }
+ },
+ "2": {
+  "primary": {
+   "date": "2026-09-06",
+   "hour_local": 15,
+   "label": "primary",
+   "pct_any_shade": 14,
+   "pct_canopy": 14,
+   "pct_terrain": 0,
+   "samples": [
+    {
+     "canopy": false,
+     "horizon_deg": 1.0,
+     "mile": 0.0,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 1.2,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 2.21,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 3.34,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 1.6,
+     "mile": 4.35,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.0,
+     "mile": 5.36,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 6.43,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 7.46,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 3.4,
+     "mile": 8.49,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 9.5,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.3,
+     "mile": 10.57,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.6,
+     "mile": 11.76,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.1,
+     "mile": 12.8,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.3,
+     "mile": 14.51,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 8.0,
+     "mile": 15.65,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 16.67,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.1,
+     "mile": 17.87,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 18.95,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 20.04,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 21.04,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 22.37,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 23.68,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 24.68,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.2,
+     "mile": 25.71,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 26.8,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.7,
+     "mile": 27.85,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.1,
+     "mile": 29.37,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 30.43,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 32.18,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.9,
+     "mile": 33.74,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.1,
+     "mile": 34.86,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.9,
+     "mile": 35.88,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.4,
+     "mile": 37.18,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.3,
+     "mile": 38.19,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 39.2,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 40.4,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 2.3,
+     "mile": 41.64,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.7,
+     "mile": 42.71,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.7,
+     "mile": 43.83,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.9,
+     "mile": 44.93,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 3.1,
+     "mile": 45.93,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.0,
+     "mile": 46.94,
+     "terrain_shade": false
+    }
+   ],
+   "sun_azimuth_deg": 228,
+   "sun_elevation_deg": 49.7
+  }
+ },
  "3": {
   "Alternate 1": {
    "date": "2026-09-07",
@@ -1737,6 +2251,1080 @@
    ],
    "sun_azimuth_deg": 229,
    "sun_elevation_deg": 49.0
+  }
+ },
+ "6": {
+  "primary": {
+   "date": "2026-09-10",
+   "hour_local": 15,
+   "label": "primary",
+   "pct_any_shade": 0,
+   "pct_canopy": 0,
+   "pct_terrain": 0,
+   "samples": [
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 0.0,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.3,
+     "mile": 1.08,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.1,
+     "mile": 2.76,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 21.3,
+     "mile": 3.86,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.7,
+     "mile": 5.24,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.0,
+     "mile": 6.25,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 7.39,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.9,
+     "mile": 8.4,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.1,
+     "mile": 9.42,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.9,
+     "mile": 10.47,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 11.53,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 13.64,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.1,
+     "mile": 14.79,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.7,
+     "mile": 15.93,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.7,
+     "mile": 16.99,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 18.02,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 19.05,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 20.17,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 21.27,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 22.37,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.0,
+     "mile": 23.41,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.4,
+     "mile": 24.65,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.3,
+     "mile": 25.71,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.7,
+     "mile": 26.75,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.3,
+     "mile": 27.79,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.6,
+     "mile": 28.93,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 13.0,
+     "mile": 29.95,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.1,
+     "mile": 31.79,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.6,
+     "mile": 32.9,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 16.7,
+     "mile": 34.07,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 11.9,
+     "mile": 35.16,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 15.6,
+     "mile": 36.22,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.6,
+     "mile": 37.28,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.6,
+     "mile": 38.3,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.3,
+     "mile": 39.47,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 21.1,
+     "mile": 40.49,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 17.7,
+     "mile": 41.59,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.9,
+     "mile": 42.85,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 10.8,
+     "mile": 43.89,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.7,
+     "mile": 45.22,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.4,
+     "mile": 46.39,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.4,
+     "mile": 47.44,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 48.5,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.4,
+     "mile": 49.54,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.1,
+     "mile": 50.82,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.1,
+     "mile": 51.95,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.9,
+     "mile": 53.58,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.7,
+     "mile": 54.9,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.7,
+     "mile": 55.93,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.9,
+     "mile": 56.94,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.2,
+     "mile": 58.03,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.8,
+     "mile": 59.03,
+     "terrain_shade": false
+    }
+   ],
+   "sun_azimuth_deg": 230,
+   "sun_elevation_deg": 48.7
+  }
+ },
+ "7": {
+  "primary": {
+   "date": "2026-09-11",
+   "hour_local": 15,
+   "label": "primary",
+   "pct_any_shade": 11,
+   "pct_canopy": 11,
+   "pct_terrain": 0,
+   "samples": [
+    {
+     "canopy": false,
+     "horizon_deg": 2.7,
+     "mile": 0.0,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.9,
+     "mile": 1.22,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 10.8,
+     "mile": 2.67,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 15.4,
+     "mile": 3.79,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 13.5,
+     "mile": 4.85,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.6,
+     "mile": 5.9,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 4.1,
+     "mile": 7.05,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 7.3,
+     "mile": 8.07,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 8.1,
+     "mile": 9.37,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 10.4,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.9,
+     "mile": 11.41,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 7.5,
+     "mile": 12.46,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.9,
+     "mile": 13.54,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.1,
+     "mile": 14.55,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.0,
+     "mile": 15.55,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 16.92,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 18.88,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 20.17,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 21.25,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 22.34,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 23.5,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.1,
+     "mile": 24.54,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 25.54,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 26.84,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 27.91,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 29.01,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 30.9,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.6,
+     "mile": 32.24,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 33.29,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.0,
+     "mile": 34.31,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 35.41,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 37.73,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.9,
+     "mile": 38.82,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 39.86,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.3,
+     "mile": 40.89,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.5,
+     "mile": 41.9,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.0,
+     "mile": 43.01,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.5,
+     "mile": 44.01,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.2,
+     "mile": 45.1,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 7.0,
+     "mile": 46.1,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.4,
+     "mile": 47.21,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 5.8,
+     "mile": 48.26,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 49.29,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 50.37,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 51.44,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 52.48,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.8,
+     "mile": 53.53,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 54.71,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 55.72,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 56.73,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 57.85,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 1.1,
+     "mile": 58.85,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.0,
+     "mile": 59.89,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 61.05,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 62.29,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 63.37,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.1,
+     "mile": 64.87,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.6,
+     "mile": 65.92,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.6,
+     "mile": 67.13,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 68.14,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 69.2,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 70.38,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 71.42,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 72.49,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 74.0,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 75.02,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 76.03,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 77.14,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 78.26,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 79.32,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 80.36,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 81.43,
+     "terrain_shade": false
+    }
+   ],
+   "sun_azimuth_deg": 231,
+   "sun_elevation_deg": 48.3
+  }
+ },
+ "8": {
+  "primary": {
+   "date": "2026-09-12",
+   "hour_local": 15,
+   "label": "primary",
+   "pct_any_shade": 12,
+   "pct_canopy": 12,
+   "pct_terrain": 0,
+   "samples": [
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 0.0,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 1.05,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.3,
+     "mile": 2.05,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 3.2,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 4.26,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 5.27,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 7.12,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 8.56,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 10.89,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 12.21,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 13.43,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 14.46,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 17.57,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 18.57,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 19.7,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 20.71,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 21.72,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 23.05,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 24.16,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 25.24,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 26.27,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 27.35,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 28.39,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 29.41,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.0,
+     "mile": 30.67,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 31.8,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 33.99,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 35.05,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 36.09,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 37.24,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 38.27,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 39.28,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 40.46,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.9,
+     "mile": 41.77,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.0,
+     "mile": 42.79,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.0,
+     "mile": 43.82,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 9.1,
+     "mile": 45.82,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 1.1,
+     "mile": 46.87,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 47.88,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 48.9,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.3,
+     "mile": 49.95,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 50.96,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 52.02,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 53.03,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.0,
+     "mile": 54.11,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 55.25,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 56.43,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 57.5,
+     "terrain_shade": false
+    }
+   ],
+   "sun_azimuth_deg": 232,
+   "sun_elevation_deg": 47.6
   }
  }
 }
