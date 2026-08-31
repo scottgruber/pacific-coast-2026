@@ -5684,6 +5684,14 @@
       "mile": 6.8
     },
     {
+      "lat": 37.323211,
+      "lon": -122.051616,
+      "name": "Paul and Eddies (mi 7.0)",
+      "type": "Winery",
+      "label": "Paul and Eddies",
+      "mile": 7.0
+    },
+    {
       "lat": 37.326179,
       "lon": -122.044682,
       "name": "Water (mi 7.2)",
@@ -5788,6 +5796,14 @@
       "mile": 11.8
     },
     {
+      "lat": 37.256694,
+      "lon": -122.034242,
+      "name": "Wine Collective (mi 12.2)",
+      "type": "Winery",
+      "label": "Wine Collective",
+      "mile": 12.2
+    },
+    {
       "lat": 37.244371,
       "lon": -122.003011,
       "name": "Water (mi 14.1)",
@@ -5809,6 +5825,14 @@
       "name": "Starbucks (mi 15.7)",
       "type": "Food",
       "label": "Starbucks",
+      "mile": 15.7
+    },
+    {
+      "lat": 37.228311,
+      "lon": -121.980521,
+      "name": "Cin Cin (mi 15.7)",
+      "type": "Winery",
+      "label": "Cin Cin",
       "mile": 15.7
     },
     {
@@ -5852,6 +5876,14 @@
       "mile": 16.6
     },
     {
+      "lat": 37.199958,
+      "lon": -121.987165,
+      "name": "Picnic (mi 18.4)",
+      "type": "Picnic",
+      "label": "Picnic",
+      "mile": 18.4
+    },
+    {
       "lat": 37.200015,
       "lon": -121.986795,
       "name": "Toilets (mi 18.4)",
@@ -5874,6 +5906,14 @@
       "type": "Historic",
       "label": "Patchen (historic)",
       "mile": 26.1
+    },
+    {
+      "lat": 37.13105,
+      "lon": -121.962674,
+      "name": "Villa Del Monte Winery (mi 27.0)",
+      "type": "Winery",
+      "label": "Villa Del Monte Winery",
+      "mile": 27.0
     },
     {
       "lat": 37.120424,
@@ -5906,6 +5946,14 @@
       "type": "Toilets",
       "label": "Restroom",
       "mile": 38.4
+    },
+    {
+      "lat": 36.99522,
+      "lon": -121.954601,
+      "name": "Bargetto Winery (mi 39.9)",
+      "type": "Winery",
+      "label": "Bargetto Winery",
+      "mile": 39.9
     },
     {
       "lat": 36.994421,
@@ -5977,6 +6025,14 @@
       "name": "Toilets (mi 43.8)",
       "type": "Toilets",
       "label": "Toilets",
+      "mile": 43.8
+    },
+    {
+      "lat": 36.978877,
+      "lon": -122.012732,
+      "name": "One Double Oh Seven (mi 43.8)",
+      "type": "Winery",
+      "label": "One Double Oh Seven",
       "mile": 43.8
     },
     {

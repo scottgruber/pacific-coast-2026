@@ -24,6 +24,8 @@ from pathlib import Path
 
 sys.setrecursionlimit(10000)
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 ROOT = Path(__file__).resolve().parent.parent
 GPX_DIR = ROOT / "gpx"
 DATA_DIR = ROOT / "data"
@@ -299,7 +301,23 @@ def elevation_profile(pts, interval_m, smoothing_window):
 
 # Written by add_services.py from OpenStreetMap. Kept out of the map-marker
 # waypoints and surfaced as their own list on the day page instead.
-SERVICE_WAYPOINT_TYPES = {"Water", "Toilets", "Food", "Store", "Scenic", "Historic"}
+#
+# Imported rather than restated: this list was hard-coded once and immediately
+# drifted - adding winery and picnic categories to add_services.py left them
+# missing here, so they were silently misfiled as landmarks and never reached
+# a day page. One definition, one place.
+def _service_types():
+    try:
+        import add_services
+        return set(add_services.ALL_TYPES)
+    except Exception:
+        # add_services pulls no unusual imports, but the build must not depend
+        # on it: fall back to the known set rather than failing outright.
+        return {"Water", "Toilets", "Food", "Store", "Scenic", "Historic",
+                "Winery", "Picnic"}
+
+
+SERVICE_WAYPOINT_TYPES = _service_types()
 # The day's own start and finish, added by prepare_gpx.py for the head unit.
 # They are already the ends of the drawn line, so they are not marked again.
 ENDPOINT_WAYPOINT_TYPES = {"Start", "Finish"}

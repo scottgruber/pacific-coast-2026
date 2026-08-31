@@ -18263,6 +18263,14 @@
       "mile": 0.3
     },
     {
+      "lat": 35.592621,
+      "lon": -120.69355,
+      "name": "Vina Robles (mi 3.3)",
+      "type": "Winery",
+      "label": "Vina Robles",
+      "mile": 3.3
+    },
+    {
       "lat": 35.590755,
       "lon": -120.694728,
       "name": "Food Mart (mi 3.5)",
@@ -18295,6 +18303,14 @@
       "mile": 6.8
     },
     {
+      "lat": 35.547722,
+      "lon": -120.707122,
+      "name": "15 degrees C, Wine Shop & Bar (mi 6.8)",
+      "type": "Winery",
+      "label": "15 degrees C, Wine Shop & Bar",
+      "mile": 6.8
+    },
+    {
       "lat": 35.491761,
       "lon": -120.668341,
       "name": "Toilets (mi 13.7)",
@@ -18316,6 +18332,14 @@
       "name": "Dark Nectar Coffee (mi 13.8)",
       "type": "Food",
       "label": "Dark Nectar Coffee",
+      "mile": 13.8
+    },
+    {
+      "lat": 35.49077,
+      "lon": -120.669785,
+      "name": "Grape Encounters EmPOURium (mi 13.8)",
+      "type": "Winery",
+      "label": "Grape Encounters EmPOURium",
       "mile": 13.8
     },
     {
@@ -18351,6 +18375,14 @@
       "mile": 31.0
     },
     {
+      "lat": 35.369233,
+      "lon": -120.854182,
+      "name": "La Parisienne French Bakery (mi 31.0)",
+      "type": "Food",
+      "label": "La Parisienne French Bakery",
+      "mile": 31.0
+    },
+    {
       "lat": 35.369017,
       "lon": -120.85411,
       "name": "Morro Bay House of Jerky (mi 31.0)",
@@ -18359,11 +18391,11 @@
       "mile": 31.0
     },
     {
-      "lat": 35.36446,
-      "lon": -120.852579,
-      "name": "Sweet Reef (mi 31.3)",
-      "type": "Food",
-      "label": "Sweet Reef",
+      "lat": 35.364249,
+      "lon": -120.852852,
+      "name": "Morro Bay Wine Seller (mi 31.3)",
+      "type": "Winery",
+      "label": "Morro Bay Wine Seller",
       "mile": 31.3
     },
     {
@@ -18463,6 +18495,14 @@
       "mile": 51.2
     },
     {
+      "lat": 35.182805,
+      "lon": -120.706107,
+      "name": "Avila Valley Barn (mi 51.5)",
+      "type": "Store",
+      "label": "Avila Valley Barn",
+      "mile": 51.5
+    },
+    {
       "lat": 35.165052,
       "lon": -120.69042,
       "name": "Marisol (mi 53.1)",
@@ -18500,6 +18540,14 @@
       "name": "Water (mi 54.6)",
       "type": "Water",
       "label": "Water",
+      "mile": 54.6
+    },
+    {
+      "lat": 35.154169,
+      "lon": -120.665201,
+      "name": "Picnic (mi 54.6)",
+      "type": "Picnic",
+      "label": "Picnic",
       "mile": 54.6
     },
     {
@@ -18541,6 +18589,14 @@
       "type": "Store",
       "label": "Price Street Market",
       "mile": 56.0
+    },
+    {
+      "lat": 35.142776,
+      "lon": -120.640923,
+      "name": "Sans Liege (mi 56.2)",
+      "type": "Winery",
+      "label": "Sans Liege",
+      "mile": 56.2
     },
     {
       "lat": 35.13909,

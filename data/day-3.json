@@ -23267,6 +23267,14 @@
       "mile": 4.8
     },
     {
+      "lat": 36.542245,
+      "lon": -121.905822,
+      "name": "BevMo! (mi 4.8)",
+      "type": "Winery",
+      "label": "BevMo!",
+      "mile": 4.8
+    },
+    {
       "lat": 36.540896,
       "lon": -121.889961,
       "name": "Toilets (mi 5.7)",
@@ -23289,6 +23297,14 @@
       "type": "Store",
       "label": "Valley Hills Deli and BBQ",
       "mile": 8.0
+    },
+    {
+      "lat": 36.528442,
+      "lon": -121.819547,
+      "name": "Folktale Winery (mi 9.7)",
+      "type": "Winery",
+      "label": "Folktale Winery",
+      "mile": 9.7
     },
     {
       "lat": 36.525043,
@@ -23363,10 +23379,18 @@
       "mile": 16.1
     },
     {
+      "lat": 36.478204,
+      "lon": -121.730298,
+      "name": "Joyce Wine Company (mi 16.4)",
+      "type": "Winery",
+      "label": "Joyce Wine Company",
+      "mile": 16.4
+    },
+    {
       "lat": 36.269508,
       "lon": -121.393028,
       "name": "Sycamore Flats (mi 46.8)",
-      "type": "Scenic",
+      "type": "Winery",
       "label": "Sycamore Flats",
       "mile": 46.8
     },
@@ -23385,6 +23409,14 @@
       "type": "Store",
       "label": "Store",
       "mile": 69.7
+    },
+    {
+      "lat": 36.213463,
+      "lon": -121.125032,
+      "name": "Picnic (mi 69.9)",
+      "type": "Picnic",
+      "label": "Picnic",
+      "mile": 69.9
     },
     {
       "lat": 36.212697,

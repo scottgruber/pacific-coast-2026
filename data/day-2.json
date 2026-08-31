@@ -5192,6 +5192,14 @@
       "mile": 0.5
     },
     {
+      "lat": 36.978483,
+      "lon": -122.020659,
+      "name": "Jury Room (mi 0.5)",
+      "type": "Winery",
+      "label": "Jury Room",
+      "mile": 0.5
+    },
+    {
       "lat": 36.984876,
       "lon": -121.990215,
       "name": "Store (mi 2.3)",
@@ -5205,6 +5213,14 @@
       "name": "Food (mi 2.9)",
       "type": "Food",
       "label": "Food",
+      "mile": 2.9
+    },
+    {
+      "lat": 36.989385,
+      "lon": -121.980127,
+      "name": "Garden Liquors & Deli (mi 2.9)",
+      "type": "Winery",
+      "label": "Garden Liquors & Deli",
       "mile": 2.9
     },
     {
@@ -5312,6 +5328,14 @@
       "mile": 8.0
     },
     {
+      "lat": 36.979027,
+      "lon": -121.908918,
+      "name": "Windjammer (mi 8.0)",
+      "type": "Winery",
+      "label": "Windjammer",
+      "mile": 8.0
+    },
+    {
       "lat": 36.974677,
       "lon": -121.888463,
       "name": "Cafe Bittersweet (mi 9.2)",
@@ -5392,12 +5416,12 @@
       "mile": 27.2
     },
     {
-      "lat": 36.798452,
-      "lon": -121.783603,
-      "name": "Store (mi 27.3)",
+      "lat": 36.798655,
+      "lon": -121.783558,
+      "name": "Store (mi 27.2)",
       "type": "Store",
       "label": "Store",
-      "mile": 27.3
+      "mile": 27.2
     },
     {
       "lat": 36.798951,
@@ -5406,6 +5430,14 @@
       "type": "Historic",
       "label": "Shakespeare Society of America",
       "mile": 27.4
+    },
+    {
+      "lat": 36.779612,
+      "lon": -121.777304,
+      "name": "Thistle Hut (mi 28.8)",
+      "type": "Store",
+      "label": "Thistle Hut",
+      "mile": 28.8
     },
     {
       "lat": 36.693133,
@@ -5432,6 +5464,14 @@
       "mile": 36.6
     },
     {
+      "lat": 36.680091,
+      "lon": -121.8037,
+      "name": "English Ales Brewery (mi 37.2)",
+      "type": "Winery",
+      "label": "English Ales Brewery",
+      "mile": 37.2
+    },
+    {
       "lat": 36.665426,
       "lon": -121.811085,
       "name": "Deli Delicious (mi 38.3)",
@@ -5454,6 +5494,14 @@
       "type": "Food",
       "label": "Panera Bread",
       "mile": 41.9
+    },
+    {
+      "lat": 36.618906,
+      "lon": -121.845673,
+      "name": "Total Wine (mi 42.6)",
+      "type": "Winery",
+      "label": "Total Wine",
+      "mile": 42.6
     },
     {
       "lat": 36.60898,
@@ -5496,6 +5544,14 @@
       "mile": 45.7
     },
     {
+      "lat": 36.59752,
+      "lon": -121.884399,
+      "name": "El Estero Picnic Area (mi 45.8)",
+      "type": "Picnic",
+      "label": "El Estero Picnic Area",
+      "mile": 45.8
+    },
+    {
       "lat": 36.600481,
       "lon": -121.884284,
       "name": "Water (mi 45.8)",
@@ -5525,6 +5581,14 @@
       "name": "Water (mi 46.1)",
       "type": "Water",
       "label": "Water",
+      "mile": 46.1
+    },
+    {
+      "lat": 36.601732,
+      "lon": -121.893805,
+      "name": "Wine from the Heart (mi 46.1)",
+      "type": "Winery",
+      "label": "Wine from the Heart",
       "mile": 46.1
     },
     {

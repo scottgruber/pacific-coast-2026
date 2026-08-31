@@ -5876,6 +5876,14 @@
       "mile": 16.1
     },
     {
+      "lat": 34.995781,
+      "lon": -120.436424,
+      "name": "Santa Maria Brewing Company (mi 16.1)",
+      "type": "Winery",
+      "label": "Santa Maria Brewing Company",
+      "mile": 16.1
+    },
+    {
       "lat": 34.985294,
       "lon": -120.437662,
       "name": "Toilets (mi 16.9)",
@@ -5884,12 +5892,60 @@
       "mile": 16.9
     },
     {
+      "lat": 34.852801,
+      "lon": -120.255892,
+      "name": "Winery Riverbench (mi 33.5)",
+      "type": "Winery",
+      "label": "Winery Riverbench",
+      "mile": 33.5
+    },
+    {
+      "lat": 34.824351,
+      "lon": -120.232009,
+      "name": "Foxen #1 (mi 36.2)",
+      "type": "Winery",
+      "label": "Foxen #1",
+      "mile": 36.2
+    },
+    {
+      "lat": 34.795602,
+      "lon": -120.185228,
+      "name": "Tres Hermanas Winery (mi 39.8)",
+      "type": "Winery",
+      "label": "Tres Hermanas Winery",
+      "mile": 39.8
+    },
+    {
+      "lat": 34.730777,
+      "lon": -120.129358,
+      "name": "Koehler Vinyard (mi 47.4)",
+      "type": "Winery",
+      "label": "Koehler Vinyard",
+      "mile": 47.4
+    },
+    {
+      "lat": 34.665337,
+      "lon": -120.114236,
+      "name": "Samsara Wines (mi 52.9)",
+      "type": "Winery",
+      "label": "Samsara Wines",
+      "mile": 52.9
+    },
+    {
       "lat": 34.664961,
       "lon": -120.115353,
       "name": "Los Olivos Wine Merchant & Cafe (mi 52.9)",
       "type": "Food",
       "label": "Los Olivos Wine Merchant & Cafe",
       "mile": 52.9
+    },
+    {
+      "lat": 34.622261,
+      "lon": -120.11654,
+      "name": "Buttonwood Farm Winery & Vineyard (mi 55.9)",
+      "type": "Winery",
+      "label": "Buttonwood Farm Winery & Vineyard",
+      "mile": 55.9
     },
     {
       "lat": 34.608023,
@@ -5937,6 +5993,14 @@
       "name": "Water (mi 58.8)",
       "type": "Water",
       "label": "Water",
+      "mile": 58.8
+    },
+    {
+      "lat": 34.596479,
+      "lon": -120.141045,
+      "name": "Cordon of Santa Barbara (mi 58.8)",
+      "type": "Winery",
+      "label": "Cordon of Santa Barbara",
       "mile": 58.8
     },
     {

@@ -5690,6 +5690,14 @@
       "mile": 0.1
     },
     {
+      "lat": 34.280992,
+      "lon": -119.291727,
+      "name": "Dargan's Irish Pub & Restaurant (mi 0.1)",
+      "type": "Winery",
+      "label": "Dargan's Irish Pub & Restaurant",
+      "mile": 0.1
+    },
+    {
       "lat": 34.275748,
       "lon": -119.290615,
       "name": "Water (mi 0.4)",
@@ -5698,28 +5706,12 @@
       "mile": 0.4
     },
     {
-      "lat": 34.276051,
-      "lon": -119.292108,
-      "name": "Water (mi 0.5)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 0.5
-    },
-    {
       "lat": 34.27034,
       "lon": -119.279397,
       "name": "Water (mi 1.4)",
       "type": "Water",
       "label": "Water",
       "mile": 1.4
-    },
-    {
-      "lat": 34.269459,
-      "lon": -119.276922,
-      "name": "Water (mi 1.5)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 1.5
     },
     {
       "lat": 34.26766,
@@ -5736,6 +5728,14 @@
       "type": "Food",
       "label": "Ox & Ocean",
       "mile": 8.6
+    },
+    {
+      "lat": 34.176575,
+      "lon": -119.196068,
+      "name": "Allan's Liquor (mi 10.9)",
+      "type": "Winery",
+      "label": "Allan's Liquor",
+      "mile": 10.9
     },
     {
       "lat": 34.156026,
@@ -5794,14 +5794,6 @@
       "mile": 26.1
     },
     {
-      "lat": 34.070706,
-      "lon": -119.013193,
-      "name": "Water (mi 26.3)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 26.3
-    },
-    {
       "lat": 34.0533,
       "lon": -118.962272,
       "name": "Toilets (mi 29.5)",
@@ -5842,6 +5834,14 @@
       "mile": 36.6
     },
     {
+      "lat": 34.031359,
+      "lon": -118.843046,
+      "name": "Malibu Brewing Company (mi 36.8)",
+      "type": "Winery",
+      "label": "Malibu Brewing Company",
+      "mile": 36.8
+    },
+    {
       "lat": 34.027694,
       "lon": -118.839151,
       "name": "Toilets (mi 37.1)",
@@ -5864,22 +5864,6 @@
       "type": "Water",
       "label": "Water",
       "mile": 38.3
-    },
-    {
-      "lat": 34.015817,
-      "lon": -118.820284,
-      "name": "Water (mi 38.4)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 38.4
-    },
-    {
-      "lat": 34.013792,
-      "lon": -118.819797,
-      "name": "Water (mi 38.4)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 38.4
     },
     {
       "lat": 34.017158,
@@ -5954,6 +5938,14 @@
       "mile": 46.4
     },
     {
+      "lat": 34.039826,
+      "lon": -118.665528,
+      "name": "Colony House Liquor (mi 47.7)",
+      "type": "Winery",
+      "label": "Colony House Liquor",
+      "mile": 47.7
+    },
+    {
       "lat": 34.037354,
       "lon": -118.637486,
       "name": "Country Liquor (mi 49.4)",
@@ -6010,28 +6002,12 @@
       "mile": 55.1
     },
     {
-      "lat": 34.038327,
-      "lon": -118.533219,
-      "name": "Water (mi 55.4)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 55.4
-    },
-    {
-      "lat": 34.037034,
-      "lon": -118.533957,
-      "name": "Water (mi 55.4)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 55.4
-    },
-    {
-      "lat": 34.035644,
-      "lon": -118.536581,
-      "name": "Water (mi 55.5)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 55.5
+      "lat": 34.037502,
+      "lon": -118.539903,
+      "name": "Picnic (mi 55.2)",
+      "type": "Picnic",
+      "label": "Picnic",
+      "mile": 55.2
     },
     {
       "lat": 34.035804,
@@ -6074,38 +6050,6 @@
       "mile": 56.9
     },
     {
-      "lat": 34.02476,
-      "lon": -118.511332,
-      "name": "Water (mi 57.1)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 57.1
-    },
-    {
-      "lat": 34.023563,
-      "lon": -118.509636,
-      "name": "Water (mi 57.1)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 57.1
-    },
-    {
-      "lat": 34.025575,
-      "lon": -118.512812,
-      "name": "Water (mi 57.1)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 57.1
-    },
-    {
-      "lat": 34.022813,
-      "lon": -118.508595,
-      "name": "Water (mi 57.3)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 57.3
-    },
-    {
       "lat": 34.021202,
       "lon": -118.507431,
       "name": "Santa Monica Gables Beach Club (mi 57.4)",
@@ -6122,36 +6066,12 @@
       "mile": 57.5
     },
     {
-      "lat": 34.020313,
-      "lon": -118.505553,
-      "name": "Water Fountain (mi 57.6)",
-      "type": "Water",
-      "label": "Water Fountain",
-      "mile": 57.6
-    },
-    {
-      "lat": 34.01924,
-      "lon": -118.504285,
-      "name": "Water (mi 57.6)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 57.6
-    },
-    {
       "lat": 34.019149,
       "lon": -118.506451,
       "name": "Food (mi 57.6)",
       "type": "Food",
       "label": "Food",
       "mile": 57.6
-    },
-    {
-      "lat": 34.017537,
-      "lon": -118.502515,
-      "name": "Water (mi 57.8)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 57.8
     },
     {
       "lat": 34.015369,
@@ -6162,30 +6082,14 @@
       "mile": 58.0
     },
     {
-      "lat": 34.016892,
-      "lon": -118.497473,
-      "name": "Water (mi 58.0)",
-      "type": "Water",
-      "label": "Water",
+      "lat": 34.015253,
+      "lon": -118.49904,
+      "name": "The Coco Club (mi 58.0)",
+      "type": "Winery",
+      "label": "The Coco Club",
       "mile": 58.0
-    },
-    {
-      "lat": 34.009972,
-      "lon": -118.495468,
-      "name": "Water (mi 58.4)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 58.4
-    },
-    {
-      "lat": 34.011617,
-      "lon": -118.49548,
-      "name": "Water (mi 58.4)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 58.4
     }
   ],
-  "water_gap_mi": 24.7,
+  "water_gap_mi": 24.8,
   "route_point_count_raw": 3397
 }

@@ -9033,6 +9033,14 @@
       "mile": 0.2
     },
     {
+      "lat": 34.595376,
+      "lon": -120.142158,
+      "name": "Sevtap Winery (mi 0.2)",
+      "type": "Winery",
+      "label": "Sevtap Winery",
+      "mile": 0.2
+    },
+    {
       "lat": 34.599027,
       "lon": -120.145662,
       "name": "Toilets (mi 0.2)",
@@ -9177,20 +9185,20 @@
       "mile": 37.7
     },
     {
+      "lat": 34.429719,
+      "lon": -119.873869,
+      "name": "BevMo! (mi 37.7)",
+      "type": "Winery",
+      "label": "BevMo!",
+      "mile": 37.7
+    },
+    {
       "lat": 34.425442,
       "lon": -119.873348,
       "name": "Water (mi 38.1)",
       "type": "Water",
       "label": "Water",
       "mile": 38.1
-    },
-    {
-      "lat": 34.426433,
-      "lon": -119.863078,
-      "name": "Water (mi 38.4)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 38.4
     },
     {
       "lat": 34.420871,
@@ -9209,32 +9217,16 @@
       "mile": 39.1
     },
     {
-      "lat": 34.420273,
-      "lon": -119.861248,
-      "name": "Water (mi 39.2)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 39.2
+      "lat": 34.418158,
+      "lon": -119.856527,
+      "name": "Picnic (mi 39.4)",
+      "type": "Picnic",
+      "label": "Picnic",
+      "mile": 39.4
     },
     {
       "lat": 34.417611,
       "lon": -119.85284,
-      "name": "Water (mi 39.7)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 39.7
-    },
-    {
-      "lat": 34.415858,
-      "lon": -119.851529,
-      "name": "Water (mi 39.7)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 39.7
-    },
-    {
-      "lat": 34.416846,
-      "lon": -119.852609,
       "name": "Water (mi 39.7)",
       "type": "Water",
       "label": "Water",
@@ -9249,51 +9241,11 @@
       "mile": 39.7
     },
     {
-      "lat": 34.417355,
-      "lon": -119.850212,
-      "name": "Water (mi 39.8)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 39.8
-    },
-    {
-      "lat": 34.413242,
-      "lon": -119.850141,
-      "name": "Water (mi 39.9)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 39.9
-    },
-    {
       "lat": 34.414068,
       "lon": -119.846556,
       "name": "Arbor Cafe (mi 40.0)",
       "type": "Food",
       "label": "Arbor Cafe",
-      "mile": 40.0
-    },
-    {
-      "lat": 34.416972,
-      "lon": -119.847467,
-      "name": "Water (mi 40.0)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 40.0
-    },
-    {
-      "lat": 34.417961,
-      "lon": -119.847997,
-      "name": "Water (mi 40.0)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 40.0
-    },
-    {
-      "lat": 34.414005,
-      "lon": -119.847341,
-      "name": "Water (mi 40.0)",
-      "type": "Water",
-      "label": "Water",
       "mile": 40.0
     },
     {
@@ -9311,46 +9263,6 @@
       "type": "Water",
       "label": "Water",
       "mile": 40.3
-    },
-    {
-      "lat": 34.413565,
-      "lon": -119.845336,
-      "name": "Water (mi 40.5)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 40.5
-    },
-    {
-      "lat": 34.412582,
-      "lon": -119.845297,
-      "name": "Water (mi 40.5)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 40.5
-    },
-    {
-      "lat": 34.413244,
-      "lon": -119.841745,
-      "name": "Water (mi 40.5)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 40.5
-    },
-    {
-      "lat": 34.413409,
-      "lon": -119.84279,
-      "name": "Water (mi 40.5)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 40.5
-    },
-    {
-      "lat": 34.411927,
-      "lon": -119.84388,
-      "name": "Water (mi 40.5)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 40.5
     },
     {
       "lat": 34.417068,
@@ -9374,6 +9286,14 @@
       "name": "The Java Station (mi 45.4)",
       "type": "Food",
       "label": "The Java Station",
+      "mile": 45.4
+    },
+    {
+      "lat": 34.439695,
+      "lon": -119.771339,
+      "name": "Talevi's Wine and Spirits (mi 45.4)",
+      "type": "Winery",
+      "label": "Talevi's Wine and Spirits",
       "mile": 45.4
     },
     {
@@ -9401,6 +9321,14 @@
       "mile": 47.7
     },
     {
+      "lat": 34.406056,
+      "lon": -119.734583,
+      "name": "Picnic Area (mi 49.6)",
+      "type": "Picnic",
+      "label": "Picnic Area",
+      "mile": 49.6
+    },
+    {
       "lat": 34.402502,
       "lon": -119.723794,
       "name": "Vons (mi 50.2)",
@@ -9415,6 +9343,14 @@
       "type": "Food",
       "label": "Starbucks",
       "mile": 50.2
+    },
+    {
+      "lat": 34.401712,
+      "lon": -119.721499,
+      "name": "The Cliff Room (mi 50.4)",
+      "type": "Winery",
+      "label": "The Cliff Room",
+      "mile": 50.4
     },
     {
       "lat": 34.395786,
@@ -9441,14 +9377,6 @@
       "mile": 52.2
     },
     {
-      "lat": 34.403637,
-      "lon": -119.692691,
-      "name": "Water (mi 52.4)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 52.4
-    },
-    {
       "lat": 34.403756,
       "lon": -119.693211,
       "name": "Harbor Market (mi 52.4)",
@@ -9473,28 +9401,20 @@
       "mile": 52.7
     },
     {
-      "lat": 34.407193,
-      "lon": -119.692996,
-      "name": "Water (mi 52.7)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 52.7
-    },
-    {
-      "lat": 34.408681,
-      "lon": -119.697211,
-      "name": "Water (mi 52.7)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 52.7
-    },
-    {
       "lat": 34.40864,
       "lon": -119.693495,
       "name": "Toma Restaurant & Bar (mi 52.8)",
       "type": "Food",
       "label": "Toma Restaurant & Bar",
       "mile": 52.8
+    },
+    {
+      "lat": 34.409973,
+      "lon": -119.685603,
+      "name": "Deep Sea Tasting Room (mi 53.1)",
+      "type": "Winery",
+      "label": "Deep Sea Tasting Room",
+      "mile": 53.1
     },
     {
       "lat": 34.410211,
@@ -9521,6 +9441,14 @@
       "mile": 54.2
     },
     {
+      "lat": 34.419771,
+      "lon": -119.664881,
+      "name": "Picnic (mi 54.7)",
+      "type": "Picnic",
+      "label": "Picnic",
+      "mile": 54.7
+    },
+    {
       "lat": 34.422632,
       "lon": -119.651706,
       "name": "Toilets (mi 55.4)",
@@ -9543,6 +9471,14 @@
       "type": "Store",
       "label": "The Point Market",
       "mile": 55.9
+    },
+    {
+      "lat": 34.421172,
+      "lon": -119.641724,
+      "name": "The Honor Bar (mi 56.7)",
+      "type": "Winery",
+      "label": "The Honor Bar",
+      "mile": 56.7
     },
     {
       "lat": 34.420057,
@@ -9582,6 +9518,14 @@
       "name": "Toilets (mi 64.2)",
       "type": "Toilets",
       "label": "Toilets",
+      "mile": 64.2
+    },
+    {
+      "lat": 34.398302,
+      "lon": -119.517291,
+      "name": "Sunburst Wine Bar (mi 64.2)",
+      "type": "Winery",
+      "label": "Sunburst Wine Bar",
       "mile": 64.2
     },
     {
@@ -9657,14 +9601,6 @@
       "mile": 80.4
     },
     {
-      "lat": 34.28014,
-      "lon": -119.313932,
-      "name": "Water (mi 80.6)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 80.6
-    },
-    {
       "lat": 34.280337,
       "lon": -119.314721,
       "name": "Toilets (mi 80.6)",
@@ -9697,16 +9633,16 @@
       "mile": 81.4
     },
     {
-      "lat": 34.276051,
-      "lon": -119.292108,
-      "name": "Water (mi 82.3)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 82.3
+      "lat": 34.280978,
+      "lon": -119.301015,
+      "name": "Paddy's (mi 81.4)",
+      "type": "Winery",
+      "label": "Paddy's",
+      "mile": 81.4
     },
     {
-      "lat": 34.275748,
-      "lon": -119.290615,
+      "lat": 34.276051,
+      "lon": -119.292108,
       "name": "Water (mi 82.3)",
       "type": "Water",
       "label": "Water",

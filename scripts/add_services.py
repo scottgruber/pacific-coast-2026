@@ -60,8 +60,12 @@ SLEEP_BETWEEN_DAYS_S = 12
 # Garmin course's capped course-point budget, so density matters more than
 # completeness. Water is never thinned: it is the scarce thing.
 CATEGORIES = {
+    # Water is the scarce thing, so it is thinned only enough to collapse
+    # clusters - beach paths carry a fountain every few hundred metres, and 34
+    # of them on day 7 pushed that course over the point budget on their own.
+    # At half a mile no isolated source is ever lost.
     ("amenity", "drinking_water"): dict(type="Water", sym="Drinking Water",
-                                        priority=0, spacing_mi=0.0),
+                                        priority=0, spacing_mi=0.5),
     ("amenity", "toilets"):        dict(type="Toilets", sym="Restroom",
                                         priority=0, spacing_mi=2.0),
     ("shop", "supermarket"):       dict(type="Store", sym="Shopping Center",
@@ -76,6 +80,38 @@ CATEGORIES = {
                                         priority=1, spacing_mi=2.5),
     ("amenity", "fast_food"):      dict(type="Food", sym="Fast Food",
                                         priority=2, spacing_mi=2.5),
+    ("shop", "bakery"):            dict(type="Food", sym="Restaurant",
+                                        priority=1, spacing_mi=2.5),
+    ("amenity", "ice_cream"):      dict(type="Food", sym="Fast Food",
+                                        priority=3, spacing_mi=2.5),
+    ("shop", "farm"):              dict(type="Store", sym="Convenience Store",
+                                        priority=2, spacing_mi=1.5),
+    ("shop", "greengrocer"):       dict(type="Store", sym="Convenience Store",
+                                        priority=2, spacing_mi=1.5),
+    # This route runs through four wine regions, and on the inland stretches a
+    # tasting room is frequently the only open door for miles - Foxen Canyon
+    # has two of them at mile 36 in what otherwise reads as empty road. Tagged
+    # in OSM as bars, wineries or wine shops rather than anything the food
+    # query matched, which is why the day 6 middle looked barren when it is
+    # not. Kept as their own category: useful stops, but with opening hours
+    # far less dependable than a shop, and obvious reasons for restraint.
+    ("craft", "winery"):           dict(type="Winery", sym="Bar",
+                                        priority=0, spacing_mi=2.0, named_only=True),
+    ("shop", "wine"):              dict(type="Winery", sym="Bar",
+                                        priority=1, spacing_mi=2.0, named_only=True),
+    ("tourism", "wine_cellar"):    dict(type="Winery", sym="Bar",
+                                        priority=1, spacing_mi=2.0, named_only=True),
+    ("amenity", "bar"):            dict(type="Winery", sym="Bar",
+                                        priority=2, spacing_mi=2.0, named_only=True),
+    ("amenity", "pub"):            dict(type="Winery", sym="Bar",
+                                        priority=2, spacing_mi=2.0, named_only=True),
+    ("amenity", "biergarten"):     dict(type="Winery", sym="Bar",
+                                        priority=3, spacing_mi=2.0, named_only=True),
+    ("shop", "alcohol"):           dict(type="Winery", sym="Bar",
+                                        priority=4, spacing_mi=2.0, named_only=True),
+    # Tables, shade and often a tap - worth knowing about on the empty days.
+    ("tourism", "picnic_site"):    dict(type="Picnic", sym="Picnic Area",
+                                        priority=0, spacing_mi=2.0),
     # Worth stopping for rather than worth relying on, so spaced widely and
     # only kept when named - an unnamed viewpoint tells a rider nothing.
     ("tourism", "viewpoint"):      dict(type="Scenic", sym="Scenic Area",
@@ -114,11 +150,12 @@ ALL_TYPES = sorted({v["type"] for v in CATEGORIES.values()})
 
 QUERY = """[out:json][timeout:120];
 (
-  node["amenity"~"^(drinking_water|toilets|cafe|restaurant|fast_food)$"](%(bbox)s);
+  node["amenity"~"^(drinking_water|toilets|cafe|restaurant|fast_food|ice_cream|bar|pub|biergarten)$"](%(bbox)s);
   way["amenity"="toilets"](%(bbox)s);
-  node["shop"~"^(supermarket|convenience|deli)$"](%(bbox)s);
+  node["shop"~"^(supermarket|convenience|deli|bakery|farm|greengrocer|wine|alcohol)$"](%(bbox)s);
   way["shop"~"^(supermarket|convenience)$"](%(bbox)s);
-  node["tourism"~"^(viewpoint|attraction|museum)$"](%(bbox)s);
+  node["craft"="winery"](%(bbox)s);
+  node["tourism"~"^(viewpoint|attraction|museum|wine_cellar|picnic_site)$"](%(bbox)s);
   node["historic"~"^(monument|memorial|ruins|building)$"](%(bbox)s);
   way["historic"~"^(monument|memorial|ruins|building)$"](%(bbox)s);
 );

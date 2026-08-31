@@ -6477,6 +6477,14 @@
   "waypoints": [],
   "services": [
     {
+      "lat": 36.206843,
+      "lon": -121.148423,
+      "name": "Picnic Area B (mi 0.2)",
+      "type": "Picnic",
+      "label": "Picnic Area B",
+      "mile": 0.2
+    },
+    {
       "lat": 36.20791,
       "lon": -121.150716,
       "name": "Portola Building (mi 0.2)",
