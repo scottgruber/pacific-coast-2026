@@ -23417,14 +23417,6 @@
       "type": "Picnic",
       "label": "Picnic",
       "mile": 69.9
-    },
-    {
-      "lat": 36.212697,
-      "lon": -121.127874,
-      "name": "King City & South Monterey County Chamber of Commerce & Agriculture (mi 70.4)",
-      "type": "Historic",
-      "label": "King City & South Monterey County Chamber of Commerce & Agriculture",
-      "mile": 70.4
     }
   ],
   "water_gap_mi": 57.4,

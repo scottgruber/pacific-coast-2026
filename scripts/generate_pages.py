@@ -190,14 +190,28 @@ def map_links(label, lat, lon):
     A generic label ("Toilets", "Water") is no help to either, so those fall
     back to the coordinate alone rather than searching for the word."""
     ll = f"{lat:.5f},{lon:.5f}"
-    generic = label.strip().lower() in {"water", "toilets", "food", "store",
-                                        "scenic", "historic", ""}
+    # A name only helps if it identifies somewhere. Sending "Picnic" or "MB" to
+    # a map search invites it to resolve the word somewhere else entirely -
+    # "Picnic" once landed a reader near Big Sur, fifty miles off the route.
+    # Anything generic, too short, or identical to its own category falls back
+    # to the coordinate, which is always exactly right.
+    #
+    # The generic list is derived, not restated: an earlier hard-coded copy went
+    # stale the moment a Picnic category was added.
+    name = label.strip()
+    generic = (
+        not name
+        or len(name) <= 3
+        or name.lower() in {t.lower() for t, _ in SERVICE_GROUPS}
+        or name.lower() in {"picnic", "picnic area", "restroom", "restrooms",
+                            "drinking water", "toilet", "wc"}
+    )
     if generic:
         return (f"https://www.google.com/maps/search/?api=1&query={ll}",
                 f"https://maps.apple.com/?q={ll}&ll={ll}")
-    name = urllib.parse.quote(label)
-    return (f"https://www.google.com/maps/search/?api=1&query={urllib.parse.quote(label + ' ' + ll)}",
-            f"https://maps.apple.com/?q={name}&ll={ll}")
+    q = urllib.parse.quote(name)
+    return (f"https://www.google.com/maps/search/?api=1&query={urllib.parse.quote(name + ' ' + ll)}",
+            f"https://maps.apple.com/?q={q}&ll={ll}")
 
 
 def group_services(services):

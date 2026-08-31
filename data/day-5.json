@@ -18351,22 +18351,6 @@
       "mile": 13.9
     },
     {
-      "lat": 35.460738,
-      "lon": -120.740148,
-      "name": "Devils Gap (mi 20.2)",
-      "type": "Scenic",
-      "label": "Devils Gap",
-      "mile": 20.2
-    },
-    {
-      "lat": 35.377161,
-      "lon": -120.850128,
-      "name": "MB (mi 30.6)",
-      "type": "Historic",
-      "label": "MB",
-      "mile": 30.6
-    },
-    {
       "lat": 35.36939,
       "lon": -120.850941,
       "name": "Toilets (mi 31.0)",
@@ -18405,14 +18389,6 @@
       "type": "Food",
       "label": "Dutchman's Seafood House",
       "mile": 31.3
-    },
-    {
-      "lat": 35.33357,
-      "lon": -120.827034,
-      "name": "Celestial Meadow (mi 35.0)",
-      "type": "Scenic",
-      "label": "Celestial Meadow",
-      "mile": 35.0
     },
     {
       "lat": 35.325482,
@@ -18549,14 +18525,6 @@
       "type": "Picnic",
       "label": "Picnic",
       "mile": 54.6
-    },
-    {
-      "lat": 35.153836,
-      "lon": -120.658408,
-      "name": "Concrete Turret (mi 55.0)",
-      "type": "Scenic",
-      "label": "Concrete Turret",
-      "mile": 55.0
     },
     {
       "lat": 35.151475,

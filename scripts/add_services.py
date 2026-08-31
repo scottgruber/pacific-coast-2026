@@ -195,6 +195,21 @@ def overpass(bbox, attempts=5):
     raise RuntimeError("unreachable")
 
 
+def excluded_names(day):
+    """Names listed under "exclude" in data/manual-pois.json for this day.
+
+    OSM tagging cannot tell you whether somewhere is worth stopping at, and no
+    filter here will get every case: roadside memorials to individuals, tourist
+    operators, bare place-name markers. This is the escape hatch for a human
+    who has looked. Matched case-insensitively against the waypoint label."""
+    path = DATA_DIR / "manual-pois.json"
+    if not path.exists():
+        return set()
+    data = json.loads(path.read_text())
+    names = data.get("exclude", {}).get(str(day), [])
+    return {n.strip().lower() for n in names}
+
+
 def manual_pois(day, route):
     """Hand-picked POIs from data/manual-pois.json.
 
@@ -263,6 +278,32 @@ def find_services(route):
         name = (tags.get("name") or "").strip()
         if cfg.get("named_only") and not name:
             continue
+
+        # Scenic, historic and picnic entries have to earn their place.
+        #
+        # The rest of the categories are self-justifying: a shop is a shop. But
+        # OSM carries thousands of named terrain features - bulk-imported from
+        # the US place-names database, or added as map labels - that are things
+        # you ride past, not places you stop. "Devils Gap" is a rock. "Concrete
+        # Turret" is a viewpoint whose entire description is its elevation.
+        # Listing those as somewhere to stop is worse than listing nothing,
+        # because a rider plans around them.
+        #
+        # So this is an allowlist, not a blocklist: when in doubt, leave it out.
+        # Something qualifies if it is notable enough to have a Wikipedia or
+        # Wikidata entry, if it is a park or a museum, or if it has facilities
+        # anybody could actually use.
+        if cfg["type"] in ("Scenic", "Historic", "Picnic"):
+            notable = "wikidata" in tags or "wikipedia" in tags
+            is_place = (tags.get("leisure") == "park"
+                        or tags.get("tourism") in ("museum", "picnic_site")
+                        or tags.get("historic") in ("monument", "memorial", "ruins"))
+            has_facilities = any(tags.get(k) not in (None, "no") for k in
+                                 ("bench", "toilets", "drinking_water",
+                                  "picnic_table", "shelter", "opening_hours",
+                                  "website", "operator"))
+            if not (notable or is_place or has_facilities):
+                continue
 
         # Access filtering, for toilets above all.
         access = (tags.get("access") or "").strip().lower()
@@ -366,6 +407,12 @@ def main():
     for day in days:
         route = route_of(day)
         services = find_services(route) + manual_pois(day, route)
+        drop = excluded_names(day)
+        if drop:
+            before = len(services)
+            services = [s for s in services
+                        if (s.get("name") or s["type"]).strip().lower() not in drop]
+            print(f"  day {day}: excluded {before - len(services)} by hand")
         services.sort(key=lambda s: s["mile"])
         counts = {}
         for s in services:

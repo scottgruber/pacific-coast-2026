@@ -5770,14 +5770,6 @@
       "mile": 18.9
     },
     {
-      "lat": 34.099366,
-      "lon": -119.079702,
-      "name": "Vista Pt (mi 21.7)",
-      "type": "Scenic",
-      "label": "Vista Pt",
-      "mile": 21.7
-    },
-    {
       "lat": 34.086069,
       "lon": -119.037122,
       "name": "Toilets (mi 24.6)",
@@ -5816,14 +5808,6 @@
       "type": "Food",
       "label": "Food",
       "mile": 35.6
-    },
-    {
-      "lat": 34.035102,
-      "lon": -118.851698,
-      "name": "Malibu Sign (mi 36.2)",
-      "type": "Historic",
-      "label": "Malibu Sign",
-      "mile": 36.2
     },
     {
       "lat": 34.031665,
@@ -5880,14 +5864,6 @@
       "type": "Toilets",
       "label": "Toilets",
       "mile": 39.7
-    },
-    {
-      "lat": 34.019951,
-      "lon": -118.787589,
-      "name": "Jim Rockford Trailer Site (mi 40.5)",
-      "type": "Scenic",
-      "label": "Jim Rockford Trailer Site",
-      "mile": 40.5
     },
     {
       "lat": 34.032091,
@@ -5962,14 +5938,6 @@
       "mile": 52.8
     },
     {
-      "lat": 34.040334,
-      "lon": -118.56059,
-      "name": "Thelma Todd Landmark Building (mi 53.8)",
-      "type": "Historic",
-      "label": "Thelma Todd Landmark Building",
-      "mile": 53.8
-    },
-    {
       "lat": 34.039315,
       "lon": -118.554205,
       "name": "Signature Cafe (mi 54.3)",
@@ -6010,20 +5978,20 @@
       "mile": 55.2
     },
     {
-      "lat": 34.035804,
-      "lon": -118.532569,
-      "name": "On LA & Malibu (mi 55.5)",
-      "type": "Scenic",
-      "label": "On LA & Malibu",
-      "mile": 55.5
-    },
-    {
       "lat": 34.031758,
       "lon": -118.527712,
       "name": "Water (mi 56.0)",
       "type": "Water",
       "label": "Water",
       "mile": 56.0
+    },
+    {
+      "lat": 34.03138,
+      "lon": -118.527196,
+      "name": "Long Wharf in Santa Monica (mi 56.1)",
+      "type": "Historic",
+      "label": "Long Wharf in Santa Monica",
+      "mile": 56.1
     },
     {
       "lat": 34.027667,
@@ -6048,14 +6016,6 @@
       "type": "Toilets",
       "label": "Toilets",
       "mile": 56.9
-    },
-    {
-      "lat": 34.021202,
-      "lon": -118.507431,
-      "name": "Santa Monica Gables Beach Club (mi 57.4)",
-      "type": "Historic",
-      "label": "Santa Monica Gables Beach Club",
-      "mile": 57.4
     },
     {
       "lat": 34.020797,

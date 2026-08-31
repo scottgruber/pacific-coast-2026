@@ -5296,14 +5296,6 @@
       "mile": 7.7
     },
     {
-      "lat": 36.972284,
-      "lon": -121.913421,
-      "name": "Water (mi 7.7)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 7.7
-    },
-    {
       "lat": 36.97232,
       "lon": -121.913402,
       "name": "Toilets (mi 7.7)",
@@ -5382,14 +5374,6 @@
       "type": "Water",
       "label": "Water",
       "mile": 13.7
-    },
-    {
-      "lat": 36.91603,
-      "lon": -121.833434,
-      "name": "Crystal Bay Farm (mi 15.7)",
-      "type": "Scenic",
-      "label": "Crystal Bay Farm",
-      "mile": 15.7
     },
     {
       "lat": 36.831494,
@@ -5528,14 +5512,6 @@
       "mile": 45.2
     },
     {
-      "lat": 36.597656,
-      "lon": -121.872724,
-      "name": "The Roman Plunge (mi 45.2)",
-      "type": "Historic",
-      "label": "The Roman Plunge",
-      "mile": 45.2
-    },
-    {
       "lat": 36.598871,
       "lon": -121.88316,
       "name": "Bay Cafe (mi 45.7)",
@@ -5560,14 +5536,6 @@
       "mile": 45.8
     },
     {
-      "lat": 36.597769,
-      "lon": -121.886433,
-      "name": "Water (mi 45.9)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 45.9
-    },
-    {
       "lat": 36.597671,
       "lon": -121.886483,
       "name": "Toilets (mi 45.9)",
@@ -5576,19 +5544,19 @@
       "mile": 45.9
     },
     {
-      "lat": 36.603384,
-      "lon": -121.889528,
-      "name": "Water (mi 46.1)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 46.1
-    },
-    {
       "lat": 36.601732,
       "lon": -121.893805,
       "name": "Wine from the Heart (mi 46.1)",
       "type": "Winery",
       "label": "Wine from the Heart",
+      "mile": 46.1
+    },
+    {
+      "lat": 36.602917,
+      "lon": -121.893295,
+      "name": "Monterey Customhouse (mi 46.1)",
+      "type": "Historic",
+      "label": "Monterey Customhouse",
       "mile": 46.1
     },
     {

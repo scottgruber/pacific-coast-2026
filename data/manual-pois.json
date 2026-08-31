@@ -1,5 +1,5 @@
 {
-  "_comment": "Hand-picked POIs that OpenStreetMap misses or tags in a way add_services.py does not match. Merged into the GPX and the day pages on every add_services run, and never thinned — if it is in here, somebody chose it deliberately. Keyed by day. type must be one of Water, Toilets, Food, Store, Scenic, Historic; sym is a Garmin symbol name.",
+  "_comment": "Hand-picked POIs and hand-removed ones. 'exclude' drops a stop by name, per day, after somebody has looked at it - OSM tagging cannot tell you whether a place is worth stopping at. Everything else here is added verbatim and never thinned. Re-run scripts/add_services.py then scripts/prepare_gpx.py to apply changes. type must be one of Water, Toilets, Food, Store, Winery, Picnic, Scenic, Historic.",
   "6": [
     {
       "name": "Los Olivos Wine Merchant & Cafe",
@@ -19,5 +19,23 @@
       "sym": "Restaurant",
       "note": "Morro Bay Embarcadero, at the harbour."
     }
-  ]
+  ],
+  "exclude": {
+    "1": [
+      "Alma",
+      "Patchen (historic)",
+      "Branciforte"
+    ],
+    "5": [
+      "MB"
+    ],
+    "7": [
+      "Jude Martin Keefer",
+      "Jeffrey David Nancarrow",
+      "Lil' Toot Boat Tours"
+    ],
+    "8": [
+      "Malibu Sign"
+    ]
+  }
 }

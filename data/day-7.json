@@ -9073,14 +9073,6 @@
       "mile": 0.6
     },
     {
-      "lat": 34.596098,
-      "lon": -120.138092,
-      "name": "The Little Mermaid Fountain (mi 0.6)",
-      "type": "Scenic",
-      "label": "The Little Mermaid Fountain",
-      "mile": 0.6
-    },
-    {
       "lat": 34.533325,
       "lon": -120.178507,
       "name": "Toilets (mi 7.1)",
@@ -9103,14 +9095,6 @@
       "type": "Water",
       "label": "Water",
       "mile": 15.6
-    },
-    {
-      "lat": 34.473969,
-      "lon": -120.138921,
-      "name": "Vista Point (mi 20.5)",
-      "type": "Scenic",
-      "label": "Vista Point",
-      "mile": 20.5
     },
     {
       "lat": 34.463103,
@@ -9199,14 +9183,6 @@
       "type": "Water",
       "label": "Water",
       "mile": 38.1
-    },
-    {
-      "lat": 34.420871,
-      "lon": -119.864456,
-      "name": "Jude Martin Keefer (mi 38.6)",
-      "type": "Historic",
-      "label": "Jude Martin Keefer",
-      "mile": 38.6
     },
     {
       "lat": 34.414965,
@@ -9369,28 +9345,12 @@
       "mile": 52.1
     },
     {
-      "lat": 34.404131,
-      "lon": -119.699013,
-      "name": "Calden Overlook (mi 52.2)",
-      "type": "Scenic",
-      "label": "Calden Overlook",
-      "mile": 52.2
-    },
-    {
       "lat": 34.403756,
       "lon": -119.693211,
       "name": "Harbor Market (mi 52.4)",
       "type": "Store",
       "label": "Harbor Market",
       "mile": 52.4
-    },
-    {
-      "lat": 34.405799,
-      "lon": -119.695272,
-      "name": "Jeffrey David Nancarrow (mi 52.5)",
-      "type": "Historic",
-      "label": "Jeffrey David Nancarrow",
-      "mile": 52.5
     },
     {
       "lat": 34.406268,
@@ -9543,14 +9503,6 @@
       "type": "Food",
       "label": "Starbucks",
       "mile": 64.9
-    },
-    {
-      "lat": 34.385417,
-      "lon": -119.495455,
-      "name": "Lois Sidenberg Overlook (mi 66.0)",
-      "type": "Scenic",
-      "label": "Lois Sidenberg Overlook",
-      "mile": 66.0
     },
     {
       "lat": 34.376503,

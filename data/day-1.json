@@ -5692,22 +5692,6 @@
       "mile": 7.0
     },
     {
-      "lat": 37.326179,
-      "lon": -122.044682,
-      "name": "Water (mi 7.2)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 7.2
-    },
-    {
-      "lat": 37.324034,
-      "lon": -122.044546,
-      "name": "Water (mi 7.2)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 7.2
-    },
-    {
       "lat": 37.324052,
       "lon": -122.044536,
       "name": "Toilets (mi 7.2)",
@@ -5780,22 +5764,6 @@
       "mile": 11.8
     },
     {
-      "lat": 37.265998,
-      "lon": -122.029946,
-      "name": "Water (mi 11.8)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 11.8
-    },
-    {
-      "lat": 37.266517,
-      "lon": -122.030995,
-      "name": "Water (mi 11.8)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 11.8
-    },
-    {
       "lat": 37.256694,
       "lon": -122.034242,
       "name": "Wine Collective (mi 12.2)",
@@ -5860,22 +5828,6 @@
       "mile": 16.4
     },
     {
-      "lat": 37.221168,
-      "lon": -121.982024,
-      "name": "Water (mi 16.6)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 16.6
-    },
-    {
-      "lat": 37.221678,
-      "lon": -121.983977,
-      "name": "Water (mi 16.6)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 16.6
-    },
-    {
       "lat": 37.199958,
       "lon": -121.987165,
       "name": "Picnic (mi 18.4)",
@@ -5890,22 +5842,6 @@
       "type": "Toilets",
       "label": "Toilets",
       "mile": 18.4
-    },
-    {
-      "lat": 37.184862,
-      "lon": -121.987423,
-      "name": "Alma (mi 20.2)",
-      "type": "Historic",
-      "label": "Alma",
-      "mile": 20.2
-    },
-    {
-      "lat": 37.141934,
-      "lon": -121.973307,
-      "name": "Patchen (historic) (mi 26.1)",
-      "type": "Historic",
-      "label": "Patchen (historic)",
-      "mile": 26.1
     },
     {
       "lat": 37.13105,
@@ -6036,14 +5972,6 @@
       "mile": 43.8
     },
     {
-      "lat": 36.981194,
-      "lon": -122.01401,
-      "name": "Branciforte (mi 43.8)",
-      "type": "Historic",
-      "label": "Branciforte",
-      "mile": 43.8
-    },
-    {
       "lat": 36.979,
       "lon": -122.014571,
       "name": "Whole Foods Market (mi 43.9)",
@@ -6052,6 +5980,6 @@
       "mile": 43.9
     }
   ],
-  "water_gap_mi": 23.6,
+  "water_gap_mi": 24.1,
   "route_point_count_raw": 8324
 }
