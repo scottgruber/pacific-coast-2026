@@ -23227,46 +23227,172 @@
   "waypoints": [],
   "services": [
     {
+      "lat": 36.583431,
+      "lon": -121.900318,
+      "name": "Whole Foods Market (mi 0.9)",
+      "type": "Store",
+      "label": "Whole Foods Market",
+      "mile": 0.9
+    },
+    {
+      "lat": 36.58242,
+      "lon": -121.901875,
+      "name": "Crazy Horse Restaurant (mi 0.9)",
+      "type": "Food",
+      "label": "Crazy Horse Restaurant",
+      "mile": 0.9
+    },
+    {
       "lat": 36.555825,
       "lon": -121.909663,
       "name": "Water (mi 3.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 3.6
+    },
+    {
+      "lat": 36.541133,
+      "lon": -121.907126,
+      "name": "Chai Lounge (mi 4.6)",
+      "type": "Food",
+      "label": "Chai Lounge",
+      "mile": 4.6
+    },
+    {
+      "lat": 36.542609,
+      "lon": -121.90571,
+      "name": "Lucky (mi 4.8)",
+      "type": "Store",
+      "label": "Lucky",
+      "mile": 4.8
     },
     {
       "lat": 36.540896,
       "lon": -121.889961,
       "name": "Toilets (mi 5.7)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 5.7
+    },
+    {
+      "lat": 36.53361,
+      "lon": -121.850621,
+      "name": "Wagon Wheel Restaurant (mi 8.0)",
+      "type": "Food",
+      "label": "Wagon Wheel Restaurant",
+      "mile": 8.0
+    },
+    {
+      "lat": 36.533867,
+      "lon": -121.850598,
+      "name": "Valley Hills Deli and BBQ (mi 8.0)",
+      "type": "Store",
+      "label": "Valley Hills Deli and BBQ",
+      "mile": 8.0
     },
     {
       "lat": 36.525043,
       "lon": -121.815791,
       "name": "Toilets (mi 10.1)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 10.1
+    },
+    {
+      "lat": 36.522506,
+      "lon": -121.810186,
+      "name": "Safeway (mi 10.3)",
+      "type": "Store",
+      "label": "Safeway",
+      "mile": 10.3
+    },
+    {
+      "lat": 36.521725,
+      "lon": -121.808769,
+      "name": "Picard Trade Bead Museum (mi 10.6)",
+      "type": "Historic",
+      "label": "Picard Trade Bead Museum",
+      "mile": 10.6
+    },
+    {
+      "lat": 36.522488,
+      "lon": -121.809045,
+      "name": "Carmey Valley Coffee Roasting (mi 10.6)",
+      "type": "Food",
+      "label": "Carmey Valley Coffee Roasting",
+      "mile": 10.6
     },
     {
       "lat": 36.509302,
       "lon": -121.767933,
       "name": "Water (mi 13.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 13.1
     },
     {
       "lat": 36.509325,
       "lon": -121.767848,
       "name": "Toilets (mi 13.1)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 13.1
     },
     {
       "lat": 36.483518,
       "lon": -121.735417,
       "name": "Toilets (mi 15.7)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 15.7
+    },
+    {
+      "lat": 36.480554,
+      "lon": -121.732806,
+      "name": "Mika Sushi (mi 16.1)",
+      "type": "Food",
+      "label": "Mika Sushi",
+      "mile": 16.1
+    },
+    {
+      "lat": 36.480239,
+      "lon": -121.733157,
+      "name": "Kasey's (mi 16.1)",
+      "type": "Store",
+      "label": "Kasey's",
+      "mile": 16.1
+    },
+    {
+      "lat": 36.269508,
+      "lon": -121.393028,
+      "name": "Sycamore Flats (mi 46.8)",
+      "type": "Scenic",
+      "label": "Sycamore Flats",
+      "mile": 46.8
     },
     {
       "lat": 36.22271,
       "lon": -121.129185,
       "name": "Toilets (mi 69.2)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 69.2
+    },
+    {
+      "lat": 36.217633,
+      "lon": -121.124956,
+      "name": "Store (mi 69.7)",
+      "type": "Store",
+      "label": "Store",
+      "mile": 69.7
+    },
+    {
+      "lat": 36.212697,
+      "lon": -121.127874,
+      "name": "King City & South Monterey County Chamber of Commerce & Agriculture (mi 70.4)",
+      "type": "Historic",
+      "label": "King City & South Monterey County Chamber of Commerce & Agriculture",
+      "mile": 70.4
     }
   ],
   "water_gap_mi": 57.4,

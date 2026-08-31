@@ -1358,3 +1358,82 @@ html.metric .unit-pair__metric {
   background: var(--color-background);
   font-size: var(--font-size-x-small);
 }
+
+/* Stops along the way
+   ------------------------------------------------------------------------ */
+
+.stops {
+  margin-top: var(--spacing-large, 2rem);
+  padding-top: var(--spacing-default);
+  border-top: var(--border-width-thin) solid var(--color-surface-border);
+}
+
+.stops__note {
+  max-width: 46rem;
+  margin: 0 0 var(--spacing-default);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.stops__groups {
+  display: grid;
+  gap: var(--spacing-default);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.stop-group {
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  padding: var(--spacing-default);
+}
+
+.stop-group h3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0 0 var(--spacing-small);
+  font-size: var(--font-size-x-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stop-group__count {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+}
+
+/* Water is the one that matters most, so it gets the accent edge. */
+.stop-group--water {
+  border-left: var(--border-width-thick) solid var(--color-accent-rust);
+}
+
+.stop-group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.stop-group li {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr auto;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: var(--font-size-small);
+}
+
+.stop__mile {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+.stop__apple {
+  text-decoration: none;
+  font-size: 1.05em;
+  line-height: 1;
+}

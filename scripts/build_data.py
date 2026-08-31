@@ -17,6 +17,7 @@ refresh the HTML.
 import datetime
 import json
 import math
+import re
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -296,7 +297,12 @@ def elevation_profile(pts, interval_m, smoothing_window):
     }
 
 
-SERVICE_WAYPOINT_TYPES = {"Water", "Toilets"}
+# Written by add_services.py from OpenStreetMap. Kept out of the map-marker
+# waypoints and surfaced as their own list on the day page instead.
+SERVICE_WAYPOINT_TYPES = {"Water", "Toilets", "Food", "Store", "Scenic", "Historic"}
+# The day's own start and finish, added by prepare_gpx.py for the head unit.
+# They are already the ends of the drawn line, so they are not marked again.
+ENDPOINT_WAYPOINT_TYPES = {"Start", "Finish"}
 TURN_CUE_WAYPOINT_TYPES = {"Dot"}
 
 
@@ -358,9 +364,20 @@ def build_day(n):
     #   Water/Toilets   - added by scripts/add_services.py from OpenStreetMap.
     #   GENERIC (other) - lodging and landmarks. First/last are the day's start
     #                     and end, so only the ones in between are marked.
-    services = [w for w in waypoints if w["type"] in SERVICE_WAYPOINT_TYPES]
+    services = []
+    for w in waypoints:
+        if w["type"] not in SERVICE_WAYPOINT_TYPES:
+            continue
+        w = dict(w)
+        # add_services.py writes "Name (mi 12.3)"; split it back apart so the
+        # page can sort by distance and show the label on its own.
+        m = re.match(r"^(.*?)\s*\(mi ([\d.]+)\)$", w["name"])
+        w["label"], w["mile"] = (m.group(1), float(m.group(2))) if m else (w["name"], 0.0)
+        services.append(w)
+    services.sort(key=lambda x: x["mile"])
     landmarks = [w for w in waypoints
                  if w["type"] not in SERVICE_WAYPOINT_TYPES
+                 and w["type"] not in ENDPOINT_WAYPOINT_TYPES
                  and w["type"] not in TURN_CUE_WAYPOINT_TYPES]
     mid_waypoints = landmarks[1:-1] if len(landmarks) > 2 else []
     options = [build_route_option(o) for o in ROUTE_OPTIONS.get(n, [])]

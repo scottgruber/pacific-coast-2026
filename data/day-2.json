@@ -5157,128 +5157,391 @@
     ]
   ],
   "options": [],
-  "waypoints": [
-    {
-      "lat": 36.9850233,
-      "lon": -122.0230909,
-      "name": "Comfort Inn San",
-      "type": "GENERIC"
-    },
-    {
-      "lat": 36.5842,
-      "lon": -121.90185,
-      "name": "Mariposa Inn an",
-      "type": "GENERIC"
-    }
-  ],
+  "waypoints": [],
   "services": [
     {
       "lat": 36.984901,
       "lon": -122.021169,
       "name": "Toilets (mi 0.0)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 0.0
+    },
+    {
+      "lat": 36.983944,
+      "lon": -122.023307,
+      "name": "Ferrell's Donut House (mi 0.1)",
+      "type": "Food",
+      "label": "Ferrell's Donut House",
+      "mile": 0.1
+    },
+    {
+      "lat": 36.983487,
+      "lon": -122.023453,
+      "name": "Valero (mi 0.1)",
+      "type": "Store",
+      "label": "Valero",
+      "mile": 0.1
+    },
+    {
+      "lat": 36.978397,
+      "lon": -122.022465,
+      "name": "Santa Cruz Bicentennial Monument (mi 0.5)",
+      "type": "Historic",
+      "label": "Santa Cruz Bicentennial Monument",
+      "mile": 0.5
+    },
+    {
+      "lat": 36.984876,
+      "lon": -121.990215,
+      "name": "Store (mi 2.3)",
+      "type": "Store",
+      "label": "Store",
+      "mile": 2.3
+    },
+    {
+      "lat": 36.987968,
+      "lon": -121.980954,
+      "name": "Food (mi 2.9)",
+      "type": "Food",
+      "label": "Food",
+      "mile": 2.9
     },
     {
       "lat": 36.990699,
       "lon": -121.975936,
       "name": "Water (mi 3.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 3.1
     },
     {
       "lat": 36.986535,
       "lon": -121.978203,
       "name": "Toilets (mi 3.1)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 3.1
+    },
+    {
+      "lat": 36.9861,
+      "lon": -121.963251,
+      "name": "Safeway (mi 3.9)",
+      "type": "Store",
+      "label": "Safeway",
+      "mile": 3.9
     },
     {
       "lat": 36.985727,
       "lon": -121.954818,
       "name": "Water (mi 4.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 4.5
     },
     {
       "lat": 36.987781,
       "lon": -121.932907,
       "name": "Toilets (mi 5.5)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 5.5
+    },
+    {
+      "lat": 36.989187,
+      "lon": -121.936344,
+      "name": "AJ's Market (mi 5.5)",
+      "type": "Store",
+      "label": "AJ's Market",
+      "mile": 5.5
     },
     {
       "lat": 36.981533,
       "lon": -121.934411,
       "name": "Water (mi 6.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 6.1
+    },
+    {
+      "lat": 36.984658,
+      "lon": -121.932095,
+      "name": "Bangkok West (mi 6.3)",
+      "type": "Food",
+      "label": "Bangkok West",
+      "mile": 6.3
     },
     {
       "lat": 36.972059,
       "lon": -121.911849,
       "name": "Water (mi 7.7)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 7.7
     },
     {
       "lat": 36.972284,
       "lon": -121.913421,
       "name": "Water (mi 7.7)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 7.7
+    },
+    {
+      "lat": 36.97232,
+      "lon": -121.913402,
+      "name": "Toilets (mi 7.7)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 7.7
+    },
+    {
+      "lat": 36.974579,
+      "lon": -121.912754,
+      "name": "Seacliff Plaza Store (mi 7.7)",
+      "type": "Store",
+      "label": "Seacliff Plaza Store",
+      "mile": 7.7
+    },
+    {
+      "lat": 36.97909,
+      "lon": -121.909761,
+      "name": "Aptos History Museum (mi 8.0)",
+      "type": "Historic",
+      "label": "Aptos History Museum",
+      "mile": 8.0
+    },
+    {
+      "lat": 36.974677,
+      "lon": -121.888463,
+      "name": "Cafe Bittersweet (mi 9.2)",
+      "type": "Food",
+      "label": "Cafe Bittersweet",
+      "mile": 9.2
+    },
+    {
+      "lat": 36.976468,
+      "lon": -121.886515,
+      "name": "Palm Deli (mi 9.5)",
+      "type": "Store",
+      "label": "Palm Deli",
+      "mile": 9.5
+    },
+    {
+      "lat": 36.947342,
+      "lon": -121.867225,
+      "name": "First High Altitude Aeroplane Flights (mi 12.6)",
+      "type": "Historic",
+      "label": "First High Altitude Aeroplane Flights",
+      "mile": 12.6
     },
     {
       "lat": 36.942984,
       "lon": -121.864309,
       "name": "Toilets (mi 12.8)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 12.8
+    },
+    {
+      "lat": 36.937147,
+      "lon": -121.862794,
+      "name": "El Patio (mi 13.4)",
+      "type": "Store",
+      "label": "El Patio",
+      "mile": 13.4
     },
     {
       "lat": 36.932465,
       "lon": -121.861953,
       "name": "Water (mi 13.7)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 13.7
+    },
+    {
+      "lat": 36.91603,
+      "lon": -121.833434,
+      "name": "Crystal Bay Farm (mi 15.7)",
+      "type": "Scenic",
+      "label": "Crystal Bay Farm",
+      "mile": 15.7
+    },
+    {
+      "lat": 36.831494,
+      "lon": -121.771393,
+      "name": "Store (mi 24.6)",
+      "type": "Store",
+      "label": "Store",
+      "mile": 24.6
     },
     {
       "lat": 36.815614,
       "lon": -121.790022,
       "name": "Toilets (mi 26.1)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 26.1
+    },
+    {
+      "lat": 36.799589,
+      "lon": -121.783558,
+      "name": "The Whole Enchilada (mi 27.2)",
+      "type": "Food",
+      "label": "The Whole Enchilada",
+      "mile": 27.2
+    },
+    {
+      "lat": 36.798452,
+      "lon": -121.783603,
+      "name": "Store (mi 27.3)",
+      "type": "Store",
+      "label": "Store",
+      "mile": 27.3
+    },
+    {
+      "lat": 36.798951,
+      "lon": -121.785734,
+      "name": "Shakespeare Society of America (mi 27.4)",
+      "type": "Historic",
+      "label": "Shakespeare Society of America",
+      "mile": 27.4
+    },
+    {
+      "lat": 36.693133,
+      "lon": -121.801147,
+      "name": "Walmart Supercenter (mi 36.3)",
+      "type": "Store",
+      "label": "Walmart Supercenter",
+      "mile": 36.3
     },
     {
       "lat": 36.691643,
       "lon": -121.801892,
       "name": "Toilets (mi 36.3)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 36.3
+    },
+    {
+      "lat": 36.686725,
+      "lon": -121.800004,
+      "name": "Starbucks (mi 36.6)",
+      "type": "Food",
+      "label": "Starbucks",
+      "mile": 36.6
+    },
+    {
+      "lat": 36.665426,
+      "lon": -121.811085,
+      "name": "Deli Delicious (mi 38.3)",
+      "type": "Store",
+      "label": "Deli Delicious",
+      "mile": 38.3
+    },
+    {
+      "lat": 36.623247,
+      "lon": -121.842127,
+      "name": "7-Eleven (mi 41.9)",
+      "type": "Store",
+      "label": "7-Eleven",
+      "mile": 41.9
+    },
+    {
+      "lat": 36.622523,
+      "lon": -121.842301,
+      "name": "Panera Bread (mi 41.9)",
+      "type": "Food",
+      "label": "Panera Bread",
+      "mile": 41.9
+    },
+    {
+      "lat": 36.60898,
+      "lon": -121.855355,
+      "name": "Smart & Final (mi 43.7)",
+      "type": "Store",
+      "label": "Smart & Final",
+      "mile": 43.7
     },
     {
       "lat": 36.610085,
       "lon": -121.859348,
       "name": "Toilets (mi 43.8)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 43.8
+    },
+    {
+      "lat": 36.599628,
+      "lon": -121.87274,
+      "name": "Navy Exchange (NEX) (mi 45.2)",
+      "type": "Store",
+      "label": "Navy Exchange (NEX)",
+      "mile": 45.2
+    },
+    {
+      "lat": 36.597656,
+      "lon": -121.872724,
+      "name": "The Roman Plunge (mi 45.2)",
+      "type": "Historic",
+      "label": "The Roman Plunge",
+      "mile": 45.2
+    },
+    {
+      "lat": 36.598871,
+      "lon": -121.88316,
+      "name": "Bay Cafe (mi 45.7)",
+      "type": "Food",
+      "label": "Bay Cafe",
+      "mile": 45.7
     },
     {
       "lat": 36.600481,
       "lon": -121.884284,
       "name": "Water (mi 45.8)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 45.8
     },
     {
       "lat": 36.597769,
       "lon": -121.886433,
       "name": "Water (mi 45.9)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 45.9
+    },
+    {
+      "lat": 36.597671,
+      "lon": -121.886483,
+      "name": "Toilets (mi 45.9)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 45.9
     },
     {
       "lat": 36.603384,
       "lon": -121.889528,
       "name": "Water (mi 46.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 46.1
     },
     {
       "lat": 36.597559,
       "lon": -121.894356,
       "name": "Water (mi 46.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 46.5
     },
     {
-      "lat": 36.597425,
-      "lon": -121.894516,
-      "name": "Toilets (mi 46.5)",
-      "type": "Toilets"
+      "lat": 36.583431,
+      "lon": -121.900318,
+      "name": "Whole Foods Market (mi 47.6)",
+      "type": "Store",
+      "label": "Whole Foods Market",
+      "mile": 47.6
     }
   ],
   "water_gap_mi": 32.1,

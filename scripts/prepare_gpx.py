@@ -11,12 +11,10 @@ Four things, each fixing something that actually bites on the head unit:
    to the cue sheet RWGPS regenerates when it snaps the track to roads. The
    result on the Edge is a POI list full of "Right".
 
-2. THIN THE TOILETS. Course points on a Garmin course are a shared, capped
-   budget: turn cues and POIs compete for the same limit, and a course that
-   exceeds it gets silently truncated — losing turn cues, which matter more
-   than a toilet. Day 7 alone had 113 service POIs before any cues were added.
-   Water is left untouched (it is the scarce thing and there are far fewer of
-   them); toilets are thinned to one per TOILET_MIN_SPACING_MI.
+2. WATCH THE COURSE-POINT BUDGET. Turn cues and POIs share a capped budget
+   on a Garmin course, and going over truncates it silently — losing turn
+   cues, which matter more than a cafe. Spacing is enforced per category by
+   add_services.py; this reports the total and flags anything still high.
 
 3. NAME CONSISTENTLY. RWGPS titles an imported route from <metadata><name>,
    and these were inconsistent — "D31 Alt Monterey to King City", "King City
@@ -40,7 +38,11 @@ NS_URI = "http://www.topografix.com/GPX/1/1"
 NS = "{%s}" % NS_URI
 
 TURN_CUE_TYPES = {"Dot"}
-TOILET_MIN_SPACING_MI = 2.0
+# Course points on a Garmin course are a shared, capped budget: turn cues and
+# POIs compete for it, and an over-budget course is silently truncated - losing
+# turn cues, which matter more than a cafe. Spacing is enforced per category in
+# add_services.py; this is the backstop that says when the total is still high.
+POI_BUDGET_WARN = 90
 # Garmin's own symbol names, so the device shows a real icon rather than a
 # generic pin. RWGPS passes <sym> through on export to a Garmin course.
 START_SYM, END_SYM = "Flag, Blue", "Flag, Green"
@@ -68,23 +70,6 @@ def set_text(parent, tag, text):
     el.text = text
 
 
-def thin_toilets(wpts, trkpts):
-    """Keep water and landmarks; drop toilets closer than the spacing floor to
-    one already kept. Order along the track is approximated by the nearest
-    track point, which is enough for a spacing rule."""
-    kept, kept_toilets = [], []
-    for w in wpts:
-        if (w.findtext(NS + "type") or "") != "Toilets":
-            kept.append(w)
-            continue
-        here = (float(w.get("lat")), float(w.get("lon")))
-        if any(haversine_mi(here, prev) < TOILET_MIN_SPACING_MI for prev in kept_toilets):
-            continue
-        kept_toilets.append(here)
-        kept.append(w)
-    return kept
-
-
 def tidy(path, day):
     ET.register_namespace("", NS_URI)
     tree = ET.parse(path)
@@ -101,11 +86,6 @@ def tidy(path, day):
     # 1. Drop RWGPS turn cues.
     wpts = [w for w in wpts if (w.findtext(NS + "type") or "") not in TURN_CUE_TYPES]
     cues_dropped = before - len(wpts)
-
-    # 2. Thin toilets.
-    n_before_thin = len(wpts)
-    wpts = thin_toilets(wpts, trkpts)
-    thinned = n_before_thin - len(wpts)
 
     # 4. Start/finish markers — rebuilt each run so re-running cannot stack them.
     wpts = [w for w in wpts if (w.findtext(NS + "type") or "") not in ("Start", "Finish")]
@@ -139,8 +119,9 @@ def tidy(path, day):
         set_text(trk, "name", title)
 
     tree.write(path, encoding="UTF-8", xml_declaration=True)
-    print(f"  {path.name:<50} cues -{cues_dropped:<3} toilets -{thinned:<3} "
-          f"wpts {before}->{len(wpts)}  \"{title}\"")
+    warn = "  << over budget, thin further" if len(wpts) > POI_BUDGET_WARN else ""
+    print(f"  {path.name:<50} cues -{cues_dropped:<3} wpts {before}->{len(wpts):<4}"
+          f"\"{title}\"{warn}")
 
 
 def main():

@@ -6477,16 +6477,76 @@
   "waypoints": [],
   "services": [
     {
+      "lat": 36.20791,
+      "lon": -121.150716,
+      "name": "Portola Building (mi 0.2)",
+      "type": "Historic",
+      "label": "Portola Building",
+      "mile": 0.2
+    },
+    {
       "lat": 36.205937,
       "lon": -121.146585,
       "name": "Toilets (mi 0.4)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 0.4
+    },
+    {
+      "lat": 36.192344,
+      "lon": -121.144526,
+      "name": "Pine Canyon Store (mi 1.6)",
+      "type": "Store",
+      "label": "Pine Canyon Store",
+      "mile": 1.6
+    },
+    {
+      "lat": 35.742187,
+      "lon": -120.877548,
+      "name": "Orange Cat Organic Cafe (mi 48.2)",
+      "type": "Food",
+      "label": "Orange Cat Organic Cafe",
+      "mile": 48.2
+    },
+    {
+      "lat": 35.74141,
+      "lon": -120.876376,
+      "name": "Oak Hill Market (mi 48.2)",
+      "type": "Store",
+      "label": "Oak Hill Market",
+      "mile": 48.2
     },
     {
       "lat": 35.742957,
       "lon": -120.877742,
       "name": "Toilets (mi 48.2)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 48.2
+    },
+    {
+      "lat": 35.688219,
+      "lon": -120.79902,
+      "name": "San Marcos Mennonite Cemetary (mi 54.6)",
+      "type": "Historic",
+      "label": "San Marcos Mennonite Cemetary",
+      "mile": 54.6
+    },
+    {
+      "lat": 35.636518,
+      "lon": -120.693152,
+      "name": "Smart & Final Extra! (mi 62.5)",
+      "type": "Store",
+      "label": "Smart & Final Extra!",
+      "mile": 62.5
+    },
+    {
+      "lat": 35.640066,
+      "lon": -120.688559,
+      "name": "A&W (mi 62.5)",
+      "type": "Food",
+      "label": "A&W",
+      "mile": 62.5
     }
   ],
   "water_gap_mi": 62.6,

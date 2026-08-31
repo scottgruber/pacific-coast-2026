@@ -241,6 +241,36 @@
 
     {% endif %}
 
+    {% if services %}
+    <section class="stops" aria-labelledby="stops-heading">
+      <h2 id="stops-heading">Stops along the way</h2>
+      <p class="stops__note">
+        Mapped in OpenStreetMap and carried in the GPX as waypoints, so they show on a
+        head unit too. Distances are miles from the start. Tap a name for Google Maps,
+        or the arrow for Apple Maps. Not verified on the ground &mdash; opening hours
+        and whether a tap actually runs are anyone&rsquo;s guess.
+      </p>
+      <div class="stops__groups">
+        {% for g in services %}
+        <div class="stop-group stop-group--{{ g.key }}">
+          <h3>{{ g.label }} <span class="stop-group__count">{{ g.stops|length }}</span></h3>
+          <ul role="list">
+            {% for s in g.stops %}
+            <li>
+              <span class="stop__mile">{{ '%.1f'|format(s.mile) }}</span>
+              <a class="stop__name" href="https://www.google.com/maps/search/?api=1&amp;query={{ s.ll }}"
+                 target="_blank" rel="noopener">{{ s.label }}</a>
+              <a class="stop__apple" href="https://maps.apple.com/?q={{ s.ll }}"
+                 target="_blank" rel="noopener" aria-label="{{ s.label }} in Apple Maps">&#8599;</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
     <nav class="day-pager" aria-label="Previous and next day">
       {% if prev_day %}
       <a class="prev" href="day-{{ prev_day }}.html">

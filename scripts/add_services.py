@@ -50,14 +50,62 @@ TIMEOUT_S = 120
 # Overpass is free and shared. Be a good citizen between days.
 SLEEP_BETWEEN_DAYS_S = 12
 
-SERVICE_TYPES = {"drinking_water": "Water", "toilets": "Toilets"}
-SERVICE_SYMS = {"drinking_water": "Drinking Water", "toilets": "Restroom"}
+# What to look for, and how each is presented. Ordered by resupply value
+# within a category: when several fall close together only the best survives
+# thinning, so a supermarket beats a corner shop and a shop beats a cafe.
+#
+# `sym` values are Garmin's own symbol names so the head unit draws a real icon
+# rather than a generic pin. `spacing_mi` is the minimum gap between kept
+# points of that type - the whole POI set competes with turn cues for a
+# Garmin course's capped course-point budget, so density matters more than
+# completeness. Water is never thinned: it is the scarce thing.
+CATEGORIES = {
+    ("amenity", "drinking_water"): dict(type="Water", sym="Drinking Water",
+                                        priority=0, spacing_mi=0.0),
+    ("amenity", "toilets"):        dict(type="Toilets", sym="Restroom",
+                                        priority=0, spacing_mi=2.0),
+    ("shop", "supermarket"):       dict(type="Store", sym="Shopping Center",
+                                        priority=0, spacing_mi=1.5),
+    ("shop", "convenience"):       dict(type="Store", sym="Convenience Store",
+                                        priority=1, spacing_mi=1.5),
+    ("shop", "deli"):              dict(type="Store", sym="Convenience Store",
+                                        priority=2, spacing_mi=1.5),
+    ("amenity", "cafe"):           dict(type="Food", sym="Restaurant",
+                                        priority=0, spacing_mi=2.5),
+    ("amenity", "restaurant"):     dict(type="Food", sym="Restaurant",
+                                        priority=1, spacing_mi=2.5),
+    ("amenity", "fast_food"):      dict(type="Food", sym="Fast Food",
+                                        priority=2, spacing_mi=2.5),
+    # Worth stopping for rather than worth relying on, so spaced widely and
+    # only kept when named - an unnamed viewpoint tells a rider nothing.
+    ("tourism", "viewpoint"):      dict(type="Scenic", sym="Scenic Area",
+                                        priority=0, spacing_mi=3.0, named_only=True),
+    ("tourism", "attraction"):     dict(type="Scenic", sym="Scenic Area",
+                                        priority=1, spacing_mi=3.0, named_only=True),
+    ("tourism", "museum"):         dict(type="Historic", sym="Museum",
+                                        priority=0, spacing_mi=3.0, named_only=True),
+    ("historic", "monument"):      dict(type="Historic", sym="Museum",
+                                        priority=1, spacing_mi=3.0, named_only=True),
+    ("historic", "memorial"):      dict(type="Historic", sym="Museum",
+                                        priority=2, spacing_mi=3.0, named_only=True),
+    ("historic", "ruins"):         dict(type="Historic", sym="Museum",
+                                        priority=1, spacing_mi=3.0, named_only=True),
+    ("historic", "building"):      dict(type="Historic", sym="Museum",
+                                        priority=3, spacing_mi=3.0, named_only=True),
+}
 
-QUERY = """[out:json][timeout:90];
+SERVICE_TYPES = {k: v["type"] for k, v in CATEGORIES.items()}
+ALL_TYPES = sorted({v["type"] for v in CATEGORIES.values()})
+
+QUERY = """[out:json][timeout:120];
 (
-  node["amenity"="drinking_water"](%(bbox)s);
-  node["amenity"="toilets"](%(bbox)s);
+  node["amenity"~"^(drinking_water|toilets|cafe|restaurant|fast_food)$"](%(bbox)s);
   way["amenity"="toilets"](%(bbox)s);
+  node["shop"~"^(supermarket|convenience|deli)$"](%(bbox)s);
+  way["shop"~"^(supermarket|convenience)$"](%(bbox)s);
+  node["tourism"~"^(viewpoint|attraction|museum)$"](%(bbox)s);
+  node["historic"~"^(monument|memorial|ruins|building)$"](%(bbox)s);
+  way["historic"~"^(monument|memorial|ruins|building)$"](%(bbox)s);
 );
 out center;"""
 
@@ -101,9 +149,17 @@ def route_of(day):
     return json.loads((DATA_DIR / f"day-{day}.json").read_text())["route"]
 
 
+def categorise(tags):
+    """The CATEGORIES entry matching an element's tags, or None."""
+    for (k, v), cfg in CATEGORIES.items():
+        if tags.get(k) == v:
+            return cfg
+    return None
+
+
 def find_services(route):
     """Facilities within MAX_OFFSET_MI of the route, each with the mile along
-    the route where it is closest."""
+    the route where it is closest, thinned per category."""
     lats = [p[0] for p in route]
     lons = [p[1] for p in route]
     bbox = (min(lats) - BBOX_PAD_DEG, min(lons) - BBOX_PAD_DEG,
@@ -119,29 +175,44 @@ def find_services(route):
         lon = e.get("lon") or (e.get("center") or {}).get("lon")
         if lat is None or lon is None:
             continue
-        amenity = e.get("tags", {}).get("amenity")
-        if amenity not in SERVICE_TYPES:
+        tags = e.get("tags", {})
+        cfg = categorise(tags)
+        if cfg is None:
+            continue
+        name = (tags.get("name") or "").strip()
+        if cfg.get("named_only") and not name:
             continue
         dists = [haversine_mi((lat, lon), (p[0], p[1])) for p in route]
-        offset = min(dists)
-        if offset > MAX_OFFSET_MI:
+        offset_mi = min(dists)
+        if offset_mi > MAX_OFFSET_MI:
             continue
-        i = dists.index(offset)
+        i = dists.index(offset_mi)
         found.append({
-            "lat": lat, "lon": lon, "amenity": amenity,
-            "name": (e.get("tags", {}).get("name") or "").strip(),
-            "mile": round(cum[i], 1), "offset_mi": round(offset, 2),
+            "lat": lat, "lon": lon, "name": name,
+            "type": cfg["type"], "sym": cfg["sym"],
+            "priority": cfg["priority"], "spacing_mi": cfg["spacing_mi"],
+            "mile": round(cum[i], 1), "offset_mi": round(offset_mi, 2),
         })
 
-    found.sort(key=lambda s: (s["mile"], s["amenity"]))
-    deduped = []
+    # Thin per category: walking in mile order, drop anything closer than its
+    # own spacing to one already kept. Sorting by priority first means the most
+    # useful member of a cluster is the one that survives - a supermarket
+    # rather than the fast-food place next door. Water is never thinned.
+    found.sort(key=lambda s: (s["mile"], s["priority"]))
+    kept = []
     for s in found:
-        if any(s["amenity"] == d["amenity"]
-               and haversine_mi((s["lat"], s["lon"]), (d["lat"], d["lon"])) < DEDUPE_MI
-               for d in deduped):
+        if s["spacing_mi"] > 0 and any(
+            k["type"] == s["type"] and abs(k["mile"] - s["mile"]) < s["spacing_mi"]
+            for k in kept
+        ):
             continue
-        deduped.append(s)
-    return deduped
+        if any(k["type"] == s["type"]
+               and haversine_mi((s["lat"], s["lon"]), (k["lat"], k["lon"])) < DEDUPE_MI
+               for k in kept):
+            continue
+        kept.append(s)
+    kept.sort(key=lambda s: s["mile"])
+    return kept
 
 
 def write_waypoints(path, services):
@@ -152,7 +223,7 @@ def write_waypoints(path, services):
     # Drop service waypoints from a previous run so this is a refresh, not an
     # append. Anything else in the file (turn cues, lodging) is left as is.
     for wpt in list(root.findall(NS + "wpt")):
-        if (wpt.findtext(NS + "type") or "") in SERVICE_TYPES.values():
+        if (wpt.findtext(NS + "type") or "") in ALL_TYPES:
             root.remove(wpt)
 
     # GPX requires wpt elements before trk, so insert ahead of the first one.
@@ -160,7 +231,7 @@ def write_waypoints(path, services):
     insert_at = list(root).index(trk) if trk is not None else len(list(root))
 
     for s in services:
-        kind = SERVICE_TYPES[s["amenity"]]
+        kind = s["type"]
         wpt = ET.Element(NS + "wpt", {"lat": f"{s['lat']:.6f}", "lon": f"{s['lon']:.6f}"})
         label = s["name"] or kind
         ET.SubElement(wpt, NS + "name").text = f"{label} (mi {s['mile']:.1f})"
@@ -170,7 +241,7 @@ def write_waypoints(path, services):
             f"not verified on the ground."
         )
         ET.SubElement(wpt, NS + "desc").text = kind
-        ET.SubElement(wpt, NS + "sym").text = SERVICE_SYMS[s["amenity"]]
+        ET.SubElement(wpt, NS + "sym").text = s["sym"]
         ET.SubElement(wpt, NS + "type").text = kind
         root.insert(insert_at, wpt)
         insert_at += 1
@@ -195,12 +266,12 @@ def main():
         services = find_services(route)
         counts = {}
         for s in services:
-            counts[s["amenity"]] = counts.get(s["amenity"], 0) + 1
+            counts[s["type"]] = counts.get(s["type"], 0) + 1
 
         # The number that actually matters for planning: the longest stretch
         # with no mapped water, start and finish included as known stops.
         water_miles = [0.0] + [s["mile"] for s in services
-                               if s["amenity"] == "drinking_water"]
+                               if s["type"] == "Water"]
         total = sum(haversine_mi(a, b) for a, b in zip(route, route[1:]))
         water_miles.append(total)
         gap = max(b - a for a, b in zip(water_miles, water_miles[1:]))
@@ -208,10 +279,8 @@ def main():
         for name in gpx_files_for(day):
             write_waypoints(GPX_DIR / name, services)
 
-        print(f"day {day}: {counts.get('drinking_water', 0):>3} water, "
-              f"{counts.get('toilets', 0):>3} toilets  "
-              f"longest dry stretch {gap:5.1f} mi  "
-              f"-> {', '.join(gpx_files_for(day))}")
+        summary = "  ".join(f"{counts.get(t, 0):>3} {t.lower()}" for t in ALL_TYPES)
+        print(f"day {day}: {summary}   dry stretch {gap:5.1f} mi")
         if day != days[-1]:
             time.sleep(SLEEP_BETWEEN_DAYS_S)
 

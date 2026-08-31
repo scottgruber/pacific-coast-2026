@@ -18239,100 +18239,332 @@
   "waypoints": [],
   "services": [
     {
+      "lat": 35.638703,
+      "lon": -120.692937,
+      "name": "7-Eleven (mi 0.0)",
+      "type": "Store",
+      "label": "7-Eleven",
+      "mile": 0.0
+    },
+    {
+      "lat": 35.640066,
+      "lon": -120.688559,
+      "name": "A&W (mi 0.0)",
+      "type": "Food",
+      "label": "A&W",
+      "mile": 0.0
+    },
+    {
       "lat": 35.632393,
       "lon": -120.695145,
       "name": "Toilets (mi 0.3)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 0.3
+    },
+    {
+      "lat": 35.590755,
+      "lon": -120.694728,
+      "name": "Food Mart (mi 3.5)",
+      "type": "Food",
+      "label": "Food Mart",
+      "mile": 3.5
+    },
+    {
+      "lat": 35.589565,
+      "lon": -120.693753,
+      "name": "ampm (mi 3.6)",
+      "type": "Store",
+      "label": "ampm",
+      "mile": 3.6
+    },
+    {
+      "lat": 35.550093,
+      "lon": -120.705022,
+      "name": "Store (mi 6.3)",
+      "type": "Store",
+      "label": "Store",
+      "mile": 6.3
     },
     {
       "lat": 35.546838,
       "lon": -120.709537,
       "name": "Toilets (mi 6.8)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 6.8
     },
     {
       "lat": 35.491761,
       "lon": -120.668341,
       "name": "Toilets (mi 13.7)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 13.7
+    },
+    {
+      "lat": 35.489291,
+      "lon": -120.666299,
+      "name": "Atascadero Historical Museum (mi 13.8)",
+      "type": "Historic",
+      "label": "Atascadero Historical Museum",
+      "mile": 13.8
+    },
+    {
+      "lat": 35.489885,
+      "lon": -120.668651,
+      "name": "Dark Nectar Coffee (mi 13.8)",
+      "type": "Food",
+      "label": "Dark Nectar Coffee",
+      "mile": 13.8
+    },
+    {
+      "lat": 35.488982,
+      "lon": -120.670274,
+      "name": "Colony Market & Deli (mi 13.9)",
+      "type": "Store",
+      "label": "Colony Market & Deli",
+      "mile": 13.9
+    },
+    {
+      "lat": 35.460738,
+      "lon": -120.740148,
+      "name": "Devils Gap (mi 20.2)",
+      "type": "Scenic",
+      "label": "Devils Gap",
+      "mile": 20.2
+    },
+    {
+      "lat": 35.377161,
+      "lon": -120.850128,
+      "name": "MB (mi 30.6)",
+      "type": "Historic",
+      "label": "MB",
+      "mile": 30.6
     },
     {
       "lat": 35.36939,
       "lon": -120.850941,
       "name": "Toilets (mi 31.0)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 31.0
+    },
+    {
+      "lat": 35.369017,
+      "lon": -120.85411,
+      "name": "Morro Bay House of Jerky (mi 31.0)",
+      "type": "Store",
+      "label": "Morro Bay House of Jerky",
+      "mile": 31.0
+    },
+    {
+      "lat": 35.36446,
+      "lon": -120.852579,
+      "name": "Sweet Reef (mi 31.3)",
+      "type": "Food",
+      "label": "Sweet Reef",
+      "mile": 31.3
+    },
+    {
+      "lat": 35.33357,
+      "lon": -120.827034,
+      "name": "Celestial Meadow (mi 35.0)",
+      "type": "Scenic",
+      "label": "Celestial Meadow",
+      "mile": 35.0
     },
     {
       "lat": 35.325482,
       "lon": -120.819445,
       "name": "Toilets (mi 35.5)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 35.5
+    },
+    {
+      "lat": 35.311277,
+      "lon": -120.826836,
+      "name": "Ralphs (mi 36.6)",
+      "type": "Store",
+      "label": "Ralphs",
+      "mile": 36.6
+    },
+    {
+      "lat": 35.310876,
+      "lon": -120.828273,
+      "name": "Ascendo (mi 36.6)",
+      "type": "Food",
+      "label": "Ascendo",
+      "mile": 36.6
     },
     {
       "lat": 35.265065,
       "lon": -120.702788,
       "name": "Water (mi 44.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 44.4
     },
     {
       "lat": 35.263937,
       "lon": -120.697012,
       "name": "Toilets (mi 44.7)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 44.7
+    },
+    {
+      "lat": 35.257704,
+      "lon": -120.690812,
+      "name": "Nautical Bean Espresso Cafe (mi 45.3)",
+      "type": "Food",
+      "label": "Nautical Bean Espresso Cafe",
+      "mile": 45.3
+    },
+    {
+      "lat": 35.258463,
+      "lon": -120.690241,
+      "name": "Grocery Outlet (mi 45.3)",
+      "type": "Store",
+      "label": "Grocery Outlet",
+      "mile": 45.3
     },
     {
       "lat": 35.254861,
       "lon": -120.69388,
       "name": "Water (mi 45.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 45.4
+    },
+    {
+      "lat": 35.236884,
+      "lon": -120.679564,
+      "name": "Pereira Octagon Barn (mi 47.2)",
+      "type": "Historic",
+      "label": "Pereira Octagon Barn",
+      "mile": 47.2
     },
     {
       "lat": 35.185782,
       "lon": -120.702859,
       "name": "Toilets (mi 51.2)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 51.2
+    },
+    {
+      "lat": 35.165052,
+      "lon": -120.69042,
+      "name": "Marisol (mi 53.1)",
+      "type": "Food",
+      "label": "Marisol",
+      "mile": 53.1
+    },
+    {
+      "lat": 35.162899,
+      "lon": -120.687069,
+      "name": "De Palo & Sons (mi 53.2)",
+      "type": "Store",
+      "label": "De Palo & Sons",
+      "mile": 53.2
+    },
+    {
+      "lat": 35.160525,
+      "lon": -120.686328,
+      "name": "Toilets (mi 53.3)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 53.3
     },
     {
       "lat": 35.160432,
       "lon": -120.686268,
       "name": "Water (mi 53.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 53.3
     },
     {
       "lat": 35.154442,
       "lon": -120.665391,
       "name": "Water (mi 54.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 54.6
     },
     {
-      "lat": 35.154462,
-      "lon": -120.665373,
-      "name": "Toilets (mi 54.6)",
-      "type": "Toilets"
+      "lat": 35.153836,
+      "lon": -120.658408,
+      "name": "Concrete Turret (mi 55.0)",
+      "type": "Scenic",
+      "label": "Concrete Turret",
+      "mile": 55.0
     },
     {
       "lat": 35.151475,
       "lon": -120.652939,
       "name": "Water (mi 55.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 55.3
+    },
+    {
+      "lat": 35.151484,
+      "lon": -120.652957,
+      "name": "Toilets (mi 55.3)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 55.3
+    },
+    {
+      "lat": 35.148234,
+      "lon": -120.648782,
+      "name": "Blast & Brew (mi 55.7)",
+      "type": "Food",
+      "label": "Blast & Brew",
+      "mile": 55.7
+    },
+    {
+      "lat": 35.144189,
+      "lon": -120.642433,
+      "name": "Price Street Market (mi 56.0)",
+      "type": "Store",
+      "label": "Price Street Market",
+      "mile": 56.0
     },
     {
       "lat": 35.13909,
       "lon": -120.642997,
       "name": "Water (mi 56.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 56.6
     },
     {
-      "lat": 35.133825,
-      "lon": -120.638132,
-      "name": "Toilets (mi 56.8)",
-      "type": "Toilets"
+      "lat": 35.128732,
+      "lon": -120.632324,
+      "name": "Toilets (mi 57.3)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 57.3
     },
     {
-      "lat": 35.104002,
-      "lon": -120.625046,
-      "name": "Toilets (mi 59.0)",
-      "type": "Toilets"
+      "lat": 35.121429,
+      "lon": -120.626618,
+      "name": "7-Eleven (mi 58.0)",
+      "type": "Store",
+      "label": "7-Eleven",
+      "mile": 58.0
+    },
+    {
+      "lat": 35.107386,
+      "lon": -120.62405,
+      "name": "Old Juan’s Cantina (mi 59.0)",
+      "type": "Food",
+      "label": "Old Juan’s Cantina",
+      "mile": 59.0
     }
   ],
   "water_gap_mi": 44.5,

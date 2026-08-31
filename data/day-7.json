@@ -9025,310 +9025,700 @@
   "waypoints": [],
   "services": [
     {
+      "lat": 34.596187,
+      "lon": -120.141491,
+      "name": "Good Seed Coffee Roasters (mi 0.2)",
+      "type": "Food",
+      "label": "Good Seed Coffee Roasters",
+      "mile": 0.2
+    },
+    {
       "lat": 34.599027,
       "lon": -120.145662,
       "name": "Toilets (mi 0.2)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 0.2
+    },
+    {
+      "lat": 34.5954,
+      "lon": -120.142345,
+      "name": "Peassants Deli & Market (mi 0.2)",
+      "type": "Store",
+      "label": "Peassants Deli & Market",
+      "mile": 0.2
+    },
+    {
+      "lat": 34.594315,
+      "lon": -120.136626,
+      "name": "Mission Santa Inés (mi 0.6)",
+      "type": "Historic",
+      "label": "Mission Santa Inés",
+      "mile": 0.6
     },
     {
       "lat": 34.595877,
       "lon": -120.140213,
       "name": "Water (mi 0.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 0.6
+    },
+    {
+      "lat": 34.596098,
+      "lon": -120.138092,
+      "name": "The Little Mermaid Fountain (mi 0.6)",
+      "type": "Scenic",
+      "label": "The Little Mermaid Fountain",
+      "mile": 0.6
     },
     {
       "lat": 34.533325,
       "lon": -120.178507,
       "name": "Toilets (mi 7.1)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 7.1
     },
     {
       "lat": 34.484965,
       "lon": -120.228653,
       "name": "Toilets (mi 14.7)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 14.7
     },
     {
       "lat": 34.471915,
       "lon": -120.228078,
       "name": "Water (mi 15.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 15.6
+    },
+    {
+      "lat": 34.473969,
+      "lon": -120.138921,
+      "name": "Vista Point (mi 20.5)",
+      "type": "Scenic",
+      "label": "Vista Point",
+      "mile": 20.5
     },
     {
       "lat": 34.463103,
       "lon": -120.071781,
       "name": "Toilets (mi 24.6)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 24.6
     },
     {
       "lat": 34.465598,
       "lon": -120.024975,
       "name": "Water (mi 27.9)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 27.9
     },
     {
       "lat": 34.465573,
       "lon": -120.024934,
       "name": "Toilets (mi 27.9)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 27.9
+    },
+    {
+      "lat": 34.465465,
+      "lon": -120.02248,
+      "name": "Food (mi 28.1)",
+      "type": "Food",
+      "label": "Food",
+      "mile": 28.1
     },
     {
       "lat": 34.43144,
       "lon": -119.916457,
       "name": "Toilets (mi 35.1)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 35.1
+    },
+    {
+      "lat": 34.431331,
+      "lon": -119.915882,
+      "name": "Site of WWII Japanese Attack (mi 35.2)",
+      "type": "Historic",
+      "label": "Site of WWII Japanese Attack",
+      "mile": 35.2
+    },
+    {
+      "lat": 34.43065,
+      "lon": -119.907826,
+      "name": "Sandpiper Grill (mi 35.6)",
+      "type": "Food",
+      "label": "Sandpiper Grill",
+      "mile": 35.6
     },
     {
       "lat": 34.429659,
       "lon": -119.87232,
       "name": "Toilets (mi 37.7)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 37.7
+    },
+    {
+      "lat": 34.429688,
+      "lon": -119.867076,
+      "name": "Indo China Market (mi 37.7)",
+      "type": "Store",
+      "label": "Indo China Market",
+      "mile": 37.7
     },
     {
       "lat": 34.425442,
       "lon": -119.873348,
       "name": "Water (mi 38.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 38.1
     },
     {
       "lat": 34.426433,
       "lon": -119.863078,
       "name": "Water (mi 38.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 38.4
+    },
+    {
+      "lat": 34.420871,
+      "lon": -119.864456,
+      "name": "Jude Martin Keefer (mi 38.6)",
+      "type": "Historic",
+      "label": "Jude Martin Keefer",
+      "mile": 38.6
     },
     {
       "lat": 34.414965,
       "lon": -119.862388,
       "name": "Water (mi 39.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 39.1
     },
     {
       "lat": 34.420273,
       "lon": -119.861248,
       "name": "Water (mi 39.2)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 39.2
     },
     {
       "lat": 34.418027,
       "lon": -119.856383,
       "name": "Water (mi 39.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 39.4
     },
     {
       "lat": 34.417611,
       "lon": -119.85284,
       "name": "Water (mi 39.7)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 39.7
     },
     {
       "lat": 34.415858,
       "lon": -119.851529,
       "name": "Water (mi 39.7)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 39.7
     },
     {
       "lat": 34.416846,
       "lon": -119.852609,
       "name": "Water (mi 39.7)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 39.7
+    },
+    {
+      "lat": 34.417617,
+      "lon": -119.852868,
+      "name": "Toilets (mi 39.7)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 39.7
     },
     {
       "lat": 34.417355,
       "lon": -119.850212,
       "name": "Water (mi 39.8)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 39.8
     },
     {
       "lat": 34.413242,
       "lon": -119.850141,
       "name": "Water (mi 39.9)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 39.9
+    },
+    {
+      "lat": 34.414068,
+      "lon": -119.846556,
+      "name": "Arbor Cafe (mi 40.0)",
+      "type": "Food",
+      "label": "Arbor Cafe",
+      "mile": 40.0
     },
     {
       "lat": 34.416972,
       "lon": -119.847467,
       "name": "Water (mi 40.0)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.0
     },
     {
       "lat": 34.417961,
       "lon": -119.847997,
       "name": "Water (mi 40.0)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.0
     },
     {
       "lat": 34.414005,
       "lon": -119.847341,
       "name": "Water (mi 40.0)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.0
+    },
+    {
+      "lat": 34.414152,
+      "lon": -119.846525,
+      "name": "The Arbor (mi 40.0)",
+      "type": "Store",
+      "label": "The Arbor",
+      "mile": 40.0
     },
     {
       "lat": 34.415262,
       "lon": -119.84476,
       "name": "Water (mi 40.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.3
     },
     {
       "lat": 34.413565,
       "lon": -119.845336,
       "name": "Water (mi 40.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.5
     },
     {
       "lat": 34.412582,
       "lon": -119.845297,
       "name": "Water (mi 40.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.5
     },
     {
       "lat": 34.413244,
       "lon": -119.841745,
       "name": "Water (mi 40.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.5
     },
     {
       "lat": 34.413409,
       "lon": -119.84279,
       "name": "Water (mi 40.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.5
     },
     {
       "lat": 34.411927,
       "lon": -119.84388,
       "name": "Water (mi 40.5)",
-      "type": "Water"
-    },
-    {
-      "lat": 34.41192,
-      "lon": -119.843869,
-      "name": "Toilets (mi 40.5)",
-      "type": "Toilets"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.5
     },
     {
       "lat": 34.417068,
       "lon": -119.830464,
       "name": "Water (mi 41.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 41.3
+    },
+    {
+      "lat": 34.425833,
+      "lon": -119.827898,
+      "name": "Toilets (mi 41.8)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 41.8
+    },
+    {
+      "lat": 34.43943,
+      "lon": -119.771953,
+      "name": "The Java Station (mi 45.4)",
+      "type": "Food",
+      "label": "The Java Station",
+      "mile": 45.4
+    },
+    {
+      "lat": 34.440023,
+      "lon": -119.758485,
+      "name": "Speedway (mi 46.1)",
+      "type": "Store",
+      "label": "Speedway",
+      "mile": 46.1
     },
     {
       "lat": 34.436608,
       "lon": -119.74833,
       "name": "Toilets (mi 46.7)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 46.7
+    },
+    {
+      "lat": 34.427062,
+      "lon": -119.734212,
+      "name": "Point Market (mi 47.7)",
+      "type": "Store",
+      "label": "Point Market",
+      "mile": 47.7
+    },
+    {
+      "lat": 34.402502,
+      "lon": -119.723794,
+      "name": "Vons (mi 50.2)",
+      "type": "Store",
+      "label": "Vons",
+      "mile": 50.2
+    },
+    {
+      "lat": 34.402371,
+      "lon": -119.723374,
+      "name": "Starbucks (mi 50.2)",
+      "type": "Food",
+      "label": "Starbucks",
+      "mile": 50.2
     },
     {
       "lat": 34.395786,
       "lon": -119.710196,
       "name": "Toilets (mi 51.3)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 51.3
     },
     {
       "lat": 34.404392,
       "lon": -119.701019,
       "name": "Water (mi 52.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 52.1
+    },
+    {
+      "lat": 34.404131,
+      "lon": -119.699013,
+      "name": "Calden Overlook (mi 52.2)",
+      "type": "Scenic",
+      "label": "Calden Overlook",
+      "mile": 52.2
     },
     {
       "lat": 34.403637,
       "lon": -119.692691,
       "name": "Water (mi 52.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 52.4
+    },
+    {
+      "lat": 34.403756,
+      "lon": -119.693211,
+      "name": "Harbor Market (mi 52.4)",
+      "type": "Store",
+      "label": "Harbor Market",
+      "mile": 52.4
+    },
+    {
+      "lat": 34.405799,
+      "lon": -119.695272,
+      "name": "Jeffrey David Nancarrow (mi 52.5)",
+      "type": "Historic",
+      "label": "Jeffrey David Nancarrow",
+      "mile": 52.5
     },
     {
       "lat": 34.406268,
       "lon": -119.693364,
       "name": "Water (mi 52.7)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 52.7
     },
     {
       "lat": 34.407193,
       "lon": -119.692996,
       "name": "Water (mi 52.7)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 52.7
     },
     {
       "lat": 34.408681,
       "lon": -119.697211,
       "name": "Water (mi 52.7)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 52.7
+    },
+    {
+      "lat": 34.40864,
+      "lon": -119.693495,
+      "name": "Toma Restaurant & Bar (mi 52.8)",
+      "type": "Food",
+      "label": "Toma Restaurant & Bar",
+      "mile": 52.8
     },
     {
       "lat": 34.410211,
       "lon": -119.685557,
       "name": "Water (mi 53.2)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 53.2
     },
     {
-      "lat": 34.4153,
-      "lon": -119.679221,
-      "name": "Toilets (mi 53.7)",
-      "type": "Toilets"
+      "lat": 34.414332,
+      "lon": -119.687186,
+      "name": "Toilets (mi 53.4)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 53.4
+    },
+    {
+      "lat": 34.418522,
+      "lon": -119.673729,
+      "name": "Tri-County Produce (mi 54.2)",
+      "type": "Store",
+      "label": "Tri-County Produce",
+      "mile": 54.2
+    },
+    {
+      "lat": 34.422632,
+      "lon": -119.651706,
+      "name": "Toilets (mi 55.4)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 55.4
+    },
+    {
+      "lat": 34.422758,
+      "lon": -119.651454,
+      "name": "Caffe Luxxe (mi 55.4)",
+      "type": "Food",
+      "label": "Caffe Luxxe",
+      "mile": 55.4
+    },
+    {
+      "lat": 34.421134,
+      "lon": -119.648103,
+      "name": "The Point Market (mi 55.9)",
+      "type": "Store",
+      "label": "The Point Market",
+      "mile": 55.9
     },
     {
       "lat": 34.420057,
       "lon": -119.625401,
       "name": "Toilets (mi 57.5)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 57.5
+    },
+    {
+      "lat": 34.421452,
+      "lon": -119.600625,
+      "name": "Point Market (mi 59.1)",
+      "type": "Store",
+      "label": "Point Market",
+      "mile": 59.1
+    },
+    {
+      "lat": 34.406801,
+      "lon": -119.548582,
+      "name": "Padaro Beach Grill (mi 62.4)",
+      "type": "Food",
+      "label": "Padaro Beach Grill",
+      "mile": 62.4
+    },
+    {
+      "lat": 34.406245,
+      "lon": -119.536887,
+      "name": "Kim's Market (mi 62.9)",
+      "type": "Store",
+      "label": "Kim's Market",
+      "mile": 62.9
     },
     {
       "lat": 34.398752,
       "lon": -119.519559,
       "name": "Toilets (mi 64.2)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 64.2
+    },
+    {
+      "lat": 34.394906,
+      "lon": -119.511997,
+      "name": "Albertsons (mi 64.9)",
+      "type": "Store",
+      "label": "Albertsons",
+      "mile": 64.9
+    },
+    {
+      "lat": 34.394962,
+      "lon": -119.513122,
+      "name": "Starbucks (mi 64.9)",
+      "type": "Food",
+      "label": "Starbucks",
+      "mile": 64.9
+    },
+    {
+      "lat": 34.385417,
+      "lon": -119.495455,
+      "name": "Lois Sidenberg Overlook (mi 66.0)",
+      "type": "Scenic",
+      "label": "Lois Sidenberg Overlook",
+      "mile": 66.0
     },
     {
       "lat": 34.376503,
       "lon": -119.479751,
       "name": "Toilets (mi 67.9)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 67.9
+    },
+    {
+      "lat": 34.355797,
+      "lon": -119.440347,
+      "name": "Shoals Restaurant (mi 70.7)",
+      "type": "Food",
+      "label": "Shoals Restaurant",
+      "mile": 70.7
     },
     {
       "lat": 34.345545,
       "lon": -119.419258,
       "name": "Water (mi 72.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 72.5
     },
     {
       "lat": 34.345569,
       "lon": -119.419424,
       "name": "Toilets (mi 72.5)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 72.5
     },
     {
       "lat": 34.338024,
       "lon": -119.411445,
       "name": "Water (mi 73.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 73.3
     },
     {
       "lat": 34.281569,
       "lon": -119.316564,
       "name": "Water (mi 80.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 80.4
     },
     {
       "lat": 34.28014,
       "lon": -119.313932,
       "name": "Water (mi 80.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 80.6
     },
     {
       "lat": 34.280337,
       "lon": -119.314721,
       "name": "Toilets (mi 80.6)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 80.6
+    },
+    {
+      "lat": 34.282391,
+      "lon": -119.30235,
+      "name": "Vons (mi 81.4)",
+      "type": "Store",
+      "label": "Vons",
+      "mile": 81.4
+    },
+    {
+      "lat": 34.283146,
+      "lon": -119.300121,
+      "name": "Johnny's Fine Mexican Food (mi 81.4)",
+      "type": "Food",
+      "label": "Johnny's Fine Mexican Food",
+      "mile": 81.4
+    },
+    {
+      "lat": 34.281168,
+      "lon": -119.298562,
+      "name": "Old Mission Church Foundation (mi 81.4)",
+      "type": "Historic",
+      "label": "Old Mission Church Foundation",
+      "mile": 81.4
     },
     {
       "lat": 34.276051,
       "lon": -119.292108,
       "name": "Water (mi 82.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 82.3
     },
     {
       "lat": 34.275748,
       "lon": -119.290615,
       "name": "Water (mi 82.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 82.3
     }
   ],
   "water_gap_mi": 19.3,

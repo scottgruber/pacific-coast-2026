@@ -163,6 +163,32 @@ def asset(rel):
     return f"{rel}?v={v}" if v else rel
 
 
+# Order the stops list by what a rider needs first, not alphabetically.
+SERVICE_GROUPS = [
+    ("Water", "Water"),
+    ("Store", "Shops &amp; markets"),
+    ("Food", "Food &amp; coffee"),
+    ("Toilets", "Restrooms"),
+    ("Scenic", "Scenic"),
+    ("Historic", "Historic"),
+]
+
+
+def group_services(services):
+    """Bucket a day's POIs by type, in SERVICE_GROUPS order, each sorted by
+    distance along the route. Empty groups are dropped."""
+    out = []
+    for key, label in SERVICE_GROUPS:
+        stops = [dict(s) for s in services if s["type"] == key]
+        if not stops:
+            continue
+        for s in stops:
+            s["ll"] = f"{s['lat']:.5f},{s['lon']:.5f}"
+        # Not "items": Jinja resolves g.items to the dict's own .items method.
+        out.append({"key": key.lower(), "label": label, "stops": stops})
+    return out
+
+
 def load_day(n):
     return json.loads((DATA_DIR / f"day-{n}.json").read_text())
 
@@ -269,6 +295,7 @@ def main():
                 "gpx": d["gpx"],
                 "options": options,
                 "shade": day_shade.get("primary"),
+                "services": group_services(d.get("services", [])),
                 "end_lat": round(end_lat, 4),
                 "end_lon": round(end_lon, 4),
                 "route_json": json.dumps(d["route"]),

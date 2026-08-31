@@ -5658,232 +5658,532 @@
   "waypoints": [],
   "services": [
     {
+      "lat": 34.278495,
+      "lon": -119.287288,
+      "name": "Kwiki Mart (mi 0.0)",
+      "type": "Store",
+      "label": "Kwiki Mart",
+      "mile": 0.0
+    },
+    {
+      "lat": 34.278038,
+      "lon": -119.290526,
+      "name": "Mary Mitchell House (mi 0.0)",
+      "type": "Historic",
+      "label": "Mary Mitchell House",
+      "mile": 0.0
+    },
+    {
       "lat": 34.281099,
       "lon": -119.29142,
       "name": "Toilets (mi 0.1)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 0.1
+    },
+    {
+      "lat": 34.281007,
+      "lon": -119.291426,
+      "name": "Starbucks (mi 0.1)",
+      "type": "Food",
+      "label": "Starbucks",
+      "mile": 0.1
     },
     {
       "lat": 34.275748,
       "lon": -119.290615,
       "name": "Water (mi 0.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 0.4
     },
     {
       "lat": 34.276051,
       "lon": -119.292108,
       "name": "Water (mi 0.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 0.5
     },
     {
       "lat": 34.27034,
       "lon": -119.279397,
       "name": "Water (mi 1.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 1.4
     },
     {
       "lat": 34.269459,
       "lon": -119.276922,
       "name": "Water (mi 1.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 1.5
+    },
+    {
+      "lat": 34.26766,
+      "lon": -119.273433,
+      "name": "Store (mi 1.7)",
+      "type": "Store",
+      "label": "Store",
+      "mile": 1.7
+    },
+    {
+      "lat": 34.178965,
+      "lon": -119.235852,
+      "name": "Ox & Ocean (mi 8.6)",
+      "type": "Food",
+      "label": "Ox & Ocean",
+      "mile": 8.6
+    },
+    {
+      "lat": 34.156026,
+      "lon": -119.194573,
+      "name": "Grocery Outlet (mi 12.2)",
+      "type": "Store",
+      "label": "Grocery Outlet",
+      "mile": 12.2
+    },
+    {
+      "lat": 34.154568,
+      "lon": -119.194849,
+      "name": "Taco Bell (mi 12.3)",
+      "type": "Food",
+      "label": "Taco Bell",
+      "mile": 12.3
+    },
+    {
+      "lat": 34.147956,
+      "lon": -119.19874,
+      "name": "Port Hueneme Historical Museum (mi 12.8)",
+      "type": "Historic",
+      "label": "Port Hueneme Historical Museum",
+      "mile": 12.8
+    },
+    {
+      "lat": 34.131932,
+      "lon": -119.100531,
+      "name": "Point Mugu Missile Park (mi 18.9)",
+      "type": "Historic",
+      "label": "Point Mugu Missile Park",
+      "mile": 18.9
+    },
+    {
+      "lat": 34.099366,
+      "lon": -119.079702,
+      "name": "Vista Pt (mi 21.7)",
+      "type": "Scenic",
+      "label": "Vista Pt",
+      "mile": 21.7
     },
     {
       "lat": 34.086069,
       "lon": -119.037122,
       "name": "Toilets (mi 24.6)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 24.6
     },
     {
       "lat": 34.073026,
       "lon": -119.014777,
       "name": "Water (mi 26.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 26.1
     },
     {
       "lat": 34.070706,
       "lon": -119.013193,
       "name": "Water (mi 26.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 26.3
     },
     {
       "lat": 34.0533,
       "lon": -118.962272,
       "name": "Toilets (mi 29.5)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 29.5
     },
     {
       "lat": 34.046525,
       "lon": -118.93379,
       "name": "Water (mi 31.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 31.3
+    },
+    {
+      "lat": 34.035239,
+      "lon": -118.862284,
+      "name": "Food (mi 35.6)",
+      "type": "Food",
+      "label": "Food",
+      "mile": 35.6
+    },
+    {
+      "lat": 34.035102,
+      "lon": -118.851698,
+      "name": "Malibu Sign (mi 36.2)",
+      "type": "Historic",
+      "label": "Malibu Sign",
+      "mile": 36.2
+    },
+    {
+      "lat": 34.031665,
+      "lon": -118.843763,
+      "name": "Chevron (mi 36.6)",
+      "type": "Store",
+      "label": "Chevron",
+      "mile": 36.6
     },
     {
       "lat": 34.027694,
       "lon": -118.839151,
       "name": "Toilets (mi 37.1)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 37.1
+    },
+    {
+      "lat": 34.016506,
+      "lon": -118.823509,
+      "name": "Food (mi 38.2)",
+      "type": "Food",
+      "label": "Food",
+      "mile": 38.2
     },
     {
       "lat": 34.016574,
       "lon": -118.823384,
       "name": "Water (mi 38.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 38.3
     },
     {
       "lat": 34.015817,
       "lon": -118.820284,
       "name": "Water (mi 38.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 38.4
     },
     {
       "lat": 34.013792,
       "lon": -118.819797,
       "name": "Water (mi 38.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 38.4
+    },
+    {
+      "lat": 34.017158,
+      "lon": -118.819055,
+      "name": "Malibu Ranch Market (mi 38.5)",
+      "type": "Store",
+      "label": "Malibu Ranch Market",
+      "mile": 38.5
     },
     {
       "lat": 34.020349,
       "lon": -118.800928,
       "name": "Toilets (mi 39.7)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 39.7
+    },
+    {
+      "lat": 34.019951,
+      "lon": -118.787589,
+      "name": "Jim Rockford Trailer Site (mi 40.5)",
+      "type": "Scenic",
+      "label": "Jim Rockford Trailer Site",
+      "mile": 40.5
     },
     {
       "lat": 34.032091,
       "lon": -118.746624,
       "name": "Water (mi 43.0)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 43.0
     },
     {
       "lat": 34.032131,
       "lon": -118.746679,
       "name": "Toilets (mi 43.0)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 43.0
+    },
+    {
+      "lat": 34.034394,
+      "lon": -118.738603,
+      "name": "Store (mi 43.5)",
+      "type": "Store",
+      "label": "Store",
+      "mile": 43.5
+    },
+    {
+      "lat": 34.034146,
+      "lon": -118.694993,
+      "name": "Ralphs (mi 45.9)",
+      "type": "Store",
+      "label": "Ralphs",
+      "mile": 45.9
+    },
+    {
+      "lat": 34.034246,
+      "lon": -118.693582,
+      "name": "Starbucks (mi 46.2)",
+      "type": "Food",
+      "label": "Starbucks",
+      "mile": 46.2
     },
     {
       "lat": 34.037561,
       "lon": -118.686495,
       "name": "Toilets (mi 46.4)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 46.4
+    },
+    {
+      "lat": 34.037354,
+      "lon": -118.637486,
+      "name": "Country Liquor (mi 49.4)",
+      "type": "Store",
+      "label": "Country Liquor",
+      "mile": 49.4
+    },
+    {
+      "lat": 34.040519,
+      "lon": -118.578769,
+      "name": "7-Eleven (mi 52.8)",
+      "type": "Store",
+      "label": "7-Eleven",
+      "mile": 52.8
+    },
+    {
+      "lat": 34.040334,
+      "lon": -118.56059,
+      "name": "Thelma Todd Landmark Building (mi 53.8)",
+      "type": "Historic",
+      "label": "Thelma Todd Landmark Building",
+      "mile": 53.8
+    },
+    {
+      "lat": 34.039315,
+      "lon": -118.554205,
+      "name": "Signature Cafe (mi 54.3)",
+      "type": "Food",
+      "label": "Signature Cafe",
+      "mile": 54.3
+    },
+    {
+      "lat": 34.039288,
+      "lon": -118.553984,
+      "name": "Vons (mi 54.3)",
+      "type": "Store",
+      "label": "Vons",
+      "mile": 54.3
     },
     {
       "lat": 34.039179,
       "lon": -118.55124,
       "name": "Toilets (mi 54.6)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 54.6
     },
     {
       "lat": 34.037823,
       "lon": -118.540524,
       "name": "Water (mi 55.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 55.1
     },
     {
       "lat": 34.038327,
       "lon": -118.533219,
       "name": "Water (mi 55.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 55.4
     },
     {
       "lat": 34.037034,
       "lon": -118.533957,
       "name": "Water (mi 55.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 55.4
     },
     {
       "lat": 34.035644,
       "lon": -118.536581,
       "name": "Water (mi 55.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 55.5
+    },
+    {
+      "lat": 34.035804,
+      "lon": -118.532569,
+      "name": "On LA & Malibu (mi 55.5)",
+      "type": "Scenic",
+      "label": "On LA & Malibu",
+      "mile": 55.5
     },
     {
       "lat": 34.031758,
       "lon": -118.527712,
       "name": "Water (mi 56.0)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 56.0
+    },
+    {
+      "lat": 34.027667,
+      "lon": -118.518001,
+      "name": "ExtraMile (mi 56.6)",
+      "type": "Store",
+      "label": "ExtraMile",
+      "mile": 56.6
     },
     {
       "lat": 34.026305,
       "lon": -118.514186,
       "name": "Water (mi 56.9)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 56.9
     },
     {
       "lat": 34.026297,
       "lon": -118.514311,
       "name": "Toilets (mi 56.9)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 56.9
     },
     {
       "lat": 34.02476,
       "lon": -118.511332,
       "name": "Water (mi 57.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 57.1
     },
     {
       "lat": 34.023563,
       "lon": -118.509636,
       "name": "Water (mi 57.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 57.1
     },
     {
       "lat": 34.025575,
       "lon": -118.512812,
       "name": "Water (mi 57.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 57.1
     },
     {
       "lat": 34.022813,
       "lon": -118.508595,
       "name": "Water (mi 57.3)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 57.3
+    },
+    {
+      "lat": 34.021202,
+      "lon": -118.507431,
+      "name": "Santa Monica Gables Beach Club (mi 57.4)",
+      "type": "Historic",
+      "label": "Santa Monica Gables Beach Club",
+      "mile": 57.4
     },
     {
       "lat": 34.020797,
       "lon": -118.506231,
       "name": "Water (mi 57.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 57.5
     },
     {
       "lat": 34.020313,
       "lon": -118.505553,
       "name": "Water Fountain (mi 57.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water Fountain",
+      "mile": 57.6
     },
     {
       "lat": 34.01924,
       "lon": -118.504285,
       "name": "Water (mi 57.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 57.6
+    },
+    {
+      "lat": 34.019149,
+      "lon": -118.506451,
+      "name": "Food (mi 57.6)",
+      "type": "Food",
+      "label": "Food",
+      "mile": 57.6
     },
     {
       "lat": 34.017537,
       "lon": -118.502515,
       "name": "Water (mi 57.8)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 57.8
     },
     {
       "lat": 34.015369,
       "lon": -118.49978,
       "name": "Water (mi 58.0)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 58.0
     },
     {
       "lat": 34.016892,
       "lon": -118.497473,
       "name": "Water (mi 58.0)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 58.0
     },
     {
       "lat": 34.009972,
       "lon": -118.495468,
       "name": "Water (mi 58.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 58.4
     },
     {
       "lat": 34.011617,
       "lon": -118.49548,
       "name": "Water (mi 58.4)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 58.4
     }
   ],
   "water_gap_mi": 24.7,

@@ -5633,164 +5633,375 @@
     ]
   ],
   "options": [],
-  "waypoints": [
-    {
-      "lat": 37.3863329,
-      "lon": -122.1134766,
-      "name": "230 Chateau Dr",
-      "type": "GENERIC"
-    },
-    {
-      "lat": 36.98502,
-      "lon": -122.02309,
-      "name": "Comfort Inn San",
-      "type": "GENERIC"
-    }
-  ],
+  "waypoints": [],
   "services": [
+    {
+      "lat": 37.382774,
+      "lon": -122.114541,
+      "name": "DeMartini Orchard (mi 0.0)",
+      "type": "Store",
+      "label": "DeMartini Orchard",
+      "mile": 0.0
+    },
     {
       "lat": 37.386952,
       "lon": -122.109507,
       "name": "Toilets (mi 0.1)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 0.1
+    },
+    {
+      "lat": 37.352972,
+      "lon": -122.08737,
+      "name": "Tom's Depot (mi 3.8)",
+      "type": "Food",
+      "label": "Tom's Depot",
+      "mile": 3.8
+    },
+    {
+      "lat": 37.342256,
+      "lon": -122.071443,
+      "name": "Lucky (mi 4.9)",
+      "type": "Store",
+      "label": "Lucky",
+      "mile": 4.9
+    },
+    {
+      "lat": 37.332682,
+      "lon": -122.050632,
+      "name": "Don Burnett Bicycle-Pedestrian Bridge (mi 6.4)",
+      "type": "Historic",
+      "label": "Don Burnett Bicycle-Pedestrian Bridge",
+      "mile": 6.4
     },
     {
       "lat": 37.327518,
       "lon": -122.050711,
       "name": "Water (mi 6.8)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 6.8
     },
     {
       "lat": 37.326179,
       "lon": -122.044682,
       "name": "Water (mi 7.2)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 7.2
     },
     {
       "lat": 37.324034,
       "lon": -122.044546,
       "name": "Water (mi 7.2)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 7.2
     },
     {
       "lat": 37.324052,
       "lon": -122.044536,
       "name": "Toilets (mi 7.2)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 7.2
+    },
+    {
+      "lat": 37.320853,
+      "lon": -122.045583,
+      "name": "Cafe Rococo (mi 7.3)",
+      "type": "Food",
+      "label": "Cafe Rococo",
+      "mile": 7.3
     },
     {
       "lat": 37.324264,
       "lon": -122.038747,
       "name": "Water (mi 7.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 7.5
+    },
+    {
+      "lat": 37.323616,
+      "lon": -122.039602,
+      "name": "Whole Foods Market (mi 7.5)",
+      "type": "Store",
+      "label": "Whole Foods Market",
+      "mile": 7.5
     },
     {
       "lat": 37.295764,
       "lon": -122.038452,
       "name": "Water (mi 9.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 9.5
+    },
+    {
+      "lat": 37.292017,
+      "lon": -122.032852,
+      "name": "Jakes of Saratoga (mi 10.0)",
+      "type": "Food",
+      "label": "Jakes of Saratoga",
+      "mile": 10.0
+    },
+    {
+      "lat": 37.289314,
+      "lon": -122.031806,
+      "name": "Stop ’n’ Save (mi 10.1)",
+      "type": "Store",
+      "label": "Stop ’n’ Save",
+      "mile": 10.1
     },
     {
       "lat": 37.265787,
       "lon": -122.028881,
       "name": "Water (mi 11.8)",
-      "type": "Water"
-    },
-    {
-      "lat": 37.265873,
-      "lon": -122.030166,
-      "name": "Water (mi 11.8)",
-      "type": "Water"
-    },
-    {
-      "lat": 37.266517,
-      "lon": -122.030995,
-      "name": "Water (mi 11.8)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 11.8
     },
     {
       "lat": 37.265498,
       "lon": -122.029803,
       "name": "Toilets (mi 11.8)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 11.8
+    },
+    {
+      "lat": 37.265873,
+      "lon": -122.030166,
+      "name": "Water (mi 11.8)",
+      "type": "Water",
+      "label": "Water",
+      "mile": 11.8
+    },
+    {
+      "lat": 37.266517,
+      "lon": -122.030995,
+      "name": "Water (mi 11.8)",
+      "type": "Water",
+      "label": "Water",
+      "mile": 11.8
     },
     {
       "lat": 37.244371,
       "lon": -122.003011,
       "name": "Water (mi 14.1)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 14.1
+    },
+    {
+      "lat": 37.229787,
+      "lon": -121.982899,
+      "name": "Valero of Los Gatos (mi 15.5)",
+      "type": "Store",
+      "label": "Valero of Los Gatos",
+      "mile": 15.5
+    },
+    {
+      "lat": 37.230305,
+      "lon": -121.979733,
+      "name": "Starbucks (mi 15.7)",
+      "type": "Food",
+      "label": "Starbucks",
+      "mile": 15.7
     },
     {
       "lat": 37.225146,
       "lon": -121.978663,
       "name": "Water (mi 16.2)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 16.2
     },
     {
       "lat": 37.225101,
       "lon": -121.978479,
       "name": "Toilets (mi 16.2)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 16.2
+    },
+    {
+      "lat": 37.2205,
+      "lon": -121.979115,
+      "name": "New Museum of Los Gatos (mi 16.4)",
+      "type": "Historic",
+      "label": "New Museum of Los Gatos",
+      "mile": 16.4
     },
     {
       "lat": 37.221168,
       "lon": -121.982024,
       "name": "Water (mi 16.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 16.6
     },
     {
       "lat": 37.221678,
       "lon": -121.983977,
       "name": "Water (mi 16.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 16.6
     },
     {
-      "lat": 37.19577,
-      "lon": -121.98529,
-      "name": "Toilets (mi 19.4)",
-      "type": "Toilets"
+      "lat": 37.200015,
+      "lon": -121.986795,
+      "name": "Toilets (mi 18.4)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 18.4
+    },
+    {
+      "lat": 37.184862,
+      "lon": -121.987423,
+      "name": "Alma (mi 20.2)",
+      "type": "Historic",
+      "label": "Alma",
+      "mile": 20.2
+    },
+    {
+      "lat": 37.141934,
+      "lon": -121.973307,
+      "name": "Patchen (historic) (mi 26.1)",
+      "type": "Historic",
+      "label": "Patchen (historic)",
+      "mile": 26.1
+    },
+    {
+      "lat": 37.120424,
+      "lon": -121.928643,
+      "name": "Summit Store (mi 29.1)",
+      "type": "Store",
+      "label": "Summit Store",
+      "mile": 29.1
     },
     {
       "lat": 37.061164,
       "lon": -121.941664,
       "name": "Toilets (mi 34.9)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 34.9
+    },
+    {
+      "lat": 37.05886,
+      "lon": -121.942384,
+      "name": "Enchanted Valley Snack Shack (mi 35.1)",
+      "type": "Food",
+      "label": "Enchanted Valley Snack Shack",
+      "mile": 35.1
+    },
+    {
+      "lat": 37.032714,
+      "lon": -121.946708,
+      "name": "Casalegno's (mi 37.2)",
+      "type": "Store",
+      "label": "Casalegno's",
+      "mile": 37.2
     },
     {
       "lat": 37.016785,
       "lon": -121.952911,
       "name": "Restroom (mi 38.4)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Restroom",
+      "mile": 38.4
     },
     {
       "lat": 36.994421,
       "lon": -121.961448,
       "name": "Water (mi 40.0)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.0
+    },
+    {
+      "lat": 36.988985,
+      "lon": -121.954295,
+      "name": "Home Away Soquel (mi 40.4)",
+      "type": "Food",
+      "label": "Home Away Soquel",
+      "mile": 40.4
     },
     {
       "lat": 36.985727,
       "lon": -121.954818,
       "name": "Water (mi 40.5)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 40.5
+    },
+    {
+      "lat": 36.9861,
+      "lon": -121.963251,
+      "name": "Safeway (mi 40.8)",
+      "type": "Store",
+      "label": "Safeway",
+      "mile": 40.8
     },
     {
       "lat": 36.990699,
       "lon": -121.975936,
       "name": "Water (mi 41.6)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 41.6
     },
     {
       "lat": 36.986535,
       "lon": -121.978203,
       "name": "Toilets (mi 41.6)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 41.6
+    },
+    {
+      "lat": 36.984876,
+      "lon": -121.990215,
+      "name": "Store (mi 42.4)",
+      "type": "Store",
+      "label": "Store",
+      "mile": 42.4
+    },
+    {
+      "lat": 36.981233,
+      "lon": -122.001463,
+      "name": "Akira (mi 43.1)",
+      "type": "Food",
+      "label": "Akira",
+      "mile": 43.1
     },
     {
       "lat": 36.979137,
       "lon": -122.014505,
       "name": "Toilets (mi 43.8)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 43.8
+    },
+    {
+      "lat": 36.981194,
+      "lon": -122.01401,
+      "name": "Branciforte (mi 43.8)",
+      "type": "Historic",
+      "label": "Branciforte",
+      "mile": 43.8
+    },
+    {
+      "lat": 36.979,
+      "lon": -122.014571,
+      "name": "Whole Foods Market (mi 43.9)",
+      "type": "Store",
+      "label": "Whole Foods Market",
+      "mile": 43.9
     }
   ],
   "water_gap_mi": 23.6,

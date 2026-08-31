@@ -5825,44 +5825,135 @@
     ]
   ],
   "options": [],
-  "waypoints": [
-    {
-      "lat": 35.1070059,
-      "lon": -120.6237587,
-      "name": "Dune Surfer Inn",
-      "type": "GENERIC"
-    }
-  ],
+  "waypoints": [],
   "services": [
     {
       "lat": 35.109481,
       "lon": -120.626897,
       "name": "Toilets (mi 0.0)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 0.0
+    },
+    {
+      "lat": 35.107386,
+      "lon": -120.62405,
+      "name": "Old Juan’s Cantina (mi 0.0)",
+      "type": "Food",
+      "label": "Old Juan’s Cantina",
+      "mile": 0.0
+    },
+    {
+      "lat": 35.106793,
+      "lon": -120.623546,
+      "name": "Johnson’s Market & Gifts (mi 0.0)",
+      "type": "Store",
+      "label": "Johnson’s Market & Gifts",
+      "mile": 0.0
+    },
+    {
+      "lat": 35.10196,
+      "lon": -120.617053,
+      "name": "Oceano WW2 Memorial (mi 0.5)",
+      "type": "Historic",
+      "label": "Oceano WW2 Memorial",
+      "mile": 0.5
     },
     {
       "lat": 35.028217,
       "lon": -120.498091,
       "name": "Toilets (mi 11.4)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 11.4
+    },
+    {
+      "lat": 35.021922,
+      "lon": -120.488489,
+      "name": "Cowgirl Cafe (mi 12.1)",
+      "type": "Food",
+      "label": "Cowgirl Cafe",
+      "mile": 12.1
+    },
+    {
+      "lat": 34.996229,
+      "lon": -120.436301,
+      "name": "Rancho Nipomo (mi 16.1)",
+      "type": "Food",
+      "label": "Rancho Nipomo",
+      "mile": 16.1
     },
     {
       "lat": 34.985294,
       "lon": -120.437662,
       "name": "Toilets (mi 16.9)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 16.9
+    },
+    {
+      "lat": 34.638839,
+      "lon": -120.114181,
+      "name": "Ballard School (mi 54.9)",
+      "type": "Historic",
+      "label": "Ballard School",
+      "mile": 54.9
     },
     {
       "lat": 34.608023,
       "lon": -120.122861,
       "name": "Toilets (mi 57.0)",
-      "type": "Toilets"
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 57.0
+    },
+    {
+      "lat": 34.600144,
+      "lon": -120.126878,
+      "name": "Nielsen's (mi 57.7)",
+      "type": "Store",
+      "label": "Nielsen's",
+      "mile": 57.7
+    },
+    {
+      "lat": 34.594315,
+      "lon": -120.136626,
+      "name": "Mission Santa Inés (mi 58.1)",
+      "type": "Historic",
+      "label": "Mission Santa Inés",
+      "mile": 58.1
+    },
+    {
+      "lat": 34.596359,
+      "lon": -120.137942,
+      "name": "The Coffee House (mi 58.1)",
+      "type": "Food",
+      "label": "The Coffee House",
+      "mile": 58.1
+    },
+    {
+      "lat": 34.596098,
+      "lon": -120.138092,
+      "name": "The Little Mermaid Fountain (mi 58.1)",
+      "type": "Scenic",
+      "label": "The Little Mermaid Fountain",
+      "mile": 58.1
     },
     {
       "lat": 34.595877,
       "lon": -120.140213,
       "name": "Water (mi 58.8)",
-      "type": "Water"
+      "type": "Water",
+      "label": "Water",
+      "mile": 58.8
+    },
+    {
+      "lat": 34.59592,
+      "lon": -120.143395,
+      "name": "Toilets (mi 59.1)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 59.1
     }
   ],
   "water_gap_mi": 58.7,
