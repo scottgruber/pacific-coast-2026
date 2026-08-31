@@ -5157,8 +5157,23 @@
     ]
   ],
   "options": [],
-  "waypoints": [],
+  "waypoints": [
+    {
+      "lat": 36.5842,
+      "lon": -121.90185,
+      "name": "Mariposa Inn an",
+      "type": "GENERIC"
+    }
+  ],
   "services": [
+    {
+      "lat": 36.985049,
+      "lon": -122.021185,
+      "name": "Grant Park (mi 0.0)",
+      "type": "Park",
+      "label": "Grant Park",
+      "mile": 0.0
+    },
     {
       "lat": 36.984901,
       "lon": -122.021169,
@@ -5168,11 +5183,11 @@
       "mile": 0.0
     },
     {
-      "lat": 36.983944,
-      "lon": -122.023307,
-      "name": "Ferrell's Donut House (mi 0.1)",
+      "lat": 36.983579,
+      "lon": -122.022615,
+      "name": "noodle time (mi 0.1)",
       "type": "Food",
-      "label": "Ferrell's Donut House",
+      "label": "noodle time",
       "mile": 0.1
     },
     {
@@ -5184,44 +5199,20 @@
       "mile": 0.1
     },
     {
+      "lat": 36.982044,
+      "lon": -122.021647,
+      "name": "Grog Shop (mi 0.5)",
+      "type": "Winery",
+      "label": "Grog Shop",
+      "mile": 0.5
+    },
+    {
       "lat": 36.978397,
       "lon": -122.022465,
       "name": "Santa Cruz Bicentennial Monument (mi 0.5)",
       "type": "Historic",
       "label": "Santa Cruz Bicentennial Monument",
       "mile": 0.5
-    },
-    {
-      "lat": 36.978483,
-      "lon": -122.020659,
-      "name": "Jury Room (mi 0.5)",
-      "type": "Winery",
-      "label": "Jury Room",
-      "mile": 0.5
-    },
-    {
-      "lat": 36.984876,
-      "lon": -121.990215,
-      "name": "Store (mi 2.3)",
-      "type": "Store",
-      "label": "Store",
-      "mile": 2.3
-    },
-    {
-      "lat": 36.987968,
-      "lon": -121.980954,
-      "name": "Food (mi 2.9)",
-      "type": "Food",
-      "label": "Food",
-      "mile": 2.9
-    },
-    {
-      "lat": 36.989385,
-      "lon": -121.980127,
-      "name": "Garden Liquors & Deli (mi 2.9)",
-      "type": "Winery",
-      "label": "Garden Liquors & Deli",
-      "mile": 2.9
     },
     {
       "lat": 36.990699,
@@ -5232,22 +5223,6 @@
       "mile": 3.1
     },
     {
-      "lat": 36.986535,
-      "lon": -121.978203,
-      "name": "Toilets (mi 3.1)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 3.1
-    },
-    {
-      "lat": 36.9861,
-      "lon": -121.963251,
-      "name": "Safeway (mi 3.9)",
-      "type": "Store",
-      "label": "Safeway",
-      "mile": 3.9
-    },
-    {
       "lat": 36.985727,
       "lon": -121.954818,
       "name": "Water (mi 4.5)",
@@ -5256,19 +5231,19 @@
       "mile": 4.5
     },
     {
-      "lat": 36.987781,
-      "lon": -121.932907,
-      "name": "Toilets (mi 5.5)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 5.5
-    },
-    {
       "lat": 36.989187,
       "lon": -121.936344,
       "name": "AJ's Market (mi 5.5)",
       "type": "Store",
       "label": "AJ's Market",
+      "mile": 5.5
+    },
+    {
+      "lat": 36.987781,
+      "lon": -121.932907,
+      "name": "Toilets (mi 5.5)",
+      "type": "Toilets",
+      "label": "Toilets",
       "mile": 5.5
     },
     {
@@ -5296,44 +5271,12 @@
       "mile": 7.7
     },
     {
-      "lat": 36.97232,
-      "lon": -121.913402,
-      "name": "Toilets (mi 7.7)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 7.7
-    },
-    {
-      "lat": 36.974579,
-      "lon": -121.912754,
-      "name": "Seacliff Plaza Store (mi 7.7)",
-      "type": "Store",
-      "label": "Seacliff Plaza Store",
-      "mile": 7.7
-    },
-    {
-      "lat": 36.97909,
-      "lon": -121.909761,
-      "name": "Aptos History Museum (mi 8.0)",
-      "type": "Historic",
-      "label": "Aptos History Museum",
-      "mile": 8.0
-    },
-    {
-      "lat": 36.979027,
-      "lon": -121.908918,
-      "name": "Windjammer (mi 8.0)",
+      "lat": 36.977833,
+      "lon": -121.900733,
+      "name": "Sante Archangeli Family Wines (mi 8.6)",
       "type": "Winery",
-      "label": "Windjammer",
-      "mile": 8.0
-    },
-    {
-      "lat": 36.974677,
-      "lon": -121.888463,
-      "name": "Cafe Bittersweet (mi 9.2)",
-      "type": "Food",
-      "label": "Cafe Bittersweet",
-      "mile": 9.2
+      "label": "Sante Archangeli Family Wines",
+      "mile": 8.6
     },
     {
       "lat": 36.976468,
@@ -5358,14 +5301,6 @@
       "type": "Toilets",
       "label": "Toilets",
       "mile": 12.8
-    },
-    {
-      "lat": 36.937147,
-      "lon": -121.862794,
-      "name": "El Patio (mi 13.4)",
-      "type": "Store",
-      "label": "El Patio",
-      "mile": 13.4
     },
     {
       "lat": 36.932465,
@@ -5397,14 +5332,6 @@
       "name": "The Whole Enchilada (mi 27.2)",
       "type": "Food",
       "label": "The Whole Enchilada",
-      "mile": 27.2
-    },
-    {
-      "lat": 36.798655,
-      "lon": -121.783558,
-      "name": "Store (mi 27.2)",
-      "type": "Store",
-      "label": "Store",
       "mile": 27.2
     },
     {
@@ -5440,6 +5367,14 @@
       "mile": 36.3
     },
     {
+      "lat": 36.690627,
+      "lon": -121.797128,
+      "name": "Marina City Park (mi 36.5)",
+      "type": "Park",
+      "label": "Marina City Park",
+      "mile": 36.5
+    },
+    {
       "lat": 36.686725,
       "lon": -121.800004,
       "name": "Starbucks (mi 36.6)",
@@ -5456,12 +5391,12 @@
       "mile": 37.2
     },
     {
-      "lat": 36.665426,
-      "lon": -121.811085,
-      "name": "Deli Delicious (mi 38.3)",
-      "type": "Store",
-      "label": "Deli Delicious",
-      "mile": 38.3
+      "lat": 36.622523,
+      "lon": -121.842301,
+      "name": "Panera Bread (mi 41.9)",
+      "type": "Food",
+      "label": "Panera Bread",
+      "mile": 41.9
     },
     {
       "lat": 36.623247,
@@ -5472,60 +5407,12 @@
       "mile": 41.9
     },
     {
-      "lat": 36.622523,
-      "lon": -121.842301,
-      "name": "Panera Bread (mi 41.9)",
-      "type": "Food",
-      "label": "Panera Bread",
-      "mile": 41.9
-    },
-    {
-      "lat": 36.618906,
-      "lon": -121.845673,
-      "name": "Total Wine (mi 42.6)",
-      "type": "Winery",
-      "label": "Total Wine",
-      "mile": 42.6
-    },
-    {
-      "lat": 36.60898,
-      "lon": -121.855355,
-      "name": "Smart & Final (mi 43.7)",
-      "type": "Store",
-      "label": "Smart & Final",
-      "mile": 43.7
-    },
-    {
       "lat": 36.610085,
       "lon": -121.859348,
       "name": "Toilets (mi 43.8)",
       "type": "Toilets",
       "label": "Toilets",
       "mile": 43.8
-    },
-    {
-      "lat": 36.599628,
-      "lon": -121.87274,
-      "name": "Navy Exchange (NEX) (mi 45.2)",
-      "type": "Store",
-      "label": "Navy Exchange (NEX)",
-      "mile": 45.2
-    },
-    {
-      "lat": 36.598871,
-      "lon": -121.88316,
-      "name": "Bay Cafe (mi 45.7)",
-      "type": "Food",
-      "label": "Bay Cafe",
-      "mile": 45.7
-    },
-    {
-      "lat": 36.59752,
-      "lon": -121.884399,
-      "name": "El Estero Picnic Area (mi 45.8)",
-      "type": "Picnic",
-      "label": "El Estero Picnic Area",
-      "mile": 45.8
     },
     {
       "lat": 36.600481,
@@ -5536,19 +5423,11 @@
       "mile": 45.8
     },
     {
-      "lat": 36.597671,
-      "lon": -121.886483,
-      "name": "Toilets (mi 45.9)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 45.9
-    },
-    {
-      "lat": 36.601732,
-      "lon": -121.893805,
-      "name": "Wine from the Heart (mi 46.1)",
+      "lat": 36.601752,
+      "lon": -121.890034,
+      "name": "London Bridge Pub (mi 46.1)",
       "type": "Winery",
-      "label": "Wine from the Heart",
+      "label": "London Bridge Pub",
       "mile": 46.1
     },
     {
@@ -5560,19 +5439,27 @@
       "mile": 46.1
     },
     {
-      "lat": 36.597559,
-      "lon": -121.894356,
-      "name": "Water (mi 46.5)",
-      "type": "Water",
-      "label": "Water",
+      "lat": 36.596504,
+      "lon": -121.894577,
+      "name": "Trader Joe's (mi 46.5)",
+      "type": "Store",
+      "label": "Trader Joe's",
       "mile": 46.5
     },
     {
-      "lat": 36.583431,
-      "lon": -121.900318,
-      "name": "Whole Foods Market (mi 47.6)",
-      "type": "Store",
-      "label": "Whole Foods Market",
+      "lat": 36.59729,
+      "lon": -121.895171,
+      "name": "Monterey State Historic Park (mi 46.5)",
+      "type": "Park",
+      "label": "Monterey State Historic Park",
+      "mile": 46.5
+    },
+    {
+      "lat": 36.583458,
+      "lon": -121.897042,
+      "name": "Starbucks (mi 47.6)",
+      "type": "Food",
+      "label": "Starbucks",
       "mile": 47.6
     }
   ],

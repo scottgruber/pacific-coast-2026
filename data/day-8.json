@@ -5674,14 +5674,6 @@
       "mile": 0.0
     },
     {
-      "lat": 34.281099,
-      "lon": -119.29142,
-      "name": "Toilets (mi 0.1)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 0.1
-    },
-    {
       "lat": 34.281007,
       "lon": -119.291426,
       "name": "Starbucks (mi 0.1)",
@@ -5698,6 +5690,22 @@
       "mile": 0.1
     },
     {
+      "lat": 34.281099,
+      "lon": -119.29142,
+      "name": "Toilets (mi 0.1)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 0.1
+    },
+    {
+      "lat": 34.279745,
+      "lon": -119.292811,
+      "name": "California Street Mini Park (mi 0.2)",
+      "type": "Park",
+      "label": "California Street Mini Park",
+      "mile": 0.2
+    },
+    {
       "lat": 34.275748,
       "lon": -119.290615,
       "name": "Water (mi 0.4)",
@@ -5706,20 +5714,20 @@
       "mile": 0.4
     },
     {
-      "lat": 34.27034,
-      "lon": -119.279397,
-      "name": "Water (mi 1.4)",
+      "lat": 34.269459,
+      "lon": -119.276922,
+      "name": "Water (mi 1.5)",
       "type": "Water",
       "label": "Water",
-      "mile": 1.4
+      "mile": 1.5
     },
     {
-      "lat": 34.26766,
-      "lon": -119.273433,
-      "name": "Store (mi 1.7)",
-      "type": "Store",
-      "label": "Store",
-      "mile": 1.7
+      "lat": 34.196949,
+      "lon": -119.240665,
+      "name": "Oxnard Shores Park (mi 7.2)",
+      "type": "Park",
+      "label": "Oxnard Shores Park",
+      "mile": 7.2
     },
     {
       "lat": 34.178965,
@@ -5746,28 +5754,12 @@
       "mile": 12.2
     },
     {
-      "lat": 34.154568,
-      "lon": -119.194849,
-      "name": "Taco Bell (mi 12.3)",
-      "type": "Food",
-      "label": "Taco Bell",
-      "mile": 12.3
-    },
-    {
       "lat": 34.147956,
       "lon": -119.19874,
       "name": "Port Hueneme Historical Museum (mi 12.8)",
       "type": "Historic",
       "label": "Port Hueneme Historical Museum",
       "mile": 12.8
-    },
-    {
-      "lat": 34.131932,
-      "lon": -119.100531,
-      "name": "Point Mugu Missile Park (mi 18.9)",
-      "type": "Historic",
-      "label": "Point Mugu Missile Park",
-      "mile": 18.9
     },
     {
       "lat": 34.086069,
@@ -5786,12 +5778,12 @@
       "mile": 26.1
     },
     {
-      "lat": 34.0533,
-      "lon": -118.962272,
-      "name": "Toilets (mi 29.5)",
+      "lat": 34.044631,
+      "lon": -118.93971,
+      "name": "Toilets (mi 31.1)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 29.5
+      "mile": 31.1
     },
     {
       "lat": 34.046525,
@@ -5834,36 +5826,12 @@
       "mile": 37.1
     },
     {
-      "lat": 34.016506,
-      "lon": -118.823509,
-      "name": "Food (mi 38.2)",
-      "type": "Food",
-      "label": "Food",
-      "mile": 38.2
-    },
-    {
       "lat": 34.016574,
       "lon": -118.823384,
       "name": "Water (mi 38.3)",
       "type": "Water",
       "label": "Water",
       "mile": 38.3
-    },
-    {
-      "lat": 34.017158,
-      "lon": -118.819055,
-      "name": "Malibu Ranch Market (mi 38.5)",
-      "type": "Store",
-      "label": "Malibu Ranch Market",
-      "mile": 38.5
-    },
-    {
-      "lat": 34.020349,
-      "lon": -118.800928,
-      "name": "Toilets (mi 39.7)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 39.7
     },
     {
       "lat": 34.032091,
@@ -5890,14 +5858,6 @@
       "mile": 43.5
     },
     {
-      "lat": 34.034146,
-      "lon": -118.694993,
-      "name": "Ralphs (mi 45.9)",
-      "type": "Store",
-      "label": "Ralphs",
-      "mile": 45.9
-    },
-    {
       "lat": 34.034246,
       "lon": -118.693582,
       "name": "Starbucks (mi 46.2)",
@@ -5906,11 +5866,11 @@
       "mile": 46.2
     },
     {
-      "lat": 34.037561,
-      "lon": -118.686495,
-      "name": "Toilets (mi 46.4)",
-      "type": "Toilets",
-      "label": "Toilets",
+      "lat": 34.035533,
+      "lon": -118.688411,
+      "name": "Legacy Park (mi 46.4)",
+      "type": "Park",
+      "label": "Legacy Park",
       "mile": 46.4
     },
     {
@@ -5930,27 +5890,19 @@
       "mile": 49.4
     },
     {
-      "lat": 34.040519,
-      "lon": -118.578769,
-      "name": "7-Eleven (mi 52.8)",
+      "lat": 34.038895,
+      "lon": -118.555815,
+      "name": "Chevron (mi 54.2)",
       "type": "Store",
-      "label": "7-Eleven",
-      "mile": 52.8
+      "label": "Chevron",
+      "mile": 54.2
     },
     {
-      "lat": 34.039315,
-      "lon": -118.554205,
-      "name": "Signature Cafe (mi 54.3)",
+      "lat": 34.039113,
+      "lon": -118.554115,
+      "name": "Starbucks (mi 54.3)",
       "type": "Food",
-      "label": "Signature Cafe",
-      "mile": 54.3
-    },
-    {
-      "lat": 34.039288,
-      "lon": -118.553984,
-      "name": "Vons (mi 54.3)",
-      "type": "Store",
-      "label": "Vons",
+      "label": "Starbucks",
       "mile": 54.3
     },
     {
@@ -5970,20 +5922,12 @@
       "mile": 55.1
     },
     {
-      "lat": 34.037502,
-      "lon": -118.539903,
-      "name": "Picnic (mi 55.2)",
-      "type": "Picnic",
-      "label": "Picnic",
+      "lat": 34.039861,
+      "lon": -118.537064,
+      "name": "Palisades-Asilomar Park (mi 55.2)",
+      "type": "Park",
+      "label": "Palisades-Asilomar Park",
       "mile": 55.2
-    },
-    {
-      "lat": 34.031758,
-      "lon": -118.527712,
-      "name": "Water (mi 56.0)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 56.0
     },
     {
       "lat": 34.03138,
@@ -5994,14 +5938,6 @@
       "mile": 56.1
     },
     {
-      "lat": 34.027667,
-      "lon": -118.518001,
-      "name": "ExtraMile (mi 56.6)",
-      "type": "Store",
-      "label": "ExtraMile",
-      "mile": 56.6
-    },
-    {
       "lat": 34.026305,
       "lon": -118.514186,
       "name": "Water (mi 56.9)",
@@ -6010,28 +5946,12 @@
       "mile": 56.9
     },
     {
-      "lat": 34.026297,
-      "lon": -118.514311,
-      "name": "Toilets (mi 56.9)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 56.9
-    },
-    {
-      "lat": 34.020797,
-      "lon": -118.506231,
-      "name": "Water (mi 57.5)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 57.5
-    },
-    {
-      "lat": 34.019149,
-      "lon": -118.506451,
-      "name": "Food (mi 57.6)",
-      "type": "Food",
-      "label": "Food",
-      "mile": 57.6
+      "lat": 34.015253,
+      "lon": -118.49904,
+      "name": "The Coco Club (mi 58.0)",
+      "type": "Winery",
+      "label": "The Coco Club",
+      "mile": 58.0
     },
     {
       "lat": 34.015369,
@@ -6040,16 +5960,8 @@
       "type": "Water",
       "label": "Water",
       "mile": 58.0
-    },
-    {
-      "lat": 34.015253,
-      "lon": -118.49904,
-      "name": "The Coco Club (mi 58.0)",
-      "type": "Winery",
-      "label": "The Coco Club",
-      "mile": 58.0
     }
   ],
-  "water_gap_mi": 24.8,
+  "water_gap_mi": 24.7,
   "route_point_count_raw": 3397
 }

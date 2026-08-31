@@ -6477,14 +6477,6 @@
   "waypoints": [],
   "services": [
     {
-      "lat": 36.206843,
-      "lon": -121.148423,
-      "name": "Picnic Area B (mi 0.2)",
-      "type": "Picnic",
-      "label": "Picnic Area B",
-      "mile": 0.2
-    },
-    {
       "lat": 36.206815,
       "lon": -121.14741,
       "name": "King City Station (mi 0.3)",
@@ -6533,27 +6525,19 @@
       "mile": 48.2
     },
     {
-      "lat": 35.688219,
-      "lon": -120.79902,
-      "name": "San Marcos Mennonite Cemetary (mi 54.6)",
-      "type": "Historic",
-      "label": "San Marcos Mennonite Cemetary",
-      "mile": 54.6
-    },
-    {
-      "lat": 35.636518,
-      "lon": -120.693152,
-      "name": "Smart & Final Extra! (mi 62.5)",
+      "lat": 35.638703,
+      "lon": -120.692937,
+      "name": "7-Eleven (mi 62.5)",
       "type": "Store",
-      "label": "Smart & Final Extra!",
+      "label": "7-Eleven",
       "mile": 62.5
     },
     {
-      "lat": 35.640066,
-      "lon": -120.688559,
-      "name": "A&W (mi 62.5)",
+      "lat": 35.639935,
+      "lon": -120.688521,
+      "name": "KFC (mi 62.5)",
       "type": "Food",
-      "label": "A&W",
+      "label": "KFC",
       "mile": 62.5
     }
   ],

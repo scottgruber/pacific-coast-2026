@@ -23227,6 +23227,14 @@
   "waypoints": [],
   "services": [
     {
+      "lat": 36.593027,
+      "lon": -121.904957,
+      "name": "Via Paraiso Park (mi 0.0)",
+      "type": "Park",
+      "label": "Via Paraiso Park",
+      "mile": 0.0
+    },
+    {
       "lat": 36.583431,
       "lon": -121.900318,
       "name": "Whole Foods Market (mi 0.9)",
@@ -23249,22 +23257,6 @@
       "type": "Water",
       "label": "Water",
       "mile": 3.6
-    },
-    {
-      "lat": 36.541133,
-      "lon": -121.907126,
-      "name": "Chai Lounge (mi 4.6)",
-      "type": "Food",
-      "label": "Chai Lounge",
-      "mile": 4.6
-    },
-    {
-      "lat": 36.542609,
-      "lon": -121.90571,
-      "name": "Lucky (mi 4.8)",
-      "type": "Store",
-      "label": "Lucky",
-      "mile": 4.8
     },
     {
       "lat": 36.542245,
@@ -23299,43 +23291,11 @@
       "mile": 8.0
     },
     {
-      "lat": 36.528442,
-      "lon": -121.819547,
-      "name": "Folktale Winery (mi 9.7)",
-      "type": "Winery",
-      "label": "Folktale Winery",
-      "mile": 9.7
-    },
-    {
-      "lat": 36.525043,
-      "lon": -121.815791,
-      "name": "Toilets (mi 10.1)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 10.1
-    },
-    {
-      "lat": 36.522506,
-      "lon": -121.810186,
-      "name": "Safeway (mi 10.3)",
-      "type": "Store",
-      "label": "Safeway",
-      "mile": 10.3
-    },
-    {
       "lat": 36.521725,
       "lon": -121.808769,
       "name": "Picard Trade Bead Museum (mi 10.6)",
       "type": "Historic",
       "label": "Picard Trade Bead Museum",
-      "mile": 10.6
-    },
-    {
-      "lat": 36.522488,
-      "lon": -121.809045,
-      "name": "Carmey Valley Coffee Roasting (mi 10.6)",
-      "type": "Food",
-      "label": "Carmey Valley Coffee Roasting",
       "mile": 10.6
     },
     {
@@ -23355,12 +23315,12 @@
       "mile": 13.1
     },
     {
-      "lat": 36.483518,
-      "lon": -121.735417,
-      "name": "Toilets (mi 15.7)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 15.7
+      "lat": 36.480239,
+      "lon": -121.733157,
+      "name": "Kasey's (mi 16.1)",
+      "type": "Store",
+      "label": "Kasey's",
+      "mile": 16.1
     },
     {
       "lat": 36.480554,
@@ -23368,14 +23328,6 @@
       "name": "Mika Sushi (mi 16.1)",
       "type": "Food",
       "label": "Mika Sushi",
-      "mile": 16.1
-    },
-    {
-      "lat": 36.480239,
-      "lon": -121.733157,
-      "name": "Kasey's (mi 16.1)",
-      "type": "Store",
-      "label": "Kasey's",
       "mile": 16.1
     },
     {
@@ -23395,6 +23347,14 @@
       "mile": 46.8
     },
     {
+      "lat": 36.335684,
+      "lon": -121.211367,
+      "name": "Oak Park (mi 59.1)",
+      "type": "Park",
+      "label": "Oak Park",
+      "mile": 59.1
+    },
+    {
       "lat": 36.22271,
       "lon": -121.129185,
       "name": "Toilets (mi 69.2)",
@@ -23403,20 +23363,20 @@
       "mile": 69.2
     },
     {
+      "lat": 36.222152,
+      "lon": -121.12911,
+      "name": "Railroad Park (mi 69.5)",
+      "type": "Park",
+      "label": "Railroad Park",
+      "mile": 69.5
+    },
+    {
       "lat": 36.217633,
       "lon": -121.124956,
       "name": "Store (mi 69.7)",
       "type": "Store",
       "label": "Store",
       "mile": 69.7
-    },
-    {
-      "lat": 36.213463,
-      "lon": -121.125032,
-      "name": "Picnic (mi 69.9)",
-      "type": "Picnic",
-      "label": "Picnic",
-      "mile": 69.9
     }
   ],
   "water_gap_mi": 57.4,

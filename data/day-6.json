@@ -5828,19 +5828,19 @@
   "waypoints": [],
   "services": [
     {
-      "lat": 35.109481,
-      "lon": -120.626897,
-      "name": "Toilets (mi 0.0)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 0.0
-    },
-    {
       "lat": 35.107386,
       "lon": -120.62405,
       "name": "Old Juan’s Cantina (mi 0.0)",
       "type": "Food",
       "label": "Old Juan’s Cantina",
+      "mile": 0.0
+    },
+    {
+      "lat": 35.109481,
+      "lon": -120.626897,
+      "name": "Toilets (mi 0.0)",
+      "type": "Toilets",
+      "label": "Toilets",
       "mile": 0.0
     },
     {
@@ -5868,14 +5868,6 @@
       "mile": 12.1
     },
     {
-      "lat": 34.996229,
-      "lon": -120.436301,
-      "name": "Rancho Nipomo (mi 16.1)",
-      "type": "Food",
-      "label": "Rancho Nipomo",
-      "mile": 16.1
-    },
-    {
       "lat": 34.995781,
       "lon": -120.436424,
       "name": "Santa Maria Brewing Company (mi 16.1)",
@@ -5900,36 +5892,12 @@
       "mile": 33.5
     },
     {
-      "lat": 34.824351,
-      "lon": -120.232009,
-      "name": "Foxen #1 (mi 36.2)",
-      "type": "Winery",
-      "label": "Foxen #1",
-      "mile": 36.2
-    },
-    {
-      "lat": 34.795602,
-      "lon": -120.185228,
-      "name": "Tres Hermanas Winery (mi 39.8)",
-      "type": "Winery",
-      "label": "Tres Hermanas Winery",
-      "mile": 39.8
-    },
-    {
       "lat": 34.730777,
       "lon": -120.129358,
       "name": "Koehler Vinyard (mi 47.4)",
       "type": "Winery",
       "label": "Koehler Vinyard",
       "mile": 47.4
-    },
-    {
-      "lat": 34.665337,
-      "lon": -120.114236,
-      "name": "Samsara Wines (mi 52.9)",
-      "type": "Winery",
-      "label": "Samsara Wines",
-      "mile": 52.9
     },
     {
       "lat": 34.664961,
@@ -5946,6 +5914,14 @@
       "type": "Winery",
       "label": "Buttonwood Farm Winery & Vineyard",
       "mile": 55.9
+    },
+    {
+      "lat": 34.607541,
+      "lon": -120.123187,
+      "name": "Sunny Fields Park (mi 57.0)",
+      "type": "Park",
+      "label": "Sunny Fields Park",
+      "mile": 57.0
     },
     {
       "lat": 34.608023,
@@ -5986,22 +5962,6 @@
       "type": "Water",
       "label": "Water",
       "mile": 58.8
-    },
-    {
-      "lat": 34.596479,
-      "lon": -120.141045,
-      "name": "Cordon of Santa Barbara (mi 58.8)",
-      "type": "Winery",
-      "label": "Cordon of Santa Barbara",
-      "mile": 58.8
-    },
-    {
-      "lat": 34.59592,
-      "lon": -120.143395,
-      "name": "Toilets (mi 59.1)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 59.1
     }
   ],
   "water_gap_mi": 58.7,

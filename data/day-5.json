@@ -18247,11 +18247,11 @@
       "mile": 0.0
     },
     {
-      "lat": 35.640066,
-      "lon": -120.688559,
-      "name": "A&W (mi 0.0)",
+      "lat": 35.639935,
+      "lon": -120.688521,
+      "name": "KFC (mi 0.0)",
       "type": "Food",
-      "label": "A&W",
+      "label": "KFC",
       "mile": 0.0
     },
     {
@@ -18271,22 +18271,6 @@
       "mile": 3.3
     },
     {
-      "lat": 35.590755,
-      "lon": -120.694728,
-      "name": "Food Mart (mi 3.5)",
-      "type": "Food",
-      "label": "Food Mart",
-      "mile": 3.5
-    },
-    {
-      "lat": 35.589565,
-      "lon": -120.693753,
-      "name": "ampm (mi 3.6)",
-      "type": "Store",
-      "label": "ampm",
-      "mile": 3.6
-    },
-    {
       "lat": 35.550093,
       "lon": -120.705022,
       "name": "Store (mi 6.3)",
@@ -18300,14 +18284,6 @@
       "name": "Toilets (mi 6.8)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 6.8
-    },
-    {
-      "lat": 35.547722,
-      "lon": -120.707122,
-      "name": "15 degrees C, Wine Shop & Bar (mi 6.8)",
-      "type": "Winery",
-      "label": "15 degrees C, Wine Shop & Bar",
       "mile": 6.8
     },
     {
@@ -18335,11 +18311,11 @@
       "mile": 13.8
     },
     {
-      "lat": 35.49077,
-      "lon": -120.669785,
-      "name": "Grape Encounters EmPOURium (mi 13.8)",
+      "lat": 35.489788,
+      "lon": -120.668735,
+      "name": "Barley & Boar (mi 13.8)",
       "type": "Winery",
-      "label": "Grape Encounters EmPOURium",
+      "label": "Barley & Boar",
       "mile": 13.8
     },
     {
@@ -18349,6 +18325,14 @@
       "type": "Store",
       "label": "Colony Market & Deli",
       "mile": 13.9
+    },
+    {
+      "lat": 35.457529,
+      "lon": -120.688379,
+      "name": "Three Bridges Oak Preserve Trailhead (mi 17.0)",
+      "type": "Park",
+      "label": "Three Bridges Oak Preserve Trailhead",
+      "mile": 17.0
     },
     {
       "lat": 35.36939,
@@ -18391,12 +18375,12 @@
       "mile": 31.3
     },
     {
-      "lat": 35.325482,
-      "lon": -120.819445,
-      "name": "Toilets (mi 35.5)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 35.5
+      "lat": 35.366349,
+      "lon": -120.84443,
+      "name": "Morro Bay City Park (mi 31.7)",
+      "type": "Park",
+      "label": "Morro Bay City Park",
+      "mile": 31.7
     },
     {
       "lat": 35.311277,
@@ -18455,14 +18439,6 @@
       "mile": 45.4
     },
     {
-      "lat": 35.236884,
-      "lon": -120.679564,
-      "name": "Pereira Octagon Barn (mi 47.2)",
-      "type": "Historic",
-      "label": "Pereira Octagon Barn",
-      "mile": 47.2
-    },
-    {
       "lat": 35.185782,
       "lon": -120.702859,
       "name": "Toilets (mi 51.2)",
@@ -18479,28 +18455,20 @@
       "mile": 51.5
     },
     {
+      "lat": 35.169049,
+      "lon": -120.6962,
+      "name": "South Palisades Park (mi 52.6)",
+      "type": "Park",
+      "label": "South Palisades Park",
+      "mile": 52.6
+    },
+    {
       "lat": 35.165052,
       "lon": -120.69042,
       "name": "Marisol (mi 53.1)",
       "type": "Food",
       "label": "Marisol",
       "mile": 53.1
-    },
-    {
-      "lat": 35.162899,
-      "lon": -120.687069,
-      "name": "De Palo & Sons (mi 53.2)",
-      "type": "Store",
-      "label": "De Palo & Sons",
-      "mile": 53.2
-    },
-    {
-      "lat": 35.160525,
-      "lon": -120.686328,
-      "name": "Toilets (mi 53.3)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 53.3
     },
     {
       "lat": 35.160432,
@@ -18519,38 +18487,6 @@
       "mile": 54.6
     },
     {
-      "lat": 35.154169,
-      "lon": -120.665201,
-      "name": "Picnic (mi 54.6)",
-      "type": "Picnic",
-      "label": "Picnic",
-      "mile": 54.6
-    },
-    {
-      "lat": 35.151475,
-      "lon": -120.652939,
-      "name": "Water (mi 55.3)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 55.3
-    },
-    {
-      "lat": 35.151484,
-      "lon": -120.652957,
-      "name": "Toilets (mi 55.3)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 55.3
-    },
-    {
-      "lat": 35.148234,
-      "lon": -120.648782,
-      "name": "Blast & Brew (mi 55.7)",
-      "type": "Food",
-      "label": "Blast & Brew",
-      "mile": 55.7
-    },
-    {
       "lat": 35.144189,
       "lon": -120.642433,
       "name": "Price Street Market (mi 56.0)",
@@ -18567,28 +18503,20 @@
       "mile": 56.2
     },
     {
+      "lat": 35.141123,
+      "lon": -120.641694,
+      "name": "Toilets (mi 56.2)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 56.2
+    },
+    {
       "lat": 35.13909,
       "lon": -120.642997,
       "name": "Water (mi 56.6)",
       "type": "Water",
       "label": "Water",
       "mile": 56.6
-    },
-    {
-      "lat": 35.128732,
-      "lon": -120.632324,
-      "name": "Toilets (mi 57.3)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 57.3
-    },
-    {
-      "lat": 35.121429,
-      "lon": -120.626618,
-      "name": "7-Eleven (mi 58.0)",
-      "type": "Store",
-      "label": "7-Eleven",
-      "mile": 58.0
     },
     {
       "lat": 35.107386,

@@ -9022,8 +9022,23 @@
     ]
   ],
   "options": [],
-  "waypoints": [],
+  "waypoints": [
+    {
+      "lat": 34.406056,
+      "lon": -119.734583,
+      "name": "Picnic Area (mi 49.6)",
+      "type": "Picnic"
+    }
+  ],
   "services": [
+    {
+      "lat": 34.597982,
+      "lon": -120.147021,
+      "name": "Hans Christian Andersen Park (mi 0.1)",
+      "type": "Park",
+      "label": "Hans Christian Andersen Park",
+      "mile": 0.1
+    },
     {
       "lat": 34.596187,
       "lon": -120.141491,
@@ -9081,6 +9096,14 @@
       "mile": 7.1
     },
     {
+      "lat": 34.487767,
+      "lon": -120.226262,
+      "name": "Fremont Foxon Historical Marker (mi 14.5)",
+      "type": "Park",
+      "label": "Fremont Foxon Historical Marker",
+      "mile": 14.5
+    },
+    {
       "lat": 34.484965,
       "lon": -120.228653,
       "name": "Toilets (mi 14.7)",
@@ -9110,14 +9133,6 @@
       "name": "Water (mi 27.9)",
       "type": "Water",
       "label": "Water",
-      "mile": 27.9
-    },
-    {
-      "lat": 34.465573,
-      "lon": -120.024934,
-      "name": "Toilets (mi 27.9)",
-      "type": "Toilets",
-      "label": "Toilets",
       "mile": 27.9
     },
     {
@@ -9153,14 +9168,6 @@
       "mile": 35.6
     },
     {
-      "lat": 34.429659,
-      "lon": -119.87232,
-      "name": "Toilets (mi 37.7)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 37.7
-    },
-    {
       "lat": 34.429688,
       "lon": -119.867076,
       "name": "Indo China Market (mi 37.7)",
@@ -9185,6 +9192,14 @@
       "mile": 38.1
     },
     {
+      "lat": 34.415053,
+      "lon": -119.861872,
+      "name": "Children's Park (mi 39.0)",
+      "type": "Park",
+      "label": "Children's Park",
+      "mile": 39.0
+    },
+    {
       "lat": 34.414965,
       "lon": -119.862388,
       "name": "Water (mi 39.1)",
@@ -9193,44 +9208,12 @@
       "mile": 39.1
     },
     {
-      "lat": 34.418158,
-      "lon": -119.856527,
-      "name": "Picnic (mi 39.4)",
-      "type": "Picnic",
-      "label": "Picnic",
-      "mile": 39.4
-    },
-    {
-      "lat": 34.417611,
-      "lon": -119.85284,
-      "name": "Water (mi 39.7)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 39.7
-    },
-    {
-      "lat": 34.417617,
-      "lon": -119.852868,
-      "name": "Toilets (mi 39.7)",
+      "lat": 34.41642,
+      "lon": -119.845407,
+      "name": "Toilets (mi 40.1)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 39.7
-    },
-    {
-      "lat": 34.414068,
-      "lon": -119.846556,
-      "name": "Arbor Cafe (mi 40.0)",
-      "type": "Food",
-      "label": "Arbor Cafe",
-      "mile": 40.0
-    },
-    {
-      "lat": 34.414152,
-      "lon": -119.846525,
-      "name": "The Arbor (mi 40.0)",
-      "type": "Store",
-      "label": "The Arbor",
-      "mile": 40.0
+      "mile": 40.1
     },
     {
       "lat": 34.415262,
@@ -9241,6 +9224,14 @@
       "mile": 40.3
     },
     {
+      "lat": 34.414874,
+      "lon": -119.840531,
+      "name": "Courtyard Cafe (mi 40.7)",
+      "type": "Food",
+      "label": "Courtyard Cafe",
+      "mile": 40.7
+    },
+    {
       "lat": 34.417068,
       "lon": -119.830464,
       "name": "Water (mi 41.3)",
@@ -9249,28 +9240,12 @@
       "mile": 41.3
     },
     {
-      "lat": 34.425833,
-      "lon": -119.827898,
-      "name": "Toilets (mi 41.8)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 41.8
-    },
-    {
-      "lat": 34.43943,
-      "lon": -119.771953,
-      "name": "The Java Station (mi 45.4)",
+      "lat": 34.440346,
+      "lon": -119.767027,
+      "name": "Eller's Donuts (mi 45.7)",
       "type": "Food",
-      "label": "The Java Station",
-      "mile": 45.4
-    },
-    {
-      "lat": 34.439695,
-      "lon": -119.771339,
-      "name": "Talevi's Wine and Spirits (mi 45.4)",
-      "type": "Winery",
-      "label": "Talevi's Wine and Spirits",
-      "mile": 45.4
+      "label": "Eller's Donuts",
+      "mile": 45.7
     },
     {
       "lat": 34.440023,
@@ -9289,20 +9264,12 @@
       "mile": 46.7
     },
     {
-      "lat": 34.427062,
-      "lon": -119.734212,
-      "name": "Point Market (mi 47.7)",
-      "type": "Store",
-      "label": "Point Market",
-      "mile": 47.7
-    },
-    {
-      "lat": 34.406056,
-      "lon": -119.734583,
-      "name": "Picnic Area (mi 49.6)",
-      "type": "Picnic",
-      "label": "Picnic Area",
-      "mile": 49.6
+      "lat": 34.401869,
+      "lon": -119.738394,
+      "name": "Douglas Family Preserve (mi 49.3)",
+      "type": "Park",
+      "label": "Douglas Family Preserve",
+      "mile": 49.3
     },
     {
       "lat": 34.402502,
@@ -9310,14 +9277,6 @@
       "name": "Vons (mi 50.2)",
       "type": "Store",
       "label": "Vons",
-      "mile": 50.2
-    },
-    {
-      "lat": 34.402371,
-      "lon": -119.723374,
-      "name": "Starbucks (mi 50.2)",
-      "type": "Food",
-      "label": "Starbucks",
       "mile": 50.2
     },
     {
@@ -9329,12 +9288,20 @@
       "mile": 50.4
     },
     {
-      "lat": 34.395786,
-      "lon": -119.710196,
-      "name": "Toilets (mi 51.3)",
+      "lat": 34.397085,
+      "lon": -119.704922,
+      "name": "Toilets (mi 51.7)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 51.3
+      "mile": 51.7
+    },
+    {
+      "lat": 34.404064,
+      "lon": -119.701418,
+      "name": "West Campus Cafeteria (mi 52.1)",
+      "type": "Food",
+      "label": "West Campus Cafeteria",
+      "mile": 52.1
     },
     {
       "lat": 34.404392,
@@ -9345,38 +9312,6 @@
       "mile": 52.1
     },
     {
-      "lat": 34.403756,
-      "lon": -119.693211,
-      "name": "Harbor Market (mi 52.4)",
-      "type": "Store",
-      "label": "Harbor Market",
-      "mile": 52.4
-    },
-    {
-      "lat": 34.406268,
-      "lon": -119.693364,
-      "name": "Water (mi 52.7)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 52.7
-    },
-    {
-      "lat": 34.40864,
-      "lon": -119.693495,
-      "name": "Toma Restaurant & Bar (mi 52.8)",
-      "type": "Food",
-      "label": "Toma Restaurant & Bar",
-      "mile": 52.8
-    },
-    {
-      "lat": 34.409973,
-      "lon": -119.685603,
-      "name": "Deep Sea Tasting Room (mi 53.1)",
-      "type": "Winery",
-      "label": "Deep Sea Tasting Room",
-      "mile": 53.1
-    },
-    {
       "lat": 34.410211,
       "lon": -119.685557,
       "name": "Water (mi 53.2)",
@@ -9385,60 +9320,12 @@
       "mile": 53.2
     },
     {
-      "lat": 34.414332,
-      "lon": -119.687186,
-      "name": "Toilets (mi 53.4)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 53.4
-    },
-    {
       "lat": 34.418522,
       "lon": -119.673729,
       "name": "Tri-County Produce (mi 54.2)",
       "type": "Store",
       "label": "Tri-County Produce",
       "mile": 54.2
-    },
-    {
-      "lat": 34.419771,
-      "lon": -119.664881,
-      "name": "Picnic (mi 54.7)",
-      "type": "Picnic",
-      "label": "Picnic",
-      "mile": 54.7
-    },
-    {
-      "lat": 34.422632,
-      "lon": -119.651706,
-      "name": "Toilets (mi 55.4)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 55.4
-    },
-    {
-      "lat": 34.422758,
-      "lon": -119.651454,
-      "name": "Caffe Luxxe (mi 55.4)",
-      "type": "Food",
-      "label": "Caffe Luxxe",
-      "mile": 55.4
-    },
-    {
-      "lat": 34.421134,
-      "lon": -119.648103,
-      "name": "The Point Market (mi 55.9)",
-      "type": "Store",
-      "label": "The Point Market",
-      "mile": 55.9
-    },
-    {
-      "lat": 34.421172,
-      "lon": -119.641724,
-      "name": "The Honor Bar (mi 56.7)",
-      "type": "Winery",
-      "label": "The Honor Bar",
-      "mile": 56.7
     },
     {
       "lat": 34.420057,
@@ -9465,20 +9352,12 @@
       "mile": 62.4
     },
     {
-      "lat": 34.406245,
-      "lon": -119.536887,
-      "name": "Kim's Market (mi 62.9)",
+      "lat": 34.405042,
+      "lon": -119.530711,
+      "name": "Store (mi 63.4)",
       "type": "Store",
-      "label": "Kim's Market",
-      "mile": 62.9
-    },
-    {
-      "lat": 34.398752,
-      "lon": -119.519559,
-      "name": "Toilets (mi 64.2)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 64.2
+      "label": "Store",
+      "mile": 63.4
     },
     {
       "lat": 34.398302,
@@ -9489,28 +9368,20 @@
       "mile": 64.2
     },
     {
-      "lat": 34.394906,
-      "lon": -119.511997,
-      "name": "Albertsons (mi 64.9)",
-      "type": "Store",
-      "label": "Albertsons",
-      "mile": 64.9
-    },
-    {
-      "lat": 34.394962,
-      "lon": -119.513122,
-      "name": "Starbucks (mi 64.9)",
-      "type": "Food",
-      "label": "Starbucks",
-      "mile": 64.9
-    },
-    {
-      "lat": 34.376503,
-      "lon": -119.479751,
-      "name": "Toilets (mi 67.9)",
+      "lat": 34.398752,
+      "lon": -119.519559,
+      "name": "Toilets (mi 64.2)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 67.9
+      "mile": 64.2
+    },
+    {
+      "lat": 34.383516,
+      "lon": -119.487512,
+      "name": "Carpinteria Bluffs III (mi 66.5)",
+      "type": "Park",
+      "label": "Carpinteria Bluffs III",
+      "mile": 66.5
     },
     {
       "lat": 34.355797,
@@ -9537,12 +9408,12 @@
       "mile": 72.5
     },
     {
-      "lat": 34.338024,
-      "lon": -119.411445,
-      "name": "Water (mi 73.3)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 73.3
+      "lat": 34.286119,
+      "lon": -119.327124,
+      "name": "Emma Wood State Beach (mi 79.7)",
+      "type": "Park",
+      "label": "Emma Wood State Beach",
+      "mile": 79.7
     },
     {
       "lat": 34.281569,
@@ -9569,11 +9440,11 @@
       "mile": 81.4
     },
     {
-      "lat": 34.283146,
-      "lon": -119.300121,
-      "name": "Johnny's Fine Mexican Food (mi 81.4)",
+      "lat": 34.281422,
+      "lon": -119.301094,
+      "name": "Burger King (mi 81.4)",
       "type": "Food",
-      "label": "Johnny's Fine Mexican Food",
+      "label": "Burger King",
       "mile": 81.4
     },
     {

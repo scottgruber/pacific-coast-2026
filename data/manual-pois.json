@@ -23,11 +23,13 @@
   "exclude": {
     "1": [
       "Alma",
+      "Branciforte",
       "Patchen (historic)",
-      "Branciforte"
+      "Picnic"
     ],
     "5": [
-      "MB"
+      "MB",
+      "Pereira Octagon Barn"
     ],
     "7": [
       "Jude Martin Keefer",
@@ -36,6 +38,9 @@
     ],
     "8": [
       "Malibu Sign"
+    ],
+    "4": [
+      "San Marcos Mennonite Cemetary"
     ]
   }
 }

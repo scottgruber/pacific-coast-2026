@@ -170,7 +170,7 @@ SERVICE_GROUPS = [
     ("Store", "Shops &amp; markets"),
     ("Food", "Food &amp; coffee"),
     ("Winery", "Tasting rooms &amp; bars"),
-    ("Picnic", "Picnic spots"),
+    ("Park", "Parks"),
     ("Toilets", "Restrooms"),
     ("Scenic", "Scenic"),
     ("Historic", "Historic"),

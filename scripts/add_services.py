@@ -65,29 +65,29 @@ CATEGORIES = {
     # of them on day 7 pushed that course over the point budget on their own.
     # At half a mile no isolated source is ever lost.
     ("amenity", "drinking_water"): dict(type="Water", sym="Drinking Water",
-                                        priority=0, spacing_mi=0.5),
+                                        priority=0, spacing_mi=1.0),
     ("amenity", "toilets"):        dict(type="Toilets", sym="Restroom",
-                                        priority=0, spacing_mi=2.0),
+                                        priority=0, spacing_mi=5.0),
     ("shop", "supermarket"):       dict(type="Store", sym="Shopping Center",
-                                        priority=0, spacing_mi=1.5),
+                                        priority=0, spacing_mi=4.0),
     ("shop", "convenience"):       dict(type="Store", sym="Convenience Store",
-                                        priority=1, spacing_mi=1.5),
+                                        priority=1, spacing_mi=4.0),
     ("shop", "deli"):              dict(type="Store", sym="Convenience Store",
-                                        priority=2, spacing_mi=1.5),
+                                        priority=2, spacing_mi=4.0),
     ("amenity", "cafe"):           dict(type="Food", sym="Restaurant",
-                                        priority=0, spacing_mi=2.5),
+                                        priority=0, spacing_mi=5.0),
     ("amenity", "restaurant"):     dict(type="Food", sym="Restaurant",
-                                        priority=1, spacing_mi=2.5),
+                                        priority=1, spacing_mi=5.0),
     ("amenity", "fast_food"):      dict(type="Food", sym="Fast Food",
-                                        priority=2, spacing_mi=2.5),
+                                        priority=2, spacing_mi=5.0),
     ("shop", "bakery"):            dict(type="Food", sym="Restaurant",
-                                        priority=1, spacing_mi=2.5),
+                                        priority=1, spacing_mi=5.0),
     ("amenity", "ice_cream"):      dict(type="Food", sym="Fast Food",
-                                        priority=3, spacing_mi=2.5),
+                                        priority=3, spacing_mi=5.0),
     ("shop", "farm"):              dict(type="Store", sym="Convenience Store",
-                                        priority=2, spacing_mi=1.5),
+                                        priority=2, spacing_mi=4.0),
     ("shop", "greengrocer"):       dict(type="Store", sym="Convenience Store",
-                                        priority=2, spacing_mi=1.5),
+                                        priority=2, spacing_mi=4.0),
     # This route runs through four wine regions, and on the inland stretches a
     # tasting room is frequently the only open door for miles - Foxen Canyon
     # has two of them at mile 36 in what otherwise reads as empty road. Tagged
@@ -96,38 +96,41 @@ CATEGORIES = {
     # not. Kept as their own category: useful stops, but with opening hours
     # far less dependable than a shop, and obvious reasons for restraint.
     ("craft", "winery"):           dict(type="Winery", sym="Bar",
-                                        priority=0, spacing_mi=2.0, named_only=True),
+                                        priority=0, spacing_mi=8.0, named_only=True),
     ("shop", "wine"):              dict(type="Winery", sym="Bar",
-                                        priority=1, spacing_mi=2.0, named_only=True),
+                                        priority=1, spacing_mi=8.0, named_only=True),
     ("tourism", "wine_cellar"):    dict(type="Winery", sym="Bar",
-                                        priority=1, spacing_mi=2.0, named_only=True),
+                                        priority=1, spacing_mi=8.0, named_only=True),
     ("amenity", "bar"):            dict(type="Winery", sym="Bar",
-                                        priority=2, spacing_mi=2.0, named_only=True),
+                                        priority=2, spacing_mi=8.0, named_only=True),
     ("amenity", "pub"):            dict(type="Winery", sym="Bar",
-                                        priority=2, spacing_mi=2.0, named_only=True),
+                                        priority=2, spacing_mi=8.0, named_only=True),
     ("amenity", "biergarten"):     dict(type="Winery", sym="Bar",
-                                        priority=3, spacing_mi=2.0, named_only=True),
+                                        priority=3, spacing_mi=8.0, named_only=True),
     ("shop", "alcohol"):           dict(type="Winery", sym="Bar",
-                                        priority=4, spacing_mi=2.0, named_only=True),
-    # Tables, shade and often a tap - worth knowing about on the empty days.
-    ("tourism", "picnic_site"):    dict(type="Picnic", sym="Picnic Area",
-                                        priority=0, spacing_mi=2.0),
+                                        priority=4, spacing_mi=8.0, named_only=True),
+    # A park with real facilities beats a bare picnic-site tag: somewhere to
+    # sit, usually water and a restroom, and reliably open. Picnic sites were
+    # tried first and dropped - most were unnamed, several were bulk imports,
+    # and the group is not stopping long except for lunch.
+    ("leisure", "park"):           dict(type="Park", sym="Park",
+                                        priority=0, spacing_mi=6.0, named_only=True),
     # Worth stopping for rather than worth relying on, so spaced widely and
     # only kept when named - an unnamed viewpoint tells a rider nothing.
     ("tourism", "viewpoint"):      dict(type="Scenic", sym="Scenic Area",
-                                        priority=0, spacing_mi=3.0, named_only=True),
+                                        priority=0, spacing_mi=8.0, named_only=True),
     ("tourism", "attraction"):     dict(type="Scenic", sym="Scenic Area",
-                                        priority=1, spacing_mi=3.0, named_only=True),
+                                        priority=1, spacing_mi=8.0, named_only=True),
     ("tourism", "museum"):         dict(type="Historic", sym="Museum",
-                                        priority=0, spacing_mi=3.0, named_only=True),
+                                        priority=0, spacing_mi=8.0, named_only=True),
     ("historic", "monument"):      dict(type="Historic", sym="Museum",
-                                        priority=1, spacing_mi=3.0, named_only=True),
+                                        priority=1, spacing_mi=8.0, named_only=True),
     ("historic", "memorial"):      dict(type="Historic", sym="Museum",
-                                        priority=2, spacing_mi=3.0, named_only=True),
+                                        priority=2, spacing_mi=8.0, named_only=True),
     ("historic", "ruins"):         dict(type="Historic", sym="Museum",
-                                        priority=1, spacing_mi=3.0, named_only=True),
+                                        priority=1, spacing_mi=8.0, named_only=True),
     ("historic", "building"):      dict(type="Historic", sym="Museum",
-                                        priority=3, spacing_mi=3.0, named_only=True),
+                                        priority=3, spacing_mi=8.0, named_only=True),
 }
 
 # amenity=toilets says a toilet exists, not that a passing cyclist may use it.
@@ -155,7 +158,9 @@ QUERY = """[out:json][timeout:120];
   node["shop"~"^(supermarket|convenience|deli|bakery|farm|greengrocer|wine|alcohol)$"](%(bbox)s);
   way["shop"~"^(supermarket|convenience)$"](%(bbox)s);
   node["craft"="winery"](%(bbox)s);
-  node["tourism"~"^(viewpoint|attraction|museum|wine_cellar|picnic_site)$"](%(bbox)s);
+  node["tourism"~"^(viewpoint|attraction|museum|wine_cellar)$"](%(bbox)s);
+  node["leisure"="park"](%(bbox)s);
+  way["leisure"="park"](%(bbox)s);
   node["historic"~"^(monument|memorial|ruins|building)$"](%(bbox)s);
   way["historic"~"^(monument|memorial|ruins|building)$"](%(bbox)s);
 );
@@ -279,31 +284,35 @@ def find_services(route):
         if cfg.get("named_only") and not name:
             continue
 
-        # Scenic, historic and picnic entries have to earn their place.
+        # Scenic, historic and park entries have to earn their place.
         #
-        # The rest of the categories are self-justifying: a shop is a shop. But
-        # OSM carries thousands of named terrain features - bulk-imported from
-        # the US place-names database, or added as map labels - that are things
-        # you ride past, not places you stop. "Devils Gap" is a rock. "Concrete
-        # Turret" is a viewpoint whose entire description is its elevation.
-        # Listing those as somewhere to stop is worse than listing nothing,
-        # because a rider plans around them.
+        # The other categories are self-justifying: a shop is a shop. But OSM
+        # carries thousands of named terrain features - bulk-imported from the
+        # US place-names database, or added as map labels - that are things you
+        # ride past, not places you stop. "Devils Gap" is a rock. "Concrete
+        # Turret" is a viewpoint whose entire description is its elevation. The
+        # Fremont-Foxen Monument is tagged leisure=park and is a roadside
+        # plaque. Listing those as somewhere to stop is worse than listing
+        # nothing, because a rider plans around them.
         #
         # So this is an allowlist, not a blocklist: when in doubt, leave it out.
-        # Something qualifies if it is notable enough to have a Wikipedia or
-        # Wikidata entry, if it is a park or a museum, or if it has facilities
-        # anybody could actually use.
-        if cfg["type"] in ("Scenic", "Historic", "Picnic"):
+        if cfg["type"] in ("Scenic", "Historic", "Park"):
             notable = "wikidata" in tags or "wikipedia" in tags
-            is_place = (tags.get("leisure") == "park"
-                        or tags.get("tourism") in ("museum", "picnic_site")
-                        or tags.get("historic") in ("monument", "memorial", "ruins"))
             has_facilities = any(tags.get(k) not in (None, "no") for k in
                                  ("bench", "toilets", "drinking_water",
-                                  "picnic_table", "shelter", "opening_hours",
-                                  "website", "operator"))
-            if not (notable or is_place or has_facilities):
-                continue
+                                  "picnic_table", "shelter", "playground",
+                                  "opening_hours", "website", "operator"))
+            # A park has to show something beyond the tag itself - the tag is
+            # what the bulk imports set. Museums and monuments are destinations
+            # by definition, so the tag alone is enough for those.
+            if cfg["type"] == "Park":
+                if not (notable or has_facilities):
+                    continue
+            else:
+                is_place = (tags.get("tourism") == "museum"
+                            or tags.get("historic") in ("monument", "memorial", "ruins"))
+                if not (notable or is_place or has_facilities):
+                    continue
 
         # Access filtering, for toilets above all.
         access = (tags.get("access") or "").strip().lower()
@@ -319,7 +328,16 @@ def find_services(route):
         if offset_mi > MAX_OFFSET_MI:
             continue
         i = dists.index(offset_mi)
+        # Quality signal for thinning. An OSM entry carrying opening hours, a
+        # website or a Wikidata link has been maintained by somebody who knows
+        # the place; a bare node with a name may be a decade stale. When two
+        # stops fall in the same cluster, the documented one is the one worth
+        # riding to. Lower sorts first.
+        quality = 0 if any(k in tags for k in
+                           ("opening_hours", "website", "contact:website",
+                            "phone", "wikidata")) else 1
         found.append({
+            "quality": quality,
             "lat": lat, "lon": lon, "name": name,
             "type": cfg["type"], "sym": cfg["sym"],
             "customers_only": customers_only, "fee": fee,
@@ -331,7 +349,7 @@ def find_services(route):
     # own spacing to one already kept. Sorting by priority first means the most
     # useful member of a cluster is the one that survives - a supermarket
     # rather than the fast-food place next door. Water is never thinned.
-    found.sort(key=lambda s: (s["mile"], s["priority"]))
+    found.sort(key=lambda s: (s["mile"], s["quality"], s["priority"]))
     kept = []
     for s in found:
         if s["spacing_mi"] > 0 and any(

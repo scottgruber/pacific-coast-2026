@@ -5692,36 +5692,20 @@
       "mile": 7.0
     },
     {
+      "lat": 37.324815,
+      "lon": -122.043922,
+      "name": "Memorial Park (mi 7.2)",
+      "type": "Park",
+      "label": "Memorial Park",
+      "mile": 7.2
+    },
+    {
       "lat": 37.324052,
       "lon": -122.044536,
       "name": "Toilets (mi 7.2)",
       "type": "Toilets",
       "label": "Toilets",
       "mile": 7.2
-    },
-    {
-      "lat": 37.320853,
-      "lon": -122.045583,
-      "name": "Cafe Rococo (mi 7.3)",
-      "type": "Food",
-      "label": "Cafe Rococo",
-      "mile": 7.3
-    },
-    {
-      "lat": 37.324264,
-      "lon": -122.038747,
-      "name": "Water (mi 7.5)",
-      "type": "Water",
-      "label": "Water",
-      "mile": 7.5
-    },
-    {
-      "lat": 37.323616,
-      "lon": -122.039602,
-      "name": "Whole Foods Market (mi 7.5)",
-      "type": "Store",
-      "label": "Whole Foods Market",
-      "mile": 7.5
     },
     {
       "lat": 37.295764,
@@ -5754,22 +5738,6 @@
       "type": "Water",
       "label": "Water",
       "mile": 11.8
-    },
-    {
-      "lat": 37.265498,
-      "lon": -122.029803,
-      "name": "Toilets (mi 11.8)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 11.8
-    },
-    {
-      "lat": 37.256694,
-      "lon": -122.034242,
-      "name": "Wine Collective (mi 12.2)",
-      "type": "Winery",
-      "label": "Wine Collective",
-      "mile": 12.2
     },
     {
       "lat": 37.244371,
@@ -5828,22 +5796,6 @@
       "mile": 16.4
     },
     {
-      "lat": 37.199958,
-      "lon": -121.987165,
-      "name": "Picnic (mi 18.4)",
-      "type": "Picnic",
-      "label": "Picnic",
-      "mile": 18.4
-    },
-    {
-      "lat": 37.200015,
-      "lon": -121.986795,
-      "name": "Toilets (mi 18.4)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 18.4
-    },
-    {
       "lat": 37.13105,
       "lon": -121.962674,
       "name": "Villa Del Monte Winery (mi 27.0)",
@@ -5900,28 +5852,20 @@
       "mile": 40.0
     },
     {
-      "lat": 36.988985,
-      "lon": -121.954295,
-      "name": "Home Away Soquel (mi 40.4)",
+      "lat": 36.989517,
+      "lon": -121.957138,
+      "name": "Pretty Good Advice (mi 40.4)",
       "type": "Food",
-      "label": "Home Away Soquel",
+      "label": "Pretty Good Advice",
       "mile": 40.4
     },
     {
-      "lat": 36.985727,
-      "lon": -121.954818,
-      "name": "Water (mi 40.5)",
-      "type": "Water",
-      "label": "Water",
+      "lat": 36.987684,
+      "lon": -121.956309,
+      "name": "Heart of Soquel Park (mi 40.5)",
+      "type": "Park",
+      "label": "Heart of Soquel Park",
       "mile": 40.5
-    },
-    {
-      "lat": 36.9861,
-      "lon": -121.963251,
-      "name": "Safeway (mi 40.8)",
-      "type": "Store",
-      "label": "Safeway",
-      "mile": 40.8
     },
     {
       "lat": 36.990699,
@@ -5932,28 +5876,12 @@
       "mile": 41.6
     },
     {
-      "lat": 36.986535,
-      "lon": -121.978203,
-      "name": "Toilets (mi 41.6)",
-      "type": "Toilets",
-      "label": "Toilets",
-      "mile": 41.6
-    },
-    {
-      "lat": 36.984876,
-      "lon": -121.990215,
-      "name": "Store (mi 42.4)",
+      "lat": 36.988569,
+      "lon": -121.975486,
+      "name": "Mel's Market & Deli (mi 41.6)",
       "type": "Store",
-      "label": "Store",
-      "mile": 42.4
-    },
-    {
-      "lat": 36.981233,
-      "lon": -122.001463,
-      "name": "Akira (mi 43.1)",
-      "type": "Food",
-      "label": "Akira",
-      "mile": 43.1
+      "label": "Mel's Market & Deli",
+      "mile": 41.6
     },
     {
       "lat": 36.979137,
@@ -5962,22 +5890,6 @@
       "type": "Toilets",
       "label": "Toilets",
       "mile": 43.8
-    },
-    {
-      "lat": 36.978877,
-      "lon": -122.012732,
-      "name": "One Double Oh Seven (mi 43.8)",
-      "type": "Winery",
-      "label": "One Double Oh Seven",
-      "mile": 43.8
-    },
-    {
-      "lat": 36.979,
-      "lon": -122.014571,
-      "name": "Whole Foods Market (mi 43.9)",
-      "type": "Store",
-      "label": "Whole Foods Market",
-      "mile": 43.9
     }
   ],
   "water_gap_mi": 24.1,
