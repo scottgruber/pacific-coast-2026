@@ -1,62 +1,92 @@
 # Pacific Coast Bike Tour — Los Altos to Los Angeles
 
 A day-by-day planning site for an 8-day bike tour down the California
-coast, September 5–12, 2026: route maps, elevation profiles, and a page
-comparing our planned route against the Adventure Cycling reference track
-it's loosely based on.
+coast, September 5–12, 2026: route maps, elevation profiles, downloadable
+GPX, live conditions, afternoon shade estimates, and a page comparing the
+planned route against the Adventure Cycling reference track it's loosely
+based on.
 
 Unlike a post-trip recap, this ride hasn't happened yet — there's no
-recorded moving time or speed, so day pages show what a route file can
-tell you ahead of time: distance, elevation gain/loss, and notable climbs.
+recorded moving time or speed, so day pages show what a route file and a
+few public data sources can tell you ahead of time: distance, elevation
+gain and loss, notable climbs, where the water and food are, and how much
+of the day is actually in shade.
 
 It's a static site — Python scripts render Jinja templates + JSON data into
-plain HTML in `build/`. No server-side code runs on the deployed site.
+plain HTML in `build/`. The one exception is `api/airnow.php`, a small proxy
+that exists because an AirNow key cannot be domain-restricted; everything
+else is static files.
+
+The site's own [colophon page](templates/colophon.html.jinja) explains where
+each number comes from, for readers rather than maintainers.
 
 ## File tree
 
 ```
 .
-├── gpx/                    Day-N-*.gpx tracks plus the
-│                            Pacific-Coast-Section-4-SF-SB-Southbound.gpx
-│                            reference track it's loosely based on
+├── gpx/                     Day-N-*.gpx tracks, plus the
+│   │                         Pacific-Coast-Section-4-SF-SB-Southbound.gpx
+│   │                         reference track this route is loosely based on
+│   └── fire-hazard/         the superseded Big Sur coast tracks for days 3-5,
+│                             kept in case the road reopens
+├── api/
+│   └── airnow.php           air-quality proxy — the only server-side code on
+│                             the site; see "Conditions data" for why
 ├── css/
 │   └── main.css             all site styles, one file — color/type tokens
 │                             live in :root, everything else references them
 ├── data/
-│   ├── day-N.json            stats, elevation profile, route, waypoints
+│   ├── day-N.json           stats, elevation profile, route, services
 │   │                         (built by build_data.py from gpx/)
-│   ├── reference.json        same, for the Section 4 reference track
-│   ├── overview.json         whole-trip summary (built by build_data.py)
-│   └── roster.json           riders + SAG crew (hand-maintained, not GPX-derived)
+│   ├── reference.json       same, for the Section 4 reference track
+│   ├── overview.json        whole-trip summary (built by build_data.py)
+│   ├── shade.json           afternoon shade per day (build_shade.py)
+│   ├── towns.json           towns each day passes through (build_towns.py)
+│   ├── roster.json          riders + SAG crew          — HAND-MAINTAINED
+│   ├── notes.json           per-day highlights/cautions — HAND-MAINTAINED
+│   └── manual-pois.json     stops OSM misses            — HAND-MAINTAINED
 ├── js/
-│   ├── map.js                Leaflet route map (day pages + overview)
-│   ├── compare.js             two-layer toggleable map for compare.html
-│   └── units.js              imperial/metric toggle
-├── fonts/                    self-hosted Tofino Variable / Tofino Text
-│                              Variable licensed font files
+│   ├── config.js            Mapbox public token (see "Maps and the Mapbox token")
+│   ├── basemap.js           shared Leaflet basemaps, layer switcher, map handoff
+│   ├── map.js               route map for the day pages and the overview
+│   ├── compare.js           planned-vs-reference toggle map
+│   ├── conditions.js        live air quality + weather on the day pages
+│   └── units.js             imperial/metric toggle
+├── fonts/                   self-hosted Tofino Variable / Tofino Text
+│                             Variable licensed font files
 ├── scripts/
-│   ├── build_data.py         GPX → data/day-N.json + reference.json +
-│   │                         overview.json
-│   └── generate_pages.py     templates/ + data/ → build/*.html
+│   ├── build_data.py        gpx/ → data/day-N.json + reference + overview
+│   ├── generate_pages.py    templates/ + data/ → build/*.html
+│   ├── add_services.py      OSM water/toilets/food/shops/scenic → GPX waypoints
+│   ├── prepare_gpx.py       ready the GPX for Ride with GPS and a Garmin
+│   ├── build_shade.py       afternoon shade: terrain horizon + mapped canopy
+│   └── build_towns.py       towns along each route
 ├── templates/
-│   ├── _nav.html.jinja       shared site nav
-│   ├── _units.html.jinja     imperial/metric macro
-│   ├── day.html.jinja        one per day page
-│   ├── index.html.jinja      overview page (stats, day grid, roster)
-│   └── compare.html.jinja    planned-vs-reference route toggle map
-├── build/                    GENERATED — gitignored, see "Building" below
+│   ├── _nav.html.jinja      shared site nav
+│   ├── _units.html.jinja    imperial/metric macro
+│   ├── _icons.html.jinja    inline SVG icons
+│   ├── day.html.jinja       one per day page
+│   ├── index.html.jinja     overview page (stats, day grid, roster)
+│   ├── compare.html.jinja   planned-vs-reference route toggle map
+│   └── colophon.html.jinja  how the site is built, and where the data is from
+├── build/                   GENERATED — gitignored, see "Building" below
+├── .env                     API keys — gitignored, never committed
 ├── icon.svg
 └── README.md
 ```
 
 `build/` isn't committed — it's fully regeneratable and holds the actual
-deployable output: the rendered HTML plus symlinks (`css`, `js`, `icon.svg`)
-back to the real files above it, so it's a self-contained folder you can
-serve from any path.
+deployable output: the rendered HTML plus symlinks (`css`, `js`, `fonts`,
+`gpx`, `api`, `icon.svg`) back to the real files above it, so it's a
+self-contained folder you can serve from any path.
+
+Three files under `data/` are hand-maintained and never written by a script:
+`roster.json`, `notes.json` and `manual-pois.json`. Edits there survive any
+rebuild.
 
 ## Building
 
-Full rebuild, in order:
+The two that run every time:
 
 ```bash
 python3 scripts/build_data.py      # only if a GPX track changed
@@ -65,14 +95,42 @@ python3 scripts/generate_pages.py  # always — renders templates + data → bui
 
 In practice, editing a template or `css/main.css` only needs the last step.
 
+The other four hit live APIs, are slow, and are rate-limited, so they are run
+by hand when their inputs change rather than on every build. Their output is
+committed, so a normal rebuild never needs them:
+
+```bash
+python3 scripts/add_services.py    # after a GPX route changes, or manual-pois.json
+python3 scripts/prepare_gpx.py     # always after add_services.py
+python3 scripts/build_shade.py     # after a route changes
+python3 scripts/build_towns.py     # after a route changes
+```
+
+Order matters for the first two: `add_services.py` rewrites the waypoints in
+the GPX files, and `prepare_gpx.py` then strips turn cues, names the routes
+consistently and adds start/finish markers. Run `build_data.py` after either,
+since both change what the day JSON is built from.
+
+`build_shade.py` caches elevations to `data/.elevation-cache.json`
+(gitignored), so re-runs are cheap. Overpass and Open-Meteo are free shared
+services and will rate-limit a burst; all four scripts back off and retry.
+
 ## Local preview
 
 ```bash
-python3 -m http.server 8744 --directory build
+php -S 127.0.0.1:8744 -t build
 ```
 
 then open `http://localhost:8744/`. This is also what `.claude/launch.json`'s
 `static-server` config runs.
+
+Use PHP's built-in server, not `python3 -m http.server`. A static server
+hands `api/airnow.php` to the browser as source text instead of executing
+it, so the conditions panel silently falls back to its links.
+
+Map tiles will not load locally if the Mapbox token is restricted to the
+live domain — add `http://localhost:*/*` to the token's URL restrictions if
+you want a basemap while previewing. Everything else works without it.
 
 ## Version control
 
@@ -207,6 +265,54 @@ decision. Committing to a route means changing `GPX_FILES` and rebuilding; the
 preview note under an alternate's chart says so explicitly, so a chart from one
 route is never read against numbers from another.
 
+## Route notes and hand-picked stops
+
+Two files under `data/` hold judgement rather than measurement, and no script
+ever writes to them:
+
+`notes.json` — per-day "worth looking up for" and "what to watch for" lines,
+shown at the top of each day page. Every figure quoted in there traces back to
+`data/day-N.json` or `data/shade.json`, so re-check them if a route changes.
+The claims about traffic, road surface and scenery do **not** come from the
+data: OpenStreetMap has no shoulder, speed-limit or width tag on most of these
+roads. Those come from people who have ridden them, and lines nobody has
+verified say so outright rather than implying someone checked.
+
+`manual-pois.json` — stops that OpenStreetMap misses or tags in a way
+`add_services.py` does not match. Los Olivos, for instance, has well-known
+places to eat and none of them are tagged as any amenity the query looks for.
+Entries here are merged into the GPX on every `add_services.py` run and are
+exempt from thinning; their waypoint comments say "Added by hand" so a
+deliberate pick is distinguishable from a scraped one on the device.
+
+```json
+{ "6": [ { "name": "...", "lat": 0.0, "lon": 0.0,
+           "type": "Food", "sym": "Restaurant", "note": "..." } ] }
+```
+
+`type` must be one of Water, Toilets, Food, Store, Scenic, Historic. `sym` is a
+Garmin symbol name.
+
+## Shade
+
+`build_shade.py` estimates how much of each route is shaded in the afternoon,
+by two independent mechanisms reported separately: mapped woodland within 30 m
+of the road, and terrain high enough to block the sun. The second is the honest
+form of "aspect" — it samples ground elevation along the sun's bearing out to
+3.2 km and compares the largest angle subtended against the sun's own
+elevation, because a west-facing slope only helps if it is steep enough and
+close enough to actually block anything.
+
+Terrain shade comes out at 0% almost everywhere at 3pm, which is a real result
+rather than a broken model: the September sun is still around 49° up. Sweeping
+the hour confirms the model responds — day 3 reaches 18% terrain shade by 6pm
+and 50% by 7pm. During riding hours on this route, canopy is the only shade.
+
+Canopy tests proximity, not containment. Mappers draw woodland up to the road
+edge and stop, so a point on the centreline is essentially never *inside* a
+wood polygon; an earlier containment test scored every day 0% while polygons
+sat twenty feet away.
+
 ## Cache busting
 
 `generate_pages.py` exposes an `asset()` helper to the templates, which appends
@@ -256,23 +362,26 @@ checking for smoke.
 ### Deploying the proxy
 
 `api/` is symlinked into `build/`, so `rsync -aL` copies `airnow.php` into the
-published tree as a real file. The web root is
-`/var/www/scottgruber.me/html`, so put the key **one level above it**, by hand,
-once — never through git:
+published tree as a real file.
+
+The key is **not** in this repo and must never be. Put it on the server by
+hand, once, in a file **one directory above the web root** so it cannot be
+requested over HTTP, readable only by the user PHP runs as:
 
 ```bash
-# on the server, NOT in any git repo
-echo 'AIRNOW_API_KEY=<your-key>' > /var/www/scottgruber.me/airnow.env
-chmod 600 /var/www/scottgruber.me/airnow.env
+# on the server, outside any git repo, adjust for your own paths
+printf 'AIRNOW_API_KEY=%s\n' 'your-key' > "$(dirname "$WEB_ROOT")/airnow.env"
 ```
 
 `airnow.php` resolves the key in this order: the `AIRNOW_API_KEY` environment
-variable (if you would rather set it in the php-fpm pool or vhost), then
-`dirname(DOCUMENT_ROOT) . '/airnow.env'` as above, then the repo's gitignored
-`.env` — that last one is for local development only and must never resolve on
-the server. The deploy rsyncs into a public git repo, so a `.env` inside the
-published tree would be committed and served over HTTP. Nothing puts it there
-today; keep it that way.
+variable (set it in the php-fpm pool or vhost if you prefer), then that file
+above the web root, then the repo's gitignored `.env` — the last of which is
+for local development only and must never resolve on a server. The deploy
+rsyncs into a public repo, so a `.env` inside the published tree would be
+committed and served. Nothing puts it there; keep it that way.
+
+After deploying, confirm the key file is not reachable over HTTP — requesting
+it should 404, not 200.
 
 Local preview runs `php -S` (see `.claude/launch.json`) rather than
 `python3 -m http.server`, so the proxy actually executes. A static server would
