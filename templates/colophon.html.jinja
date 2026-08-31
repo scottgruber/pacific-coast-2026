@@ -1,0 +1,337 @@
+<!-- GENERATED FILE — edit templates/colophon.html.jinja, then rerun scripts/generate_pages.py -->
+{% from "_nav.html.jinja" import render_nav %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How this site was built — Pacific Coast Bike Tour</title>
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  <meta name="description" content="How the Pacific Coast Bike Tour site is built: GPX tracks, routing, Mapbox maps, and the OpenStreetMap, National Weather Service and AirNow data behind each day page.">
+
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#F2EFE9">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="top-band">
+    <header>
+      <h1 class="site-title"><a href="index.html">Pacific Coast Bike Tour</a></h1>
+      <p class="site-tagline">The "LA to LA" ride: Los Altos to Los Angeles.</p>
+    </header>
+
+    {{ render_nav('colophon') }}
+  </div>
+
+  <main id="main">
+
+    <div class="day-title">
+      <div class="day-title__number">
+        <span class="day-title__label">Colophon</span>
+      </div>
+      <h2 class="day-title__route">How this site was built</h2>
+    </div>
+
+    <article class="prose">
+
+      <p class="prose__lede">
+        Eight GPX tracks go in; eight day pages come out, each with an elevation profile,
+        a map, live conditions and a list of places to stop. Everything below is either
+        free, keyless, or running on a public token. This page exists so that anyone
+        wondering where a number came from can go and check it.
+      </p>
+
+      <h3>The shape of it</h3>
+
+      <p>
+        It is a static site with a hand-rolled generator: two Python scripts, some Jinja
+        templates, and one dependency. <code>build_data.py</code> reads the GPX tracks
+        and writes JSON; <code>generate_pages.py</code> renders that JSON through the
+        templates into plain HTML. There is no framework, no bundler, and no
+        <code>package.json</code>. The published site is HTML, CSS, about 640 lines of
+        vanilla JavaScript, and a single PHP file.
+      </p>
+
+      <p>
+        That last file is the only server-side code, and it exists for one specific
+        reason, explained below.
+      </p>
+
+      <h3>Routes</h3>
+
+      <p>
+        Most days come from GPX tracks drawn by hand in Ride with GPS or exported from
+        Garmin Connect. Days 3&ndash;5 were re-routed in August 2026 when a fire closed the
+        Big&nbsp;Sur coast; those replacements were generated with
+        <a href="https://brouter.de/" target="_blank" rel="noopener">BRouter</a>, an open
+        routing engine that runs on OpenStreetMap data and lets you pick a cycling
+        profile rather than accepting whatever a car router thinks a bike wants. The
+        original coast tracks are kept rather than deleted, in case the road reopens.
+      </p>
+
+      <p>
+        The profile choice matters more than it sounds. Routing Day&nbsp;5 with a general
+        touring profile produced a line with an unpaved section of Santa&nbsp;Rita Road; a
+        road-cycling profile avoided it and found Highway&nbsp;41 instead, for a third of a
+        mile more and 280&nbsp;ft <em>less</em> climbing.
+      </p>
+
+      <h3>Distance, elevation and climbs</h3>
+
+      <p>
+        All computed from the GPX in pure Python, no library:
+      </p>
+
+      <ul>
+        <li>
+          The map line is simplified with <strong>Ramer&ndash;Douglas&ndash;Peucker</strong> at a
+          4&nbsp;m tolerance &mdash; Day&nbsp;1 goes from 8,324 track points to 672 without
+          visibly changing shape at map scale.
+        </li>
+        <li>
+          Elevation is resampled every 100&nbsp;m and smoothed over a five-sample window
+          before gain and loss are totalled. Raw GPX elevation is noisy enough that
+          summing it directly inflates the climbing figures.
+        </li>
+        <li>
+          Climbs are found by thresholding gradient, merging stretches separated by a
+          short flat, then discarding anything under 500&nbsp;m or 20&nbsp;m of gain.
+        </li>
+      </ul>
+
+      <p>
+        Every elevation chart is drawn on the same vertical scale, so a flat day looks
+        flat. Charts that auto-fit their own range make every day look equally
+        mountainous, which is worse than useless for comparing them.
+      </p>
+
+      <h3>Maps</h3>
+
+      <p>
+        <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a> with
+        raster tiles from <a href="https://www.mapbox.com/" target="_blank" rel="noopener">Mapbox</a>.
+        Three basemaps, because the two things this route is judged on are climbing and
+        shade: <strong>Elevation</strong> (contours and hillshade, the default),
+        <strong>Vegetation</strong> (satellite, where tree cover is directly visible), and
+        <strong>Plain</strong> for reading road names.
+      </p>
+
+      <p>
+        Clicking any point hands that coordinate to Google Maps, Apple Maps or Street
+        View. Neither Google nor Apple lets a third-party site embed an interactive map
+        without a paid, billed key, so handing the coordinate off is the honest
+        substitute.
+      </p>
+
+      <h3>Stops, water and towns</h3>
+
+      <p>
+        Everything in the <em>Stops along the way</em> lists comes from
+        <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a>,
+        queried through the
+        <a href="https://overpass-api.de/" target="_blank" rel="noopener">Overpass API</a>
+        and written into the GPX files as waypoints so they also appear on a head unit.
+      </p>
+
+      <p>
+        Two things had to be handled carefully. A Garmin course has a capped
+        course-point budget shared between turn cues and waypoints, and going over
+        truncates it silently &mdash; losing turn prompts, which matter more than a caf&eacute;.
+        So POIs are thinned per category, with priorities: a supermarket survives over
+        the fast-food place next door, and water is never thinned.
+      </p>
+
+      <p>
+        And <code>amenity=toilets</code> says a toilet exists, not that a passing cyclist
+        may use it. Auditing the route turned up private units, permit-only beach
+        facilities, and six separate toilet nodes inside a college campus. Restricted
+        access and school, church or club operators are now filtered out;
+        customers-only stops are kept and labelled, because buying a coffee is a fair
+        trade and a caf&eacute; is in practice the most reliable restroom on any of these
+        roads.
+      </p>
+
+      <p>
+        Where OpenStreetMap simply has nothing &mdash; Los Olivos has well-known places to
+        eat and none of them are tagged as anything the query matches &mdash; a short
+        hand-maintained list fills the gap. Waypoints say which they are, because an
+        OSM-derived point may be stale or mistagged while a hand-picked one was chosen
+        deliberately.
+      </p>
+
+      <h3>Shade</h3>
+
+      <p>
+        The most involved calculation, and the one that settled an actual decision. Two
+        mechanisms, measured separately:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Canopy</strong> &mdash; mapped woodland within 30&nbsp;m of the road. Proximity,
+          not containment: mappers draw woodland up to the road edge and stop, so a
+          point on the centreline is essentially never <em>inside</em> a wood. Testing
+          containment scored every day zero while polygons sat twenty feet away.
+        </li>
+        <li>
+          <strong>Terrain</strong> &mdash; the honest form of "aspect". A slope facing west only
+          helps if it is steep enough and close enough to actually block the sun, which
+          a bare aspect number never tells you. So the ground is sampled along the sun's
+          compass bearing at 100&nbsp;m to 3.2&nbsp;km, and the largest angle it subtends is
+          compared against the sun's own elevation.
+        </li>
+      </ul>
+
+      <p>
+        Sun position comes from the NOAA solar algorithm, implemented directly; ground
+        elevation from
+        <a href="https://open-meteo.com/en/docs/elevation-api" target="_blank" rel="noopener">Open-Meteo's elevation API</a>,
+        which is free and needs no key.
+      </p>
+
+      <p>
+        At 3&nbsp;pm in early September the sun is still about 49&deg; up, so terrain shade
+        comes out at 0% almost everywhere &mdash; which is a real result, not a broken model.
+        Sweeping the hour confirms it behaves: by 6&nbsp;pm terrain shade on Day&nbsp;3 is 18%,
+        and by 7&nbsp;pm it is 50%. During riding hours on these routes, tree cover is the
+        only shade on offer.
+      </p>
+
+      <h3>Live conditions</h3>
+
+      <p>
+        Two feeds, fetched differently for one reason: whether a key is involved.
+      </p>
+
+      <p>
+        <strong>Weather</strong> comes straight from the
+        <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">National Weather Service API</a>.
+        No key, CORS open, so the browser can call it directly. It takes three hops:
+        the grid point for the coordinate, that grid's forecast, then the nearest
+        station's latest observation &mdash; the forecast payload carries no humidity.
+      </p>
+
+      <p>
+        <strong>Air quality</strong> comes from
+        <a href="https://docs.airnowapi.org/" target="_blank" rel="noopener">AirNow</a>,
+        and cannot be fetched the same way. Unlike a Mapbox public token, an AirNow key
+        cannot be restricted to a domain, and its rate limit is enforced per key. Publish
+        it and anyone can drain the hourly quota, after which AirNow returns nothing
+        until the next hour &mdash; the panel would go blank, plausibly right when someone on
+        the road is checking for smoke. So the key stays on the server behind a small PHP
+        proxy, which caches for ten minutes, refuses coordinates outside this route so it
+        cannot be used as a free general-purpose proxy, and serves a stale-but-labelled
+        reading rather than nothing when the upstream is rate-limiting.
+      </p>
+
+      <p>
+        Every air quality reading names the reporting station and its distance. That is
+        deliberate: the network is sparse inland &mdash; Monterey has no station within
+        75&nbsp;miles &mdash; and smoke varies sharply over short distances. A bare number would
+        imply a precision the reading does not have.
+      </p>
+
+      <h3>What this does not tell you</h3>
+
+      <p>
+        OpenStreetMap is volunteer-mapped, and thin in rural California. A day showing no
+        water means nobody has mapped any, not that there is none; Day&nbsp;4 comes back with
+        zero mapped water across 62&nbsp;miles, which is a reason to load the support car
+        rather than a survey result. The same caveat applies to canopy: comparing two
+        routes in the same region is far more trustworthy than any single absolute
+        figure.
+      </p>
+
+      <p>
+        The route notes mix measured figures with rider knowledge. Distances, gradients
+        and percentages are all traceable to the data above. Judgements about traffic and
+        road surface are not &mdash; OpenStreetMap has no shoulder, speed limit or width tag
+        on most of these roads &mdash; so those come from people who have ridden them, and are
+        marked as unchecked where nobody has.
+      </p>
+
+      <h3>Source</h3>
+
+      <p>
+        All of it is on GitHub:
+        <a href="https://github.com/scottgruber/pacific-coast-2026" target="_blank" rel="noopener">scottgruber/pacific-coast-2026</a>.
+        The interesting parts, if you want to check the working:
+      </p>
+
+      <ul class="colophon-credits">
+        <li>
+          <a href="https://github.com/scottgruber/pacific-coast-2026/blob/main/scripts/build_data.py" target="_blank" rel="noopener"><code>scripts/build_data.py</code></a>
+          &mdash; GPX parsing, Ramer&ndash;Douglas&ndash;Peucker simplification, elevation resampling, climb detection
+        </li>
+        <li>
+          <a href="https://github.com/scottgruber/pacific-coast-2026/blob/main/scripts/build_shade.py" target="_blank" rel="noopener"><code>scripts/build_shade.py</code></a>
+          &mdash; NOAA solar position and the horizon-angle terrain test
+        </li>
+        <li>
+          <a href="https://github.com/scottgruber/pacific-coast-2026/blob/main/scripts/add_services.py" target="_blank" rel="noopener"><code>scripts/add_services.py</code></a>
+          &mdash; Overpass queries, the access filtering, and per-category thinning
+        </li>
+        <li>
+          <a href="https://github.com/scottgruber/pacific-coast-2026/blob/main/scripts/prepare_gpx.py" target="_blank" rel="noopener"><code>scripts/prepare_gpx.py</code></a>
+          &mdash; readying the GPX for Ride with GPS and a Garmin head unit
+        </li>
+        <li>
+          <a href="https://github.com/scottgruber/pacific-coast-2026/blob/main/api/airnow.php" target="_blank" rel="noopener"><code>api/airnow.php</code></a>
+          &mdash; the air quality proxy, and why it has to exist
+        </li>
+        <li>
+          <a href="https://github.com/scottgruber/pacific-coast-2026/blob/main/js/basemap.js" target="_blank" rel="noopener"><code>js/basemap.js</code></a>
+          &mdash; Leaflet, the Mapbox tile layers and the map-app handoff
+        </li>
+        <li>
+          <a href="https://github.com/scottgruber/pacific-coast-2026/blob/main/scripts/generate_pages.py" target="_blank" rel="noopener"><code>scripts/generate_pages.py</code></a>
+          &mdash; templates to HTML, the elevation SVGs, and asset cache busting
+        </li>
+      </ul>
+
+      <p>
+        The two algorithms worth reading up on rather than taking on trust:
+        <a href="https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm" target="_blank" rel="noopener">Ramer&ndash;Douglas&ndash;Peucker</a>
+        for line simplification, and
+        <a href="https://en.wikipedia.org/wiki/Position_of_the_Sun" target="_blank" rel="noopener">solar position</a>
+        for the shade model &mdash; the implementation here follows NOAA&rsquo;s solar
+        calculator equations.
+      </p>
+
+      <h3>Credits</h3>
+
+      <ul class="colophon-credits">
+        <li><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors &mdash; base map data, stops, woodland, towns</li>
+        <li><a href="https://www.mapbox.com/about/maps/" target="_blank" rel="noopener">Mapbox</a> &mdash; basemap tiles</li>
+        <li><a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a> &mdash; map rendering</li>
+        <li><a href="https://brouter.de/" target="_blank" rel="noopener">BRouter</a> &mdash; cycling routes for the fire detour</li>
+        <li><a href="https://overpass-api.de/" target="_blank" rel="noopener">Overpass API</a> &mdash; OpenStreetMap queries</li>
+        <li><a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> &mdash; elevation data for the shade model</li>
+        <li><a href="https://www.weather.gov/" target="_blank" rel="noopener">National Weather Service</a> &mdash; forecasts and observations</li>
+        <li><a href="https://www.airnow.gov/" target="_blank" rel="noopener">AirNow</a> &mdash; air quality</li>
+        <li><a href="https://www.adventurecycling.org/routes-and-maps/adventure-cycling-route-network/pacific-coast/" target="_blank" rel="noopener">Adventure Cycling Association</a> &mdash; the Pacific Coast reference route on the <a href="compare.html">compare page</a></li>
+      </ul>
+
+    </article>
+
+    <nav class="day-pager" aria-label="Elsewhere">
+      <a class="prev" href="index.html">
+        <span class="day-pager__label">&larr; Back</span>
+        <span class="day-pager__title">Overview</span>
+      </a>
+      <a class="next" href="compare.html">
+        <span class="day-pager__label">Next &rarr;</span>
+        <span class="day-pager__title">Compare routes</span>
+      </a>
+    </nav>
+
+  </main>
+
+  <script src="{{ asset('js/units.js') }}"></script>
+</body>
+
+</html>

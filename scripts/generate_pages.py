@@ -405,6 +405,12 @@ def main():
     (BUILD_DIR / "compare.html").write_text(html)
     print("wrote compare.html")
 
+    # Colophon ------------------------------------------------------------
+    # No data of its own — it documents where everything else comes from.
+    colophon_template = env.get_template("colophon.html.jinja")
+    (BUILD_DIR / "colophon.html").write_text(colophon_template.render())
+    print("wrote colophon.html")
+
 
 if __name__ == "__main__":
     main()

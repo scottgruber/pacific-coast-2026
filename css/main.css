@@ -1381,6 +1381,15 @@ html.metric .unit-pair__metric {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
+/* There are six categories, so once there is room, pin the grid to three
+   columns rather than letting auto-fit pack four or five uneven ones in. Six
+   boxes then read as a tidy 3x2 instead of a ragged last row. */
+@media (min-width: 62em) {
+  .stops__groups {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .stop-group {
   border-radius: var(--border-radius);
   border: var(--border-width-thin) solid var(--color-surface-border);
@@ -1517,4 +1526,50 @@ html.metric .unit-pair__metric {
 .towns__off {
   color: var(--color-text-muted);
   font-size: var(--font-size-x-small);
+}
+
+/* Colophon prose
+   ------------------------------------------------------------------------ */
+
+.prose {
+  max-width: 42rem;
+}
+
+.prose__lede {
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+.prose h3 {
+  margin: var(--spacing-large, 2rem) 0 var(--spacing-small);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.35rem;
+  border-bottom: var(--border-width-thin) solid var(--color-accent-line);
+}
+
+.prose p,
+.prose li {
+  line-height: 1.6;
+}
+
+.prose ul {
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.prose code {
+  font-size: 0.9em;
+  padding: 0.1em 0.3em;
+  border-radius: var(--border-radius);
+  background: var(--color-surface);
+}
+
+.colophon-credits {
+  list-style: none;
+  padding-left: 0;
+  font-size: var(--font-size-small);
 }
