@@ -2,7 +2,7 @@
   "_comment": "Hand-maintained per-day notes. Not generated - build_data.py never touches this file, so edits here survive a rebuild. 'watch' items are things to plan around; 'highlights' are things worth looking up for; 'region' describes the farming and wine country the day crosses. Figures quoted in highlights and watch come from data/day-N.json or data/shade.json, so re-check them if a route changes. The 'region' lines are background rather than measurement: the AVA names and the towns are checked against the route, the crops are general knowledge.",
   "1": {
     "highlights": [
-      "Leaves Los Altos through the Santa Cruz Mountains — the redwood miles are the most sheltered riding of the whole trip.",
+      "Leaves Los Altos through the Santa Cruz Mountains, with redwood canopy over much of the climb.",
       "Descends to the coast at Santa Cruz; Capitola is a short detour off the end."
     ],
     "watch": [
@@ -16,7 +16,7 @@
       "Moss Landing sits right on the route at roughly halfway — a good lunch stop."
     ],
     "watch": [
-      "Nothing steeper than 3.5% anywhere on the route — the least climbing of the whole trip at 1,640 ft."
+      "Nothing steeper than 4.7% anywhere on the route — the least climbing of the whole trip at 1,640 ft."
     ],
     "region": "The Pajaro Valley behind Watsonville is one of the largest strawberry and cane-berry districts in the country; the low ground either side of the road is berries under plastic for much of the year. Nearer the coast it turns to artichokes and brussels sprouts, and at Moss Landing the route passes Elkhorn Slough, a tidal estuary and one of the better bird sites on this coast."
   },
@@ -41,7 +41,7 @@
     "watch": [
       "The hardest day: 62.6 mi and 4,005 ft, with next to no shade on it. Start as early as you can.",
       "No water anywhere until Paso Robles at the finish - a 62.6 mi dry stretch, the longest of the trip. Lockwood Store and Diner at mi 25 sits right on the road and is the only thing in the 24.3 mi after mi 0.7. Widening the search to six miles turns up almost nothing else, so unlike day 3 this emptiness is real rather than an artefact of how close a stop has to be to get listed. This is the day the SAG car matters most.",
-      "Steepest sustained pitch of the trip at mi 42.2–43.8, 639 ft at 7.5% — and it comes late."
+      "The day's biggest climb comes late: mi 42.2–43.8, 639 ft at 7.5%. The steepest is earlier and shorter, mi 10.0–11.5 at 7.7%."
     ],
     "region": "Leaves the irrigated valley floor almost immediately. Most of the day is oak savanna and cattle ranching through Jolon and the Fort Hunter Liggett country — dry-farmed and thinly settled, which is why there is so little on the route. Vineyards reappear on the approach to Paso Robles."
   },
@@ -65,7 +65,7 @@
       "Rides the length of Foxen Canyon through the Santa Maria Valley wine country — tasting rooms are the main thing open along the middle of the day."
     ],
     "watch": [
-      "No mapped tree cover anywhere on the route — not a single wooded stretch beside the road.",
+      "No mapped tree cover anywhere on the route.",
       "The longest stretch without anywhere to stop is 17 mi, from Santa Maria to the Riverbench winery. Between there and Los Olivos the stops are tasting rooms, whose hours are far less dependable than a shop.",
       "Late climb at mi 43.5–44.4, 301 ft at 6.6%, when the day is nearly done."
     ],
@@ -74,10 +74,10 @@
   "7": {
     "highlights": [
       "The coastal miles are the prettiest of the trip: Gaviota, Refugio, El Capitán, then Santa Barbara and Carpinteria.",
-      "Best-served day by far — 35 water points and the shortest dry stretch at 19 mi."
+      "Best-served day by far — 12 water points, more than any other day, and the shortest dry stretch at 19 mi."
     ],
     "watch": [
-      "Longest day of the trip at 82.4 mi, but the climbing is front-loaded: the hardest pitch is mi 4.4–5.2 at 5.9%, and it eases after.",
+      "Longest day of the trip at 82.4 mi, but the climbing is front-loaded: the hardest pitch is mi 7.9–8.6 at 7.1%, and everything after mi 10 is gentle.",
       "Sections through the Gaviota corridor are ridden on the US-101 freeway shoulder. It is a wide shoulder — noisy and fast alongside, but there is room."
     ],
     "region": "Leaves the Santa Ynez Valley and runs the Gaviota coast, which is cattle ranchland and largely undeveloped — a rare stretch of open California coastline. From Goleta onward it turns to lemon and avocado groves on the slopes above the road, and Carpinteria is cut flowers and nursery glass, an industry that has been there for a century."

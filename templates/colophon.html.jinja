@@ -166,10 +166,51 @@
       </p>
 
       <p>
-        Hand-picked stops also skip the quarter-mile screen every scraped stop passes, so
+        Hand-picked stops also skip the offset screen every scraped stop passes, so
         one can sit further off the line than anything around it. Those print the detour
         under the name rather than sitting in the list looking like somewhere you ride
         past.
+      </p>
+
+      <p>
+        That screen is a quarter mile on most days and 1.5&nbsp;mi on Days&nbsp;3 and 4.
+        A quarter mile is right where there is something every few miles &mdash; a stop
+        further off than that is noise nobody would ride to. It is wrong where there is
+        nothing, because it then reports an empty <em>route</em> as an empty
+        <em>valley</em>: Day&nbsp;3 runs the west side of the Salinas Valley with every
+        town off to the east, and at a quarter mile the page showed four stops in
+        sixty-five miles while a corridor search found shops every few miles. Widening it
+        took the day from 10 stops to 28. It stops at 1.5&nbsp;mi &mdash; a three-mile
+        round trip &mdash; on purpose: 3&nbsp;mi would close the gap on paper, but only by
+        assuming somebody rides five and a half miles for a filling station.
+      </p>
+
+      <p>
+        Anything admitted past a quarter mile also has to be reachable without crossing
+        US&#8209;101, tested against the freeway's own geometry rather than guessed at
+        from which side of the map it falls on. That is what keeps Soledad's shops off
+        Day&nbsp;3 while keeping the Mission, which sits west of the freeway even though
+        the town does not. The test is scoped to the far stops deliberately: Day&nbsp;7
+        rides the 101 shoulder through Gaviota, and applying it there would discard
+        legitimate roadside stops as unreachable.
+      </p>
+
+      <p>
+        Tasting rooms and bars are listed only on Days&nbsp;5 and 6, the two days built
+        around them. Elsewhere they crowded out the water and toilets somebody is actually
+        looking for, and on a hot inland day they are the wrong thing to steer a rider
+        toward.
+      </p>
+
+      <p>
+        One caution about all of this, learned the hard way. The Overpass query used to
+        keep its own list of shop and amenity tags, separate from the table that says what
+        each tag means. The two drifted: <code>shop=general</code> was in the table but
+        never fetched, so Lockwood Store and Diner &mdash; 0.03&nbsp;mi off the road at
+        mi&nbsp;25 of Day&nbsp;4, the only resupply in the middle of the emptiest day on
+        the trip &mdash; simply never appeared, and the day's notes concluded there was
+        nothing there. The query is now generated from the table, so the two cannot
+        disagree again.
       </p>
 
       <h3>Lodging</h3>

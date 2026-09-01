@@ -18882,16 +18882,6 @@
       "detour_mi": null
     },
     {
-      "lat": 35.252529,
-      "lon": -120.688386,
-      "name": "BevMo! (mi 45.9)",
-      "type": "Winery",
-      "label": "BevMo!",
-      "mile": 45.9,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 35.185782,
       "lon": -120.702859,
       "name": "Toilets (mi 51.3)",
