@@ -54,7 +54,7 @@ TOWNS = {n: {"start": STOPS[n - 1], "end": STOPS[n]} for n in range(1, len(STOPS
 GPX_FILES = {
     1: "Day-1-Los-Altos-to-Santa-Cruz.gpx",
     2: "Day-2-Santa-Cruz-to-Monterey.gpx",
-    3: "Day-3-Monterey_to_King_City-Alt-1-.gpx",
+    3: "Day-3-Monterey_to_King_City-via-Salinas-Valley-River-Road.gpx",
     4: "Day-4-King_City_to_Paso_Robles.gpx",
     5: "Day-5-Paso_Robles_to_Oceano-via-Santa-Rita-and-Los-Osos.gpx",
     6: "Day-6-Oceano-to-Solvang.gpx",
@@ -68,8 +68,8 @@ GPX_FILES = {
 # the options can be compared before one is committed to.
 ROUTE_OPTIONS = {
     3: [
-        {"label": "Alternate 1",
-         "file": "Day-3-Monterey_to_King_City-Alt-1-.gpx",
+        {"label": "Via Salinas Valley River Road",
+         "file": "Day-3-Monterey_to_King_City-via-Salinas-Valley-River-Road.gpx",
          "note": "Down the Salinas Valley on River Road — 5 mi shorter and "
                  "less than half the climbing, but almost no shade and no "
                  "mapped water."},

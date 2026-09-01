@@ -7,7 +7,7 @@
     "start": "Monterey",
     "end": "King City"
   },
-  "gpx": "Day-3-Monterey_to_King_City-Alt-1-.gpx",
+  "gpx": "Day-3-Monterey_to_King_City-via-Salinas-Valley-River-Road.gpx",
   "stats": {
     "distance_mi": 65.5
   },
@@ -6541,9 +6541,9 @@
   ],
   "options": [
     {
-      "label": "Alternate 1",
+      "label": "Via Salinas Valley River Road",
       "note": "Down the Salinas Valley on River Road — 5 mi shorter and less than half the climbing, but almost no shade and no mapped water.",
-      "gpx": "Day-3-Monterey_to_King_City-Alt-1-.gpx",
+      "gpx": "Day-3-Monterey_to_King_City-via-Salinas-Valley-River-Road.gpx",
       "route": [
         [
           36.59929,
