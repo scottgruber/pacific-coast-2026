@@ -251,7 +251,9 @@ where the route isn't settled. The file named in `GPX_FILES` is the primary —
 it drives the day's headline stats and elevation chart, and draws as the solid
 line. Everything else in `ROUTE_OPTIONS` draws dashed and gets its own download
 button and distance/climbing summary, so the options can be compared before one
-is committed to. Days 3 and 5 each carry two.
+is committed to. Day 5 carries two. Day 3 did until River Road was
+settled on; its Carmel Valley track stays in `gpx/` as the record of what
+that choice was made against, but the day no longer offers it.
 
 Superseded tracks (the original Big Sur coast routing for days 3–5, closed by
 fire) are kept in `gpx/fire-hazard/` rather than deleted, in case the coast

@@ -66,18 +66,9 @@ GPX_FILES = {
 # GPX_FILES above is the primary (it drives the day's headline stats and
 # elevation chart); everything listed here is drawn and offered alongside it so
 # the options can be compared before one is committed to.
+# Day 3 is settled on River Road and no longer lists options; the Carmel
+# Valley track stays in gpx/ as the record of what it was weighed against.
 ROUTE_OPTIONS = {
-    3: [
-        {"label": "Via Salinas Valley River Road",
-         "file": "Day-3-Monterey_to_King_City-via-Salinas-Valley-River-Road.gpx",
-         "note": "Down the Salinas Valley on River Road — 5 mi shorter and "
-                 "less than half the climbing, but almost no shade and no "
-                 "mapped water."},
-        {"label": "Via Carmel Valley",
-         "file": "Day-3-Monterey_to_King_City-via-Carmel-Valley.gpx",
-         "note": "Carmel Valley Road inland — longer and much hillier, but "
-                 "three times the tree cover."},
-    ],
     5: [
         {"label": "Via Santa Rita and Los Osos",
          "file": "Day-5-Paso_Robles_to_Oceano-via-Santa-Rita-and-Los-Osos.gpx",
