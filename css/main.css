@@ -40,12 +40,20 @@
      via font-weight + font-stretch. */
   --font-family-display: 'Tofino Variable', 'Helvetica Neue', Arial, sans-serif;
 
-  --font-size-display-x-large: 4.3em; /* 68.8px */
-  --font-size-display-large: 3.583em; /* 57.328px */
-  --font-size-display: 2.986em; /* 47.78px */
-  --font-size-xxx-large: 2.488em; /* 39.81px */
-  --font-size-xx-large: 2.074em; /* 33.18px */
-  --font-size-x-large: 1.728em; /* 27.65px */
+  /* The display end of the scale is fluid: the ratio-based sizes above
+     ~1.7em are set for a wide column and were being applied unchanged at
+     375px, where a two-town day title wrapped to four lines and a stat
+     numeral's min-content pushed the stat grid past the viewport. Each
+     clamp holds its previous value from ~1200px up (the px comments are
+     still the desktop size) and eases down to a mobile size that fits;
+     rem rather than em is safe here because the heading reset below sets
+     font-size: inherit, so every one of these lands on a 16px parent. */
+  --font-size-display-x-large: clamp(2.375rem, 1.5rem + 3.73vw, 4.3rem); /* 68.8px */
+  --font-size-display-large: clamp(2.125rem, 1.46rem + 2.83vw, 3.583rem); /* 57.328px */
+  --font-size-display: clamp(1.875rem, 1.37rem + 2.16vw, 2.986rem); /* 47.78px */
+  --font-size-xxx-large: clamp(1.6875rem, 1.32rem + 1.55vw, 2.488rem); /* 39.81px */
+  --font-size-xx-large: clamp(1.5rem, 1.24rem + 1.11vw, 2.074rem); /* 33.18px */
+  --font-size-x-large: clamp(1.3125rem, 1.12rem + 0.81vw, 1.728rem); /* 27.65px */
   --font-size-large: 1.44em; /* 23.04px */
   --font-size-medium: 1.2em; /* 19.02px */
   --font-size-default: 1em; /* 16px */
@@ -113,7 +121,9 @@
   --spacing-small: 0.5rem;
   --spacing-default: 1rem;
   --spacing-medium: 1.5rem;
-  --spacing-large: 3rem;
+  /* Eases to 2rem on a phone, where 3rem between every section was
+     enough to push the page into extra scrolling on its own. */
+  --spacing-large: clamp(2rem, 1.35rem + 2.1vw, 3rem);
 
   --duration-quickly: 0.2s;
   --duration-slowly: 1s;
@@ -409,7 +419,9 @@ html.metric .unit-pair__metric {
   font-weight: 800;
   font-stretch: 110%;
   letter-spacing: 0.02em;
-  line-height: var(--line-height-heading);
+  /* Tighter than --line-height-heading: 1.2 is right for a subhead, but
+     at display size it opens a gap you read as a paragraph break. */
+  line-height: 1.08;
   color: var(--color-text-default);
   text-wrap: balance;
 }
@@ -418,7 +430,10 @@ html.metric .unit-pair__metric {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.5em;
+  /* Row gap kept well under the column gap: when the title wraps to one
+     town per line on a phone, a symmetric 0.5em stacks on top of the
+     line-height and reads as two headings rather than one. */
+  gap: 0.05em 0.5em;
 }
 
 .town-route .arrow {
@@ -502,6 +517,11 @@ html.metric .unit-pair__metric {
   display: flex;
   flex-direction: column-reverse;
   gap: 0.15em;
+  /* A grid item's min-width is auto, so a 1fr column refuses to shrink
+     below the numeral's min-content width - which is how a long value
+     like "19255ft" dragged the whole row past the right edge on a phone
+     even after the numeral itself got smaller. */
+  min-width: 0;
 }
 
 /* Display/hero recipe again — "big numbers" get the loud black treatment
