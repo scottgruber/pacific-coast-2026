@@ -714,7 +714,7 @@ html.metric .unit-pair__metric {
 .climb-list li {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: baseline;
   gap: 0.5em;
   font-size: var(--font-size-small);
   padding-block: var(--spacing-x-small);
@@ -725,11 +725,34 @@ html.metric .unit-pair__metric {
   border-bottom: none;
 }
 
+/* The climbs list sits in a narrow column, and on a phone three columns do
+   not fit: rows with a longer mile range wrapped and the ones with a short
+   range did not, so the numbers landed at a different offset on almost every
+   row. Below 40em the range takes its own line and the two numbers sit
+   beneath it, which keeps them aligned. Above it, all three share a row. */
 .climb-list__mile {
   color: var(--color-text-muted);
+  flex: 1 1 100%;
+  min-width: 0;
 }
 
+@media (min-width: 40em) {
+  .climb-list__mile {
+    flex: 1 1 auto;
+  }
+}
+
+/* The two numeric columns are right-aligned on a fixed width so the digits
+   line up down the list - the point of the list is comparing one climb with
+   another, and ragged numbers make that a reading exercise. Tabular figures
+   because Tofino's proportional ones would undo the alignment. */
 .climb-list__stat {
+  flex: 0 0 5em;
+  /* Pushes the pair to the right edge on the stacked mobile layout; harmless
+     in the three-column one, where __mile already takes the slack. */
+  margin-inline-start: auto;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
   font-weight: var(--font-weight-semi-bold);
   color: var(--color-text-default);
 }
@@ -739,6 +762,9 @@ html.metric .unit-pair__metric {
    turns into noise repeated 5-8 times down a list; one row should read as
    one consistent data line, not one column shouting over the other two. */
 .climb-list__grade {
+  flex: 0 0 5em;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
   color: var(--color-text-default);
 }
 
@@ -1386,9 +1412,7 @@ html.metric .unit-pair__metric {
   gap: 0.4em;
   font-family: var(--font-family-display);
   font-size: var(--font-size-small);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-weight: 700;
 }
 
 .wx-prevailing__detail {

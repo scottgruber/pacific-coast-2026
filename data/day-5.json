@@ -18942,16 +18942,6 @@
       "detour_mi": null
     },
     {
-      "lat": 35.14557,
-      "lon": -120.644492,
-      "name": "Liquor Store (mi 56.0)",
-      "type": "Winery",
-      "label": "Liquor Store",
-      "mile": 56.0,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 35.144189,
       "lon": -120.642433,
       "name": "Price Street Market (mi 56.1)",
