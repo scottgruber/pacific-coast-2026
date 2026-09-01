@@ -54,9 +54,9 @@ TOWNS = {n: {"start": STOPS[n - 1], "end": STOPS[n]} for n in range(1, len(STOPS
 GPX_FILES = {
     1: "Day-1-Los-Altos-to-Santa-Cruz.gpx",
     2: "Day-2-Santa-Cruz-to-Monterey.gpx",
-    3: "Day-3-Monterey_to_King_City-via-Carmel-Valley.gpx",
+    3: "Day-3-Monterey_to_King_City-Alt-1-.gpx",
     4: "Day-4-King_City_to_Paso_Robles.gpx",
-    5: "Day-5-Paso_Robles_to_Oceano.gpx",
+    5: "Day-5-Paso_Robles_to_Oceano-via-Santa-Rita-and-Los-Osos.gpx",
     6: "Day-6-Oceano-to-Solvang.gpx",
     7: "Day-7-Solvang-to-Ventura.gpx",
     8: "Day-8-Ventura-to-Santa-Monica.gpx",
@@ -68,22 +68,28 @@ GPX_FILES = {
 # the options can be compared before one is committed to.
 ROUTE_OPTIONS = {
     3: [
-        {"label": "Via Carmel Valley",
-         "file": "Day-3-Monterey_to_King_City-via-Carmel-Valley.gpx",
-         "note": "Carmel Valley Road inland — longer, more tree cover."},
         {"label": "Alternate 1",
          "file": "Day-3-Monterey_to_King_City-Alt-1-.gpx",
-         "note": "Shorter inland line, more exposed."},
+         "note": "Down the Salinas Valley on River Road — 5 mi shorter and "
+                 "less than half the climbing, but almost no shade and no "
+                 "mapped water."},
+        {"label": "Via Carmel Valley",
+         "file": "Day-3-Monterey_to_King_City-via-Carmel-Valley.gpx",
+         "note": "Carmel Valley Road inland — longer and much hillier, but "
+                 "three times the tree cover."},
     ],
     5: [
+        {"label": "Via Santa Rita and Los Osos",
+         "file": "Day-5-Paso_Robles_to_Oceano-via-Santa-Rita-and-Los-Osos.gpx",
+         "note": "Back roads over the 46 West ridge and down Santa Rita, then "
+                 "Los Osos Valley Road to the coast. Steeper: the worst half "
+                 "mile averages 9.9%, and about a mile of the day sits at 9% "
+                 "or more. Skips Atascadero and San Luis Obispo."},
         {"label": "Highway 41",
          "file": "Day-5-Paso_Robles_to_Oceano.gpx",
-         "note": "Paved throughout via Atascadero and Morro Bay. Steadier grades "
-                 "— the main climb averages 5.4% — but ~19 mi on highways."},
-        {"label": "Quieter inland",
-         "file": "Day-5-Paso_Robles_to_Oceano-Alt-Quieter.gpx",
-         "note": "Also fully paved, with roughly twice the back-road mileage, "
-                 "but steeper: sustained pitches to ~9%. Skips Atascadero."},
+         "note": "Same coastal half, but crosses on Highway 41 via Atascadero. "
+                 "Steadier — the worst half mile averages 7.5% — at the cost "
+                 "of ~19 mi on highways."},
     ],
 }
 

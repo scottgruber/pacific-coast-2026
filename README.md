@@ -251,11 +251,21 @@ where the route isn't settled. The file named in `GPX_FILES` is the primary —
 it drives the day's headline stats and elevation chart, and draws as the solid
 line. Everything else in `ROUTE_OPTIONS` draws dashed and gets its own download
 button and distance/climbing summary, so the options can be compared before one
-is committed to. Day 3 currently carries two.
+is committed to. Days 3 and 5 each carry two.
 
 Superseded tracks (the original Big Sur coast routing for days 3–5, closed by
 fire) are kept in `gpx/fire-hazard/` rather than deleted, in case the coast
-reopens before the trip.
+reopens before the trip. Tracks superseded for ordinary routing reasons are
+just deleted — `Day-5-…-Alt-Quieter.gpx` was dropped once the Santa Rita line
+replaced it, and git still has it.
+
+**Changing which track is primary is not only a `GPX_FILES` edit.**
+`add_services.py` measures mile markers and offsets against the route in
+`data/day-N.json`, so that file has to already describe the new primary before
+services are rebuilt. Run `build_data.py` *first*, then the sequence under
+"Applying changes" below. Skipping that step is quiet rather than loud: the
+build succeeds and the day page lists stops from the old route, at mileages
+that do not exist on the new one.
 
 On a day with options, the page shows a radio switcher. Selecting one makes its
 line solid and on top, dashes the others, and swaps the elevation chart — and
@@ -375,6 +385,7 @@ case-insensitively against the label shown on the page:
 After editing either section:
 
 ```bash
+python3 scripts/build_data.py         # first, if the primary track changed
 python3 scripts/add_services.py 5 6   # day numbers optional; omit for all
 python3 scripts/prepare_gpx.py 5 6
 python3 scripts/build_data.py
@@ -513,5 +524,5 @@ serve `airnow.php` as source text instead of running it.
 Neither is a live feed. Aspect in particular is a computation: it falls out of
 the GPX plus an elevation raster, so it could be precomputed in
 `build_data.py` and baked into `data/day-N.json` exactly like the climb
-detection already is — which would let the two Day 3 alternates be compared on
+detection already is — which would let a day's alternates be compared on
 shade with numbers rather than by eye.

@@ -196,99 +196,63 @@
   {
    "lat": 36.600256,
    "lon": -121.8946388,
-   "mile": 0.2,
+   "mile": 1.2,
    "name": "Monterey",
-   "offset_mi": 0.8,
+   "offset_mi": 0.2,
    "place": "city",
    "rank": 0
   },
   {
-   "lat": 36.5552656,
-   "lon": -121.923278,
-   "mile": 3.2,
-   "name": "Carmel-by-the-Sea",
-   "offset_mi": 0.6,
+   "lat": 36.6171819,
+   "lon": -121.848285,
+   "mile": 4.7,
+   "name": "Sand City",
+   "offset_mi": 0.1,
    "place": "village",
    "rank": 2
   },
   {
-   "lat": 36.5371834,
-   "lon": -121.8791195,
-   "mile": 6.3,
-   "name": "Hacienda Carmel",
+   "lat": 36.6530148,
+   "lon": -121.7324481,
+   "mile": 13.1,
+   "name": "East Garrison",
+   "offset_mi": 0.1,
+   "place": "town",
+   "rank": 1
+  },
+  {
+   "lat": 36.6213145,
+   "lon": -121.6861355,
+   "mile": 17.0,
+   "name": "Creekside",
    "offset_mi": 0.3,
    "place": "hamlet",
    "rank": 3
   },
   {
-   "lat": 36.5316279,
-   "lon": -121.8260619,
-   "mile": 9.3,
-   "name": "Carmel Valley Manor",
-   "offset_mi": 0.1,
-   "place": "hamlet",
-   "rank": 3
-  },
-  {
-   "lat": 36.4796839,
-   "lon": -121.732447,
-   "mile": 16.2,
-   "name": "Carmel Valley",
-   "offset_mi": 0.0,
-   "place": "village",
-   "rank": 2
-  },
-  {
-   "lat": 36.3696841,
-   "lon": -121.5902203,
-   "mile": 29.7,
-   "name": "Jamesburg",
-   "offset_mi": 1.2,
-   "place": "hamlet",
-   "rank": 3
-  },
-  {
-   "lat": 36.2519073,
-   "lon": -121.4299335,
+   "lat": 36.4002423,
+   "lon": -121.3463195,
    "mile": 44.6,
-   "name": "Millers Ranch",
-   "offset_mi": 0.5,
+   "name": "Fort Romie",
+   "offset_mi": 0.9,
    "place": "hamlet",
    "rank": 3
   },
   {
    "lat": 36.3207998,
    "lon": -121.243813,
-   "mile": 56.5,
+   "mile": 53.2,
    "name": "Greenfield",
-   "offset_mi": 0.6,
+   "offset_mi": 1.5,
    "place": "town",
    "rank": 1
   },
   {
-   "lat": 36.354966,
-   "lon": -121.2115899,
-   "mile": 59.6,
-   "name": "Metz",
-   "offset_mi": 1.2,
-   "place": "hamlet",
-   "rank": 3
-  },
-  {
-   "lat": 36.288577,
-   "lon": -121.1526971,
-   "mile": 64.5,
-   "name": "Coburn",
-   "offset_mi": 0.1,
-   "place": "hamlet",
-   "rank": 3
-  },
-  {
    "lat": 36.2125032,
    "lon": -121.1270413,
-   "mile": 70.4,
+   "mile": 64.9,
    "name": "King City",
-   "offset_mi": 0.2,
+   "offset_mi": 1.0,
    "place": "town",
    "rank": 1
   }
@@ -353,52 +317,52 @@
   {
    "lat": 35.6262618,
    "lon": -120.6901319,
-   "mile": 0.2,
+   "mile": 0.9,
    "name": "Paso Robles",
-   "offset_mi": 0.7,
+   "offset_mi": 0.0,
    "place": "town",
    "rank": 1
   },
   {
    "lat": 35.5496939,
    "lon": -120.706004,
-   "mile": 6.8,
+   "mile": 6.4,
    "name": "Templeton",
    "offset_mi": 0.3,
    "place": "town",
    "rank": 1
   },
   {
-   "lat": 35.4894169,
-   "lon": -120.6707255,
-   "mile": 14.0,
-   "name": "Atascadero",
-   "offset_mi": 0.0,
-   "place": "town",
-   "rank": 1
-  },
-  {
-   "lat": 35.4567712,
-   "lon": -120.732285,
-   "mile": 19.9,
-   "name": "Morro Toro",
-   "offset_mi": 0.3,
+   "lat": 35.5317997,
+   "lon": -120.854794,
+   "mile": 17.5,
+   "name": "Santa Rita",
+   "offset_mi": 0.2,
    "place": "hamlet",
    "rank": 3
   },
   {
+   "lat": 35.4427512,
+   "lon": -120.892125,
+   "mile": 26.0,
+   "name": "Cayucos",
+   "offset_mi": 1.0,
+   "place": "village",
+   "rank": 2
+  },
+  {
    "lat": 35.3658075,
    "lon": -120.849901,
-   "mile": 31.3,
+   "mile": 31.4,
    "name": "Morro Bay",
-   "offset_mi": 0.0,
+   "offset_mi": 0.1,
    "place": "town",
    "rank": 1
   },
   {
    "lat": 35.3263634,
    "lon": -120.8351785,
-   "mile": 35.3,
+   "mile": 35.4,
    "name": "Baywood Park",
    "offset_mi": 0.7,
    "place": "village",
@@ -407,7 +371,7 @@
   {
    "lat": 35.1799752,
    "lon": -120.731841,
-   "mile": 51.5,
+   "mile": 51.6,
    "name": "Avila Beach",
    "offset_mi": 1.6,
    "place": "village",
@@ -416,7 +380,7 @@
   {
    "lat": 35.1552532,
    "lon": -120.672394,
-   "mile": 54.5,
+   "mile": 54.6,
    "name": "Shell Beach",
    "offset_mi": 0.4,
    "place": "village",
@@ -425,7 +389,7 @@
   {
    "lat": 35.1209452,
    "lon": -120.621837,
-   "mile": 58.0,
+   "mile": 58.1,
    "name": "Grover Beach",
    "offset_mi": 0.4,
    "place": "town",
