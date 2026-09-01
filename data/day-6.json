@@ -5947,16 +5947,6 @@
       "detour_mi": null
     },
     {
-      "lat": 34.664939,
-      "lon": -120.115387,
-      "name": "Los Olivos Wine Merchant & Cafe (mi 52.9)",
-      "type": "Food",
-      "label": "Los Olivos Wine Merchant & Cafe",
-      "mile": 52.9,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 34.664961,
       "lon": -120.115353,
       "name": "Los Olivos Wine Merchant & Cafe (mi 52.9)",

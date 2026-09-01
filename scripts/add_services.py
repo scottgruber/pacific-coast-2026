@@ -23,8 +23,10 @@ waypoint means "someone mapped a tap once", not "it is running today".
 """
 import json
 import math
+import re
 import sys
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -200,6 +202,32 @@ ALL_TYPES = sorted({v["type"] for v in CATEGORIES.values()})
 # a hot inland day they are actively the wrong thing to steer a rider toward.
 WINERY_TYPE = "Winery"
 WINERY_DAYS = {5, 6}
+# A scraped stop counts as the same place as a hand-picked one only if it
+# shares its type AND either carries the same name or sits within a few
+# metres. Distance alone is not enough: on the Morro Bay Embarcadero a
+# drinking fountain is 48 m from a fish market and the skateboard museum is
+# 41 m from a restaurant, so a plain 50 m rule deleted a water point - the one
+# category that must never be thinned.
+DEDUPE_SAME_NAME_MI = 60 / 1609.344
+DEDUPE_ANY_NAME_MI = 15 / 1609.344
+
+
+def _norm(name):
+    # Loose name match: case, accents and punctuation all differ between a
+    # hand-written entry and OSM's.
+    n = unicodedata.normalize('NFKD', (name or '').lower())
+    n = ''.join(c for c in n if not unicodedata.combining(c))
+    return re.sub(r'[^a-z0-9]+', ' ', n).strip()
+
+
+def same_place(a, b):
+    if a['type'] != b['type']:
+        return False
+    d = haversine_mi((a['lat'], a['lon']), (b['lat'], b['lon']))
+    if d <= DEDUPE_ANY_NAME_MI:
+        return True
+    return (d <= DEDUPE_SAME_NAME_MI
+            and _norm(a.get('name')) == _norm(b.get('name')))
 
 def _values(key):
     """The values CATEGORIES knows about for an OSM key, as an Overpass regex."""
@@ -553,6 +581,22 @@ def main():
             services = [s for s in services
                         if (s.get("name") or s["type"]).strip().lower() not in drop]
             print(f"  day {day}: excluded {before - len(services)} by hand")
+        # A hand-picked stop and the OSM node for the same place both survive
+        # to here, and the page then lists the venue twice - once starred, once
+        # not. Los Olivos Wine Merchant sat 4 m from its own hand-picked entry.
+        # Excluding by name cannot fix it, because the exclude filter runs over
+        # the merged list and would drop the starred copy too, so proximity
+        # decides: a scraped stop this close to a hand-picked one is the same
+        # place, and the deliberate entry is the one worth keeping.
+        picked = [s for s in services if s.get("manual")]
+        if picked:
+            before = len(services)
+            services = [s for s in services if s.get("manual")
+                        or not any(same_place(s, m) for m in picked)]
+            if before != len(services):
+                print(f"  day {day}: dropped {before - len(services)} "
+                      f"duplicated by a hand-picked stop")
+
         if day not in WINERY_DAYS:
             before = len(services)
             services = [s for s in services if s["type"] != WINERY_TYPE]
