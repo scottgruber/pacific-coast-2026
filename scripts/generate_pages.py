@@ -36,6 +36,8 @@ def ensure_build_symlinks():
         "gpx": "../gpx",
         "api": "../api",
         "icon.svg": "../icon.svg",
+        # Sets the MIME type for .gpx; see the file for why it matters.
+        ".htaccess": "../.htaccess",
     }
     for name, target in links.items():
         link = BUILD_DIR / name

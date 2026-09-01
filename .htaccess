@@ -1,0 +1,14 @@
+# Serve GPX with its registered media type.
+#
+# Apache has no built-in mapping for .gpx, so without this it sends no
+# Content-Type header at all. The browser then sniffs the <?xml prolog every
+# GPX starts with, decides the file is XML, and saves it as .xml - which
+# Garmin Connect and Ride with GPS both refuse to import, since they filter
+# uploads by extension. Chrome mostly gets it right because the download
+# links carry a `download` attribute; Safari lets sniffing win.
+#
+# AddType needs AllowOverride FileInfo (or All) on this directory. With
+# AllowOverride None this file is ignored harmlessly; if overrides are on but
+# FileInfo is not granted, Apache returns 500 for the whole directory - so
+# check the Content-Type after deploying, not just that the page loads.
+AddType application/gpx+xml .gpx
