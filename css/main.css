@@ -1343,74 +1343,20 @@ html.metric .unit-pair__metric {
   font-size: var(--font-size-x-small);
 }
 
-/* Afternoon shade card
+/* Exposure warning
    ------------------------------------------------------------------------ */
 
-.shade-card {
-  border-radius: var(--border-radius);
-  border: var(--border-width-thin) solid var(--color-surface-border);
-  background: var(--color-surface);
-  padding: var(--spacing-default);
-}
-
-.shade-card h2 {
-  display: flex;
-  align-items: center;
-  gap: 0.45em;
-}
-
-.shade-card__lede {
-  margin: 0 0 var(--spacing-small);
-  font-size: var(--font-size-small);
-  color: var(--color-text-muted);
-}
-
-.shade-stats {
-  display: grid;
-  gap: var(--spacing-small);
-  margin: 0;
-}
-
-@media (min-width: 30em) {
-  .shade-stats {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.shade-stats dt {
-  font-size: var(--font-size-x-small);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-muted);
-}
-
-.shade-stats dd {
-  margin: 0.1rem 0 0;
-  font-size: var(--font-size-small);
-}
-
-.shade-stats strong {
-  font-family: var(--font-family-display);
-  font-size: 1.35rem;
-  font-variant-numeric: tabular-nums;
-  color: var(--color-accent-rust);
-}
-
-.shade-card__note,
-.shade-card__source {
-  margin: var(--spacing-small) 0 0;
-  font-size: var(--font-size-x-small);
-  color: var(--color-text-muted);
-}
-
-/* A near-shadeless day is a planning fact, not a footnote. */
-.shade-card__warn {
-  margin: var(--spacing-small) 0 0;
-  padding: 0.4rem 0.55rem;
+/* All that remains of the shade card. The canopy and terrain percentages it
+   used to carry were withdrawn as unreliable; this one line is the part that
+   survived review, so it stands on its own rather than as a footnote to a
+   number that is no longer there. */
+.exposure-warn {
+  margin: var(--spacing-medium) 0 0;
+  padding: var(--spacing-small) var(--spacing-default);
   border-radius: var(--border-radius);
   border-left: var(--border-width-thick) solid var(--color-accent-rust);
-  background: var(--color-background);
-  font-size: var(--font-size-x-small);
+  background: var(--color-surface);
+  font-size: var(--font-size-small);
 }
 
 /* Stops along the way
@@ -1636,6 +1582,15 @@ html.metric .unit-pair__metric {
   letter-spacing: 0.08em;
   padding-bottom: 0.35rem;
   border-bottom: var(--border-width-thin) solid var(--color-accent-line);
+}
+
+/* Subordinate to .prose h3, which is a small uppercase rule with a border.
+   This is larger in px but quieter in character - a bold lead-in inside a
+   section rather than a new section. */
+.prose h4 {
+  margin: var(--spacing-medium) 0 var(--spacing-x-small);
+  font-size: var(--font-size-default);
+  font-weight: 700;
 }
 
 .prose p,

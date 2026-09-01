@@ -2,7 +2,7 @@
   "_comment": "Hand-maintained per-day notes. Not generated - build_data.py never touches this file, so edits here survive a rebuild. 'watch' items are things to plan around; 'highlights' are things worth looking up for; 'region' describes the farming and wine country the day crosses. Figures quoted in highlights and watch come from data/day-N.json or data/shade.json, so re-check them if a route changes. The 'region' lines are background rather than measurement: the AVA names and the towns are checked against the route, the crops are general knowledge.",
   "1": {
     "highlights": [
-      "Leaves Los Altos through the Santa Cruz Mountains — the redwood miles are the shadiest of the whole trip at 18%.",
+      "Leaves Los Altos through the Santa Cruz Mountains — the redwood miles are the most sheltered riding of the whole trip.",
       "Descends to the coast at Santa Cruz; Capitola is a short detour off the end."
     ],
     "watch": [
@@ -28,7 +28,7 @@
     ],
     "watch": [
       "Water is the problem with this route: 64.2 mi with nothing mapped after mi 1.2 in Monterey. Greenfield sits 1.5 mi off the line and is the one realistic refill. Carry for the whole day, or plan the detour.",
-      "Effectively unshaded at 8% tree cover — a valley floor with the sun on it all afternoon.",
+      "Effectively unshaded — a valley floor with the sun on it all afternoon, and almost no mapped tree cover along the road.",
       "Barely a climb on it: one pitch of 0.68 mi at 4.3% around mi 37, and a high point of 492 ft. Nobody has checked the shoulder or the traffic on River Road — worth asking someone who has ridden it."
     ],
     "region": "Leaves Monterey across the old Fort Ord ground at Marina and East Garrison, then turns down the Salinas Valley — the ground that gets called America's Salad Bowl, with lettuce, broccoli, spinach and celery, a large share of the national crop, grown in long flat blocks between the two ranges. River Road runs along the foot of the Santa Lucia Highlands AVA, the bench above Soledad and Greenfield planted mostly to pinot noir and chardonnay."
@@ -39,7 +39,7 @@
       "Lake Nacimiento appears on the descent toward Paso Robles."
     ],
     "watch": [
-      "The hardest day: 62.6 mi, 4,005 ft, and only 4% shade. Start as early as you can.",
+      "The hardest day: 62.6 mi and 4,005 ft, with next to no shade on it. Start as early as you can.",
       "No mapped water anywhere on the route, and effectively nothing between mile 1 and mile 48. This is the day the SAG car matters most.",
       "Steepest sustained pitch of the trip at mi 42.2–43.8, 639 ft at 7.5% — and it comes late."
     ],
@@ -55,7 +55,7 @@
       "The steep stretch is mi 14.2–15.1, 350 ft at 7.6% to the 1,528 ft summit. \"Sustained pitches to about 9%\" means the worst continuous half mile averages 9.9% and the worst quarter mile 11.4%; roughly a mile of the day, in pieces, sits at 9% or steeper. The Highway 41 alternate tops out at 7.5% over its worst half mile.",
       "A second climb follows at mi 22.7–23.4, 215 ft at 6.0%, on the way down Santa Rita.",
       "Nothing is mapped between Templeton at mi 7 and the edge of Morro Bay at mi 28 — 21 miles with no water, food or toilets, and it is the same 21 miles that holds all the climbing. The longest dry stretch is 30.4 mi.",
-      "Effectively unshaded at 8% tree cover."
+      "Effectively unshaded."
     ],
     "region": "Starts in the Paso Robles AVA, one of California's largest, where hot days and cool nights suit cabernet and the rhône varieties; the vineyards run right up to the edge of town and follow Highway 46 West most of the way to the ridge. Over the top the planting stops, and the coastal side is cattle ground down Old Creek to Cayucos, then vegetable fields either side of Los Osos Valley Road."
   },
@@ -65,7 +65,7 @@
       "Rides the length of Foxen Canyon through the Santa Maria Valley wine country — tasting rooms are the main thing open along the middle of the day."
     ],
     "watch": [
-      "No mapped tree cover anywhere on the route — 0%, the only day on the trip with none.",
+      "No mapped tree cover anywhere on the route — not a single wooded stretch beside the road.",
       "The longest stretch without anywhere to stop is 17 mi, from Santa Maria to the Riverbench winery. Between there and Los Olivos the stops are tasting rooms, whose hours are far less dependable than a shop.",
       "Late climb at mi 43.5–44.4, 301 ft at 6.6%, when the day is nearly done."
     ],

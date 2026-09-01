@@ -214,10 +214,50 @@
 
       <p>
         At 3&nbsp;pm in early September the sun is still about 49&deg; up, so terrain shade
-        comes out at 0% almost everywhere &mdash; which is a real result, not a broken model.
-        Sweeping the hour confirms it behaves: by 6&nbsp;pm terrain shade on Day&nbsp;3 is 18%,
-        and by 7&nbsp;pm it is 50%. During riding hours on these routes, tree cover is the
-        only shade on offer.
+        comes out at zero almost everywhere &mdash; a real result, not a broken model.
+        Sweeping the hour confirms it behaves: hold the route still and drop the sun,
+        and terrain shade on Day&nbsp;3 climbs steadily through the evening. During
+        riding hours on these routes, though, tree cover is the only shade on offer.
+      </p>
+
+      <h4>Why the day pages no longer print a shade figure</h4>
+
+      <p>
+        They used to, and the numbers did not survive being checked. Three faults, all
+        pushing the same way:
+      </p>
+
+      <ul>
+        <li>
+          The canopy query counted <code>natural=scrub</code> &mdash; chaparral a metre or
+          two tall &mdash; alongside wood and forest, then labelled the total "tree cover".
+          On Day&nbsp;3 that is the whole figure: of five shaded sample points, four were
+          scrub and one was woodland. The page said 8%; actual trees are 2%.
+        </li>
+        <li>
+          Canopy was tested in every direction, unlike terrain, which correctly probes
+          along the sun's bearing. With the sun in the south-west, woodland on the
+          north-east side of the road throws its shade away from the rider and still
+          counted. Thirty metres is too generous besides: at a 49&deg; sun a tree shades
+          about 0.87 of its own height, so reaching the road from 30&nbsp;m away takes a
+          34&nbsp;m tree.
+        </li>
+        <li>
+          Each percentage rested on one sample per mile &mdash; 39 to 72 binary
+          observations per day, where a single sample is worth 1.4 to 2.6 points.
+          Day&nbsp;4's "4%" was two data points. That is not a figure that supports two
+          significant digits.
+        </li>
+      </ul>
+
+      <p>
+        Under-mapping cuts the other way &mdash; OSM woodland is thin inland, so real shade
+        can read as none &mdash; but the errors do not cancel, and the model is least
+        trustworthy exactly where it matters most: the hot inland days. What survives is
+        the warning on a near-shadeless day, which no error found here would overturn.
+        A bare day is bare under every correction. <code>build_shade.py</code> is still in
+        the repo, and would earn its place again for an October trip or a dawn start,
+        when a lower sun makes terrain shade real.
       </p>
 
       <h3>Live conditions</h3>

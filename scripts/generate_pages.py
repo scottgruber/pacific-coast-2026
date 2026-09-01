@@ -335,10 +335,6 @@ def main():
                 chart = build_elevation_svg(o.pop("profile"), f"{n}-opt{i}", shared_min_e, shared_max_e)
                 o["svg"] = chart["svg"]
                 o["exaggeration"] = chart["exaggeration"]
-                # Shade is keyed by option label, with the day's chosen line
-                # stored under "primary".
-                key = "primary" if o["primary"] else o["label"]
-                o["shade"] = day_shade.get(key)
                 options.append(o)
             # Conditions links are anchored on where the day finishes.
             end_lat, end_lon = d["route"][-1]
