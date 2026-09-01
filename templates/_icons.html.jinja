@@ -1,27 +1,46 @@
-{# Inline SVG icons. Kept inline rather than as an icon font or sprite sheet so
-   they inherit currentColor and need no extra request. All are decorative —
-   the adjacent text carries the meaning — hence aria-hidden. #}
+{# Google Material Symbols, inlined as SVG rather than loaded as the icon font.
 
+   Inline keeps the properties the hand-drawn set had: the glyph inherits
+   currentColor, costs no extra request, and cannot flash a blank box while a
+   font loads. Pulling the font from Google Fonts instead would put a
+   render-blocking third-party request on every page and send every reader to
+   Google, on a site that otherwise self-hosts everything it serves.
+
+   Paths are Google's own, taken unmodified from the Material Symbols
+   Outlined set (Apache 2.0). They use Material's own 0 -960 960 960 viewBox,
+   which is why these differ from the 0 0 24 24 set they replaced; .icon sizes
+   in em, so the coordinate system does not matter.
+
+   All are decorative - the adjacent text carries the meaning - hence
+   aria-hidden. #}
+
+{# star, fill1: the filled variant on purpose. The outlined star is too faint
+   to read as a mark against a stop's name at 0.85em. #}
 {% macro icon_star() -%}
-<svg class="icon icon--star" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" focusable="false"><path d="m12 3.4 2.6 5.6 6 .8-4.4 4.2 1.1 6.1L12 17.2 6.7 20.1l1.1-6.1L3.4 9.8l6-.8Z"/></svg>
+<svg class="icon icon--star" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true" focusable="false"><path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/></svg>
 {%- endmacro %}
 
+{# hotel #}
 {% macro icon_bed() -%}
-<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 18V7"/><path d="M3 13h18v5"/><path d="M21 18v-4a3 3 0 0 0-3-3h-7v2"/><circle cx="7.5" cy="9.5" r="2"/></svg>
+<svg class="icon" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true" focusable="false"><path d="M40-200v-600h80v400h320v-320h320q66 0 113 47t47 113v360h-80v-120H120v120H40Zm155-275q-35-35-35-85t35-85q35-35 85-35t85 35q35 35 35 85t-35 85q-35 35-85 35t-85-35Zm325 75h320v-160q0-33-23.5-56.5T760-640H520v240ZM308.5-531.5Q320-543 320-560t-11.5-28.5Q297-600 280-600t-28.5 11.5Q240-577 240-560t11.5 28.5Q263-520 280-520t28.5-11.5ZM280-560Zm240-80v240-240Z"/></svg>
 {%- endmacro %}
 
+{# map #}
 {% macro icon_map() -%}
-<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3 3 5.4v15.2L9 18l6 2.6 6-2.4V3l-6 2.4L9 3Z"/><path d="M9 3v15"/><path d="M15 5.4v15.2"/></svg>
+<svg class="icon" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true" focusable="false"><path d="m600-120-240-84-186 72q-20 8-37-4.5T120-170v-560q0-13 7.5-23t20.5-15l212-72 240 84 186-72q20-8 37 4.5t17 33.5v560q0 13-7.5 23T812-192l-212 72Zm-40-98v-468l-160-56v468l160 56Zm80 0 120-40v-474l-120 46v468Zm-440-10 120-46v-468l-120 40v474Zm440-458v468-468Zm-320-56v468-468Z"/></svg>
 {%- endmacro %}
 
+{# open_in_new #}
 {% macro icon_external() -%}
-<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1.6 1.6 0 0 1-1.6 1.6H5.6A1.6 1.6 0 0 1 4 19V8.2A1.6 1.6 0 0 1 5.6 6.6H10"/></svg>
+<svg class="icon" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
 {%- endmacro %}
 
+{# thermostat #}
 {% macro icon_conditions() -%}
-<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 18a3.5 3.5 0 0 0 0-7 5 5 0 0 0-9.6-1.6A4 4 0 0 0 7 18Z"/></svg>
+<svg class="icon" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true" focusable="false"><path d="M520-520v-80h200v80H520Zm0-160v-80h320v80H520ZM178.5-178.5Q120-237 120-320q0-48 21-89.5t59-70.5v-240q0-50 35-85t85-35q50 0 85 35t35 85v240q38 29 59 70.5t21 89.5q0 83-58.5 141.5T320-120q-83 0-141.5-58.5ZM200-320h240q0-29-12.5-54T392-416l-32-24v-280q0-17-11.5-28.5T320-760q-17 0-28.5 11.5T280-720v280l-32 24q-23 17-35.5 42T200-320Z"/></svg>
 {%- endmacro %}
 
-{% macro icon_shade() -%}
-<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v2"/><path d="M5.6 5.6 7 7"/><path d="M3 12h2"/><path d="M17 7l1.4-1.4"/><path d="M19 12h2"/><circle cx="12" cy="12" r="3.4"/><path d="M4 20h16"/><path d="M8 20a4 4 0 0 1 8 0"/></svg>
+{# air #}
+{% macro icon_wind() -%}
+<svg class="icon" viewBox="0 -960 960 960" fill="currentColor" aria-hidden="true" focusable="false"><path d="M460-160q-50 0-85-35t-35-85h80q0 17 11.5 28.5T460-240q17 0 28.5-11.5T500-280q0-17-11.5-28.5T460-320H80v-80h380q50 0 85 35t35 85q0 50-35 85t-85 35ZM80-560v-80h540q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43h-80q0-59 40.5-99.5T620-840q59 0 99.5 40.5T760-700q0 59-40.5 99.5T620-560H80Zm660 320v-80q26 0 43-17t17-43q0-26-17-43t-43-17H80v-80h660q59 0 99.5 40.5T880-380q0 59-40.5 99.5T740-240Z"/></svg>
 {%- endmacro %}

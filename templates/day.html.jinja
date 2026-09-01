@@ -1,7 +1,7 @@
 <!-- GENERATED FILE — edit templates/day.html.jinja + data/day-N.json, then rerun scripts/generate_pages.py -->
 {% from "_nav.html.jinja" import render_nav %}
 {% from "_units.html.jinja" import unit %}
-{% from "_icons.html.jinja" import icon_map, icon_external, icon_conditions, icon_star, icon_bed %}
+{% from "_icons.html.jinja" import icon_map, icon_external, icon_conditions, icon_star, icon_bed, icon_wind %}
 <!doctype html>
 <html lang="en">
 
@@ -219,7 +219,7 @@
             {# Climatology, not forecast - it sits outside data-conditions-weather
                so the live NWS fetch replaces the reading below without wiping it. #}
             <p class="wx-prevailing wx-prevailing--{{ wind.relation }}">
-              <span class="wx-prevailing__lede">Usually a
+              <span class="wx-prevailing__lede">{{ icon_wind() }} Usually a
                 <strong>{{ wind.relation }}</strong></span>
               <span class="wx-prevailing__detail">
                 You ride {{ wind.travel_compass }}; early-September wind here runs

@@ -1381,6 +1381,9 @@ html.metric .unit-pair__metric {
 }
 
 .wx-prevailing__lede {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
   font-family: var(--font-family-display);
   font-size: var(--font-size-small);
   font-weight: 600;
