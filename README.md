@@ -27,8 +27,11 @@ each number comes from, for readers rather than maintainers.
 ├── gpx/                     Day-N-*.gpx tracks, plus the
 │   │                         Pacific-Coast-Section-4-SF-SB-Southbound.gpx
 │   │                         reference track this route is loosely based on
-│   └── fire-hazard/         the superseded Big Sur coast tracks for days 3-5,
-│                             kept in case the road reopens
+│   └── unused/              tracks the site does not offer: the superseded Big
+│                             Sur coast routing for days 3-5, kept in case the
+│                             road reopens, and day 3's Carmel Valley line.
+│                             Excluded from the deploy, so nothing here is
+│                             published
 ├── api/
 │   └── airnow.php           air-quality proxy — the only server-side code on
 │                             the site; see "Conditions data" for why
@@ -166,11 +169,21 @@ python3 scripts/generate_pages.py
 
 ```bash
 mkdir -p ~/Sites/scottgruber.me/bike-tours/pacific-coast/2026
-rsync -aL build/ ~/Sites/scottgruber.me/bike-tours/pacific-coast/2026/
+rsync -aL --delete --exclude 'gpx/unused/' \
+  build/ ~/Sites/scottgruber.me/bike-tours/pacific-coast/2026/
 ```
 
 (`-L` follows the symlinks so `css`/`js`/`fonts`/`icon.svg` get copied as
 real files rather than links pointing outside the scottgruber.me repo.)
+
+`--exclude 'gpx/unused/'` is what keeps withdrawn tracks off the site:
+`build/gpx` is a symlink to the whole `gpx/` directory, so without it every
+file in there is published whether or not a page links to it.
+
+`--delete` matters as much. Without it rsync only ever adds, so a renamed or
+withdrawn track stays live under its old name — `Day-3-…-Alt-1-.gpx` and the
+Carmel Valley line both lingered that way. Run it once with `--dry-run` after
+any rename to see what it will remove before it removes it.
 
 **3. Commit and push:**
 
@@ -252,14 +265,16 @@ it drives the day's headline stats and elevation chart, and draws as the solid
 line. Everything else in `ROUTE_OPTIONS` draws dashed and gets its own download
 button and distance/climbing summary, so the options can be compared before one
 is committed to. Day 5 carries two. Day 3 did until River Road was
-settled on; its Carmel Valley track stays in `gpx/` as the record of what
-that choice was made against, but the day no longer offers it.
+settled on; its Carmel Valley track moved to `gpx/unused/` as the record of
+what that choice was made against, but the day no longer offers it.
 
-Superseded tracks (the original Big Sur coast routing for days 3–5, closed by
-fire) are kept in `gpx/fire-hazard/` rather than deleted, in case the coast
-reopens before the trip. Tracks superseded for ordinary routing reasons are
-just deleted — `Day-5-…-Alt-Quieter.gpx` was dropped once the Santa Rita line
-replaced it, and git still has it.
+`gpx/unused/` holds every track the site does not offer — the original Big Sur
+coast routing for days 3–5, closed by fire and kept in case the coast reopens,
+and day 3's Carmel Valley line. The deploy excludes that directory, so `gpx/`'s
+top level is exactly what gets published, and moving a track into `unused/` is
+all it takes to withdraw it from the site. Tracks superseded for ordinary
+routing reasons can still just be deleted — `Day-5-…-Alt-Quieter.gpx` was
+dropped once the Santa Rita line replaced it, and git still has it.
 
 **Changing which track is primary is not only a `GPX_FILES` edit.**
 `add_services.py` measures mile markers and offsets against the route in

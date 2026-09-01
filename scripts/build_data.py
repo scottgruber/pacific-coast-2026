@@ -43,7 +43,7 @@ M_TO_FT = 3.28084
 #
 # Days 3-5 were rerouted inland in Aug 2026 after a Big Sur fire closed the
 # coast route (Monterey-Big Sur-San Simeon-Oceano). The superseded tracks are
-# kept in gpx/fire-hazard/ rather than deleted, in case the coast reopens.
+# kept in gpx/unused/ rather than deleted, in case the coast reopens.
 STOPS = [
     "Los Altos", "Santa Cruz", "Monterey", "King City", "Paso Robles",
     "Oceano", "Solvang", "Ventura", "Santa Monica",
