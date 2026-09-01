@@ -5677,32 +5677,22 @@
       "detour_mi": null
     },
     {
+      "lat": 34.278477,
+      "lon": -119.288704,
+      "name": "Corrales (mi 0.0)",
+      "type": "Food",
+      "label": "Corrales",
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
       "lat": 34.278038,
       "lon": -119.290526,
       "name": "Mary Mitchell House (mi 0.0)",
       "type": "Historic",
       "label": "Mary Mitchell House",
       "mile": 0.0,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 34.281007,
-      "lon": -119.291426,
-      "name": "Starbucks (mi 0.1)",
-      "type": "Food",
-      "label": "Starbucks",
-      "mile": 0.1,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 34.280992,
-      "lon": -119.291727,
-      "name": "Dargan's Irish Pub & Restaurant (mi 0.1)",
-      "type": "Winery",
-      "label": "Dargan's Irish Pub & Restaurant",
-      "mile": 0.1,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5767,22 +5757,12 @@
       "detour_mi": null
     },
     {
-      "lat": 34.176575,
-      "lon": -119.196068,
-      "name": "Allan's Liquor (mi 10.9)",
-      "type": "Winery",
-      "label": "Allan's Liquor",
-      "mile": 10.9,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 34.156026,
-      "lon": -119.194573,
-      "name": "Grocery Outlet (mi 12.2)",
+      "lat": 34.176954,
+      "lon": -119.193266,
+      "name": "Smart & Final (mi 10.9)",
       "type": "Store",
-      "label": "Grocery Outlet",
-      "mile": 12.2,
+      "label": "Smart & Final",
+      "mile": 10.9,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5813,6 +5793,16 @@
       "type": "Water",
       "label": "Water",
       "mile": 26.1,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 34.053245,
+      "lon": -118.962507,
+      "name": "Neptune's Net (mi 29.5)",
+      "type": "Food",
+      "label": "Neptune's Net",
+      "mile": 29.5,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5857,16 +5847,6 @@
       "detour_mi": null
     },
     {
-      "lat": 34.031359,
-      "lon": -118.843046,
-      "name": "Malibu Brewing Company (mi 36.8)",
-      "type": "Winery",
-      "label": "Malibu Brewing Company",
-      "mile": 36.8,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 34.027694,
       "lon": -118.839151,
       "name": "Toilets (mi 37.1)",
@@ -5883,6 +5863,16 @@
       "type": "Water",
       "label": "Water",
       "mile": 38.3,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 34.025209,
+      "lon": -118.769904,
+      "name": "Geoffrey's Malibu (mi 41.4)",
+      "type": "Food",
+      "label": "Geoffrey's Malibu",
+      "mile": 41.4,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5917,12 +5907,12 @@
       "detour_mi": null
     },
     {
-      "lat": 34.034246,
-      "lon": -118.693582,
-      "name": "Starbucks (mi 46.2)",
+      "lat": 34.037341,
+      "lon": -118.686389,
+      "name": "Howdy's (mi 46.4)",
       "type": "Food",
-      "label": "Starbucks",
-      "mile": 46.2,
+      "label": "Howdy's",
+      "mile": 46.4,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5937,16 +5927,6 @@
       "detour_mi": null
     },
     {
-      "lat": 34.039826,
-      "lon": -118.665528,
-      "name": "Colony House Liquor (mi 47.7)",
-      "type": "Winery",
-      "label": "Colony House Liquor",
-      "mile": 47.7,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 34.037354,
       "lon": -118.637486,
       "name": "Country Liquor (mi 49.4)",
@@ -5957,22 +5937,22 @@
       "detour_mi": null
     },
     {
+      "lat": 34.039079,
+      "lon": -118.584084,
+      "name": "Cholada Thai Beach Cuisine (mi 52.5)",
+      "type": "Food",
+      "label": "Cholada Thai Beach Cuisine",
+      "mile": 52.5,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
       "lat": 34.038895,
       "lon": -118.555815,
       "name": "Chevron (mi 54.2)",
       "type": "Store",
       "label": "Chevron",
       "mile": 54.2,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 34.039113,
-      "lon": -118.554115,
-      "name": "Starbucks (mi 54.3)",
-      "type": "Food",
-      "label": "Starbucks",
-      "mile": 54.3,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -6027,12 +6007,12 @@
       "detour_mi": null
     },
     {
-      "lat": 34.015253,
-      "lon": -118.49904,
-      "name": "The Coco Club (mi 58.0)",
-      "type": "Winery",
-      "label": "The Coco Club",
-      "mile": 58.0,
+      "lat": 34.019149,
+      "lon": -118.506451,
+      "name": "Food (mi 57.6)",
+      "type": "Food",
+      "label": "Food",
+      "mile": 57.6,
       "hand_picked": false,
       "detour_mi": null
     },

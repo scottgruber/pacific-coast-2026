@@ -6496,34 +6496,74 @@
       "detour_mi": null
     },
     {
-      "lat": 36.205937,
-      "lon": -121.146585,
+      "lat": 36.222152,
+      "lon": -121.12911,
+      "name": "Railroad Park (mi 0.4)",
+      "type": "Park",
+      "label": "Railroad Park",
+      "mile": 0.4,
+      "hand_picked": false,
+      "detour_mi": 1.4
+    },
+    {
+      "lat": 36.209638,
+      "lon": -121.141567,
       "name": "Toilets (mi 0.4)",
       "type": "Toilets",
       "label": "Toilets",
       "mile": 0.4,
       "hand_picked": false,
-      "detour_mi": null
+      "detour_mi": 0.3
     },
     {
-      "lat": 36.192344,
-      "lon": -121.144526,
-      "name": "Pine Canyon Store (mi 1.6)",
+      "lat": 36.217633,
+      "lon": -121.124956,
+      "name": "Store (mi 0.7)",
       "type": "Store",
-      "label": "Pine Canyon Store",
-      "mile": 1.6,
+      "label": "Store",
+      "mile": 0.7,
+      "hand_picked": false,
+      "detour_mi": 1.4
+    },
+    {
+      "lat": 36.213209,
+      "lon": -121.126375,
+      "name": "California Gourmet Pizza (mi 0.7)",
+      "type": "Food",
+      "label": "California Gourmet Pizza",
+      "mile": 0.7,
+      "hand_picked": false,
+      "detour_mi": 1.1
+    },
+    {
+      "lat": 35.937148,
+      "lon": -121.0825,
+      "name": "Lockwood Store and Diner (mi 25.0)",
+      "type": "Store",
+      "label": "Lockwood Store and Diner",
+      "mile": 25.0,
       "hand_picked": false,
       "detour_mi": null
     },
     {
-      "lat": 35.742187,
-      "lon": -120.877548,
-      "name": "Orange Cat Organic Cafe (mi 48.2)",
-      "type": "Food",
-      "label": "Orange Cat Organic Cafe",
-      "mile": 48.2,
+      "lat": 35.759312,
+      "lon": -120.899474,
+      "name": "Toilets (mi 46.5)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 46.5,
       "hand_picked": false,
-      "detour_mi": null
+      "detour_mi": 0.8
+    },
+    {
+      "lat": 35.757525,
+      "lon": -120.901522,
+      "name": "Nacimiento Resort Dragon Grill (mi 46.8)",
+      "type": "Food",
+      "label": "Nacimiento Resort Dragon Grill",
+      "mile": 46.8,
+      "hand_picked": false,
+      "detour_mi": 0.9
     },
     {
       "lat": 35.74141,
@@ -6536,34 +6576,44 @@
       "detour_mi": null
     },
     {
-      "lat": 35.742957,
-      "lon": -120.877742,
-      "name": "Toilets (mi 48.2)",
+      "lat": 35.650557,
+      "lon": -120.695655,
+      "name": "Toilets (mi 61.8)",
       "type": "Toilets",
       "label": "Toilets",
-      "mile": 48.2,
+      "mile": 61.8,
       "hand_picked": false,
-      "detour_mi": null
+      "detour_mi": 0.6
     },
     {
-      "lat": 35.638703,
-      "lon": -120.692937,
-      "name": "7-Eleven (mi 62.5)",
-      "type": "Store",
-      "label": "7-Eleven",
-      "mile": 62.5,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 35.639935,
-      "lon": -120.688521,
-      "name": "KFC (mi 62.5)",
+      "lat": 35.627876,
+      "lon": -120.690638,
+      "name": "Kreuzberg Coffee Company (mi 62.5)",
       "type": "Food",
-      "label": "KFC",
+      "label": "Kreuzberg Coffee Company",
       "mile": 62.5,
       "hand_picked": false,
-      "detour_mi": null
+      "detour_mi": 0.8
+    },
+    {
+      "lat": 35.643568,
+      "lon": -120.687904,
+      "name": "Grocery Outlet (mi 62.5)",
+      "type": "Store",
+      "label": "Grocery Outlet",
+      "mile": 62.5,
+      "hand_picked": false,
+      "detour_mi": 0.4
+    },
+    {
+      "lat": 35.626219,
+      "lon": -120.69027,
+      "name": "Water (mi 62.5)",
+      "type": "Water",
+      "label": "Water",
+      "mile": 62.5,
+      "hand_picked": false,
+      "detour_mi": 0.9
     }
   ],
   "water_gap_mi": 62.6,

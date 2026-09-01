@@ -5705,16 +5705,6 @@
       "detour_mi": null
     },
     {
-      "lat": 37.323211,
-      "lon": -122.051616,
-      "name": "Paul and Eddies (mi 7.0)",
-      "type": "Winery",
-      "label": "Paul and Eddies",
-      "mile": 7.0,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 37.324815,
       "lon": -122.043922,
       "name": "Memorial Park (mi 7.2)",
@@ -5805,16 +5795,6 @@
       "detour_mi": null
     },
     {
-      "lat": 37.228311,
-      "lon": -121.980521,
-      "name": "Cin Cin (mi 15.7)",
-      "type": "Winery",
-      "label": "Cin Cin",
-      "mile": 15.7,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 37.225146,
       "lon": -121.978663,
       "name": "Water (mi 16.2)",
@@ -5845,12 +5825,12 @@
       "detour_mi": null
     },
     {
-      "lat": 37.13105,
-      "lon": -121.962674,
-      "name": "Villa Del Monte Winery (mi 27.0)",
-      "type": "Winery",
-      "label": "Villa Del Monte Winery",
-      "mile": 27.0,
+      "lat": 37.170042,
+      "lon": -121.978467,
+      "name": "Lupin Clubhouse Restaurant (mi 22.3)",
+      "type": "Food",
+      "label": "Lupin Clubhouse Restaurant",
+      "mile": 22.3,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5891,16 +5871,6 @@
       "type": "Toilets",
       "label": "Restroom",
       "mile": 38.4,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 36.99522,
-      "lon": -121.954601,
-      "name": "Bargetto Winery (mi 39.9)",
-      "type": "Winery",
-      "label": "Bargetto Winery",
-      "mile": 39.9,
       "hand_picked": false,
       "detour_mi": null
     },

@@ -5187,6 +5187,16 @@
       "detour_mi": null
     },
     {
+      "lat": 36.985103,
+      "lon": -122.024122,
+      "name": "Denny's (mi 0.0)",
+      "type": "Food",
+      "label": "Denny's",
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
       "lat": 36.984901,
       "lon": -122.021169,
       "name": "Toilets (mi 0.0)",
@@ -5197,32 +5207,12 @@
       "detour_mi": null
     },
     {
-      "lat": 36.983579,
-      "lon": -122.022615,
-      "name": "noodle time (mi 0.1)",
-      "type": "Food",
-      "label": "noodle time",
-      "mile": 0.1,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 36.983487,
       "lon": -122.023453,
       "name": "Valero (mi 0.1)",
       "type": "Store",
       "label": "Valero",
       "mile": 0.1,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 36.982044,
-      "lon": -122.021647,
-      "name": "Grog Shop (mi 0.5)",
-      "type": "Winery",
-      "label": "Grog Shop",
-      "mile": 0.5,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5327,16 +5317,6 @@
       "detour_mi": null
     },
     {
-      "lat": 36.977833,
-      "lon": -121.900733,
-      "name": "Sante Archangeli Family Wines (mi 8.6)",
-      "type": "Winery",
-      "label": "Sante Archangeli Family Wines",
-      "mile": 8.6,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 36.976468,
       "lon": -121.886515,
       "name": "Palm Deli (mi 9.5)",
@@ -5397,12 +5377,12 @@
       "detour_mi": null
     },
     {
-      "lat": 36.799589,
-      "lon": -121.783558,
-      "name": "The Whole Enchilada (mi 27.2)",
+      "lat": 36.810475,
+      "lon": -121.786154,
+      "name": "Sea Harvest (mi 26.4)",
       "type": "Food",
-      "label": "The Whole Enchilada",
-      "mile": 27.2,
+      "label": "Sea Harvest",
+      "mile": 26.4,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5467,16 +5447,6 @@
       "detour_mi": null
     },
     {
-      "lat": 36.680091,
-      "lon": -121.8037,
-      "name": "English Ales Brewery (mi 37.2)",
-      "type": "Winery",
-      "label": "English Ales Brewery",
-      "mile": 37.2,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 36.622523,
       "lon": -121.842301,
       "name": "Panera Bread (mi 41.9)",
@@ -5513,16 +5483,6 @@
       "type": "Water",
       "label": "Water",
       "mile": 45.8,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 36.601752,
-      "lon": -121.890034,
-      "name": "London Bridge Pub (mi 46.1)",
-      "type": "Winery",
-      "label": "London Bridge Pub",
-      "mile": 46.1,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5567,12 +5527,12 @@
       "detour_mi": null
     },
     {
-      "lat": 36.583458,
-      "lon": -121.897042,
-      "name": "Starbucks (mi 47.6)",
+      "lat": 36.587965,
+      "lon": -121.899085,
+      "name": "Chopstix Restaurant (mi 47.3)",
       "type": "Food",
-      "label": "Starbucks",
-      "mile": 47.6,
+      "label": "Chopstix Restaurant",
+      "mile": 47.3,
       "hand_picked": false,
       "detour_mi": null
     }

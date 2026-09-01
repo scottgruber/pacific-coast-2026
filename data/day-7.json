@@ -9062,16 +9062,6 @@
       "detour_mi": null
     },
     {
-      "lat": 34.595376,
-      "lon": -120.142158,
-      "name": "Sevtap Winery (mi 0.2)",
-      "type": "Winery",
-      "label": "Sevtap Winery",
-      "mile": 0.2,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 34.599027,
       "lon": -120.145662,
       "name": "Toilets (mi 0.2)",
@@ -9152,12 +9142,32 @@
       "detour_mi": null
     },
     {
+      "lat": 34.471872,
+      "lon": -120.228245,
+      "name": "Store (mi 15.6)",
+      "type": "Store",
+      "label": "Store",
+      "mile": 15.6,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
       "lat": 34.463103,
       "lon": -120.071781,
       "name": "Toilets (mi 24.6)",
       "type": "Toilets",
       "label": "Toilets",
       "mile": 24.6,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 34.463492,
+      "lon": -120.070295,
+      "name": "Store (mi 24.8)",
+      "type": "Store",
+      "label": "Store",
+      "mile": 24.8,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -9217,16 +9227,6 @@
       "name": "Indo China Market (mi 37.7)",
       "type": "Store",
       "label": "Indo China Market",
-      "mile": 37.7,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 34.429719,
-      "lon": -119.873869,
-      "name": "BevMo! (mi 37.7)",
-      "type": "Winery",
-      "label": "BevMo!",
       "mile": 37.7,
       "hand_picked": false,
       "detour_mi": null
@@ -9362,16 +9362,6 @@
       "detour_mi": null
     },
     {
-      "lat": 34.401712,
-      "lon": -119.721499,
-      "name": "The Cliff Room (mi 50.4)",
-      "type": "Winery",
-      "label": "The Cliff Room",
-      "mile": 50.4,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 34.397085,
       "lon": -119.704922,
       "name": "Toilets (mi 51.7)",
@@ -9442,22 +9432,22 @@
       "detour_mi": null
     },
     {
+      "lat": 34.421571,
+      "lon": -119.6011,
+      "name": "Red Kettle Coffee (mi 59.0)",
+      "type": "Food",
+      "label": "Red Kettle Coffee",
+      "mile": 59.0,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
       "lat": 34.421452,
       "lon": -119.600625,
       "name": "Point Market (mi 59.1)",
       "type": "Store",
       "label": "Point Market",
       "mile": 59.1,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 34.406801,
-      "lon": -119.548582,
-      "name": "Padaro Beach Grill (mi 62.4)",
-      "type": "Food",
-      "label": "Padaro Beach Grill",
-      "mile": 62.4,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -9472,11 +9462,11 @@
       "detour_mi": null
     },
     {
-      "lat": 34.398302,
-      "lon": -119.517291,
-      "name": "Sunburst Wine Bar (mi 64.2)",
-      "type": "Winery",
-      "label": "Sunburst Wine Bar",
+      "lat": 34.398558,
+      "lon": -119.517644,
+      "name": "Jack's Bistro & Famous Bagels (mi 64.2)",
+      "type": "Food",
+      "label": "Jack's Bistro & Famous Bagels",
       "mile": 64.2,
       "hand_picked": false,
       "detour_mi": null
@@ -9572,11 +9562,11 @@
       "detour_mi": null
     },
     {
-      "lat": 34.281422,
-      "lon": -119.301094,
-      "name": "Burger King (mi 81.4)",
+      "lat": 34.282136,
+      "lon": -119.30087,
+      "name": "Himalaya (mi 81.4)",
       "type": "Food",
-      "label": "Burger King",
+      "label": "Himalaya",
       "mile": 81.4,
       "hand_picked": false,
       "detour_mi": null
@@ -9587,16 +9577,6 @@
       "name": "Mission Chumash Barracks (mi 81.4)",
       "type": "Historic",
       "label": "Mission Chumash Barracks",
-      "mile": 81.4,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 34.280978,
-      "lon": -119.301015,
-      "name": "Paddy's (mi 81.4)",
-      "type": "Winery",
-      "label": "Paddy's",
       "mile": 81.4,
       "hand_picked": false,
       "detour_mi": null

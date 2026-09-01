@@ -60,6 +60,30 @@
       "type": "Food",
       "sym": "Restaurant",
       "note": "Los Olivos, on Grand Avenue."
+    },
+    {
+      "name": "Foxen Winery",
+      "lat": 34.824351,
+      "lon": -120.232009,
+      "type": "Winery",
+      "sym": "Bar",
+      "note": "Foxen Canyon Road, right on the route. OpenStreetMap carries two Foxen tasting rooms 0.35 mi apart and names them only #1 and #2; this is the northern one."
+    },
+    {
+      "name": "El Rancho Market",
+      "lat": 34.606246,
+      "lon": -120.101650,
+      "type": "Store",
+      "sym": "Shopping Center",
+      "note": "Santa Ynez, off the route. Full grocery with a deli counter - the last proper resupply before Solvang."
+    },
+    {
+      "name": "Old Mission Santa Ines",
+      "lat": 34.594315,
+      "lon": -120.136626,
+      "type": "Historic",
+      "sym": "Museum",
+      "note": "Solvang, where the day ends. Founded 1804; church and museum open to visitors."
     }
   ],
   "7": [
@@ -81,6 +105,9 @@
     }
   ],
   "exclude": {
+    "6": [
+      "Mission Santa Inés"
+    ],
     "1": [
       "Alma",
       "Branciforte",

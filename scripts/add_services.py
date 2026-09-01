@@ -43,6 +43,32 @@ USER_AGENT = "pacific-coast-2026/1.0 (bike tour route planning)"
 
 # How far off the track a facility can be and still be worth stopping for.
 MAX_OFFSET_MI = 0.25
+# The quarter-mile screen is right on a day that has something every few miles:
+# a stop further off than that is noise you would never ride to. It is wrong on
+# a day that has nothing, where the same screen reports an empty route as an
+# empty valley. Day 3 runs the west side of the Salinas Valley with every town
+# off to the east, and day 4 crosses the Jolon backcountry; on those two a stop
+# three miles off is worth knowing about, because it may be the only one.
+#
+# 1.5 mi is a three-mile round trip, which is about the most a loaded touring
+# bike should be asked to add to a sixty-mile day. It is deliberately short of
+# what would "fix" day 3: the west-side stops sit at 2.4-2.7 mi, so admitting
+# them would need 2.75 and a 5.5 mi round trip. At 1.5 the day still shows a
+# ~35 mi stretch with nothing reachable, which is the true shape of the route
+# rather than an artefact of the screen, and is why it is a SAG day.
+#
+# Anything admitted past MAX_OFFSET_MI carries its detour on the page and must
+# also clear NO_CROSSING_REFS below - a stop is not reachable if getting to it
+# means crossing a freeway.
+OFFSET_OVERRIDES = {3: 1.5, 4: 1.5}
+# Roads a rider should not have to cross to reach a shop. Checked only for
+# stops past MAX_OFFSET_MI, so days that ride beside or on US-101 - day 7 takes
+# its shoulder through the Gaviota corridor - are unaffected.
+NO_CROSSING_REFS = "US 101"
+
+
+def offset_limit(day):
+    return OFFSET_OVERRIDES.get(day, MAX_OFFSET_MI)
 # Two taps 30 m apart are one stop; collapse them.
 DEDUPE_MI = 0.05
 BBOX_PAD_DEG = 0.02
@@ -79,6 +105,17 @@ CATEGORIES = {
                                         priority=1, spacing_mi=4.0),
     ("shop", "deli"):              dict(type="Store", sym="Convenience Store",
                                         priority=2, spacing_mi=4.0),
+    # The rural country store, and the tag most worth having. Lockwood Store
+    # and Diner sits 0.03 mi off the route at mi 25 of day 4 - the only
+    # resupply in the middle of the hardest, emptiest day on the trip - and
+    # was invisible here until shop=general was added, which is how that day
+    # came to claim "effectively nothing between mile 1 and mile 48".
+    ("shop", "general"):           dict(type="Store", sym="Convenience Store",
+                                        priority=1, spacing_mi=4.0),
+    # A less-used synonym for supermarket; cheap to accept, and rural mappers
+    # reach for it.
+    ("shop", "grocery"):           dict(type="Store", sym="Convenience Store",
+                                        priority=1, spacing_mi=4.0),
     ("amenity", "cafe"):           dict(type="Food", sym="Restaurant",
                                         priority=0, spacing_mi=5.0),
     ("amenity", "restaurant"):     dict(type="Food", sym="Restaurant",
@@ -156,12 +193,31 @@ BLOCKED_OPERATOR_WORDS = ("school", "college", "university", "academy",
 SERVICE_TYPES = {k: v["type"] for k, v in CATEGORIES.items()}
 ALL_TYPES = sorted({v["type"] for v in CATEGORIES.values()})
 
+# Tasting rooms, bars and pubs are scraped as type "Winery" everywhere, but
+# they are only worth listing on the two days built around them: day 5 through
+# the Paso Robles AVA, and day 6 down Foxen Canyon. On a coastal or a city day
+# they crowd out the water and toilets somebody is actually looking for, and on
+# a hot inland day they are actively the wrong thing to steer a rider toward.
+WINERY_TYPE = "Winery"
+WINERY_DAYS = {5, 6}
+
+def _values(key):
+    """The values CATEGORIES knows about for an OSM key, as an Overpass regex."""
+    return "|".join(sorted(v for k, v in CATEGORIES if k == key))
+
+
+# Derived from CATEGORIES rather than written out again. These were two
+# separate lists, and they drifted: shop=general was added as a category but
+# never fetched, so Lockwood Store and Diner - 0.03 mi off the route at mi 25
+# of day 4, the only resupply in the middle of the emptiest day - simply never
+# appeared, and the day's notes said there was nothing there. Both node and way
+# for each, since a rural store is as often mapped as a building outline.
 QUERY = """[out:json][timeout:120];
 (
-  node["amenity"~"^(drinking_water|toilets|cafe|restaurant|fast_food|ice_cream|bar|pub|biergarten)$"](%(bbox)s);
-  way["amenity"="toilets"](%(bbox)s);
-  node["shop"~"^(supermarket|convenience|deli|bakery|farm|greengrocer|wine|alcohol)$"](%(bbox)s);
-  way["shop"~"^(supermarket|convenience)$"](%(bbox)s);
+  node["amenity"~"^(%(amenity)s)$"](%(bbox)s);
+  way["amenity"~"^(%(amenity)s)$"](%(bbox)s);
+  node["shop"~"^(%(shop)s)$"](%(bbox)s);
+  way["shop"~"^(%(shop)s)$"](%(bbox)s);
   node["craft"="winery"](%(bbox)s);
   node["tourism"~"^(viewpoint|attraction|museum|wine_cellar)$"](%(bbox)s);
   node["leisure"="park"](%(bbox)s);
@@ -170,6 +226,51 @@ QUERY = """[out:json][timeout:120];
   way["historic"~"^(monument|memorial|ruins|building)$"](%(bbox)s);
 );
 out center tags;"""
+
+
+BARRIER_QUERY = """[out:json][timeout:120];
+(way["ref"~"%(ref)s"](%(bbox)s););
+out geom;"""
+
+
+def barrier_segments(bbox):
+    """Segments of the road riders should not cross, for the day's bbox."""
+    q = BARRIER_QUERY % {"ref": NO_CROSSING_REFS,
+                         "bbox": "%s,%s,%s,%s" % bbox}
+    req = urllib.request.Request(
+        OVERPASS, data=urllib.parse.urlencode({"data": q}).encode(),
+        headers={"User-Agent": USER_AGENT})
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                els = json.loads(r.read().decode())
+            break
+        except Exception as exc:
+            print(f"    barrier query retry {attempt + 1}/5: {exc}")
+            time.sleep(20 * (attempt + 1))
+    else:
+        print("    barrier query failed; skipping the crossing filter")
+        return []
+    segs = []
+    for e in els.get("elements", []):
+        g = e.get("geometry") or []
+        segs += [((a["lat"], a["lon"]), (b["lat"], b["lon"]))
+                 for a, b in zip(g, g[1:])]
+    return segs
+
+
+def _ccw(a, b, c):
+    return (c[0] - a[0]) * (b[1] - a[1]) > (b[0] - a[0]) * (c[1] - a[1])
+
+
+def crosses_barrier(p, q, segs):
+    """Whether the straight line p->q intersects any barrier segment. A proxy
+    for 'you would have to cross the freeway': the real approach road may wander
+    further, but if the direct line clears it, some local road does too."""
+    for a, b in segs:
+        if _ccw(p, a, b) != _ccw(q, a, b) and _ccw(p, q, a) != _ccw(p, q, b):
+            return True
+    return False
 
 
 def haversine_mi(a, b):
@@ -184,7 +285,8 @@ def haversine_mi(a, b):
 def overpass(bbox, attempts=5):
     """Query Overpass, backing off on 429/504. It is a free shared service and
     will refuse a burst; the wait is expected, not an error."""
-    q = QUERY % {"bbox": "%s,%s,%s,%s" % bbox}
+    q = QUERY % {"bbox": "%s,%s,%s,%s" % bbox,
+                 "amenity": _values("amenity"), "shop": _values("shop")}
     req = urllib.request.Request(
         OVERPASS,
         data=urllib.parse.urlencode({"data": q}).encode(),
@@ -263,7 +365,7 @@ def categorise(tags):
     return None
 
 
-def find_services(route):
+def find_services(route, limit=MAX_OFFSET_MI, barriers=()):
     """Facilities within MAX_OFFSET_MI of the route, each with the mile along
     the route where it is closest, thinned per category."""
     lats = [p[0] for p in route]
@@ -330,9 +432,14 @@ def find_services(route):
         fee = (tags.get("fee") or "").strip().lower() == "yes"
         dists = [haversine_mi((lat, lon), (p[0], p[1])) for p in route]
         offset_mi = min(dists)
-        if offset_mi > MAX_OFFSET_MI:
+        if offset_mi > limit:
             continue
         i = dists.index(offset_mi)
+        # Past the base screen a stop has to be genuinely reachable, not just
+        # near. Crossing a freeway on a bike is the difference.
+        if offset_mi > MAX_OFFSET_MI and barriers:
+            if crosses_barrier(route[i], (lat, lon), barriers):
+                continue
         # Quality signal for thinning. An OSM entry carrying opening hours, a
         # website or a Wikidata link has been maintained by somebody who knows
         # the place; a bare node with a name may be a decade stale. When two
@@ -429,13 +536,28 @@ def main():
 
     for day in days:
         route = route_of(day)
-        services = find_services(route) + manual_pois(day, route)
+        limit = offset_limit(day)
+        barriers = ()
+        if limit > MAX_OFFSET_MI:
+            lats = [p[0] for p in route]
+            lons = [p[1] for p in route]
+            pad = limit / 60.0 + 0.02
+            barriers = barrier_segments((min(lats) - pad, min(lons) - pad,
+                                         max(lats) + pad, max(lons) + pad))
+            print(f"  day {day}: offset limit {limit} mi, "
+                  f"{len(barriers)} {NO_CROSSING_REFS} segments")
+        services = find_services(route, limit, barriers) + manual_pois(day, route)
         drop = excluded_names(day)
         if drop:
             before = len(services)
             services = [s for s in services
                         if (s.get("name") or s["type"]).strip().lower() not in drop]
             print(f"  day {day}: excluded {before - len(services)} by hand")
+        if day not in WINERY_DAYS:
+            before = len(services)
+            services = [s for s in services if s["type"] != WINERY_TYPE]
+            if before != len(services):
+                print(f"  day {day}: dropped {before - len(services)} winery/bar")
         services.sort(key=lambda s: s["mile"])
         counts = {}
         for s in services:

@@ -18702,6 +18702,16 @@
       "detour_mi": null
     },
     {
+      "lat": 35.553611,
+      "lon": -120.751576,
+      "name": "Turley Wine Cellars (mi 9.6)",
+      "type": "Winery",
+      "label": "Turley Wine Cellars",
+      "mile": 9.6,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
       "lat": 35.40684,
       "lon": -120.871288,
       "name": "North Point Natural Area (mi 28.0)",
@@ -18722,22 +18732,32 @@
       "detour_mi": null
     },
     {
+      "lat": 35.394506,
+      "lon": -120.860191,
+      "name": "The Buoy (mi 29.3)",
+      "type": "Winery",
+      "label": "The Buoy",
+      "mile": 29.3,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 35.392905,
+      "lon": -120.859638,
+      "name": "Lolo's (mi 29.4)",
+      "type": "Food",
+      "label": "Lolo's",
+      "mile": 29.4,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
       "lat": 35.389951,
       "lon": -120.857248,
       "name": "Spencer's Fresh Market (mi 29.7)",
       "type": "Store",
       "label": "Spencer's Fresh Market",
       "mile": 29.7,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 35.369233,
-      "lon": -120.854182,
-      "name": "La Parisienne French Bakery (mi 31.1)",
-      "type": "Food",
-      "label": "La Parisienne French Bakery",
-      "mile": 31.1,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -18757,16 +18777,6 @@
       "name": "Water (mi 31.4)",
       "type": "Water",
       "label": "Water",
-      "mile": 31.4,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 35.364249,
-      "lon": -120.852852,
-      "name": "Morro Bay Wine Seller (mi 31.4)",
-      "type": "Winery",
-      "label": "Morro Bay Wine Seller",
       "mile": 31.4,
       "hand_picked": false,
       "detour_mi": null
@@ -18832,22 +18842,22 @@
       "detour_mi": null
     },
     {
+      "lat": 35.262053,
+      "lon": -120.697011,
+      "name": "Zen Dog (mi 44.8)",
+      "type": "Food",
+      "label": "Zen Dog",
+      "mile": 44.8,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
       "lat": 35.263937,
       "lon": -120.697012,
       "name": "Toilets (mi 44.8)",
       "type": "Toilets",
       "label": "Toilets",
       "mile": 44.8,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 35.257704,
-      "lon": -120.690812,
-      "name": "Nautical Bean Espresso Cafe (mi 45.4)",
-      "type": "Food",
-      "label": "Nautical Bean Espresso Cafe",
-      "mile": 45.4,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -18868,6 +18878,16 @@
       "type": "Water",
       "label": "Water",
       "mile": 45.5,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 35.252529,
+      "lon": -120.688386,
+      "name": "BevMo! (mi 45.9)",
+      "type": "Winery",
+      "label": "BevMo!",
+      "mile": 45.9,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -18932,22 +18952,22 @@
       "detour_mi": null
     },
     {
+      "lat": 35.14557,
+      "lon": -120.644492,
+      "name": "Liquor Store (mi 56.0)",
+      "type": "Winery",
+      "label": "Liquor Store",
+      "mile": 56.0,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
       "lat": 35.144189,
       "lon": -120.642433,
       "name": "Price Street Market (mi 56.1)",
       "type": "Store",
       "label": "Price Street Market",
       "mile": 56.1,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 35.142776,
-      "lon": -120.640923,
-      "name": "Sans Liege (mi 56.3)",
-      "type": "Winery",
-      "label": "Sans Liege",
-      "mile": 56.3,
       "hand_picked": false,
       "detour_mi": null
     },

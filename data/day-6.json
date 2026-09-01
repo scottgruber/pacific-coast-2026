@@ -5877,12 +5877,22 @@
       "detour_mi": null
     },
     {
-      "lat": 35.021922,
-      "lon": -120.488489,
-      "name": "Cowgirl Cafe (mi 12.1)",
+      "lat": 35.048084,
+      "lon": -120.525838,
+      "name": "Food (mi 8.7)",
       "type": "Food",
-      "label": "Cowgirl Cafe",
-      "mile": 12.1,
+      "label": "Food",
+      "mile": 8.7,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 34.996229,
+      "lon": -120.436301,
+      "name": "Rancho Nipomo (mi 16.1)",
+      "type": "Food",
+      "label": "Rancho Nipomo",
+      "mile": 16.1,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5917,12 +5927,32 @@
       "detour_mi": null
     },
     {
+      "lat": 34.824351,
+      "lon": -120.232009,
+      "name": "Foxen Winery (mi 36.2)",
+      "type": "Winery",
+      "label": "Foxen Winery",
+      "mile": 36.2,
+      "hand_picked": true,
+      "detour_mi": null
+    },
+    {
       "lat": 34.730777,
       "lon": -120.129358,
       "name": "Koehler Vinyard (mi 47.4)",
       "type": "Winery",
       "label": "Koehler Vinyard",
       "mile": 47.4,
+      "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 34.664939,
+      "lon": -120.115387,
+      "name": "Los Olivos Wine Merchant & Cafe (mi 52.9)",
+      "type": "Food",
+      "label": "Los Olivos Wine Merchant & Cafe",
+      "mile": 52.9,
       "hand_picked": false,
       "detour_mi": null
     },
@@ -5945,6 +5975,16 @@
       "mile": 55.9,
       "hand_picked": false,
       "detour_mi": null
+    },
+    {
+      "lat": 34.606246,
+      "lon": -120.10165,
+      "name": "El Rancho Market (mi 56.9)",
+      "type": "Store",
+      "label": "El Rancho Market",
+      "mile": 56.9,
+      "hand_picked": true,
+      "detour_mi": 1.2
     },
     {
       "lat": 34.607541,
@@ -5977,23 +6017,23 @@
       "detour_mi": null
     },
     {
-      "lat": 34.594315,
-      "lon": -120.136626,
-      "name": "Mission Santa Inés (mi 58.1)",
-      "type": "Historic",
-      "label": "Mission Santa Inés",
+      "lat": 34.594789,
+      "lon": -120.138058,
+      "name": "Birkholm's Solvang Danish Bakery (mi 58.1)",
+      "type": "Food",
+      "label": "Birkholm's Solvang Danish Bakery",
       "mile": 58.1,
       "hand_picked": false,
       "detour_mi": null
     },
     {
-      "lat": 34.596359,
-      "lon": -120.137942,
-      "name": "The Coffee House (mi 58.1)",
-      "type": "Food",
-      "label": "The Coffee House",
+      "lat": 34.594315,
+      "lon": -120.136626,
+      "name": "Old Mission Santa Ines (mi 58.1)",
+      "type": "Historic",
+      "label": "Old Mission Santa Ines",
       "mile": 58.1,
-      "hand_picked": false,
+      "hand_picked": true,
       "detour_mi": null
     },
     {

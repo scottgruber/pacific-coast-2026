@@ -6552,6 +6552,36 @@
   },
   "services": [
     {
+      "lat": 36.604969,
+      "lon": -121.925124,
+      "name": "Arnett Park (mi 0.0)",
+      "type": "Park",
+      "label": "Arnett Park",
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": 0.8
+    },
+    {
+      "lat": 36.607477,
+      "lon": -121.925908,
+      "name": "Lucky (mi 0.0)",
+      "type": "Store",
+      "label": "Lucky",
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": 1.0
+    },
+    {
+      "lat": 36.608893,
+      "lon": -121.923231,
+      "name": "Starbucks (mi 0.0)",
+      "type": "Food",
+      "label": "Starbucks",
+      "mile": 0.0,
+      "hand_picked": false,
+      "detour_mi": 0.9
+    },
+    {
       "lat": 36.597322,
       "lon": -121.912227,
       "name": "Toilets (mi 0.0)",
@@ -6562,54 +6592,24 @@
       "detour_mi": null
     },
     {
-      "lat": 36.599027,
-      "lon": -121.909652,
-      "name": "Veteran's Memorial Park (mi 0.1)",
-      "type": "Park",
-      "label": "Veteran's Memorial Park",
-      "mile": 0.1,
+      "lat": 36.616727,
+      "lon": -121.901071,
+      "name": "Monterey Mirror Maze (mi 0.2)",
+      "type": "Scenic",
+      "label": "Monterey Mirror Maze",
+      "mile": 0.2,
       "hand_picked": false,
-      "detour_mi": null
+      "detour_mi": 1.2
     },
     {
-      "lat": 36.597037,
-      "lon": -121.896715,
-      "name": "Casa Gutierrez (mi 1.1)",
+      "lat": 36.617271,
+      "lon": -121.901017,
+      "name": "Pacific Biological Laboratories (mi 0.2)",
       "type": "Historic",
-      "label": "Casa Gutierrez",
-      "mile": 1.1,
+      "label": "Pacific Biological Laboratories",
+      "mile": 0.2,
       "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 36.596211,
-      "lon": -121.894591,
-      "name": "Ocean Sushi (mi 1.1)",
-      "type": "Food",
-      "label": "Ocean Sushi",
-      "mile": 1.1,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 36.596504,
-      "lon": -121.894577,
-      "name": "Trader Joe's (mi 1.2)",
-      "type": "Store",
-      "label": "Trader Joe's",
-      "mile": 1.2,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 36.600139,
-      "lon": -121.89474,
-      "name": "Crown & Anchor (mi 1.2)",
-      "type": "Winery",
-      "label": "Crown & Anchor",
-      "mile": 1.2,
-      "hand_picked": false,
-      "detour_mi": null
+      "detour_mi": 1.3
     },
     {
       "lat": 36.597559,
@@ -6622,14 +6622,74 @@
       "detour_mi": null
     },
     {
-      "lat": 36.623247,
-      "lon": -121.842127,
-      "name": "7-Eleven (mi 5.7)",
+      "lat": 36.599497,
+      "lon": -121.861265,
+      "name": "Water (mi 3.2)",
+      "type": "Water",
+      "label": "Water",
+      "mile": 3.2,
+      "hand_picked": false,
+      "detour_mi": 0.3
+    },
+    {
+      "lat": 36.608001,
+      "lon": -121.847246,
+      "name": "Grocery Outlet (mi 4.1)",
       "type": "Store",
-      "label": "7-Eleven",
-      "mile": 5.7,
+      "label": "Grocery Outlet",
+      "mile": 4.1,
+      "hand_picked": false,
+      "detour_mi": 0.5
+    },
+    {
+      "lat": 36.620573,
+      "lon": -121.84506,
+      "name": "Five Guys (mi 5.0)",
+      "type": "Food",
+      "label": "Five Guys",
+      "mile": 5.0,
       "hand_picked": false,
       "detour_mi": null
+    },
+    {
+      "lat": 36.639056,
+      "lon": -121.812646,
+      "name": "Stillwell Park (mi 7.5)",
+      "type": "Park",
+      "label": "Stillwell Park",
+      "mile": 7.5,
+      "hand_picked": false,
+      "detour_mi": 0.7
+    },
+    {
+      "lat": 36.660721,
+      "lon": -121.820959,
+      "name": "Toilets (mi 8.2)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 8.2,
+      "hand_picked": false,
+      "detour_mi": 0.6
+    },
+    {
+      "lat": 36.664285,
+      "lon": -121.80978,
+      "name": "Trader Joe's (mi 8.7)",
+      "type": "Store",
+      "label": "Trader Joe's",
+      "mile": 8.7,
+      "hand_picked": false,
+      "detour_mi": 0.7
+    },
+    {
+      "lat": 36.654836,
+      "lon": -121.736526,
+      "name": "Water (mi 13.1)",
+      "type": "Water",
+      "label": "Water",
+      "mile": 13.1,
+      "hand_picked": false,
+      "detour_mi": 0.3
     },
     {
       "lat": 36.627183,
@@ -6642,6 +6702,96 @@
       "detour_mi": null
     },
     {
+      "lat": 36.630238,
+      "lon": -121.679113,
+      "name": "Hilltown Ferry State Historic Landmark (mi 16.8)",
+      "type": "Park",
+      "label": "Hilltown Ferry State Historic Landmark",
+      "mile": 16.8,
+      "hand_picked": false,
+      "detour_mi": 0.4
+    },
+    {
+      "lat": 36.622576,
+      "lon": -121.646933,
+      "name": "El Valle Market (mi 18.5)",
+      "type": "Store",
+      "label": "El Valle Market",
+      "mile": 18.5,
+      "hand_picked": false,
+      "detour_mi": 0.8
+    },
+    {
+      "lat": 36.404778,
+      "lon": -121.355689,
+      "name": "Mission Soledad Museum (mi 42.1)",
+      "type": "Historic",
+      "label": "Mission Soledad Museum",
+      "mile": 42.1,
+      "hand_picked": false,
+      "detour_mi": 1.0
+    },
+    {
+      "lat": 36.405094,
+      "lon": -121.356538,
+      "name": "Toilets (mi 42.1)",
+      "type": "Toilets",
+      "label": "Toilets",
+      "mile": 42.1,
+      "hand_picked": false,
+      "detour_mi": 1.0
+    },
+    {
+      "lat": 36.323022,
+      "lon": -121.245758,
+      "name": "Greenfield City Park (mi 53.2)",
+      "type": "Park",
+      "label": "Greenfield City Park",
+      "mile": 53.2,
+      "hand_picked": false,
+      "detour_mi": 1.5
+    },
+    {
+      "lat": 36.319439,
+      "lon": -121.242553,
+      "name": "Mendoza Market (mi 53.2)",
+      "type": "Store",
+      "label": "Mendoza Market",
+      "mile": 53.2,
+      "hand_picked": false,
+      "detour_mi": 1.5
+    },
+    {
+      "lat": 36.321882,
+      "lon": -121.244512,
+      "name": "Tutti Frutti (mi 53.2)",
+      "type": "Food",
+      "label": "Tutti Frutti",
+      "mile": 53.2,
+      "hand_picked": false,
+      "detour_mi": 1.5
+    },
+    {
+      "lat": 36.31777,
+      "lon": -121.241194,
+      "name": "Water (mi 53.9)",
+      "type": "Water",
+      "label": "Water",
+      "mile": 53.9,
+      "hand_picked": false,
+      "detour_mi": 1.4
+    },
+    {
+      "lat": 36.192344,
+      "lon": -121.144526,
+      "name": "Pine Canyon Store (mi 64.2)",
+      "type": "Store",
+      "label": "Pine Canyon Store",
+      "mile": 64.2,
+      "hand_picked": false,
+      "detour_mi": 0.3
+    },
+    {
       "lat": 36.20198,
       "lon": -121.143259,
       "name": "Old Salinas River Bridge Ruins (mi 64.7)",
@@ -6652,16 +6802,36 @@
       "detour_mi": null
     },
     {
-      "lat": 36.205937,
-      "lon": -121.146585,
-      "name": "Toilets (mi 65.2)",
+      "lat": 36.213209,
+      "lon": -121.126375,
+      "name": "California Gourmet Pizza (mi 64.9)",
+      "type": "Food",
+      "label": "California Gourmet Pizza",
+      "mile": 64.9,
+      "hand_picked": false,
+      "detour_mi": 1.1
+    },
+    {
+      "lat": 36.210701,
+      "lon": -121.134292,
+      "name": "Toilets (mi 64.9)",
       "type": "Toilets",
       "label": "Toilets",
+      "mile": 64.9,
+      "hand_picked": false,
+      "detour_mi": 0.7
+    },
+    {
+      "lat": 36.222152,
+      "lon": -121.12911,
+      "name": "Railroad Park (mi 65.2)",
+      "type": "Park",
+      "label": "Railroad Park",
       "mile": 65.2,
       "hand_picked": false,
-      "detour_mi": null
+      "detour_mi": 1.4
     }
   ],
-  "water_gap_mi": 64.2,
+  "water_gap_mi": 40.9,
   "route_point_count_raw": 1882
 }
