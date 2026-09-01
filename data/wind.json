@@ -1,0 +1,162 @@
+{
+ "1": {
+  "component": -0.77,
+  "consistency": 0.63,
+  "from_compass": "SSW",
+  "from_deg": 210,
+  "hours": 1350,
+  "hours_local": [
+   9,
+   17
+  ],
+  "relation": "headwind",
+  "speed_mph": 4.0,
+  "steady_mph": 2.5,
+  "travel_compass": "S",
+  "travel_deg": 170,
+  "years": [
+   2015,
+   2024
+  ]
+ },
+ "2": {
+  "component": -0.08,
+  "consistency": 0.9,
+  "from_compass": "WSW",
+  "from_deg": 252,
+  "hours": 1350,
+  "hours_local": [
+   9,
+   17
+  ],
+  "relation": "crosswind",
+  "speed_mph": 6.5,
+  "steady_mph": 5.9,
+  "travel_compass": "SSE",
+  "travel_deg": 166,
+  "years": [
+   2015,
+   2024
+  ]
+ },
+ "3": {
+  "component": 1.0,
+  "consistency": 0.92,
+  "from_compass": "WNW",
+  "from_deg": 301,
+  "hours": 1350,
+  "hours_local": [
+   9,
+   17
+  ],
+  "relation": "tailwind",
+  "speed_mph": 6.1,
+  "steady_mph": 5.6,
+  "travel_compass": "ESE",
+  "travel_deg": 123,
+  "years": [
+   2015,
+   2024
+  ]
+ },
+ "4": {
+  "component": -0.04,
+  "consistency": 0.54,
+  "from_compass": "SW",
+  "from_deg": 235,
+  "hours": 1350,
+  "hours_local": [
+   9,
+   17
+  ],
+  "relation": "crosswind",
+  "speed_mph": 5.1,
+  "steady_mph": 2.8,
+  "travel_compass": "SSE",
+  "travel_deg": 147,
+  "years": [
+   2015,
+   2024
+  ]
+ },
+ "5": {
+  "component": -0.0,
+  "consistency": 0.88,
+  "from_compass": "W",
+  "from_deg": 264,
+  "hours": 1350,
+  "hours_local": [
+   9,
+   17
+  ],
+  "relation": "crosswind",
+  "speed_mph": 6.5,
+  "steady_mph": 5.7,
+  "travel_compass": "S",
+  "travel_deg": 174,
+  "years": [
+   2015,
+   2024
+  ]
+ },
+ "6": {
+  "component": 0.67,
+  "consistency": 0.82,
+  "from_compass": "W",
+  "from_deg": 274,
+  "hours": 1350,
+  "hours_local": [
+   9,
+   17
+  ],
+  "relation": "crosswind",
+  "speed_mph": 6.1,
+  "steady_mph": 5.0,
+  "travel_compass": "SE",
+  "travel_deg": 143,
+  "years": [
+   2015,
+   2024
+  ]
+ },
+ "7": {
+  "component": 0.04,
+  "consistency": 0.8,
+  "from_compass": "SSW",
+  "from_deg": 207,
+  "hours": 1350,
+  "hours_local": [
+   9,
+   17
+  ],
+  "relation": "crosswind",
+  "speed_mph": 4.8,
+  "steady_mph": 3.8,
+  "travel_compass": "ESE",
+  "travel_deg": 114,
+  "years": [
+   2015,
+   2024
+  ]
+ },
+ "8": {
+  "component": 0.66,
+  "consistency": 0.62,
+  "from_compass": "WSW",
+  "from_deg": 243,
+  "hours": 1350,
+  "hours_local": [
+   9,
+   17
+  ],
+  "relation": "crosswind",
+  "speed_mph": 6.4,
+  "steady_mph": 4.0,
+  "travel_compass": "ESE",
+  "travel_deg": 112,
+  "years": [
+   2015,
+   2024
+  ]
+ }
+}

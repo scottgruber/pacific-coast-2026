@@ -264,6 +264,10 @@ def main():
     # every build. Days without an entry simply omit the shade card.
     shade_path = DATA_DIR / "shade.json"
     shade = json.loads(shade_path.read_text()) if shade_path.exists() else {}
+    # Written by build_wind.py, same arrangement as shade: a slow external
+    # fetch kept out of data/day-N.json. Days without an entry omit the line.
+    wind_path = DATA_DIR / "wind.json"
+    wind = json.loads(wind_path.read_text()) if wind_path.exists() else {}
     towns_path = DATA_DIR / "towns.json"
     towns_by_day = json.loads(towns_path.read_text()) if towns_path.exists() else {}
     # Hand-maintained prose, never generated — see the note inside the file.
@@ -348,6 +352,7 @@ def main():
                 "gpx": d["gpx"],
                 "options": options,
                 "shade": day_shade.get("primary"),
+                "wind": wind.get(str(n)),
                 "services": group_services(d.get("services", [])),
                 "lodging": with_map_links(d.get("lodging")),
                 "lodging_json": json.dumps(d.get("lodging")),

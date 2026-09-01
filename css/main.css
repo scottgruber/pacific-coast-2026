@@ -1359,6 +1359,45 @@ html.metric .unit-pair__metric {
   font-size: var(--font-size-small);
 }
 
+/* Prevailing wind
+   ------------------------------------------------------------------------ */
+
+/* Sits above the live reading in the weather block. The left rule carries the
+   verdict: rust for a headwind, which is the one that costs you something,
+   and the quieter border for a cross or tailwind. */
+.wx-prevailing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  margin: 0 0 var(--spacing-small);
+  padding: var(--spacing-small) var(--spacing-default);
+  border-left: var(--border-width-thick) solid var(--color-surface-border);
+  border-radius: var(--border-radius);
+  background: var(--color-surface);
+}
+
+.wx-prevailing--headwind {
+  border-left-color: var(--color-accent-rust);
+}
+
+.wx-prevailing__lede {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.wx-prevailing__detail {
+  font-size: var(--font-size-small);
+  line-height: 1.45;
+}
+
+.wx-prevailing__source {
+  font-size: var(--font-size-x-small);
+  color: var(--color-text-muted);
+}
+
 /* Stops along the way
    ------------------------------------------------------------------------ */
 

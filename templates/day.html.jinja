@@ -215,6 +215,29 @@
 
           <div class="conditions-block">
             <h3 class="conditions-block__title">Weather</h3>
+            {% if wind %}
+            {# Climatology, not forecast - it sits outside data-conditions-weather
+               so the live NWS fetch replaces the reading below without wiping it. #}
+            <p class="wx-prevailing wx-prevailing--{{ wind.relation }}">
+              <span class="wx-prevailing__lede">Usually a
+                <strong>{{ wind.relation }}</strong></span>
+              <span class="wx-prevailing__detail">
+                You ride {{ wind.travel_compass }}; early-September wind here runs
+                from the {{ wind.from_compass }} at {{ wind.speed_mph }}&nbsp;mph,
+                {% if wind.consistency >= 0.8 %}and holds that direction
+                {{ (wind.consistency * 100)|round|int }}% of the time.
+                {% elif wind.consistency >= 0.6 %}though it only holds that
+                direction {{ (wind.consistency * 100)|round|int }}% of the time.
+                {% else %}but it is variable — only
+                {{ (wind.consistency * 100)|round|int }}% of it blows one way, so
+                treat the direction loosely.{% endif %}
+              </span>
+              <span class="wx-prevailing__source">Mean of
+                {{ wind.years[0] }}&ndash;{{ wind.years[1] }} September,
+                {{ wind.hours_local[0] }}:00&ndash;{{ wind.hours_local[1] }}:00,
+                at the day&rsquo;s midpoint. What to expect, not a forecast.</span>
+            </p>
+            {% endif %}
             <div data-conditions-weather>
               <ul class="conditions-list" role="list">
                 <li><a href="https://forecast.weather.gov/MapClick.php?lat={{ end_lat }}&amp;lon={{ end_lon }}" target="_blank" rel="noopener">NWS forecast {{ icon_external() }}</a></li>
