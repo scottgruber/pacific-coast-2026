@@ -64,7 +64,9 @@ each number comes from, for readers rather than maintainers.
 │   ├── add_services.py      OSM water/toilets/food/shops/scenic → GPX waypoints
 │   ├── prepare_gpx.py       ready the GPX for Ride with GPS and a Garmin
 │   ├── build_shade.py       afternoon shade: terrain horizon + mapped canopy
-│   └── build_towns.py       towns along each route
+│   ├── build_towns.py       towns along each route
+│   ├── check_gpx.py         audit the tracks: structure, gaps, chaining, hotels
+│   └── check_roads.py       audit the tracks for motorway, ramp and trunk miles
 ├── templates/
 │   ├── _nav.html.jinja      shared site nav
 │   ├── _units.html.jinja    imperial/metric macro
@@ -147,6 +149,57 @@ is gitignored here since it's fully regeneratable output, never a source
 of truth.
 
 Remote: `git@github.com:scottgruber/pacific-coast-2026.git`
+
+## Auditing the tracks
+
+The GPX files are the one part of this project somebody's safety rests on. A
+wrong number on a page costs a reader nothing; a track that jumps, loses its
+elevation, or stops a mile from the bed costs them at the end of a sixty-mile
+day. Two scripts check them, and neither writes anything.
+
+```bash
+python3 scripts/check_gpx.py          # every day; add day numbers for a subset
+python3 scripts/check_roads.py        # same, but hits Overpass
+```
+
+`check_gpx.py` is local and takes a second. It parses each file, then checks
+elevation is present and plausible, that coordinates are in range, that the
+Start and Finish waypoints still agree with the track's own ends, that each day
+starts where the last one finished, and that each day finishes at the hotel in
+`lodging.json`. **It exits non-zero on an error, so it can gate a deploy.**
+Run it after anything touches `gpx/`.
+
+It is the check that catches the failure this project actually had: moving day
+3's finish to Keefer's Inn left day 4 starting 1.22 miles away, and nothing on
+the site would have shown it.
+
+A large gap between consecutive points is a **warning, not an error**, and the
+distinction matters. Day 5 runs 2,228 ft between points on Los Osos Valley
+Road; the road is straight there, so the drawn line follows it exactly. Sparse
+sampling on a straight is fine, on a bend it is not, and the script cannot tell
+them apart without the road geometry — so it names the points to look at rather
+than pretending to judge. Day 5's have been checked and are fine.
+
+`check_roads.py` asks OpenStreetMap which samples sit on a motorway, a freeway
+ramp or a trunk road. It is slower and depends on a free shared service, so run
+it when a route changes rather than on every build.
+
+Read its output knowing two things. Trunk-class roads **are** the route —
+Pacific Coast Highway, CA-1, Foothill Expressway — and are listed for
+completeness, not as faults. And a hit prints what else was within reach,
+because on this route that column is usually the answer: an early version
+filtered cycleways out of the matching and duly reported half a mile of 65 mph
+motorway on day 1, when the route is on the Los Gatos Creek Trail twelve metres
+away. Days 1, 2 and 3 all read that way. Every nearby way is now considered and
+the closest wins.
+
+The one place the route is genuinely on a motorway is day 7 through Gaviota,
+where OSM records `bicycle=yes` and a shoulder — which matches the Pacific
+Coast Route, though whether the signs are up is not something a script can see.
+
+Neither script verifies anything on the ground, and a road absent from
+`check_roads.py`'s output is not thereby safe: OSM has no shoulder or width tag
+on most of these roads.
 
 ## Deploying to scottgruber.me/bike-tours/pacific-coast/2026
 
