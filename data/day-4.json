@@ -6730,7 +6730,43 @@
     ]
   ],
   "options": [],
-  "waypoints": [],
+  "waypoints": [
+    {
+      "lat": 35.96915,
+      "lon": -121.17629,
+      "name": "SAG 1 — Jolon",
+      "type": "Milestone",
+      "cmt": "Mission Road junction, a third of the way in. Nothing between here and mi 0.2. Added by hand."
+    },
+    {
+      "lat": 35.93678,
+      "lon": -121.08321,
+      "name": "SAG 2 — Lockwood",
+      "type": "Milestone",
+      "cmt": "Lockwood Store and Diner, 67997 Jolon Rd, 0.03 mi off. The only shop in the middle 44 miles; Marin's Vineyard shares the premises. Added by hand."
+    },
+    {
+      "lat": 35.89744,
+      "lon": -121.08964,
+      "name": "SAG 3 — San Antonio River",
+      "type": "Milestone",
+      "cmt": "The river crossing. Last chance before twenty empty miles. Added by hand."
+    },
+    {
+      "lat": 35.76327,
+      "lon": -120.8864,
+      "name": "SAG 4 — Lake Nacimiento",
+      "type": "Milestone",
+      "cmt": "Turn for the resort, 0.5 mi off: restrooms and the Dragon Grill. Added by hand."
+    },
+    {
+      "lat": 35.74454,
+      "lon": -120.87658,
+      "name": "SAG 5 — Oak Hill Market",
+      "type": "Milestone",
+      "cmt": "Heritage Ranch, 0.2 mi off. Water, and the last stop before Paso Robles. Added by hand."
+    }
+  ],
   "lodging": {
     "name": "Holiday Inn Express & Suites Paso Robles",
     "address": "2455 Riverside Ave, Paso Robles, CA 93446",

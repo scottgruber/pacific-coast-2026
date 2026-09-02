@@ -1,0 +1,49 @@
+{
+  "_comment": "Points on a route that matter for their own sake rather than as somewhere to stop. HAND-MAINTAINED - no script writes here. prepare_gpx.py strips every type=Milestone waypoint and rewrites them from this file on each run, so entries are idempotent and a hand-edited GPX is never the record. Coordinates should sit ON the track: a milestone is a course point the head unit shows as you reach it, not a destination. 'sym' is a Garmin symbol name. Day 4's are the SAG rendezvous plan; day 8's is the finish line.",
+  "4": [
+    {
+      "name": "SAG 1 — Jolon",
+      "lat": 35.96915,
+      "lon": -121.17629,
+      "sym": "Flag, Red",
+      "note": "Mission Road junction, a third of the way in. Nothing between here and mi 0.2."
+    },
+    {
+      "name": "SAG 2 — Lockwood",
+      "lat": 35.93678,
+      "lon": -121.08321,
+      "sym": "Flag, Red",
+      "note": "Lockwood Store and Diner, 67997 Jolon Rd, 0.03 mi off. The only shop in the middle 44 miles; Marin's Vineyard shares the premises."
+    },
+    {
+      "name": "SAG 3 — San Antonio River",
+      "lat": 35.89744,
+      "lon": -121.08964,
+      "sym": "Flag, Red",
+      "note": "The river crossing. Last chance before twenty empty miles."
+    },
+    {
+      "name": "SAG 4 — Lake Nacimiento",
+      "lat": 35.76327,
+      "lon": -120.8864,
+      "sym": "Flag, Red",
+      "note": "Turn for the resort, 0.5 mi off: restrooms and the Dragon Grill."
+    },
+    {
+      "name": "SAG 5 — Oak Hill Market",
+      "lat": 35.74454,
+      "lon": -120.87658,
+      "sym": "Flag, Red",
+      "note": "Heritage Ranch, 0.2 mi off. Water, and the last stop before Paso Robles."
+    }
+  ],
+  "8": [
+    {
+      "name": "FINISH LINE — Santa Monica Pier",
+      "lat": 34.009558,
+      "lon": -118.497175,
+      "sym": "Flag, Red",
+      "note": "The end of the ride. The track carries on 0.34 mi to the hotel."
+    }
+  ]
+}

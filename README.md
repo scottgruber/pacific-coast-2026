@@ -48,6 +48,7 @@ each number comes from, for readers rather than maintainers.
 │   ├── roster.json          riders + SAG crew          — HAND-MAINTAINED
 │   ├── notes.json           per-day highlights/cautions — HAND-MAINTAINED
 │   ├── lodging.json         the hotel for each night    — HAND-MAINTAINED
+│   ├── milestones.json      SAG points, the finish line — HAND-MAINTAINED
 │   └── manual-pois.json     stops OSM misses            — HAND-MAINTAINED
 ├── js/
 │   ├── config.js            Mapbox public token (see "Maps and the Mapbox token")
@@ -396,6 +397,35 @@ Anything past `MAX_OFFSET_MI` therefore prints its distance under the name
 same number before they got here. If a stop needs that line, it is worth asking
 whether it should be in the file at all: the two Santa Cruz wharf and West Cliff
 places are there because somebody asked for them by name, knowing the detour.
+
+## Milestones
+
+`data/milestones.json` holds points on a route that matter for their own sake
+rather than as somewhere to stop. Two kinds so far: day 4's SAG rendezvous plan,
+and the Santa Monica Pier, which is the finish line even though day 8's track
+carries on another third of a mile to the hotel.
+
+```json
+{ "4": [ { "name": "SAG 1 — Jolon", "lat": 0.0, "lon": 0.0,
+           "sym": "Flag, Red", "note": "..." } ] }
+```
+
+`prepare_gpx.py` strips every `type=Milestone` waypoint and rewrites them from
+this file on each run, exactly as it does start and finish. So entries are
+idempotent, and the JSON is the record — a hand-edited GPX never is. That
+matters because `add_services.py` rewrites the same files: the pier began as a
+hand edit and would have been lost the first time somebody regenerated the day.
+
+Put the coordinate **on the track**. A milestone is a course point the head unit
+raises as you reach it, not a destination — day 4's Lake Nacimiento marker sits
+at the turn, not at the resort half a mile off. `build_data.py` surfaces them
+unconditionally, unlike the landmark heuristic, which needs three waypoints
+before it shows any and would silently drop a lone one.
+
+Day 4's exist because that day is SAG-supported for water: nothing on it is
+tagged as drinking water until mi 64.3, and a three-mile-wide search of the
+Jolon corridor turns up one shop between mi 5 and mi 46. The five markers are
+where the car can meet the riders.
 
 ## Lodging
 

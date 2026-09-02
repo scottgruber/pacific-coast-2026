@@ -23,7 +23,14 @@ Four things, each fixing something that actually bites on the head unit:
 
 4. MARK START AND FINISH. A named waypoint at each end gives an obvious
    anchor on the map page and on the device.
+
+5. WRITE THE MILESTONES. data/milestones.json holds points that matter for
+   their own sake rather than as somewhere to stop — day 4's SAG rendezvous
+   plan, and the Santa Monica Pier, which is the finish line even though day 8
+   carries on to the hotel. Rewritten from the file each run, like start and
+   finish, so the JSON is the record and a hand-edited GPX never is.
 """
+import json
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -46,6 +53,17 @@ POI_BUDGET_WARN = 90
 # Garmin's own symbol names, so the device shows a real icon rather than a
 # generic pin. RWGPS passes <sym> through on export to a Garmin course.
 START_SYM, END_SYM = "Flag, Blue", "Flag, Green"
+MILESTONE_TYPE = "Milestone"
+MILESTONE_SYM = "Flag, Red"
+DATA_DIR = ROOT / "data"
+
+
+def milestones_for(day):
+    """Hand-picked course points for a day, from data/milestones.json."""
+    path = DATA_DIR / "milestones.json"
+    if not path.exists():
+        return []
+    return json.loads(path.read_text()).get(str(day), [])
 
 
 def haversine_mi(a, b):
@@ -99,6 +117,21 @@ def tidy(path, day):
         ET.SubElement(w, NS + "sym").text = sym
         ET.SubElement(w, NS + "type").text = kind
         wpts.insert(0 if kind == "Start" else len(wpts), w)
+
+    # 5. Milestones — same treatment as start and finish: stripped and rewritten,
+    # so re-running cannot stack them and the JSON stays the single record.
+    wpts = [w for w in wpts
+            if (w.findtext(NS + "type") or "") != MILESTONE_TYPE]
+    marks = milestones_for(day)
+    for m in marks:
+        w = ET.Element(NS + "wpt", {"lat": f"{m['lat']:.6f}", "lon": f"{m['lon']:.6f}"})
+        ET.SubElement(w, NS + "name").text = m["name"]
+        if m.get("note"):
+            ET.SubElement(w, NS + "cmt").text = f"{m['note']} Added by hand."
+        ET.SubElement(w, NS + "desc").text = MILESTONE_TYPE
+        ET.SubElement(w, NS + "sym").text = m.get("sym", MILESTONE_SYM)
+        ET.SubElement(w, NS + "type").text = MILESTONE_TYPE
+        wpts.append(w)
 
     for w in root.findall(NS + "wpt"):
         root.remove(w)
