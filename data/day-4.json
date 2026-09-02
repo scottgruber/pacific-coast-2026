@@ -6802,6 +6802,16 @@
       "detour_mi": null
     },
     {
+      "lat": 35.93715,
+      "lon": -121.0825,
+      "name": "Marin's Vineyard and Tasting Room (mi 26.7)",
+      "type": "Winery",
+      "label": "Marin's Vineyard and Tasting Room",
+      "mile": 26.7,
+      "hand_picked": true,
+      "detour_mi": null
+    },
+    {
       "lat": 35.759312,
       "lon": -120.899474,
       "name": "Toilets (mi 48.3)",
@@ -6852,14 +6862,14 @@
       "detour_mi": null
     },
     {
-      "lat": 35.644815,
-      "lon": -120.693305,
-      "name": "Senior Sanchos (mi 64.2)",
+      "lat": 35.627876,
+      "lon": -120.690638,
+      "name": "Kreuzberg Coffee Company (mi 64.3)",
       "type": "Food",
-      "label": "Senior Sanchos",
-      "mile": 64.2,
+      "label": "Kreuzberg Coffee Company",
+      "mile": 64.3,
       "hand_picked": false,
-      "detour_mi": 0.4
+      "detour_mi": 0.8
     },
     {
       "lat": 35.626219,

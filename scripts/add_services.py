@@ -599,7 +599,13 @@ def main():
 
         if day not in WINERY_DAYS:
             before = len(services)
-            services = [s for s in services if s["type"] != WINERY_TYPE]
+            # A hand-picked entry survives this the way it survives thinning:
+            # the rule exists to stop a scrape steering a rider toward a tasting
+            # room on a hot day, not to overrule somebody who chose one. Marin's
+            # on day 4 is listed because it shares premises with the only shop
+            # in forty-four miles, which is a reason no category rule can see.
+            services = [s for s in services
+                        if s["type"] != WINERY_TYPE or s.get("manual")]
             if before != len(services):
                 print(f"  day {day}: dropped {before - len(services)} winery/bar")
         services.sort(key=lambda s: s["mile"])

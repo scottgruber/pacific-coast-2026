@@ -330,6 +330,11 @@ SERVICE_WAYPOINT_TYPES = _service_types()
 # They are already the ends of the drawn line, so they are not marked again.
 ENDPOINT_WAYPOINT_TYPES = {"Start", "Finish"}
 TURN_CUE_WAYPOINT_TYPES = {"Dot"}
+# A place on the route that matters for its own sake rather than as somewhere to
+# stop — the Santa Monica Pier is the finish line even though day 8 carries on
+# another third of a mile to the hotel. Always shown: unlike the landmark
+# heuristic below, a milestone is there because somebody put it there.
+MILESTONE_WAYPOINT_TYPES = {"Milestone"}
 
 
 def longest_water_gap(pts, services):
@@ -455,11 +460,14 @@ def build_day(n):
         w["detour_mi"] = far_off_route(cmt)
         services.append(w)
     services.sort(key=lambda x: x["mile"])
+    milestones = [w for w in waypoints
+                  if w["type"] in MILESTONE_WAYPOINT_TYPES]
     landmarks = [w for w in waypoints
                  if w["type"] not in SERVICE_WAYPOINT_TYPES
                  and w["type"] not in ENDPOINT_WAYPOINT_TYPES
-                 and w["type"] not in TURN_CUE_WAYPOINT_TYPES]
-    mid_waypoints = landmarks[1:-1] if len(landmarks) > 2 else []
+                 and w["type"] not in TURN_CUE_WAYPOINT_TYPES
+                 and w["type"] not in MILESTONE_WAYPOINT_TYPES]
+    mid_waypoints = milestones + (landmarks[1:-1] if len(landmarks) > 2 else [])
     options = [build_route_option(o) for o in ROUTE_OPTIONS.get(n, [])]
     date = TRIP_START + datetime.timedelta(days=n - 1)
     data = {
