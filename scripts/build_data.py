@@ -68,21 +68,7 @@ GPX_FILES = {
 # the options can be compared before one is committed to.
 # Day 3 is settled on River Road and no longer lists options; the Carmel
 # Valley track stays in gpx/ as the record of what it was weighed against.
-ROUTE_OPTIONS = {
-    5: [
-        {"label": "Via Santa Rita and Los Osos",
-         "file": "Day-5-Paso_Robles_to_Oceano-via-Santa-Rita-and-Los-Osos.gpx",
-         "note": "Back roads over the 46 West ridge and down Santa Rita, then "
-                 "Los Osos Valley Road to the coast. Steeper: the worst half "
-                 "mile averages 9.9%, and about a mile of the day sits at 9% "
-                 "or more. Skips Atascadero and San Luis Obispo."},
-        {"label": "Highway 41",
-         "file": "Day-5-Paso_Robles_to_Oceano.gpx",
-         "note": "Same coastal half, but crosses on Highway 41 via Atascadero. "
-                 "Steadier — the worst half mile averages 7.5% — at the cost "
-                 "of ~19 mi on highways."},
-    ],
-}
+ROUTE_OPTIONS = {}
 
 PENDING_DAYS = []
 ALL_DAYS = sorted(set(GPX_FILES) | set(PENDING_DAYS))

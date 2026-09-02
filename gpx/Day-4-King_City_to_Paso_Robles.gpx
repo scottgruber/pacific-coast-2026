@@ -7,9 +7,351 @@
     </link>
     <time>2024-12-06T12:58:12Z</time>
   </metadata>
-  <wpt lat="36.20565" lon="-121.14967"><name>START — King City</name><sym>Flag, Blue</sym><type>Start</type></wpt><wpt lat="36.206843" lon="-121.148423"><name>Picnic Area B (mi 0.2)</name><cmt>Picnic at mile 0.2, 0.05 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Picnic</desc><sym>Picnic Area</sym><type>Picnic</type></wpt><wpt lat="36.206815" lon="-121.147410"><name>King City Station (mi 0.3)</name><cmt>Historic at mile 0.3, 0.02 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Historic</desc><sym>Museum</sym><type>Historic</type></wpt><wpt lat="36.222152" lon="-121.129110"><name>Railroad Park (mi 0.4)</name><cmt>Park at mile 0.4, 1.43 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Park</desc><sym>Park</sym><type>Park</type></wpt><wpt lat="36.209638" lon="-121.141567"><name>Toilets (mi 0.4)</name><cmt>Toilets at mile 0.4, 0.32 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="36.217633" lon="-121.124956"><name>Store (mi 0.7)</name><cmt>Store at mile 0.7, 1.36 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Store</desc><sym>Convenience Store</sym><type>Store</type></wpt><wpt lat="36.213209" lon="-121.126375"><name>California Gourmet Pizza (mi 0.7)</name><cmt>Food at mile 0.7, 1.11 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Food</desc><sym>Restaurant</sym><type>Food</type></wpt><wpt lat="35.937148" lon="-121.082500"><name>Lockwood Store and Diner (mi 25.0)</name><cmt>Store at mile 25.0, 0.03 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Store</desc><sym>Convenience Store</sym><type>Store</type></wpt><wpt lat="35.759312" lon="-120.899474"><name>Toilets (mi 46.5)</name><cmt>Toilets at mile 46.5, 0.78 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="35.757525" lon="-120.901522"><name>Nacimiento Resort Dragon Grill (mi 46.8)</name><cmt>Food at mile 46.8, 0.92 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Food</desc><sym>Restaurant</sym><type>Food</type></wpt><wpt lat="35.741410" lon="-120.876376"><name>Oak Hill Market (mi 48.2)</name><cmt>Store at mile 48.2, 0.22 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Store</desc><sym>Shopping Center</sym><type>Store</type></wpt><wpt lat="35.650557" lon="-120.695655"><name>Toilets (mi 61.8)</name><cmt>Toilets at mile 61.8, 0.63 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="35.627876" lon="-120.690638"><name>Kreuzberg Coffee Company (mi 62.5)</name><cmt>Food at mile 62.5, 0.77 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Food</desc><sym>Restaurant</sym><type>Food</type></wpt><wpt lat="35.643568" lon="-120.687904"><name>Grocery Outlet (mi 62.5)</name><cmt>Store at mile 62.5, 0.40 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Store</desc><sym>Shopping Center</sym><type>Store</type></wpt><wpt lat="35.626219" lon="-120.690270"><name>Water (mi 62.5)</name><cmt>Water at mile 62.5, 0.89 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="35.63898" lon="-120.69243"><name>FINISH — Paso Robles</name><sym>Flag, Green</sym><type>Finish</type></wpt><trk>
+  <wpt lat="36.20197" lon="-121.12821"><name>START — King City</name><sym>Flag, Blue</sym><type>Start</type></wpt><wpt lat="36.206843" lon="-121.148423"><name>Picnic Area B (mi 0.2)</name><cmt>Picnic at mile 0.2, 0.05 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Picnic</desc><sym>Picnic Area</sym><type>Picnic</type></wpt><wpt lat="36.200472" lon="-121.127738"><name>Forden Park (mi 0.0)</name><cmt>Park at mile 0.0, 0.10 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Park</desc><sym>Park</sym><type>Park</type></wpt><wpt lat="36.202403" lon="-121.128833"><name>Shell (mi 0.0)</name><cmt>Store at mile 0.0, 0.05 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Store</desc><sym>Convenience Store</sym><type>Store</type></wpt><wpt lat="36.202537" lon="-121.127967"><name>The Rustic Barrel (mi 0.0)</name><cmt>Food at mile 0.0, 0.04 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Food</desc><sym>Restaurant</sym><type>Food</type></wpt><wpt lat="36.204584" lon="-121.126926"><name>Toilets (mi 0.2)</name><cmt>Toilets at mile 0.2, 0.17 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="36.205021" lon="-121.146279"><name>Avenue of Honor (mi 1.2)</name><cmt>Historic at mile 1.2, 0.08 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Historic</desc><sym>Museum</sym><type>Historic</type></wpt><wpt lat="35.937148" lon="-121.082500"><name>Lockwood Store and Diner (mi 26.7)</name><cmt>Store at mile 26.7, 0.03 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Store</desc><sym>Convenience Store</sym><type>Store</type></wpt><wpt lat="35.759312" lon="-120.899474"><name>Toilets (mi 48.3)</name><cmt>Toilets at mile 48.3, 0.78 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="35.757525" lon="-120.901522"><name>Nacimiento Resort Dragon Grill (mi 48.6)</name><cmt>Food at mile 48.6, 0.92 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Food</desc><sym>Restaurant</sym><type>Food</type></wpt><wpt lat="35.741410" lon="-120.876376"><name>Oak Hill Market (mi 50.0)</name><cmt>Store at mile 50.0, 0.22 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Store</desc><sym>Shopping Center</sym><type>Store</type></wpt><wpt lat="35.650557" lon="-120.695655"><name>Toilets (mi 63.5)</name><cmt>Toilets at mile 63.5, 0.63 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Toilets</desc><sym>Restroom</sym><type>Toilets</type></wpt><wpt lat="35.638703" lon="-120.692937"><name>7-Eleven (mi 64.2)</name><cmt>Store at mile 64.2, 0.03 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Store</desc><sym>Convenience Store</sym><type>Store</type></wpt><wpt lat="35.644815" lon="-120.693305"><name>Senior Sanchos (mi 64.2)</name><cmt>Food at mile 64.2, 0.39 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Food</desc><sym>Restaurant</sym><type>Food</type></wpt><wpt lat="35.626219" lon="-120.690270"><name>Water (mi 64.3)</name><cmt>Water at mile 64.3, 0.89 mi off route. Mapped in OpenStreetMap; not verified on the ground.</cmt><desc>Water</desc><sym>Drinking Water</sym><type>Water</type></wpt><wpt lat="35.64055" lon="-120.68881"><name>FINISH — Paso Robles</name><sym>Flag, Green</sym><type>Finish</type></wpt><trk>
     <name>Day 4: King City to Paso Robles</name>
     <trkseg>
+      <trkpt lat="36.20197" lon="-121.12821">
+        <ele>97.0</ele>
+      </trkpt>
+      <trkpt lat="36.20175" lon="-121.12863">
+        <ele>97.0</ele>
+      </trkpt>
+      <trkpt lat="36.20173" lon="-121.12868">
+        <ele>97.2</ele>
+      </trkpt>
+      <trkpt lat="36.20170" lon="-121.12874">
+        <ele>97.2</ele>
+      </trkpt>
+      <trkpt lat="36.20207" lon="-121.12894">
+        <ele>98.0</ele>
+      </trkpt>
+      <trkpt lat="36.20222" lon="-121.12901">
+        <ele>98.2</ele>
+      </trkpt>
+      <trkpt lat="36.20238" lon="-121.12909">
+        <ele>98.0</ele>
+      </trkpt>
+      <trkpt lat="36.20245" lon="-121.12912">
+        <ele>98.0</ele>
+      </trkpt>
+      <trkpt lat="36.20284" lon="-121.12931">
+        <ele>98.2</ele>
+      </trkpt>
+      <trkpt lat="36.20328" lon="-121.12954">
+        <ele>98.4</ele>
+      </trkpt>
+      <trkpt lat="36.20372" lon="-121.12977">
+        <ele>98.5</ele>
+      </trkpt>
+      <trkpt lat="36.20403" lon="-121.12996">
+        <ele>98.0</ele>
+      </trkpt>
+      <trkpt lat="36.20439" lon="-121.13021">
+        <ele>98.0</ele>
+      </trkpt>
+      <trkpt lat="36.20461" lon="-121.13036">
+        <ele>97.8</ele>
+      </trkpt>
+      <trkpt lat="36.20491" lon="-121.13058">
+        <ele>97.2</ele>
+      </trkpt>
+      <trkpt lat="36.20499" lon="-121.13063">
+        <ele>97.2</ele>
+      </trkpt>
+      <trkpt lat="36.20496" lon="-121.13077">
+        <ele>97.0</ele>
+      </trkpt>
+      <trkpt lat="36.20484" lon="-121.13101">
+        <ele>97.2</ele>
+      </trkpt>
+      <trkpt lat="36.20480" lon="-121.13111">
+        <ele>97.2</ele>
+      </trkpt>
+      <trkpt lat="36.20479" lon="-121.13117">
+        <ele>97.5</ele>
+      </trkpt>
+      <trkpt lat="36.20477" lon="-121.13125">
+        <ele>97.5</ele>
+      </trkpt>
+      <trkpt lat="36.20479" lon="-121.13140">
+        <ele>97.5</ele>
+      </trkpt>
+      <trkpt lat="36.20479" lon="-121.13148">
+        <ele>97.2</ele>
+      </trkpt>
+      <trkpt lat="36.20481" lon="-121.13160">
+        <ele>97.2</ele>
+      </trkpt>
+      <trkpt lat="36.20487" lon="-121.13215">
+        <ele>96.5</ele>
+      </trkpt>
+      <trkpt lat="36.20494" lon="-121.13273">
+        <ele>96.0</ele>
+      </trkpt>
+      <trkpt lat="36.20494" lon="-121.13278">
+        <ele>96.0</ele>
+      </trkpt>
+      <trkpt lat="36.20499" lon="-121.13284">
+        <ele>96.0</ele>
+      </trkpt>
+      <trkpt lat="36.20500" lon="-121.13285">
+        <ele>96.0</ele>
+      </trkpt>
+      <trkpt lat="36.20518" lon="-121.13306">
+        <ele>96.2</ele>
+      </trkpt>
+      <trkpt lat="36.20525" lon="-121.13315">
+        <ele>96.2</ele>
+      </trkpt>
+      <trkpt lat="36.20529" lon="-121.13322">
+        <ele>96.2</ele>
+      </trkpt>
+      <trkpt lat="36.20533" lon="-121.13330">
+        <ele>96.2</ele>
+      </trkpt>
+      <trkpt lat="36.20536" lon="-121.13342">
+        <ele>96.2</ele>
+      </trkpt>
+      <trkpt lat="36.20538" lon="-121.13376">
+        <ele>96.5</ele>
+      </trkpt>
+      <trkpt lat="36.20539" lon="-121.13384">
+        <ele>96.5</ele>
+      </trkpt>
+      <trkpt lat="36.20542" lon="-121.13392">
+        <ele>96.2</ele>
+      </trkpt>
+      <trkpt lat="36.20571" lon="-121.13439">
+        <ele>96.9</ele>
+      </trkpt>
+      <trkpt lat="36.20599" lon="-121.13486">
+        <ele>97.5</ele>
+      </trkpt>
+      <trkpt lat="36.20623" lon="-121.13525">
+        <ele>97.0</ele>
+      </trkpt>
+      <trkpt lat="36.20641" lon="-121.13554">
+        <ele>96.5</ele>
+      </trkpt>
+      <trkpt lat="36.20658" lon="-121.13580">
+        <ele>96.0</ele>
+      </trkpt>
+      <trkpt lat="36.20658" lon="-121.13582">
+        <ele>96.0</ele>
+      </trkpt>
+      <trkpt lat="36.20664" lon="-121.13590">
+        <ele>95.8</ele>
+      </trkpt>
+      <trkpt lat="36.20644" lon="-121.13616">
+        <ele>95.8</ele>
+      </trkpt>
+      <trkpt lat="36.20623" lon="-121.13645">
+        <ele>95.8</ele>
+      </trkpt>
+      <trkpt lat="36.20611" lon="-121.13660">
+        <ele>95.5</ele>
+      </trkpt>
+      <trkpt lat="36.20582" lon="-121.13700">
+        <ele>95.8</ele>
+      </trkpt>
+      <trkpt lat="36.20558" lon="-121.13732">
+        <ele>95.5</ele>
+      </trkpt>
+      <trkpt lat="36.20539" lon="-121.13760">
+        <ele>95.0</ele>
+      </trkpt>
+      <trkpt lat="36.20516" lon="-121.13792">
+        <ele>94.0</ele>
+      </trkpt>
+      <trkpt lat="36.20510" lon="-121.13806">
+        <ele>93.5</ele>
+      </trkpt>
+      <trkpt lat="36.20504" lon="-121.13829">
+        <ele>93.0</ele>
+      </trkpt>
+      <trkpt lat="36.20496" lon="-121.13854">
+        <ele>93.0</ele>
+      </trkpt>
+      <trkpt lat="36.20494" lon="-121.13859">
+        <ele>93.0</ele>
+      </trkpt>
+      <trkpt lat="36.20485" lon="-121.13890">
+        <ele>93.0</ele>
+      </trkpt>
+      <trkpt lat="36.20477" lon="-121.13912">
+        <ele>93.2</ele>
+      </trkpt>
+      <trkpt lat="36.20462" lon="-121.13958">
+        <ele>92.5</ele>
+      </trkpt>
+      <trkpt lat="36.20452" lon="-121.13989">
+        <ele>91.5</ele>
+      </trkpt>
+      <trkpt lat="36.20437" lon="-121.14026">
+        <ele>91.0</ele>
+      </trkpt>
+      <trkpt lat="36.20418" lon="-121.14062">
+        <ele>91.0</ele>
+      </trkpt>
+      <trkpt lat="36.20399" lon="-121.14094">
+        <ele>90.2</ele>
+      </trkpt>
+      <trkpt lat="36.20393" lon="-121.14110">
+        <ele>90.0</ele>
+      </trkpt>
+      <trkpt lat="36.20387" lon="-121.14131">
+        <ele>90.0</ele>
+      </trkpt>
+      <trkpt lat="36.20383" lon="-121.14150">
+        <ele>90.0</ele>
+      </trkpt>
+      <trkpt lat="36.20381" lon="-121.14167">
+        <ele>90.0</ele>
+      </trkpt>
+      <trkpt lat="36.20381" lon="-121.14207">
+        <ele>90.0</ele>
+      </trkpt>
+      <trkpt lat="36.20381" lon="-121.14248">
+        <ele>90.0</ele>
+      </trkpt>
+      <trkpt lat="36.20382" lon="-121.14287">
+        <ele>89.8</ele>
+      </trkpt>
+      <trkpt lat="36.20386" lon="-121.14322">
+        <ele>89.5</ele>
+      </trkpt>
+      <trkpt lat="36.20391" lon="-121.14353">
+        <ele>90.0</ele>
+      </trkpt>
+      <trkpt lat="36.20401" lon="-121.14406">
+        <ele>91.2</ele>
+      </trkpt>
+      <trkpt lat="36.20409" lon="-121.14440">
+        <ele>91.8</ele>
+      </trkpt>
+      <trkpt lat="36.20412" lon="-121.14449">
+        <ele>92.0</ele>
+      </trkpt>
+      <trkpt lat="36.20418" lon="-121.14455">
+        <ele>92.2</ele>
+      </trkpt>
+      <trkpt lat="36.20425" lon="-121.14459">
+        <ele>92.5</ele>
+      </trkpt>
+      <trkpt lat="36.20439" lon="-121.14464">
+        <ele>92.8</ele>
+      </trkpt>
+      <trkpt lat="36.20466" lon="-121.14471">
+        <ele>93.0</ele>
+      </trkpt>
+      <trkpt lat="36.20497" lon="-121.14480">
+        <ele>93.8</ele>
+      </trkpt>
+      <trkpt lat="36.20517" lon="-121.14487">
+        <ele>93.8</ele>
+      </trkpt>
+      <trkpt lat="36.20537" lon="-121.14499">
+        <ele>93.5</ele>
+      </trkpt>
+      <trkpt lat="36.20577" lon="-121.14525">
+        <ele>93.1</ele>
+      </trkpt>
+      <trkpt lat="36.20617" lon="-121.14552">
+        <ele>92.8</ele>
+      </trkpt>
+      <trkpt lat="36.20627" lon="-121.14560">
+        <ele>92.5</ele>
+      </trkpt>
+      <trkpt lat="36.20637" lon="-121.14570">
+        <ele>92.2</ele>
+      </trkpt>
+      <trkpt lat="36.20643" lon="-121.14578">
+        <ele>92.2</ele>
+      </trkpt>
+      <trkpt lat="36.20651" lon="-121.14589">
+        <ele>91.8</ele>
+      </trkpt>
+      <trkpt lat="36.20664" lon="-121.14613">
+        <ele>91.2</ele>
+      </trkpt>
+      <trkpt lat="36.20676" lon="-121.14640">
+        <ele>91.5</ele>
+      </trkpt>
+      <trkpt lat="36.20686" lon="-121.14664">
+        <ele>91.5</ele>
+      </trkpt>
+      <trkpt lat="36.20698" lon="-121.14697">
+        <ele>91.5</ele>
+      </trkpt>
+      <trkpt lat="36.20710" lon="-121.14734">
+        <ele>91.5</ele>
+      </trkpt>
+      <trkpt lat="36.20715" lon="-121.14755">
+        <ele>91.5</ele>
+      </trkpt>
+      <trkpt lat="36.20717" lon="-121.14777">
+        <ele>91.2</ele>
+      </trkpt>
+      <trkpt lat="36.20721" lon="-121.14821">
+        <ele>91.2</ele>
+      </trkpt>
+      <trkpt lat="36.20724" lon="-121.14865">
+        <ele>91.2</ele>
+      </trkpt>
+      <trkpt lat="36.20725" lon="-121.14879">
+        <ele>91.5</ele>
+      </trkpt>
+      <trkpt lat="36.20724" lon="-121.14906">
+        <ele>92.0</ele>
+      </trkpt>
+      <trkpt lat="36.20723" lon="-121.14925">
+        <ele>92.2</ele>
+      </trkpt>
+      <trkpt lat="36.20721" lon="-121.14939">
+        <ele>92.2</ele>
+      </trkpt>
+      <trkpt lat="36.20718" lon="-121.14953">
+        <ele>92.5</ele>
+      </trkpt>
+      <trkpt lat="36.20712" lon="-121.14972">
+        <ele>92.8</ele>
+      </trkpt>
+      <trkpt lat="36.20709" lon="-121.14983">
+        <ele>93.0</ele>
+      </trkpt>
+      <trkpt lat="36.20697" lon="-121.15018">
+        <ele>93.5</ele>
+      </trkpt>
+      <trkpt lat="36.20684" lon="-121.15050">
+        <ele>93.0</ele>
+      </trkpt>
+      <trkpt lat="36.20678" lon="-121.15063">
+        <ele>92.8</ele>
+      </trkpt>
+      <trkpt lat="36.20669" lon="-121.15083">
+        <ele>92.0</ele>
+      </trkpt>
+      <trkpt lat="36.20660" lon="-121.15080">
+        <ele>92.0</ele>
+      </trkpt>
+      <trkpt lat="36.20635" lon="-121.15055">
+        <ele>93.0</ele>
+      </trkpt>
+      <trkpt lat="36.20624" lon="-121.15044">
+        <ele>93.2</ele>
+      </trkpt>
+      <trkpt lat="36.20603" lon="-121.15020">
+        <ele>93.5</ele>
+      </trkpt>
+      <trkpt lat="36.20581" lon="-121.14997">
+        <ele>93.8</ele>
+      </trkpt>
+      <trkpt lat="36.20576" lon="-121.14990">
+        <ele>93.8</ele>
+      </trkpt>
+      <trkpt lat="36.20573" lon="-121.14984">
+        <ele>93.5</ele>
+      </trkpt>
       <trkpt lat="36.20565" lon="-121.14967">
         <ele>86.8</ele>
       </trkpt>
@@ -5085,6 +5427,75 @@
       </trkpt>
       <trkpt lat="35.63898" lon="-120.69243">
         <ele>227.9</ele>
+      </trkpt>
+      <trkpt lat="35.63905" lon="-120.69244">
+        <ele>231.8</ele>
+      </trkpt>
+      <trkpt lat="35.63916" lon="-120.69244">
+        <ele>231.8</ele>
+      </trkpt>
+      <trkpt lat="35.63917" lon="-120.69232">
+        <ele>231.8</ele>
+      </trkpt>
+      <trkpt lat="35.63918" lon="-120.69203">
+        <ele>231.2</ele>
+      </trkpt>
+      <trkpt lat="35.63919" lon="-120.69186">
+        <ele>231.0</ele>
+      </trkpt>
+      <trkpt lat="35.63922" lon="-120.69137">
+        <ele>230.0</ele>
+      </trkpt>
+      <trkpt lat="35.63923" lon="-120.69116">
+        <ele>229.5</ele>
+      </trkpt>
+      <trkpt lat="35.63923" lon="-120.69109">
+        <ele>229.2</ele>
+      </trkpt>
+      <trkpt lat="35.63927" lon="-120.69048">
+        <ele>226.5</ele>
+      </trkpt>
+      <trkpt lat="35.63930" lon="-120.68986">
+        <ele>223.8</ele>
+      </trkpt>
+      <trkpt lat="35.63933" lon="-120.68945">
+        <ele>221.8</ele>
+      </trkpt>
+      <trkpt lat="35.63937" lon="-120.68919">
+        <ele>220.5</ele>
+      </trkpt>
+      <trkpt lat="35.63942" lon="-120.68900">
+        <ele>219.8</ele>
+      </trkpt>
+      <trkpt lat="35.63959" lon="-120.68847">
+        <ele>219.8</ele>
+      </trkpt>
+      <trkpt lat="35.63967" lon="-120.68828">
+        <ele>219.5</ele>
+      </trkpt>
+      <trkpt lat="35.63977" lon="-120.68811">
+        <ele>219.2</ele>
+      </trkpt>
+      <trkpt lat="35.64003" lon="-120.68817">
+        <ele>220.2</ele>
+      </trkpt>
+      <trkpt lat="35.64006" lon="-120.68818">
+        <ele>220.2</ele>
+      </trkpt>
+      <trkpt lat="35.64041" lon="-120.68825">
+        <ele>219.8</ele>
+      </trkpt>
+      <trkpt lat="35.64057" lon="-120.68828">
+        <ele>219.5</ele>
+      </trkpt>
+      <trkpt lat="35.64054" lon="-120.68854">
+        <ele>219.5</ele>
+      </trkpt>
+      <trkpt lat="35.64054" lon="-120.68862">
+        <ele>219.5</ele>
+      </trkpt>
+      <trkpt lat="35.64055" lon="-120.68881">
+        <ele>219.5</ele>
       </trkpt>
     </trkseg>
   </trk>

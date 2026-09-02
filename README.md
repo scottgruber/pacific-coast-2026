@@ -264,13 +264,15 @@ where the route isn't settled. The file named in `GPX_FILES` is the primary —
 it drives the day's headline stats and elevation chart, and draws as the solid
 line. Everything else in `ROUTE_OPTIONS` draws dashed and gets its own download
 button and distance/climbing summary, so the options can be compared before one
-is committed to. Day 5 carries two. Day 3 did until River Road was
-settled on; its Carmel Valley track moved to `gpx/unused/` as the record of
-what that choice was made against, but the day no longer offers it.
+is committed to. It is currently empty: every day is settled. Day 3 carried
+two until River Road was chosen, and day 5 until Santa Rita and Los Osos was;
+both losing tracks moved to `gpx/unused/` as the record of what the choice was
+made against, but neither day offers them.
 
 `gpx/unused/` holds every track the site does not offer — the original Big Sur
 coast routing for days 3–5, closed by fire and kept in case the coast reopens,
-and day 3's Carmel Valley line. The deploy excludes that directory, so `gpx/`'s
+day 3's Carmel Valley line, and day 5's Highway 41 line. The deploy excludes
+that directory, so `gpx/`'s
 top level is exactly what gets published, and moving a track into `unused/` is
 all it takes to withdraw it from the site. Tracks superseded for ordinary
 routing reasons can still just be deleted — `Day-5-…-Alt-Quieter.gpx` was
