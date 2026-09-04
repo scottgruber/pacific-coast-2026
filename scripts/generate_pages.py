@@ -166,9 +166,13 @@ def asset(rel):
 
 
 # Order the stops list by what a rider needs first, not alphabetically.
-# Four boxes, not eight. Park, Scenic and Historic were three thin columns that
+# Three boxes, not eight. Park, Scenic and Historic were three thin columns that
 # said the same thing - somewhere worth getting off the bike for - and a day with
-# one of each rendered three near-empty cards.
+# one of each rendered three near-empty cards. Tasting rooms sit with food rather
+# than with shops: day 6 is the only day carrying any, and a tasting room is
+# somewhere you stop and are served, not somewhere you buy provisions. That makes
+# every day three boxes, so the row is never ragged. The card is "Food & drink"
+# because "coffee" stopped covering what is in it.
 #
 # Water and Toilets are deliberately absent. They are the longest lists on most
 # days and the least worth reading in advance: a tap is something you find when
@@ -183,8 +187,7 @@ def asset(rel):
 # check this list first if a category disappears from a page.
 SERVICE_GROUPS = [
     ("Store", "Shops &amp; markets", ("Store",)),
-    ("Food", "Food &amp; coffee", ("Food",)),
-    ("Winery", "Wine tasting", ("Winery",)),
+    ("Food", "Food &amp; drink", ("Food", "Winery")),
     ("Seeing", "Worth a look", ("Park", "Scenic", "Historic")),
 ]
 

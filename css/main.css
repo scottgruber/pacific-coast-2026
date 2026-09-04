@@ -1447,10 +1447,9 @@ html.metric .unit-pair__metric {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
-/* Three categories most days, four where there are tasting rooms. Pinning to
-   three columns rather than letting auto-fit size them means a three-box day
-   fills the row exactly and a four-box day reads as 3 + 1, instead of the
-   columns changing width from one day to the next. */
+/* Three categories, every day. Pinning to three columns rather than letting
+   auto-fit size them means the row fills exactly and the columns are the same
+   width from one day to the next. */
 @media (min-width: 62em) {
   .stops__groups {
     grid-template-columns: repeat(3, 1fr);

@@ -5867,16 +5867,6 @@
       "detour_mi": null
     },
     {
-      "lat": 35.048084,
-      "lon": -120.525838,
-      "name": "Food (mi 8.7)",
-      "type": "Food",
-      "label": "Food",
-      "mile": 8.7,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 34.996229,
       "lon": -120.436301,
       "name": "Rancho Nipomo (mi 16.1)",
@@ -5914,16 +5904,6 @@
       "label": "Foxen Winery",
       "mile": 36.2,
       "hand_picked": true,
-      "detour_mi": null
-    },
-    {
-      "lat": 34.730777,
-      "lon": -120.129358,
-      "name": "Koehler Vinyard (mi 47.4)",
-      "type": "Winery",
-      "label": "Koehler Vinyard",
-      "mile": 47.4,
-      "hand_picked": false,
       "detour_mi": null
     },
     {
