@@ -672,7 +672,7 @@ html.metric .unit-pair__metric {
 }
 
 /* Only rendered when the route stops short of the door, so it is a fact about
-   the ride rather than a footnote — give it the accent the water card uses. */
+   the ride rather than a footnote — give it the accent rather than plain grey. */
 .lodging__gap {
   color: var(--color-accent-rust);
 }
@@ -1447,9 +1447,10 @@ html.metric .unit-pair__metric {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
-/* Five categories, so once there is room, pin the grid to three columns rather
-   than letting auto-fit pack four uneven ones in. Five boxes then read as 3 + 2
-   instead of a ragged last row. */
+/* Three categories most days, four where there are tasting rooms. Pinning to
+   three columns rather than letting auto-fit size them means a three-box day
+   fills the row exactly and a four-box day reads as 3 + 1, instead of the
+   columns changing width from one day to the next. */
 @media (min-width: 62em) {
   .stops__groups {
     grid-template-columns: repeat(3, 1fr);

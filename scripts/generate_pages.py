@@ -166,14 +166,22 @@ def asset(rel):
 
 
 # Order the stops list by what a rider needs first, not alphabetically.
-# Five boxes, not eight. Park, Scenic and Historic were three thin columns that
-# said the same thing - somewhere worth getting off the bike for - and a day
-# with one of each rendered three near-empty cards. Water and restrooms pair for
-# the same reason: you look for them on the same errand. Every type in the data
-# must appear in exactly one group here or it is silently dropped from the page.
-# The types stay distinct in the GPX and in day-N.json; only the page groups them.
+# Four boxes, not eight. Park, Scenic and Historic were three thin columns that
+# said the same thing - somewhere worth getting off the bike for - and a day with
+# one of each rendered three near-empty cards.
+#
+# Water and Toilets are deliberately absent. They are the longest lists on most
+# days and the least worth reading in advance: a tap is something you find when
+# you need one, not something you plan around, and forty rows of "Water" and
+# "Toilets" pushed the stops worth choosing off the screen. They are still
+# collected by add_services.py, still written into the GPX as waypoints, and
+# still in data/day-N.json - so a head unit shows them on the road even though
+# the page does not list them. The note under the heading says so.
+#
+# A type left out of this list is simply not shown. That is intentional here;
+# it was not when restrooms went missing by accident in an earlier build, so
+# check this list first if a category disappears from a page.
 SERVICE_GROUPS = [
-    ("Water", "Water &amp; restrooms", ("Water", "Toilets")),
     ("Store", "Shops &amp; markets", ("Store",)),
     ("Food", "Food &amp; coffee", ("Food",)),
     ("Winery", "Wine tasting", ("Winery",)),
