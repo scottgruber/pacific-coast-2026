@@ -29,7 +29,8 @@ each number comes from, for readers rather than maintainers.
 │   │                         reference track this route is loosely based on
 │   └── unused/              tracks the site does not offer: the superseded Big
 │                             Sur coast routing for days 3-5, kept in case the
-│                             road reopens, and day 3's Carmel Valley line.
+│                             road reopens, day 3's Carmel Valley line, and the
+│                             two day 4 lines the Salinas Valley route replaced.
 │                             Excluded from the deploy, so nothing here is
 │                             published
 ├── api/
@@ -325,7 +326,9 @@ made against, but neither day offers them.
 
 `gpx/unused/` holds every track the site does not offer — the original Big Sur
 coast routing for days 3–5, closed by fire and kept in case the coast reopens,
-day 3's Carmel Valley line, and day 5's Highway 41 line. The deploy excludes
+day 3's Carmel Valley line, day 5's Highway 41 line, and the two day 4 lines the
+Salinas Valley route replaced: the Jolon and Nacimiento backcountry routing that
+was primary until Sep 2026, and the SRRC club track weighed against it. The deploy excludes
 that directory, so `gpx/`'s
 top level is exactly what gets published, and moving a track into `unused/` is
 all it takes to withdraw it from the site. Tracks superseded for ordinary
@@ -401,12 +404,12 @@ places are there because somebody asked for them by name, knowing the detour.
 ## Milestones
 
 `data/milestones.json` holds points on a route that matter for their own sake
-rather than as somewhere to stop. Two kinds so far: day 4's SAG rendezvous plan,
-and the Santa Monica Pier, which is the finish line even though day 8's track
-carries on another third of a mile to the hotel.
+rather than as somewhere to stop. One kind is in the file now: the Santa Monica
+Pier, which is the finish line even though day 8's track carries on another
+third of a mile to the hotel.
 
 ```json
-{ "4": [ { "name": "SAG 1 — Jolon", "lat": 0.0, "lon": 0.0,
+{ "8": [ { "name": "FINISH LINE — Santa Monica Pier", "lat": 0.0, "lon": 0.0,
            "sym": "Flag, Red", "note": "..." } ] }
 ```
 
@@ -417,15 +420,16 @@ matters because `add_services.py` rewrites the same files: the pier began as a
 hand edit and would have been lost the first time somebody regenerated the day.
 
 Put the coordinate **on the track**. A milestone is a course point the head unit
-raises as you reach it, not a destination — day 4's Lake Nacimiento marker sits
-at the turn, not at the resort half a mile off. `build_data.py` surfaces them
+raises as you reach it, not a destination. `build_data.py` surfaces them
 unconditionally, unlike the landmark heuristic, which needs three waypoints
 before it shows any and would silently drop a lone one.
 
-Day 4's exist because that day is SAG-supported for water: nothing on it is
-tagged as drinking water until mi 64.3, and a three-mile-wide search of the
-Jolon corridor turns up one shop between mi 5 and mi 46. The five markers are
-where the car can meet the riders.
+Day 4 carried five SAG markers until Sep 2026, because the Jolon and Nacimiento
+routing had no tagged drinking water until mi 64.3 and one shop in its middle 44
+miles. Rerouting day 4 down the Salinas Valley left all five 8–14 miles off the
+new track, so they were removed rather than left pointing into open country —
+the failure this file exists to prevent. The new route's water gap is 38.9 mi;
+if it needs its own rendezvous plan, it has to be built against that track.
 
 ## Lodging
 

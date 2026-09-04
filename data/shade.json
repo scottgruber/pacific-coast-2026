@@ -514,372 +514,6 @@
   }
  },
  "3": {
-  "Via Salinas Valley River Road": {
-   "date": "2026-09-07",
-   "hour_local": 15,
-   "label": "Via Salinas Valley River Road",
-   "pct_any_shade": 8,
-   "pct_canopy": 8,
-   "pct_terrain": 0,
-   "samples": [
-    {
-     "canopy": false,
-     "horizon_deg": 9.2,
-     "mile": 0.0,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 3.8,
-     "mile": 1.08,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.5,
-     "mile": 2.09,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 0.7,
-     "mile": 3.18,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 1.1,
-     "mile": 4.28,
-     "terrain_shade": false
-    },
-    {
-     "canopy": true,
-     "horizon_deg": 0.0,
-     "mile": 5.33,
-     "terrain_shade": false
-    },
-    {
-     "canopy": true,
-     "horizon_deg": 0.6,
-     "mile": 6.52,
-     "terrain_shade": false
-    },
-    {
-     "canopy": true,
-     "horizon_deg": 0.3,
-     "mile": 7.69,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 0.6,
-     "mile": 8.73,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.3,
-     "mile": 9.99,
-     "terrain_shade": false
-    },
-    {
-     "canopy": true,
-     "horizon_deg": 1.0,
-     "mile": 11.02,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.9,
-     "mile": 12.17,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.3,
-     "mile": 13.17,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 18.3,
-     "mile": 14.17,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 9.1,
-     "mile": 15.21,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.5,
-     "mile": 16.34,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.3,
-     "mile": 17.4,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 8.8,
-     "mile": 18.48,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.2,
-     "mile": 19.51,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 8.2,
-     "mile": 20.6,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.8,
-     "mile": 21.64,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 8.3,
-     "mile": 22.66,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 7.4,
-     "mile": 23.67,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 10.2,
-     "mile": 24.75,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.5,
-     "mile": 25.83,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 10.2,
-     "mile": 27.02,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 9.6,
-     "mile": 28.02,
-     "terrain_shade": false
-    },
-    {
-     "canopy": true,
-     "horizon_deg": 7.4,
-     "mile": 29.05,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 12.2,
-     "mile": 30.07,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 9.1,
-     "mile": 31.36,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 10.2,
-     "mile": 32.36,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.2,
-     "mile": 33.39,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 9.1,
-     "mile": 34.6,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 7.2,
-     "mile": 35.68,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.8,
-     "mile": 36.78,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 5.5,
-     "mile": 38.38,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 19.8,
-     "mile": 39.68,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 11.6,
-     "mile": 40.73,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 11.6,
-     "mile": 41.87,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 17.2,
-     "mile": 43.48,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 3.2,
-     "mile": 44.5,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 3.1,
-     "mile": 45.62,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 8.5,
-     "mile": 46.8,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 4.9,
-     "mile": 47.81,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.0,
-     "mile": 49.02,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 1.6,
-     "mile": 50.27,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 0.1,
-     "mile": 51.3,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 0.4,
-     "mile": 52.34,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 0.6,
-     "mile": 53.43,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.2,
-     "mile": 54.7,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 5.7,
-     "mile": 55.93,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 4.9,
-     "mile": 57.37,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 5.7,
-     "mile": 58.6,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 5.2,
-     "mile": 59.61,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 1.1,
-     "mile": 60.85,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.5,
-     "mile": 61.86,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 5.6,
-     "mile": 62.89,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 4.2,
-     "mile": 63.96,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 1.6,
-     "mile": 64.98,
-     "terrain_shade": false
-    }
-   ],
-   "sun_azimuth_deg": 228,
-   "sun_elevation_deg": 49.4
-  },
   "Via Carmel Valley": {
    "date": "2026-09-07",
    "hour_local": 15,
@@ -1258,6 +892,372 @@
    "sun_azimuth_deg": 228,
    "sun_elevation_deg": 49.5
   },
+  "Via Salinas Valley River Road": {
+   "date": "2026-09-07",
+   "hour_local": 15,
+   "label": "Via Salinas Valley River Road",
+   "pct_any_shade": 8,
+   "pct_canopy": 8,
+   "pct_terrain": 0,
+   "samples": [
+    {
+     "canopy": false,
+     "horizon_deg": 9.2,
+     "mile": 0.0,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.8,
+     "mile": 1.08,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.5,
+     "mile": 2.09,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.7,
+     "mile": 3.18,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 4.28,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.0,
+     "mile": 5.33,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.6,
+     "mile": 6.52,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 0.3,
+     "mile": 7.69,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 8.73,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.3,
+     "mile": 9.99,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 1.0,
+     "mile": 11.02,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.9,
+     "mile": 12.17,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.3,
+     "mile": 13.17,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 18.3,
+     "mile": 14.17,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.1,
+     "mile": 15.21,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.5,
+     "mile": 16.34,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.3,
+     "mile": 17.4,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 8.8,
+     "mile": 18.48,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.2,
+     "mile": 19.51,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 8.2,
+     "mile": 20.6,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.8,
+     "mile": 21.64,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 8.3,
+     "mile": 22.66,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 7.4,
+     "mile": 23.67,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 10.2,
+     "mile": 24.75,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.5,
+     "mile": 25.83,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 10.2,
+     "mile": 27.02,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.6,
+     "mile": 28.02,
+     "terrain_shade": false
+    },
+    {
+     "canopy": true,
+     "horizon_deg": 7.4,
+     "mile": 29.05,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 12.2,
+     "mile": 30.07,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.1,
+     "mile": 31.36,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 10.2,
+     "mile": 32.36,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.2,
+     "mile": 33.39,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.1,
+     "mile": 34.6,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 7.2,
+     "mile": 35.68,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.8,
+     "mile": 36.78,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.5,
+     "mile": 38.38,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 19.8,
+     "mile": 39.68,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 11.6,
+     "mile": 40.73,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 11.6,
+     "mile": 41.87,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 17.2,
+     "mile": 43.48,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.2,
+     "mile": 44.5,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.1,
+     "mile": 45.62,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 8.5,
+     "mile": 46.8,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.9,
+     "mile": 47.81,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.0,
+     "mile": 49.02,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.6,
+     "mile": 50.27,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.1,
+     "mile": 51.3,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.4,
+     "mile": 52.34,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.6,
+     "mile": 53.43,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.2,
+     "mile": 54.7,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.7,
+     "mile": 55.93,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.9,
+     "mile": 57.37,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.7,
+     "mile": 58.6,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.2,
+     "mile": 59.61,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.1,
+     "mile": 60.85,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.5,
+     "mile": 61.86,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.6,
+     "mile": 62.89,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.2,
+     "mile": 63.96,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.6,
+     "mile": 64.98,
+     "terrain_shade": false
+    }
+   ],
+   "sun_azimuth_deg": 228,
+   "sun_elevation_deg": 49.4
+  },
   "primary": {
    "date": "2026-09-07",
    "hour_local": 15,
@@ -1630,343 +1630,295 @@
    "date": "2026-09-08",
    "hour_local": 15,
    "label": "primary",
-   "pct_any_shade": 4,
-   "pct_canopy": 4,
+   "pct_any_shade": 0,
+   "pct_canopy": 0,
    "pct_terrain": 0,
    "samples": [
     {
      "canopy": false,
-     "horizon_deg": 2.3,
+     "horizon_deg": 1.0,
      "mile": 0.0,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 4.4,
-     "mile": 1.01,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.8,
-     "mile": 2.04,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 10.5,
-     "mile": 3.18,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.1,
-     "mile": 4.31,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 5.1,
-     "mile": 5.32,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 13.2,
-     "mile": 6.34,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 4.6,
-     "mile": 7.41,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 4.3,
-     "mile": 8.53,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 4.5,
-     "mile": 9.55,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.0,
-     "mile": 10.64,
-     "terrain_shade": false
-    },
-    {
-     "canopy": true,
-     "horizon_deg": 1.4,
-     "mile": 11.66,
-     "terrain_shade": false
-    },
-    {
-     "canopy": true,
-     "horizon_deg": 20.1,
-     "mile": 12.83,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.3,
-     "mile": 14.14,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 1.9,
-     "mile": 15.27,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.5,
-     "mile": 16.29,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 7.0,
-     "mile": 17.32,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 11.9,
-     "mile": 18.69,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 1.1,
-     "mile": 20.25,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 1.5,
-     "mile": 21.96,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 3.1,
-     "mile": 23.71,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 0.9,
-     "mile": 25.0,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 7.1,
-     "mile": 26.1,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 9.1,
-     "mile": 27.31,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 18.3,
-     "mile": 28.42,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 15.6,
-     "mile": 29.43,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 16.4,
-     "mile": 30.45,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 15.0,
-     "mile": 31.72,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 9.9,
-     "mile": 32.85,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.7,
-     "mile": 33.86,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 13.8,
-     "mile": 35.38,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 11.9,
-     "mile": 36.39,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 4.4,
-     "mile": 37.47,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 9.6,
-     "mile": 38.52,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 5.5,
-     "mile": 39.56,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 11.7,
-     "mile": 40.82,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 9.4,
-     "mile": 41.92,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 9.6,
-     "mile": 42.94,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 6.3,
-     "mile": 44.02,
-     "terrain_shade": false
-    },
-    {
-     "canopy": false,
-     "horizon_deg": 2.6,
-     "mile": 45.14,
+     "horizon_deg": 0.1,
+     "mile": 1.17,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 0.0,
-     "mile": 46.19,
+     "mile": 3.68,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 8.5,
-     "mile": 47.21,
+     "horizon_deg": 0.4,
+     "mile": 4.74,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 2.6,
-     "mile": 48.23,
+     "horizon_deg": 0.5,
+     "mile": 5.79,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 3.4,
-     "mile": 49.6,
+     "horizon_deg": 0.2,
+     "mile": 6.95,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 10.2,
-     "mile": 50.74,
+     "horizon_deg": 0.7,
+     "mile": 8.83,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 9.5,
-     "mile": 51.77,
+     "horizon_deg": 0.3,
+     "mile": 9.83,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 13.8,
-     "mile": 52.79,
+     "horizon_deg": 0.4,
+     "mile": 10.86,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 16.2,
-     "mile": 53.83,
+     "horizon_deg": 0.4,
+     "mile": 11.92,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.5,
+     "mile": 13.08,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.0,
+     "mile": 14.55,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 0.8,
-     "mile": 54.85,
+     "mile": 16.96,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 8.2,
-     "mile": 56.47,
+     "horizon_deg": 0.9,
+     "mile": 18.01,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.9,
+     "mile": 19.54,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.8,
+     "mile": 20.66,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.6,
+     "mile": 22.11,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.3,
+     "mile": 23.19,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 7.0,
+     "mile": 24.25,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 18.8,
+     "mile": 25.54,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.4,
+     "mile": 26.58,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 14.4,
+     "mile": 28.03,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 18.8,
+     "mile": 29.08,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 9.6,
+     "mile": 30.13,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 5.6,
+     "mile": 31.54,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.0,
+     "mile": 32.55,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.6,
+     "mile": 33.67,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.4,
+     "mile": 34.81,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.3,
+     "mile": 35.89,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.3,
+     "mile": 37.38,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.6,
+     "mile": 39.02,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 0.0,
+     "mile": 40.05,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 6.8,
+     "mile": 41.29,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.6,
+     "mile": 42.35,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 4.3,
+     "mile": 43.38,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.0,
+     "mile": 44.52,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 5.1,
-     "mile": 58.03,
+     "mile": 45.7,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 16.2,
-     "mile": 59.11,
+     "horizon_deg": 2.4,
+     "mile": 46.7,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 7.5,
-     "mile": 60.12,
+     "horizon_deg": 1.0,
+     "mile": 47.84,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 7.9,
-     "mile": 61.18,
+     "horizon_deg": 0.6,
+     "mile": 49.19,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 5.4,
-     "mile": 62.38,
+     "horizon_deg": 0.9,
+     "mile": 50.3,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.2,
+     "mile": 51.36,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 1.2,
+     "mile": 52.38,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 3.0,
+     "mile": 53.45,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.9,
+     "mile": 54.48,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.1,
+     "mile": 55.5,
+     "terrain_shade": false
+    },
+    {
+     "canopy": false,
+     "horizon_deg": 2.1,
+     "mile": 56.56,
      "terrain_shade": false
     }
    ],
    "sun_azimuth_deg": 229,
-   "sun_elevation_deg": 49.2
+   "sun_elevation_deg": 49.1
   }
  },
  "5": {

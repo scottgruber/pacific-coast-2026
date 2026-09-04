@@ -1,96 +1,97 @@
 {
-  "_comment": "Hand-maintained per-day notes. Not generated - build_data.py never touches this file, so edits here survive a rebuild. 'watch' items are things to plan around; 'highlights' are things worth looking up for; 'region' describes the farming and wine country the day crosses. Figures quoted in highlights and watch come from data/day-N.json or data/shade.json, so re-check them if a route changes. The 'region' lines are background rather than measurement: the AVA names and the towns are checked against the route, the crops are general knowledge.",
-  "1": {
-    "highlights": [
-      "Leaves Los Altos through the Santa Cruz Mountains, with redwood canopy over much of the climb.",
-      "Descends to the coast at Santa Cruz; Capitola is a short detour off the end."
-    ],
-    "watch": [
-      "The one sustained climb is mi 22.5–24.8, 639 ft at 5.3%. It comes when legs are fresh but it is the day's crux."
-    ],
-    "region": "Starts across the Santa Clara Valley, orchard country until the 1960s and built over since, then climbs into the Santa Cruz Mountains AVA — one of California's oldest, and among its coolest and steepest, worked by small producers scattered through the redwoods rather than in open blocks of vineyard."
-  },
-  "2": {
-    "highlights": [
-      "Flat coastal day along Monterey Bay, the gentlest climbing of the trip at 1,640 ft.",
-      "Moss Landing sits right on the route at roughly halfway — a good lunch stop."
-    ],
-    "watch": [
-      "Nothing steeper than 4.7% anywhere on the route — the least climbing of the whole trip at 1,640 ft."
-    ],
-    "region": "The Pajaro Valley behind Watsonville is one of the largest strawberry and cane-berry districts in the country; the low ground either side of the road is berries under plastic for much of the year. Nearer the coast it turns to artichokes and brussels sprouts, and at Moss Landing the route passes Elkhorn Slough, a tidal estuary and one of the better bird sites on this coast."
-  },
-  "3": {
-    "highlights": [
-      "The flattest of the inland days — 65.5 mi with only 1,717 ft of climbing.",
-      "Runs the west side of the Salinas Valley on River Road, under the Santa Lucia Highlands bench, and stays out of Salinas itself.",
-      "Greenfield sits 1.5 mi off the route at mi 53 — the one town of any size between Monterey and King City."
-    ],
-    "watch": [
-      "Stops on this day are listed out to 1.5 mi off the road rather than the quarter mile used elsewhere, and only where they can be reached without crossing US-101 - the towns sit east of the freeway, River Road runs west of it. Even so the middle of the day is thin: 23.6 mi with nothing at all between El Valle Market at mi 18.5 and the Mission at Soledad at mi 42.1, and 40.9 mi between water points. This is a SAG day; carry between meets.",
-      "Effectively unshaded — a valley floor with the sun on it all afternoon, and almost no mapped tree cover along the road.",
-      "Barely a climb on it: one pitch of 0.68 mi at 4.3% around mi 37, and a high point of 492 ft. Nobody has checked the shoulder or the traffic on River Road — worth asking someone who has ridden it."
-    ],
-    "region": "Leaves Monterey across the old Fort Ord ground at Marina and East Garrison, then turns down the Salinas Valley — the ground that gets called America's Salad Bowl, with lettuce, broccoli, spinach and celery, a large share of the national crop, grown in long flat blocks between the two ranges. River Road runs along the foot of the Santa Lucia Highlands AVA, the bench above Soledad and Greenfield planted mostly to pinot noir and chardonnay."
-  },
-  "4": {
-    "highlights": [
-      "Remote oak country through Jolon and the Nacimiento backcountry, with no highway miles at all.",
-      "Lake Nacimiento appears on the descent toward Paso Robles."
-    ],
-    "watch": [
-      "The hardest day: 64.7 mi and 4,013 ft, with next to no shade on it. Start as early as you can.",
-      "The SAG car carries the water on this day, which is the reason it can be ridden at all: nothing on the route is tagged as drinking water until mi 64.3, at the finish. Four places exist to meet it. Jolon at mi 20.8 is the Mission Road junction, a third of the way in and 0.1 mi off route. Lockwood Store and Diner at mi 26.7 sits right on the road, 0.03 mi off, and is the only shop in the middle 44 miles; Marin's Vineyard shares the premises. The San Antonio River crossing at mi 29.6 is the next obvious place to meet the car. The Lake Nacimiento cluster at mi 48.3–48.6 has restrooms and the Dragon Grill. Oak Hill Market at mi 50.0, 0.2 mi off at Heritage Ranch, is a reliable water stop. The two stretches with nothing at all are mi 0.2–20.8 and mi 26.7–48.3, each a little over twenty miles. Widening the search to six miles turns up almost nothing, so unlike day 3 this emptiness is real rather than an artefact of how close a stop has to be to get listed.",
-      "The day's biggest climb comes late: mi 42.2–43.8, 639 ft at 7.5%. The steepest is earlier and shorter, mi 10.0–11.5 at 7.7%."
-    ],
-    "region": "Leaves the irrigated valley floor almost immediately. Most of the day is oak savanna and cattle ranching through Jolon and the Fort Hunter Liggett country — dry-farmed and thinly settled, which is why there is so little on the route. Vineyards reappear on the approach to Paso Robles."
-  },
-  "5": {
-    "highlights": [
-      "Crosses the range on back roads rather than a highway — Highway 46 West over the ridge at mi 15, then Santa Rita and Old Creek Roads down to the coast.",
-      "Morro Bay at mi 31, with Morro Rock as the landmark and the Embarcadero a few hundred feet off the route.",
-      "Los Osos Valley Road carries the second half to Avila and Pismo without going through San Luis Obispo."
-    ],
-    "watch": [
-      "The steep stretch is mi 14.2–15.1, 350 ft at 7.6% to the 1,528 ft summit. \"Sustained pitches to about 9%\" means the worst continuous half mile averages 9.9% and the worst quarter mile 11.4%; roughly a mile of the day, in pieces, sits at 9% or steeper.",
-      "A second climb follows at mi 22.7–23.4, 215 ft at 6.0%, on the way down Santa Rita.",
-      "Between Templeton at mi 7 and the edge of Morro Bay at mi 28 there is nothing but a tasting room at mi 9.6 — 21 miles with no water, food or toilets, and it is the same 21 miles that holds all the climbing. The longest stretch without water is 30.4 mi, from Paso Robles to Morro Bay.",
-      "Effectively unshaded."
-    ],
-    "region": "Starts in the Paso Robles AVA, one of California's largest, where hot days and cool nights suit cabernet and the rhône varieties; the vineyards run right up to the edge of town and follow Highway 46 West most of the way to the ridge. Over the top the planting stops, and the coastal side is cattle ground down Old Creek to Cayucos, then vegetable fields either side of Los Osos Valley Road."
-  },
-  "6": {
-    "highlights": [
-      "The best day for small towns: Arroyo Grande Village, Nipomo, Sisquoc, Los Olivos and Ballard are all on or near the route.",
-      "Rides the length of Foxen Canyon through the Santa Maria Valley wine country — tasting rooms are the main thing open along the middle of the day."
-    ],
-    "watch": [
-      "No mapped tree cover anywhere on the route.",
-      "The longest stretch without anywhere to stop is 17 mi, from Santa Maria to the Riverbench winery. Between there and Los Olivos the stops are tasting rooms, whose hours are far less dependable than a shop.",
-      "Late climb at mi 43.5–44.4, 301 ft at 6.6%, when the day is nearly done."
-    ],
-    "region": "The wine day. Santa Maria around mile 18 sits in one of the state's biggest strawberry and broccoli districts, then Foxen Canyon is the spine of the Santa Maria Valley AVA — a cool, wind-exposed valley that opens west to the ocean, which is why pinot noir and chardonnay do well this far south. The last stretch into Los Olivos and Solvang crosses into the Santa Ynez Valley AVA."
-  },
-  "7": {
-    "highlights": [
-      "The coastal miles are the prettiest of the trip: Gaviota, Refugio, El Capitán, then Santa Barbara and Carpinteria.",
-      "Best-served day by far — 12 water points, more than any other day, and the shortest dry stretch at 19 mi."
-    ],
-    "watch": [
-      "Longest day of the trip at 82.4 mi, but the climbing is front-loaded: the hardest pitch is mi 7.9–8.6 at 7.1%, and everything after mi 10 is gentle.",
-      "Sections through the Gaviota corridor are ridden on the US-101 freeway shoulder. It is a wide shoulder — noisy and fast alongside, but there is room."
-    ],
-    "region": "Leaves the Santa Ynez Valley and runs the Gaviota coast, which is cattle ranchland and largely undeveloped — a rare stretch of open California coastline. From Goleta onward it turns to lemon and avocado groves on the slopes above the road, and Carpinteria is cut flowers and nursery glass, an industry that has been there for a century."
-  },
-  "8": {
-    "highlights": [
-      "Final day down the coast through Ventura and Malibu into Santa Monica.",
-      "One of the two easiest days for climbing, at 1,661 ft."
-    ],
-    "watch": [
-      "Pacific Coast Highway traffic is heavy and fast, especially through Malibu on a Saturday. Be prepared to ride two-by-two, take the lane, and stay together.",
-      "Only real climb is mi 38.6–39.3, 185 ft at 5.1%."
-    ],
-    "region": "The first hour crosses the Oxnard Plain, among the most productive vegetable and strawberry ground in the United States and still farmed hard right up to the edge of the city. After Point Mugu the farming stops and the rest of the day is the Malibu coast."
-  }
+    "_comment": "Hand-maintained per-day notes. Not generated - build_data.py never touches this file, so edits here survive a rebuild. 'watch' items are things to plan around; 'highlights' are things worth looking up for; 'region' describes the farming and wine country the day crosses. Figures quoted in highlights and watch come from data/day-N.json or data/shade.json, so re-check them if a route changes. The 'region' lines are background rather than measurement: the AVA names and the towns are checked against the route, the crops are general knowledge.",
+    "1": {
+        "highlights": [
+            "Leaves Los Altos through the Santa Cruz Mountains, with redwood canopy over much of the climb.",
+            "Descends to the coast at Santa Cruz; Capitola is a short detour off the end."
+        ],
+        "watch": [
+            "The one sustained climb is mi 22.5–24.8, 639 ft at 5.3%. It comes when legs are fresh but it is the day's crux."
+        ],
+        "region": "Starts across the Santa Clara Valley, orchard country until the 1960s and built over since, then climbs into the Santa Cruz Mountains AVA — one of California's oldest, and among its coolest and steepest, worked by small producers scattered through the redwoods rather than in open blocks of vineyard."
+    },
+    "2": {
+        "highlights": [
+            "Flat coastal day along Monterey Bay, the gentlest climbing of the trip at 1,640 ft.",
+            "Moss Landing sits right on the route at roughly halfway — a good lunch stop."
+        ],
+        "watch": [
+            "Nothing steeper than 4.7% anywhere on the route — the least climbing of the whole trip at 1,640 ft."
+        ],
+        "region": "The Pajaro Valley behind Watsonville is one of the largest strawberry and cane-berry districts in the country; the low ground either side of the road is berries under plastic for much of the year. Nearer the coast it turns to artichokes and brussels sprouts, and at Moss Landing the route passes Elkhorn Slough, a tidal estuary and one of the better bird sites on this coast."
+    },
+    "3": {
+        "highlights": [
+            "The flattest of the inland days — 65.5 mi with only 1,717 ft of climbing.",
+            "Runs the west side of the Salinas Valley on River Road, under the Santa Lucia Highlands bench, and stays out of Salinas itself.",
+            "Greenfield sits 1.5 mi off the route at mi 53 — the one town of any size between Monterey and King City."
+        ],
+        "watch": [
+            "Stops on this day are listed out to 1.5 mi off the road rather than the quarter mile used elsewhere, and only where they can be reached without crossing US-101 - the towns sit east of the freeway, River Road runs west of it. Even so the middle of the day is thin: 23.6 mi with nothing at all between El Valle Market at mi 18.5 and the Mission at Soledad at mi 42.1, and 40.9 mi between water points. This is a SAG day; carry between meets.",
+            "Effectively unshaded — a valley floor with the sun on it all afternoon, and almost no mapped tree cover along the road.",
+            "Barely a climb on it: one pitch of 0.68 mi at 4.3% around mi 37, and a high point of 492 ft. Nobody has checked the shoulder or the traffic on River Road — worth asking someone who has ridden it."
+        ],
+        "region": "Leaves Monterey across the old Fort Ord ground at Marina and East Garrison, then turns down the Salinas Valley — the ground that gets called America's Salad Bowl, with lettuce, broccoli, spinach and celery, a large share of the national crop, grown in long flat blocks between the two ranges. River Road runs along the foot of the Santa Lucia Highlands AVA, the bench above Soledad and Greenfield planted mostly to pinot noir and chardonnay."
+    },
+    "4": {
+        "highlights": [
+            "The easiest day of the trip for climbing — 57.6 mi and 1,294 ft, with nothing steeper than a short 6.3% pitch at mi 47.",
+            "Runs the Salinas Valley south through San Lucas, San Ardo and Bradley to San Miguel, where Mission San Miguel Arcángel sits at mi 46.6."
+        ],
+        "watch": [
+            "Parts of this day are ridden on the US-101 freeway shoulder. OpenStreetMap records the stretches around mi 21.9–24.1 and mi 28.0–32.9 as motorway with a shoulder and bicycles permitted, and in several places there is no other road within half a mile. Nobody has checked on the ground whether the shoulder is continuous or how the on- and off-ramps ride — this is the thing to confirm before the day is ridden.",
+            "38.9 mi between water points: the first water on the route is at mi 39.0, just before Bradley. The one stop in between is the San Lucas Pitstop at mi 9.6. Carry accordingly, or plan to meet the car.",
+            "Effectively unshaded — no mapped tree cover anywhere on the route, and no terrain high enough to block the afternoon sun.",
+            "This route replaced the Jolon and Nacimiento backcountry line, which had 4,013 ft of climbing and a 16% pitch at mi 12. That track is kept in gpx/unused/. The old day's SAG water plan does not apply here and has been removed; if this day needs one, it has to be built against the new route."
+        ],
+        "region": "Follows the Salinas Valley floor south from King City — the same farmed valley day 3 comes down, though south of King City the irrigated row crops give way to drier ground, vineyards and cattle range. San Miguel, near the end, grew up around its 1797 mission, one of the least altered in the chain. The last few miles cross into the Paso Robles AVA that day 5 then starts in."
+    },
+    "5": {
+        "highlights": [
+            "Crosses the range on back roads rather than a highway — Highway 46 West over the ridge at mi 15, then Santa Rita and Old Creek Roads down to the coast.",
+            "Morro Bay at mi 31, with Morro Rock as the landmark and the Embarcadero a few hundred feet off the route.",
+            "Los Osos Valley Road carries the second half to Avila and Pismo without going through San Luis Obispo."
+        ],
+        "watch": [
+            "The steep stretch is mi 14.2–15.1, 350 ft at 7.6% to the 1,528 ft summit. \"Sustained pitches to about 9%\" means the worst continuous half mile averages 9.9% and the worst quarter mile 11.4%; roughly a mile of the day, in pieces, sits at 9% or steeper.",
+            "A second climb follows at mi 22.7–23.4, 215 ft at 6.0%, on the way down Santa Rita.",
+            "Between Templeton at mi 7 and the edge of Morro Bay at mi 28 there is nothing but a tasting room at mi 9.6 — 21 miles with no water, food or toilets, and it is the same 21 miles that holds all the climbing. The longest stretch without water is 30.4 mi, from Paso Robles to Morro Bay.",
+            "Effectively unshaded."
+        ],
+        "region": "Starts in the Paso Robles AVA, one of California's largest, where hot days and cool nights suit cabernet and the rhône varieties; the vineyards run right up to the edge of town and follow Highway 46 West most of the way to the ridge. Over the top the planting stops, and the coastal side is cattle ground down Old Creek to Cayucos, then vegetable fields either side of Los Osos Valley Road."
+    },
+    "6": {
+        "highlights": [
+            "The best day for small towns: Arroyo Grande Village, Nipomo, Sisquoc, Los Olivos and Ballard are all on or near the route.",
+            "Rides the length of Foxen Canyon through the Santa Maria Valley wine country — tasting rooms are the main thing open along the middle of the day."
+        ],
+        "watch": [
+            "No mapped tree cover anywhere on the route.",
+            "The longest stretch without anywhere to stop is 17 mi, from Santa Maria to the Riverbench winery. Between there and Los Olivos the stops are tasting rooms, whose hours are far less dependable than a shop.",
+            "Late climb at mi 43.5–44.4, 301 ft at 6.6%, when the day is nearly done."
+        ],
+        "region": "The wine day. Santa Maria around mile 18 sits in one of the state's biggest strawberry and broccoli districts, then Foxen Canyon is the spine of the Santa Maria Valley AVA — a cool, wind-exposed valley that opens west to the ocean, which is why pinot noir and chardonnay do well this far south. The last stretch into Los Olivos and Solvang crosses into the Santa Ynez Valley AVA."
+    },
+    "7": {
+        "highlights": [
+            "The coastal miles are the prettiest of the trip: Gaviota, Refugio, El Capitán, then Santa Barbara and Carpinteria.",
+            "Best-served day by far — 12 water points, more than any other day, and the shortest dry stretch at 19 mi."
+        ],
+        "watch": [
+            "Longest day of the trip at 82.4 mi, but the climbing is front-loaded: the hardest pitch is mi 7.9–8.6 at 7.1%, and everything after mi 10 is gentle.",
+            "Sections through the Gaviota corridor are ridden on the US-101 freeway shoulder. It is a wide shoulder — noisy and fast alongside, but there is room."
+        ],
+        "region": "Leaves the Santa Ynez Valley and runs the Gaviota coast, which is cattle ranchland and largely undeveloped — a rare stretch of open California coastline. From Goleta onward it turns to lemon and avocado groves on the slopes above the road, and Carpinteria is cut flowers and nursery glass, an industry that has been there for a century."
+    },
+    "8": {
+        "highlights": [
+            "Final day down the coast through Ventura and Malibu into Santa Monica.",
+            "One of the two easiest days for climbing, at 1,661 ft."
+        ],
+        "watch": [
+            "Pacific Coast Highway traffic is heavy and fast, especially through Malibu on a Saturday. Be prepared to ride two-by-two, take the lane, and stay together.",
+            "Only real climb is mi 38.6–39.3, 185 ft at 5.1%."
+        ],
+        "region": "The first hour crosses the Oxnard Plain, among the most productive vegetable and strawberry ground in the United States and still farmed hard right up to the edge of the city. After Point Mugu the farming stops and the rest of the day is the Malibu coast."
+    }
 }

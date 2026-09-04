@@ -55,7 +55,7 @@ GPX_FILES = {
     1: "Day-1-Los-Altos-to-Santa-Cruz.gpx",
     2: "Day-2-Santa-Cruz-to-Monterey.gpx",
     3: "Day-3-Monterey_to_King_City-via-Salinas-Valley-River-Road.gpx",
-    4: "Day-4-King_City_to_Paso_Robles.gpx",
+    4: "Day-4-King_City_to_Paso_Robles-via-Salinas-Valley.gpx",
     5: "Day-5-Paso_Robles_to_Oceano-via-Santa-Rita-and-Los-Osos.gpx",
     6: "Day-6-Oceano-to-Solvang.gpx",
     7: "Day-7-Solvang-to-Ventura.gpx",

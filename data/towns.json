@@ -261,54 +261,81 @@
   {
    "lat": 36.2125032,
    "lon": -121.1270413,
-   "mile": 0.7,
+   "mile": 0.9,
    "name": "King City",
-   "offset_mi": 1.0,
+   "offset_mi": 0.4,
    "place": "town",
    "rank": 1
   },
   {
-   "lat": 35.9711095,
-   "lon": -121.1749312,
-   "mile": 18.8,
-   "name": "Jolon",
+   "lat": 36.1885769,
+   "lon": -121.0696366,
+   "mile": 4.4,
+   "name": "Welby",
    "offset_mi": 0.1,
    "place": "hamlet",
    "rank": 3
   },
   {
-   "lat": 35.9442155,
-   "lon": -121.0818785,
-   "mile": 25.0,
-   "name": "Lockwood",
-   "offset_mi": 0.5,
+   "lat": 36.1288547,
+   "lon": -121.0204672,
+   "mile": 9.6,
+   "name": "San Lucas",
+   "offset_mi": 0.0,
    "place": "hamlet",
    "rank": 3
   },
   {
-   "lat": 35.7871902,
-   "lon": -120.9390738,
-   "mile": 40.9,
-   "name": "Bee Rock",
+   "lat": 36.0205207,
+   "lon": -120.9051826,
+   "mile": 20.0,
+   "name": "San Ardo",
+   "offset_mi": 0.0,
+   "place": "hamlet",
+   "rank": 3
+  },
+  {
+   "lat": 35.9310767,
+   "lon": -120.8632355,
+   "mile": 28.0,
+   "name": "Wunpost",
+   "offset_mi": 0.4,
+   "place": "hamlet",
+   "rank": 3
+  },
+  {
+   "lat": 35.8632993,
+   "lon": -120.8007321,
+   "mile": 34.8,
+   "name": "Bradley",
    "offset_mi": 0.1,
    "place": "hamlet",
    "rank": 3
   },
   {
-   "lat": 35.7283019,
-   "lon": -120.879626,
-   "mile": 49.2,
-   "name": "Heritage Ranch",
+   "lat": 35.8091333,
+   "lon": -120.7415624,
+   "mile": 41.9,
+   "name": "Nacimiento",
    "offset_mi": 0.8,
+   "place": "hamlet",
+   "rank": 3
+  },
+  {
+   "lat": 35.7524679,
+   "lon": -120.6962826,
+   "mile": 46.6,
+   "name": "San Miguel",
+   "offset_mi": 0.0,
    "place": "village",
    "rank": 2
   },
   {
    "lat": 35.6262618,
    "lon": -120.6901319,
-   "mile": 62.5,
+   "mile": 56.6,
    "name": "Paso Robles",
-   "offset_mi": 0.9,
+   "offset_mi": 0.2,
    "place": "town",
    "rank": 1
   }
