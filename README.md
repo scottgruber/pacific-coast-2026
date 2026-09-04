@@ -26,7 +26,8 @@ each number comes from, for readers rather than maintainers.
 .
 ├── gpx/                     Day-N-*.gpx tracks, plus the
 │   │                         Pacific-Coast-Section-4-SF-SB-Southbound.gpx
-│   │                         reference track this route is loosely based on
+│   │                         reference track this route is loosely based on,
+│   │                         and the two bundles build_bundle.py writes
 │   └── unused/              tracks the site does not offer: the superseded Big
 │                             Sur coast routing for days 3-5, kept in case the
 │                             road reopens, day 3's Carmel Valley line, and the
@@ -67,6 +68,7 @@ each number comes from, for readers rather than maintainers.
 │   ├── prepare_gpx.py       ready the GPX for Ride with GPS and a Garmin
 │   ├── build_shade.py       afternoon shade: terrain horizon + mapped canopy
 │   ├── build_towns.py       towns along each route
+│   ├── build_bundle.py      the eight tracks as one zip and one combined GPX
 │   ├── check_gpx.py         audit the tracks: structure, gaps, chaining, hotels
 │   └── check_roads.py       audit the tracks for motorway, ramp and trunk miles
 ├── templates/
@@ -111,6 +113,7 @@ python3 scripts/add_services.py    # after a GPX route changes, or manual-pois.j
 python3 scripts/prepare_gpx.py     # always after add_services.py
 python3 scripts/build_shade.py     # after a route changes
 python3 scripts/build_towns.py     # after a route changes
+python3 scripts/build_bundle.py    # after any track or its waypoints change
 ```
 
 Order matters for the first two: `add_services.py` rewrites the waypoints in
@@ -150,6 +153,30 @@ is gitignored here since it's fully regeneratable output, never a source
 of truth.
 
 Remote: `git@github.com:scottgruber/pacific-coast-2026.git`
+
+## The two bundles
+
+`build_bundle.py` writes two extra downloads into `gpx/`, both derived from the
+eight day tracks and neither hand-edited:
+
+| File | What it is |
+| --- | --- |
+| `Pacific-Coast-2026-all-days.zip` | the eight day files unchanged, ~490 KB |
+| `Pacific-Coast-2026-all-days.gpx` | one file, eight `<trk>` elements, ~3.1 MB |
+
+The combined file keeps the days as **separate tracks** rather than welding them
+into one 479-mile line. The days do chain end to end — `check_gpx.py` enforces
+that — so a single track would be geometrically honest, but a head unit would
+then offer one course you cannot start partway into. Eight tracks in one file
+load as eight courses.
+
+Every waypoint comes across as well: 266 of them in one file. Some units cap what
+they will hold, which is the reason the zip exists — if a device baulks at the
+combined file, load the day you are riding.
+
+Both are committed, so a deploy publishes them without running anything. They
+are duplicated data, so they go stale silently if a track changes and this is not
+rerun — a diff touching `gpx/Day-*.gpx` but not the bundles is the tell.
 
 ## Auditing the tracks
 

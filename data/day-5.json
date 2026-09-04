@@ -6438,6 +6438,16 @@
       "detour_mi": null
     },
     {
+      "lat": 35.638703,
+      "lon": -120.692937,
+      "name": "7-Eleven (mi 0.3)",
+      "type": "Store",
+      "label": "7-Eleven",
+      "mile": 0.3,
+      "hand_picked": true,
+      "detour_mi": null
+    },
+    {
       "lat": 35.626219,
       "lon": -120.69027,
       "name": "Water (mi 1.3)",
@@ -6515,6 +6525,26 @@
       "label": "Water",
       "mile": 31.7,
       "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 35.368007,
+      "lon": -120.854207,
+      "name": "Giovanni's Fish Market (mi 31.7)",
+      "type": "Food",
+      "label": "Giovanni's Fish Market",
+      "mile": 31.7,
+      "hand_picked": true,
+      "detour_mi": null
+    },
+    {
+      "lat": 35.365104,
+      "lon": -120.853206,
+      "name": "Dutchman's Seafood House (mi 31.7)",
+      "type": "Food",
+      "label": "Dutchman's Seafood House",
+      "mile": 31.7,
+      "hand_picked": true,
       "detour_mi": null
     },
     {
@@ -6635,6 +6665,16 @@
       "label": "Toilets",
       "mile": 56.7,
       "hand_picked": false,
+      "detour_mi": null
+    },
+    {
+      "lat": 35.140062,
+      "lon": -120.642349,
+      "name": "Splash Cafe (mi 56.7)",
+      "type": "Food",
+      "label": "Splash Cafe",
+      "mile": 56.7,
+      "hand_picked": true,
       "detour_mi": null
     },
     {

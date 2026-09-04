@@ -34,6 +34,38 @@
       "type": "Food",
       "sym": "Restaurant",
       "note": "315 S Main St, Templeton. Chosen by hand; the pin is OpenStreetMap's 315 Main Street address point."
+    },
+    {
+      "name": "7-Eleven",
+      "lat": 35.638703,
+      "lon": -120.692937,
+      "type": "Store",
+      "sym": "Convenience Store",
+      "note": "Paso Robles, at the start. Pinned so the thinning cannot drop it."
+    },
+    {
+      "name": "Giovanni's Fish Market",
+      "lat": 35.368007,
+      "lon": -120.854207,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "Morro Bay Embarcadero. Pinned so the thinning cannot drop it."
+    },
+    {
+      "name": "Dutchman's Seafood House",
+      "lat": 35.365104,
+      "lon": -120.853206,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "Morro Bay Embarcadero. Pinned so the thinning cannot drop it."
+    },
+    {
+      "name": "Splash Cafe",
+      "lat": 35.140062,
+      "lon": -120.642349,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "Pismo Beach, near the end. Pinned so the thinning cannot drop it."
     }
   ],
   "6": [
