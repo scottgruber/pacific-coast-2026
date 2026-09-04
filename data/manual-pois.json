@@ -28,28 +28,12 @@
   ],
   "5": [
     {
-      "name": "Dutchman's Seafood House",
-      "lat": 35.365104,
-      "lon": -120.853206,
+      "name": "Tres Hermanos Coffee",
+      "lat": 35.550039,
+      "lon": -120.704376,
       "type": "Food",
       "sym": "Restaurant",
-      "note": "Morro Bay Embarcadero, at the harbour."
-    },
-    {
-      "name": "Giovanni's Fish Market",
-      "lat": 35.3680071,
-      "lon": -120.8542074,
-      "type": "Food",
-      "sym": "Restaurant",
-      "note": "1001 Front St, Morro Bay Embarcadero. Fish tacos, chowder, oysters."
-    },
-    {
-      "name": "Splash Cafe",
-      "lat": 35.1400616,
-      "lon": -120.642349,
-      "type": "Food",
-      "sym": "Restaurant",
-      "note": "195 Pomeroy Ave, Pismo Beach, a block off the pier. Clam chowder."
+      "note": "315 S Main St, Templeton. Chosen by hand; the pin is OpenStreetMap's 315 Main Street address point."
     }
   ],
   "6": [
@@ -75,7 +59,7 @@
       "lon": -120.10165,
       "type": "Store",
       "sym": "Shopping Center",
-      "note": "Santa Ynez, off the route. Full grocery with a deli counter - the last proper resupply before Solvang."
+      "note": "2886 Mission Dr, Solvang. Full grocery with a deli counter - the last proper resupply before Solvang. Sits 1.2 mi off the line."
     },
     {
       "name": "Old Mission Santa Ines",
@@ -84,6 +68,14 @@
       "type": "Historic",
       "sym": "Museum",
       "note": "Solvang, where the day ends. Founded 1804; church and museum open to visitors."
+    },
+    {
+      "name": "Bridlewood Winery",
+      "lat": 34.650604,
+      "lon": -120.095171,
+      "type": "Winery",
+      "sym": "Bar",
+      "note": "3555 Roblar Ave, Santa Ynez. Chosen by hand. The pin is Roblar Avenue itself, not the driveway - OpenStreetMap has no address point for 3555 - so navigate by name rather than by the dot."
     }
   ],
   "7": [
@@ -102,11 +94,23 @@
       "type": "Food",
       "sym": "Restaurant",
       "note": "216 W Cabrillo Blvd, Santa Barbara, across from the beach. Breakfast until 14:30."
+    },
+    {
+      "name": "Isla Vista Freebirds",
+      "lat": 34.413272,
+      "lon": -119.855583,
+      "type": "Food",
+      "sym": "Restaurant",
+      "note": "879 Embarcadero del Norte, Isla Vista. Burritos, open late, in the middle of the student blocks a short way off the line."
     }
   ],
   "exclude": {
     "6": [
-      "Mission Santa Inés"
+      "Mission Santa Inés",
+      "Buttonwood Farm Winery & Vineyard",
+      "Santa Maria Brewing Company",
+      "Nielsen's",
+      "Oceano WW2 Memorial"
     ],
     "1": [
       "Alma",
@@ -118,7 +122,18 @@
       "BevMo!",
       "Liquor Store",
       "MB",
-      "Pereira Octagon Barn"
+      "Pereira Octagon Barn",
+      "KFC",
+      "Food",
+      "Zen Dog",
+      "Marisol",
+      "Store",
+      "Grocery Outlet",
+      "Price Street Market",
+      "Arroyo Robles Winery",
+      "Turley Wine Cellars",
+      "The Buoy",
+      "Morro Bay Skateboard Museum"
     ],
     "7": [
       "Jude Martin Keefer",
@@ -129,7 +144,35 @@
       "Malibu Sign"
     ],
     "4": [
-      "San Marcos Mennonite Cemetary"
+      "San Marcos Mennonite Cemetary",
+      "Burger King"
+    ],
+    "3": [
+      "Five Guys",
+      "Monterey Mirror Maze",
+      "Pacific Biological Laboratories",
+      "Commissary (military only)",
+      "Navy Exchange (NEX)"
     ]
-  }
+  },
+  "3": [
+    {
+      "name": "Trader Joe's",
+      "lat": 36.596504,
+      "lon": -121.894577,
+      "type": "Store",
+      "sym": "Shopping Center",
+      "note": "570 Munras Avenue, Monterey. Right on the route at mi 3 - the last full grocery before the valley."
+    }
+  ],
+  "4": [
+    {
+      "name": "San Miguel Market & Deli",
+      "lat": 35.751228,
+      "lon": -120.696674,
+      "type": "Store",
+      "sym": "Convenience Store",
+      "note": "1299 Mission St unit 5, San Miguel. Chosen by hand; the pin is the 1299 Mission Street block, taken from the nearest address point OpenStreetMap carries, so it is the block rather than the door."
+    }
+  ]
 }

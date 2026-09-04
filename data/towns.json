@@ -528,16 +528,16 @@
   {
    "lat": 34.4115125,
    "lon": -119.8562131,
-   "mile": 39.4,
+   "mile": 39.5,
    "name": "Isla Vista",
-   "offset_mi": 0.4,
+   "offset_mi": 0.2,
    "place": "town",
    "rank": 1
   },
   {
    "lat": 34.421942,
    "lon": -119.7709714,
-   "mile": 44.7,
+   "mile": 44.8,
    "name": "Hope Ranch",
    "offset_mi": 1.0,
    "place": "hamlet",
@@ -546,7 +546,7 @@
   {
    "lat": 34.4236859,
    "lon": -119.7368386,
-   "mile": 48.0,
+   "mile": 48.1,
    "name": "Las Positas Meadows",
    "offset_mi": 0.1,
    "place": "hamlet",
@@ -555,7 +555,7 @@
   {
    "lat": 34.4221319,
    "lon": -119.702667,
-   "mile": 53.1,
+   "mile": 53.2,
    "name": "Santa Barbara",
    "offset_mi": 1.0,
    "place": "city",
@@ -564,7 +564,7 @@
   {
    "lat": 34.4366626,
    "lon": -119.6320753,
-   "mile": 57.2,
+   "mile": 57.3,
    "name": "Montecito",
    "offset_mi": 0.9,
    "place": "town",
@@ -573,7 +573,7 @@
   {
    "lat": 34.4199952,
    "lon": -119.5670709,
-   "mile": 61.1,
+   "mile": 61.2,
    "name": "Toro Canyon",
    "offset_mi": 0.2,
    "place": "village",
@@ -582,7 +582,7 @@
   {
    "lat": 34.3988838,
    "lon": -119.5184564,
-   "mile": 64.2,
+   "mile": 64.3,
    "name": "Carpinteria",
    "offset_mi": 0.2,
    "place": "town",
@@ -600,7 +600,7 @@
   {
    "lat": 34.3562486,
    "lon": -119.4424684,
-   "mile": 70.6,
+   "mile": 70.7,
    "name": "Mussel Shoals",
    "offset_mi": 0.0,
    "place": "hamlet",
@@ -609,7 +609,7 @@
   {
    "lat": 34.3190377,
    "lon": -119.3847029,
-   "mile": 75.5,
+   "mile": 75.6,
    "name": "Faria Beach",
    "offset_mi": 0.0,
    "place": "hamlet",
@@ -618,7 +618,7 @@
   {
    "lat": 34.2783355,
    "lon": -119.293174,
-   "mile": 82.3,
+   "mile": 82.4,
    "name": "Ventura",
    "offset_mi": 0.1,
    "place": "city",

@@ -35,7 +35,6 @@ def ensure_build_symlinks():
         "fonts": "../fonts",
         "gpx": "../gpx",
         "api": "../api",
-        "icon.svg": "../icon.svg",
         # Sets the MIME type for .gpx; see the file for why it matters.
         ".htaccess": "../.htaccess",
     }
@@ -167,15 +166,18 @@ def asset(rel):
 
 
 # Order the stops list by what a rider needs first, not alphabetically.
+# Five boxes, not eight. Park, Scenic and Historic were three thin columns that
+# said the same thing - somewhere worth getting off the bike for - and a day
+# with one of each rendered three near-empty cards. Water and restrooms pair for
+# the same reason: you look for them on the same errand. Every type in the data
+# must appear in exactly one group here or it is silently dropped from the page.
+# The types stay distinct in the GPX and in day-N.json; only the page groups them.
 SERVICE_GROUPS = [
-    ("Water", "Water"),
-    ("Store", "Shops &amp; markets"),
-    ("Food", "Food &amp; coffee"),
-    ("Winery", "Tasting rooms &amp; bars"),
-    ("Park", "Parks"),
-    ("Toilets", "Restrooms"),
-    ("Scenic", "Scenic"),
-    ("Historic", "Historic"),
+    ("Water", "Water &amp; restrooms", ("Water", "Toilets")),
+    ("Store", "Shops &amp; markets", ("Store",)),
+    ("Food", "Food &amp; coffee", ("Food",)),
+    ("Winery", "Wine tasting", ("Winery",)),
+    ("Seeing", "Worth a look", ("Park", "Scenic", "Historic")),
 ]
 
 
@@ -204,7 +206,7 @@ def map_links(label, lat, lon):
     generic = (
         not name
         or len(name) <= 3
-        or name.lower() in {t.lower() for t, _ in SERVICE_GROUPS}
+        or name.lower() in {t.lower() for t, _, _ in SERVICE_GROUPS}
         or name.lower() in {"picnic", "picnic area", "restroom", "restrooms",
                             "drinking water", "toilet", "wc"}
     )
@@ -227,13 +229,14 @@ def with_map_links(lodging):
 
 
 def group_services(services):
-    """Bucket a day's POIs by type, in SERVICE_GROUPS order, each sorted by
-    distance along the route. Empty groups are dropped."""
+    """Bucket a day's POIs into SERVICE_GROUPS, each sorted by distance along
+    the route. A group may gather several types; empty groups are dropped."""
     out = []
-    for key, label in SERVICE_GROUPS:
-        stops = [dict(s) for s in services if s["type"] == key]
+    for key, label, types in SERVICE_GROUPS:
+        stops = [dict(s) for s in services if s["type"] in types]
         if not stops:
             continue
+        stops.sort(key=lambda s: s["mile"])
         for s in stops:
             s["google"], s["apple"] = map_links(s["label"], s["lat"], s["lon"])
         # Not "items": Jinja resolves g.items to the dict's own .items method.

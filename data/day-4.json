@@ -5237,16 +5237,6 @@
       "detour_mi": null
     },
     {
-      "lat": 36.202577,
-      "lon": -121.129733,
-      "name": "Burger King (mi 0.0)",
-      "type": "Food",
-      "label": "Burger King",
-      "mile": 0.0,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 36.202403,
       "lon": -121.128833,
       "name": "Shell (mi 0.0)",
@@ -5335,6 +5325,16 @@
       "mile": 46.6,
       "hand_picked": false,
       "detour_mi": 0.4
+    },
+    {
+      "lat": 35.751228,
+      "lon": -120.696674,
+      "name": "San Miguel Market & Deli (mi 46.6)",
+      "type": "Store",
+      "label": "San Miguel Market & Deli",
+      "mile": 46.6,
+      "hand_picked": true,
+      "detour_mi": null
     },
     {
       "lat": 35.738133,

@@ -5867,16 +5867,6 @@
       "detour_mi": null
     },
     {
-      "lat": 35.10196,
-      "lon": -120.617053,
-      "name": "Oceano WW2 Memorial (mi 0.5)",
-      "type": "Historic",
-      "label": "Oceano WW2 Memorial",
-      "mile": 0.5,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
       "lat": 35.048084,
       "lon": -120.525838,
       "name": "Food (mi 8.7)",
@@ -5892,16 +5882,6 @@
       "name": "Rancho Nipomo (mi 16.1)",
       "type": "Food",
       "label": "Rancho Nipomo",
-      "mile": 16.1,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 34.995781,
-      "lon": -120.436424,
-      "name": "Santa Maria Brewing Company (mi 16.1)",
-      "type": "Winery",
-      "label": "Santa Maria Brewing Company",
       "mile": 16.1,
       "hand_picked": false,
       "detour_mi": null
@@ -5957,14 +5937,14 @@
       "detour_mi": null
     },
     {
-      "lat": 34.622261,
-      "lon": -120.11654,
-      "name": "Buttonwood Farm Winery & Vineyard (mi 55.9)",
+      "lat": 34.650604,
+      "lon": -120.095171,
+      "name": "Bridlewood Winery (mi 53.7)",
       "type": "Winery",
-      "label": "Buttonwood Farm Winery & Vineyard",
-      "mile": 55.9,
-      "hand_picked": false,
-      "detour_mi": null
+      "label": "Bridlewood Winery",
+      "mile": 53.7,
+      "hand_picked": true,
+      "detour_mi": 1.1
     },
     {
       "lat": 34.606246,
@@ -5993,16 +5973,6 @@
       "type": "Toilets",
       "label": "Toilets",
       "mile": 57.0,
-      "hand_picked": false,
-      "detour_mi": null
-    },
-    {
-      "lat": 34.600144,
-      "lon": -120.126878,
-      "name": "Nielsen's (mi 57.7)",
-      "type": "Store",
-      "label": "Nielsen's",
-      "mile": 57.7,
       "hand_picked": false,
       "detour_mi": null
     },

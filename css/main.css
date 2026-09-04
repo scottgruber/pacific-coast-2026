@@ -85,7 +85,7 @@
   --color-text-default: #2B2E33; /* Deep Fog — all text; 11.9:1 on Salt (AAA) */
   --color-text-muted: rgba(43, 46, 51, 0.62); /* Deep Fog, translucent */
   --color-base: #2B2E33; /* Deep Fog — text set on top of Acid Yellow fills (AAA) */
-  --color-ink-alt: #1A2B23; /* Kelp Black-Green — site title text, favicon; 12.9:1 on Salt (AAA) */
+  --color-ink-alt: #1A2B23; /* Kelp Black-Green — site title text; 12.9:1 on Salt (AAA) */
 
   --color-surface: rgba(43, 46, 51, 0.05); /* Deep Fog tint — card fills, keeps Deep Fog text AAA */
   --color-surface-border: rgba(43, 46, 51, 0.22); /* Deep Fog, translucent */
@@ -1447,9 +1447,9 @@ html.metric .unit-pair__metric {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
-/* There are six categories, so once there is room, pin the grid to three
-   columns rather than letting auto-fit pack four or five uneven ones in. Six
-   boxes then read as a tidy 3x2 instead of a ragged last row. */
+/* Five categories, so once there is room, pin the grid to three columns rather
+   than letting auto-fit pack four uneven ones in. Five boxes then read as 3 + 2
+   instead of a ragged last row. */
 @media (min-width: 62em) {
   .stops__groups {
     grid-template-columns: repeat(3, 1fr);

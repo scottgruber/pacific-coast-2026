@@ -79,13 +79,12 @@ each number comes from, for readers rather than maintainers.
 │   └── colophon.html.jinja  how the site is built, and where the data is from
 ├── build/                   GENERATED — gitignored, see "Building" below
 ├── .env                     API keys — gitignored, never committed
-├── icon.svg
 └── README.md
 ```
 
 `build/` isn't committed — it's fully regeneratable and holds the actual
 deployable output: the rendered HTML plus symlinks (`css`, `js`, `fonts`,
-`gpx`, `api`, `icon.svg`) back to the real files above it, so it's a
+`gpx`, `api`) back to the real files above it, so it's a
 self-contained folder you can serve from any path.
 
 Three files under `data/` are hand-maintained and never written by a script:
@@ -143,7 +142,7 @@ you want a basemap while previewing. Everything else works without it.
 ## Version control
 
 This repo tracks all of the source: templates, scripts, `css/`, `js/`,
-`data/*.json`, `gpx/*.gpx`, `fonts/`, and `icon.svg`. None of it is large
+`data/*.json`, `gpx/*.gpx`, and `fonts/`. None of it is large
 enough to warrant exclusion — this mirrors the pattern used by the
 `huandao` site (another static Jinja site of this kind), which only
 gitignores things too big to be worth git history (video files). `build/`
@@ -228,7 +227,7 @@ rsync -aL --delete --exclude 'gpx/unused/' \
   build/ ~/Sites/scottgruber.me/bike-tours/pacific-coast/2026/
 ```
 
-(`-L` follows the symlinks so `css`/`js`/`fonts`/`icon.svg` get copied as
+(`-L` follows the symlinks so `css`/`js`/`fonts` get copied as
 real files rather than links pointing outside the scottgruber.me repo.)
 
 `--exclude 'gpx/unused/'` is what keeps withdrawn tracks off the site:
