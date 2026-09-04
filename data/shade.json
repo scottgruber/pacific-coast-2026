@@ -10,236 +10,236 @@
    "samples": [
     {
      "canopy": false,
-     "horizon_deg": 1.5,
+     "horizon_deg": 2.3,
      "mile": 0.0,
      "terrain_shade": false
     },
     {
      "canopy": false,
-     "horizon_deg": 1.7,
-     "mile": 1.04,
+     "horizon_deg": 2.0,
+     "mile": 1.23,
      "terrain_shade": false
     },
     {
      "canopy": true,
      "horizon_deg": 2.8,
-     "mile": 3.8,
+     "mile": 3.48,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 4.7,
-     "mile": 4.89,
+     "mile": 4.56,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 2.3,
-     "mile": 6.12,
+     "mile": 5.8,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 0.9,
-     "mile": 7.15,
+     "mile": 6.82,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 4.9,
-     "mile": 8.9,
+     "mile": 8.58,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 3.6,
-     "mile": 9.98,
+     "mile": 9.65,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 5.2,
-     "mile": 11.76,
+     "mile": 11.44,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 8.3,
-     "mile": 12.88,
+     "mile": 12.55,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 9.7,
-     "mile": 13.89,
+     "mile": 13.56,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 7.1,
-     "mile": 15.01,
+     "mile": 14.68,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 6.7,
-     "mile": 16.23,
+     "mile": 15.91,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 14.5,
-     "mile": 17.26,
+     "mile": 16.93,
      "terrain_shade": false
     },
     {
      "canopy": true,
      "horizon_deg": 5.5,
-     "mile": 18.28,
+     "mile": 17.96,
      "terrain_shade": false
     },
     {
      "canopy": true,
      "horizon_deg": 5.1,
-     "mile": 19.31,
+     "mile": 18.99,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 6.6,
-     "mile": 20.32,
+     "mile": 20.0,
      "terrain_shade": false
     },
     {
      "canopy": true,
      "horizon_deg": 8.5,
-     "mile": 21.35,
+     "mile": 21.03,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 13.5,
-     "mile": 22.36,
+     "mile": 22.04,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 10.6,
-     "mile": 23.38,
+     "mile": 23.06,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 15.6,
-     "mile": 24.39,
+     "mile": 24.07,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 9.2,
-     "mile": 25.39,
+     "mile": 25.07,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 0.0,
-     "mile": 26.4,
+     "mile": 26.08,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 0.0,
-     "mile": 27.48,
+     "mile": 27.16,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 0.0,
-     "mile": 28.78,
+     "mile": 28.46,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 12.4,
-     "mile": 29.79,
+     "mile": 29.46,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 0.0,
-     "mile": 30.8,
+     "mile": 30.48,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 0.0,
-     "mile": 31.83,
+     "mile": 31.51,
      "terrain_shade": false
     },
     {
      "canopy": true,
      "horizon_deg": 0.8,
-     "mile": 32.88,
+     "mile": 32.56,
      "terrain_shade": false
     },
     {
      "canopy": true,
      "horizon_deg": 20.8,
-     "mile": 33.92,
+     "mile": 33.6,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 3.1,
-     "mile": 34.92,
+     "mile": 34.6,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 5.4,
-     "mile": 36.04,
+     "mile": 35.72,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 3.7,
-     "mile": 37.16,
+     "mile": 36.83,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 9.4,
-     "mile": 38.21,
+     "mile": 37.89,
      "terrain_shade": false
     },
     {
      "canopy": true,
      "horizon_deg": 2.7,
-     "mile": 39.3,
+     "mile": 38.98,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 8.0,
-     "mile": 40.37,
+     "mile": 40.05,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 0.0,
-     "mile": 41.62,
+     "mile": 41.3,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 1.9,
-     "mile": 42.66,
+     "mile": 42.34,
      "terrain_shade": false
     },
     {
      "canopy": false,
      "horizon_deg": 0.0,
-     "mile": 43.75,
+     "mile": 43.43,
      "terrain_shade": false
     }
    ],

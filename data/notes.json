@@ -2,11 +2,11 @@
     "_comment": "Hand-maintained per-day notes. Not generated - build_data.py never touches this file, so edits here survive a rebuild. 'watch' items are things to plan around; 'highlights' are things worth looking up for; 'region' describes the farming and wine country the day crosses. Figures quoted in highlights and watch come from data/day-N.json or data/shade.json, so re-check them if a route changes. The 'region' lines are background rather than measurement: the AVA names and the towns are checked against the route, the crops are general knowledge.",
     "1": {
         "highlights": [
-            "Leaves Los Altos through the Santa Cruz Mountains, with redwood canopy over much of the climb.",
+            "Starts from Los Altos High School on Almond Avenue, then crosses the Santa Cruz Mountains with redwood canopy over much of the climb.",
             "Descends to the coast at Santa Cruz; Capitola is a short detour off the end."
         ],
         "watch": [
-            "The one sustained climb is mi 22.5–24.8, 639 ft at 5.3%. It comes when legs are fresh but it is the day's crux."
+            "The one sustained climb is mi 22.2–24.5, 637 ft at 5.2%. It comes when legs are fresh but it is the day's crux."
         ],
         "region": "Starts across the Santa Clara Valley, orchard country until the 1960s and built over since, then climbs into the Santa Cruz Mountains AVA — one of California's oldest, and among its coolest and steepest, worked by small producers scattered through the redwoods rather than in open blocks of vineyard."
     },

@@ -3,7 +3,7 @@
   {
    "lat": 37.3893889,
    "lon": -122.0832101,
-   "mile": 0.6,
+   "mile": 0.3,
    "name": "Mountain View",
    "offset_mi": 1.2,
    "place": "city",
@@ -12,7 +12,7 @@
   {
    "lat": 37.3521636,
    "lon": -122.0860732,
-   "mile": 3.8,
+   "mile": 3.5,
    "name": "Loyola Corners",
    "offset_mi": 0.1,
    "place": "hamlet",
@@ -21,7 +21,7 @@
   {
    "lat": 37.3228934,
    "lon": -122.0322895,
-   "mile": 7.5,
+   "mile": 7.2,
    "name": "Cupertino",
    "offset_mi": 0.5,
    "place": "city",
@@ -30,7 +30,7 @@
   {
    "lat": 37.2638324,
    "lon": -122.0230146,
-   "mile": 11.8,
+   "mile": 11.4,
    "name": "Saratoga",
    "offset_mi": 0.5,
    "place": "town",
@@ -39,7 +39,7 @@
   {
    "lat": 37.226611,
    "lon": -121.9746797,
-   "mile": 16.0,
+   "mile": 15.6,
    "name": "Los Gatos",
    "offset_mi": 0.2,
    "place": "town",
@@ -48,7 +48,7 @@
   {
    "lat": 37.1582789,
    "lon": -121.9865099,
-   "mile": 24.0,
+   "mile": 23.7,
    "name": "Redwood Estates",
    "offset_mi": 0.3,
    "place": "village",
@@ -57,7 +57,7 @@
   {
    "lat": 37.1307983,
    "lon": -121.958926,
-   "mile": 27.3,
+   "mile": 27.0,
    "name": "Summit",
    "offset_mi": 0.1,
    "place": "village",
@@ -66,7 +66,7 @@
   {
    "lat": 37.1147053,
    "lon": -121.9515431,
-   "mile": 30.7,
+   "mile": 30.4,
    "name": "Summit Woods",
    "offset_mi": 0.2,
    "place": "hamlet",
@@ -75,7 +75,7 @@
   {
    "lat": 37.0906515,
    "lon": -121.9199562,
-   "mile": 33.8,
+   "mile": 33.5,
    "name": "Fidel Ranch",
    "offset_mi": 1.5,
    "place": "hamlet",
@@ -84,7 +84,7 @@
   {
    "lat": 36.974736,
    "lon": -121.9533502,
-   "mile": 40.6,
+   "mile": 40.2,
    "name": "Capitola",
    "offset_mi": 0.9,
    "place": "town",
@@ -93,7 +93,7 @@
   {
    "lat": 36.9743626,
    "lon": -122.0294673,
-   "mile": 44.2,
+   "mile": 43.9,
    "name": "Santa Cruz",
    "offset_mi": 0.6,
    "place": "city",
