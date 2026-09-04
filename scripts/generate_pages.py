@@ -273,6 +273,10 @@ def main():
     # Hand-maintained prose, never generated — see the note inside the file.
     notes_path = DATA_DIR / "notes.json"
     notes = json.loads(notes_path.read_text()) if notes_path.exists() else {}
+    # Dinner options at each night's hotel, keyed by town like lodging.json.
+    # Hand-maintained; a town with no entry simply shows no dining card.
+    dining_path = DATA_DIR / "dining.json"
+    dining = json.loads(dining_path.read_text()) if dining_path.exists() else {}
 
     trip_start = overview["trip_start"]
     trip_end = overview["trip_end"]
@@ -356,6 +360,7 @@ def main():
                 "services": group_services(d.get("services", [])),
                 "lodging": with_map_links(d.get("lodging")),
                 "lodging_json": json.dumps(d.get("lodging")),
+                "dining": dining.get(d["towns"]["end"], []),
                 "towns_through": towns_by_day.get(str(n), []),
                 "notes": notes.get(str(n)),
                 "end_lat": round(end_lat, 4),

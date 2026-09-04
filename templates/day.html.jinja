@@ -340,6 +340,35 @@
     </section>
     {% endif %}
 
+    {% if dining %}
+    <section class="dining" aria-labelledby="dining-heading">
+      <h2 id="dining-heading">Restaurants in {{ towns.end }}</h2>
+      <p class="dining__note">
+        Places to eat at the end of the day, gathered by hand rather than from
+        OpenStreetMap, so these are not the same as the stops above and are not in the
+        GPX. Most are a short walk from the hotel; where one is not, the address says so.
+        Nobody has eaten at them. Opening hours are deliberately not listed &mdash; they
+        change, and a stale hour on a page is worse than none &mdash; so tap through
+        before you set out. A name with no link had none to hand.
+      </p>
+      <ul class="dining__list" role="list">
+        {% for r in dining %}
+        <li>
+          {%- if r.url %}
+          <a class="dining__name" href="{{ r.url }}" target="_blank" rel="noopener">{{ r.name }}</a>
+          {%- else %}
+          <span class="dining__name">{{ r.name }}</span>
+          {%- endif %}
+          <span class="dining__address">{{ r.address }}</span>
+          {%- if r.note %}
+          <span class="dining__detail">{{ r.note }}</span>
+          {%- endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
     <nav class="day-pager" aria-label="Previous and next day">
       {% if prev_day %}
       <a class="prev" href="day-{{ prev_day }}.html">

@@ -1,0 +1,210 @@
+{
+  "_comment": "Dinner options at each night's hotel, keyed by the town name in build_data.STOPS - the same key lodging.json uses, so a town is written once and the day that finishes there picks it up. HAND-MAINTAINED: no script writes here. Imported once from csv/LA-LA-Restaurants.csv; that sheet also carries types, walk distances, opening hours, votes and the decision column, none of which are published. Hours especially are left out on purpose - they go stale and the site would be asserting something nobody rechecked. The link is the restaurant's own menu page, so hours are one tap away and always current. Order here is the order shown on the day page. 'url' and 'note' are both optional: a blank url renders the name as plain text rather than a dead link, and is how an entry nobody has a verified site for is recorded - do not fill one in from a search. 'note' is for anything that makes an entry not what the heading implies.",
+  "Santa Cruz": [
+    {
+      "name": "Santa Cruz Diner",
+      "address": "909 Ocean St, Santa Cruz, CA 95060",
+      "url": "https://santacruzdiner.com/santa-cruz-santa-cruz-diner-food-menu"
+    },
+    {
+      "name": "The Water Street Grill",
+      "address": "503 Water St, Santa Cruz, CA 95060",
+      "url": "https://thewaterstreetgrill.com/menu?utm_source=menu"
+    },
+    {
+      "name": "Special Noodle",
+      "address": "415 Ocean St, Santa Cruz, CA 95060",
+      "url": "https://www.bestfoodtodayus.com/ordering/restaurant/menu?restaurant_uid=7f6f0eef-e862-4556-8bb5-b37243fb5b4e"
+    },
+    {
+      "name": "Sugo Italian Pasta Bar",
+      "address": "1116 Soquel Ave, Santa Cruz, CA 95062",
+      "url": "https://www.doordash.com/store/sugo-italian-pasta-bar-santa-cruz-2516935/54863747/?pickup=true&rwg_token=AE37R_hcbZJ0Iu6-3Z0r9EFzglnSElYd7ECZUPSeXXl_O-wupOWsfWcG-WiHE2LDSZC7Qx-dQ3CyvPEd_afm-XMtEy3OewPJBQ==&utm_campaign=gpa"
+    }
+  ],
+  "Monterey": [
+    {
+      "name": "LALA Grill Del Monte",
+      "address": "1400 Del Monte Center, Monterey, CA 93940",
+      "url": "https://www.lallagrill.com/menu-del-monte/"
+    },
+    {
+      "name": "Choptix Vietnamese Restaurant",
+      "address": "1244 Munras Ave, Monterey, CA 93940",
+      "url": "https://chopstixboba.com/"
+    },
+    {
+      "name": "Esteban Restaurant",
+      "address": "700 Munras Ave, Monterey, CA 93940",
+      "url": "https://www.estebanrestaurant.com/menus"
+    },
+    {
+      "name": "Sarita's Mexican Restaurant",
+      "address": "21 Soledad Dr, Monterey, CA 93940",
+      "url": "https://saritasmexicangrill.com/menu/"
+    }
+  ],
+  "King City": [
+    {
+      "name": "The Rustic Barrel",
+      "address": "611 Canal St, King City, CA 93930",
+      "url": "https://www.doordash.com/store/the-rustic-barrel-king-city-34689489/90022148/?pickup=true&rwg_token=AE37R_g2y540uV6WX0B6DZHWo2-zXk8gBjiQaCg5QIwiJSrqzcptQKaQP69hSe1AlGkqqFH3kMGZ1gg4lEbOABbhG-L8DV9jhg==&utm_campaign=gpa"
+    },
+    {
+      "name": "Mariscos El Camaron Estilo Nayarit",
+      "address": "223 Broadway St, King City, CA 93930",
+      "url": "https://www.yelp.com/biz/mariscos-el-camaron-king-city?osq=Seafood"
+    },
+    {
+      "name": "Denny's",
+      "address": "1129 Broadway St, King City, CA 93930",
+      "url": "https://locations.dennys.com/ca/king-city/248067?utm_source=G&utm_medium=organic&utm_campaign=DAC&gad_source=6&gad_campaignid=24067522047&gbraid=0AAAABEJ0wQoYL02llrSsId5TVVBzW3baf&gclid=Cj0KCQjw79nUBhCgARIsADSHka08opAEL66RIi6304yWsW1fsxvB1BtheV3dwpUiYmazGeYqA1wub-YaAlgtEALw_wcB"
+    },
+    {
+      "name": "California Gourmet Pizza",
+      "address": "232 Broadway St #2831, King City, CA 93930",
+      "url": "https://www.californiagourmetpizzakingcity.com/"
+    }
+  ],
+  "Paso Robles": [
+    {
+      "name": "Odyssey World Café",
+      "address": "1214 Pine St, Paso Robles, CA 93446",
+      "url": "https://www.odysseyworldcafe.com/menus"
+    },
+    {
+      "name": "The Hatch Rotisserie and Bar",
+      "address": "835 13th St, Paso Robles, CA 93446",
+      "url": "https://www.hatchpasorobles.com/"
+    },
+    {
+      "name": "Stokehouse Grill",
+      "address": "1114 Pine St, Paso Robles, CA 93446",
+      "url": "https://www.stokehousegrill.com/"
+    },
+    {
+      "name": "Pappy McGregor's",
+      "address": "1122 Pine St, Paso Robles, CA 93446",
+      "url": "https://pappymcgregors.com/"
+    },
+    {
+      "name": "Street Side Ale House and Eatery",
+      "address": "843 12th St, Paso Robles, CA 93446",
+      "url": "https://www.streetsidealehouse.com/"
+    }
+  ],
+  "Oceano": [
+    {
+      "name": "Old Juan Cantina",
+      "address": "649 Pier Ave, Oceano, CA 93445",
+      "url": "https://www.oldjuanscantina.com/menu"
+    },
+    {
+      "name": "Rock & Roll Diner",
+      "address": "1300 Railroad St, Oceano, CA 93445",
+      "url": "https://rockandrolldiner.com/?utm_source=google"
+    },
+    {
+      "name": "Slappy's Chowder House",
+      "address": "306 Pier Ave, Oceano, CA 93445",
+      "url": "https://www.google.com/maps/place/Slappy%E2%80%99s+Chowder+House/@35.1054837,-120.6351238,17z/data=!3m1!4b1!4m6!3m5!1s0x80ec5906f80ae89d:0x364b25f228f25a70!8m2!3d35.1054794!4d-120.6302529!16s%2Fg%2F11tfvqkbjz?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D"
+    },
+    {
+      "name": "Ember Restaurant",
+      "address": "1200 E Grand Ave Unit 101, Arroyo Grande, CA 93420",
+      "url": "https://www.emberwoodfire.com/"
+    }
+  ],
+  "Solvang": [
+    {
+      "name": "Osteria Grappolo",
+      "address": "1546 Mission Dr, Solvang, CA 93463",
+      "url": "https://www.osteriagrappolo.com/"
+    },
+    {
+      "name": "Mad and Vin",
+      "address": "1576 Mission Dr, Solvang, CA 93463",
+      "url": "https://www.thelandsby.com/dining/"
+    },
+    {
+      "name": "Chomp",
+      "address": "1693 Mission Dr, Solvang, CA 93463",
+      "url": "https://www.chompofsolvang.com/"
+    },
+    {
+      "name": "Whiskey N Rye",
+      "address": "442 Atterdag Rd, Solvang, CA 93463",
+      "url": "https://www.whiskeynrye.com/menu#menu=dinner-menu"
+    },
+    {
+      "name": "KANOK Thai Cuisine",
+      "address": "435 Alisal Rd, Solvang, CA 93463",
+      "url": "https://www.kanokthaisolvang.com/"
+    },
+    {
+      "name": "Bridlewood Winery",
+      "address": "3555 Roblar Ave, Santa Ynez, CA 93460-9724",
+      "url": "",
+      "note": "Bring your own: sandwiches from the market nearby, eaten at the winery. In Santa Ynez, not Solvang, so this one is a ride or a lift rather than a walk."
+    }
+  ],
+  "Ventura": [
+    {
+      "name": "Eric Ericsson's Fish Co",
+      "address": "668 E Harbor Blvd, Ventura, CA 93001",
+      "url": "https://ericericssonsfishco.com/"
+    },
+    {
+      "name": "Lure Fish House",
+      "address": "60 S California St, Ventura, CA 93001",
+      "url": "https://www.lurefishhouse.com/"
+    },
+    {
+      "name": "Banzai Marina",
+      "address": "120 S California St, Ventura, CA 93001",
+      "url": "http://www.banzaimarina.com/"
+    },
+    {
+      "name": "Capriccio Inc",
+      "address": "298 E Main St, Ventura, CA 93001",
+      "url": "https://www.capriccioofventura.com/"
+    },
+    {
+      "name": "Tony's Pizzaria Surfers Point",
+      "address": "186 E Thompson Blvd, Ventura, CA 93001",
+      "url": "https://www.tonyspizzaria.net/"
+    }
+  ],
+  "Santa Monica": [
+    {
+      "name": "Mysa Mediterranean Cookhouse",
+      "address": "606 Broadway Ste 101, Santa Monica, CA 90401",
+      "url": "https://www.doordash.com/store/mysa-santa-monica-40492457/96300949/?pickup=true&rwg_token=AE37R_hOEQ-TM4z2l4ckAybyLlsxXw2EbAA7UnZY2iFc3Cl3RMsl2g09LFB3XoOXMrEQWanMQ1Cc1AugQhRk51sD-tvXbl7b7w==&utm_campaign=gpa"
+    },
+    {
+      "name": "The Surfing Fox",
+      "address": "120 Colorado Ave, Santa Monica, CA 90401",
+      "url": "https://www.thesurfingfoxsm.com/"
+    },
+    {
+      "name": "Colbi's",
+      "address": "2104 Main St, Santa Monica, CA 90405",
+      "url": "https://www.cobis.la/"
+    },
+    {
+      "name": "Din Tai Fung",
+      "address": "395 Santa Monica Pl, Santa Monica, CA 90401",
+      "url": "https://dtf.com/en-us/locations/santa-monica?utm_source=gmb&utm_medium=SMO"
+    },
+    {
+      "name": "SUGARFISH",
+      "address": "1345 2nd St, Santa Monica, CA 90401",
+      "url": "https://sugarfishsushi.com/locations/santa-monica/"
+    },
+    {
+      "name": "The MOO",
+      "address": "231 Arizona Ave, Santa Monica, CA 90404",
+      "url": "https://themookbbq.com/"
+    }
+  ]
+}

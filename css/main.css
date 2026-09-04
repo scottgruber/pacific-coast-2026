@@ -1547,6 +1547,66 @@ html.metric .unit-pair__metric {
   line-height: 1;
 }
 
+/* Dinner at tonight's hotel
+   ------------------------------------------------------------------------
+
+   Deliberately unlike .stops: those are on-route and carry a mile marker,
+   these sit at the end of the day and carry an address instead. Same card
+   vocabulary so the two read as siblings, no mile column so they cannot be
+   mistaken for something you ride past. */
+
+.dining {
+  margin-top: var(--spacing-large, 2rem);
+  padding-top: var(--spacing-default);
+  border-top: var(--border-width-thin) solid var(--color-surface-border);
+}
+
+.dining__note {
+  max-width: 46rem;
+  margin: 0 0 var(--spacing-default);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.dining__list {
+  display: grid;
+  gap: var(--spacing-default);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dining__list li {
+  border-radius: var(--border-radius);
+  border: var(--border-width-thin) solid var(--color-surface-border);
+  background: var(--color-surface);
+  padding: var(--spacing-default);
+}
+
+.dining__name {
+  display: block;
+  font-weight: 600;
+}
+
+.dining__address {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+/* Only present where an entry is not what the heading implies — a winery you
+   carry lunch into, say — so it earns the accent rather than more grey. */
+.dining__detail {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: var(--font-size-small);
+  color: var(--color-text-default);
+  border-left: var(--border-width-thick) solid var(--color-accent-line);
+  padding-left: 0.6rem;
+}
+
 /* Day brief: highlights, cautions, towns
    ------------------------------------------------------------------------ */
 
