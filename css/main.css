@@ -1041,6 +1041,28 @@ html.metric .unit-pair__metric {
   padding: 0 var(--spacing-default) var(--spacing-default);
 }
 
+/* Google and Apple sit below the buttons, not among them. They open a route
+   those services invent between the two town names, which is not the one on
+   this page — as buttons beside "Download GPX" they read as though it were. */
+.route-elsewhere {
+  margin: calc(var(--spacing-default) * -0.5) 0 0;
+  padding: 0 var(--spacing-default) var(--spacing-default);
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+.route-elsewhere a {
+  color: var(--color-text-link);
+  margin-right: 0.9rem;
+  white-space: nowrap;
+}
+
+.route-elsewhere__note {
+  display: block;
+  margin-top: 0.35rem;
+  max-width: 46rem;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

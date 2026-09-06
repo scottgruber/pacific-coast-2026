@@ -438,15 +438,15 @@ GPS**, pointing at that day's route in the
 ids live in `data/rwgps.json`, keyed by day; a day with no id shows no button
 rather than a broken link.
 
-It used to be two buttons, "Open in Google Maps" and "Open in Apple Maps", and
-they were wrong. Both URL schemes take an origin and a destination and nothing
-else — there is no way to hand either one a track — so each asked that service
-to invent a bicycle route between two town names. Sitting in the same row as
-"Download GPX" they read as three ways to get the same route, and they were not:
-Google's bicycling mode avoids motorways, so it could not reproduce day 4's
-Salinas Valley line at all, and nothing would have sent day 7 through UCSB. A
-button that quietly draws a different route than the page describes is worse
-than no button on a ride somebody is following.
+Google Maps and Apple Maps are still offered, but as plain links on their own
+line below, with a note saying they do not open this route. They were buttons in
+the same row as "Download GPX", which read as three ways to get the same route,
+and they were not: both URL schemes take an origin and a destination and nothing
+else — there is no way to hand either one a track — so each asks that service to
+invent a bicycle route between two town names. Google's bicycling mode avoids
+motorways, so it cannot reproduce day 4's Salinas Valley line at all, and
+nothing would send day 7 through UCSB. They are worth keeping for the lie of the
+land; what they were not worth was looking like the route.
 
 Google My Maps does import a GPX, but only through a signed-in manual flow, so
 Ride with GPS is the only way to show *this* route in an interactive map hosted

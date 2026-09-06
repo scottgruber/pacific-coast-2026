@@ -105,6 +105,22 @@
           {% endif %}
         </div>
 
+        {#- Kept, but as links rather than buttons and on their own line: they do
+            not open this route, and next to the download they used to look as
+            though they did. -#}
+        <p class="route-elsewhere">
+          <a href="https://www.google.com/maps/dir/?api=1&amp;origin={{ towns.start|urlencode }},CA&amp;destination={{ towns.end|urlencode }},CA&amp;travelmode=bicycling"
+             target="_blank" rel="noopener">Google Maps</a>
+          <a href="https://maps.apple.com/?saddr={{ towns.start|urlencode }},CA&amp;daddr={{ towns.end|urlencode }},CA&amp;dirflg=b"
+             target="_blank" rel="noopener">Apple Maps</a>
+          <span class="route-elsewhere__note">
+            Neither opens this route &mdash; they take only a start and an end over a
+            link, so each draws its own way between {{ towns.start }} and {{ towns.end }}.
+            Use them for the lie of the land; the GPX and Ride with GPS have the line
+            we ride.
+          </span>
+        </p>
+
         {% if options %}
         <div class="route-options">
           <h2>Route options still being decided</h2>
