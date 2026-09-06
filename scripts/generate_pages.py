@@ -291,6 +291,10 @@ def main():
     # Hand-maintained; a town with no entry simply shows no dining card.
     dining_path = DATA_DIR / "dining.json"
     dining = json.loads(dining_path.read_text()) if dining_path.exists() else {}
+    # Ride with GPS route id per day. Hand-maintained; a day without one shows
+    # no button rather than a broken link.
+    rwgps_path = DATA_DIR / "rwgps.json"
+    rwgps = json.loads(rwgps_path.read_text()) if rwgps_path.exists() else {}
 
     trip_start = overview["trip_start"]
     trip_end = overview["trip_end"]
@@ -375,6 +379,7 @@ def main():
                 "lodging": with_map_links(d.get("lodging")),
                 "lodging_json": json.dumps(d.get("lodging")),
                 "dining": dining.get(d["towns"]["end"], []),
+                "rwgps_id": rwgps.get(str(n)),
                 "towns_through": towns_by_day.get(str(n), []),
                 "notes": notes.get(str(n)),
                 "end_lat": round(end_lat, 4),

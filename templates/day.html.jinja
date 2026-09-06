@@ -92,14 +92,17 @@
             {{ icon_map() }}
             <span>Download GPX &mdash; Day {{ day }}</span>
           </a>
-          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;origin={{ towns.start|urlencode }},CA&amp;destination={{ towns.end|urlencode }},CA&amp;travelmode=bicycling" target="_blank" rel="noopener">
+          {#- Ride with GPS rather than Google or Apple: both of those accept only
+              an origin and a destination over a URL, so the line they drew was one
+              of their own choosing between the two town names, not this route. On
+              day 4 that is the difference between the Salinas Valley and whatever
+              avoids the freeway; on day 7, between riding through UCSB and not. -#}
+          {% if rwgps_id %}
+          <a class="btn" href="https://ridewithgps.com/routes/{{ rwgps_id }}" target="_blank" rel="noopener">
             {{ icon_external() }}
-            <span>Open in Google Maps</span>
+            <span>Open in Ride with GPS</span>
           </a>
-          <a class="btn" href="https://maps.apple.com/?saddr={{ towns.start|urlencode }},CA&amp;daddr={{ towns.end|urlencode }},CA&amp;dirflg=b" target="_blank" rel="noopener">
-            {{ icon_external() }}
-            <span>Open in Apple Maps</span>
-          </a>
+          {% endif %}
         </div>
 
         {% if options %}

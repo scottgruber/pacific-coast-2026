@@ -1,0 +1,11 @@
+{
+  "_comment": "Ride with GPS route id per day, from the LA-LA Tour 2026 collection at ridewithgps.com/collections/11381453. HAND-MAINTAINED: no script writes here. These are what the 'Open in Ride with GPS' button on each day page points at, and they are the only honest way to show this route in somebody else's map - Google and Apple both accept only an origin and a destination over a URL and then draw a line of their own choosing, which is not the route on this page. A day with no id here simply shows no button. Re-check an id after re-uploading a track: the route is a copy on their servers, not a live view of gpx/, so it goes stale silently.",
+  "1": "57010228",
+  "2": "57010229",
+  "3": "57010231",
+  "4": "57010232",
+  "5": "57010234",
+  "6": "57010235",
+  "7": "57010236",
+  "8": "57010237"
+}

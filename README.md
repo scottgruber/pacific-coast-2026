@@ -51,7 +51,9 @@ each number comes from, for readers rather than maintainers.
 │   ├── notes.json           per-day highlights/cautions — HAND-MAINTAINED
 │   ├── lodging.json         the hotel for each night    — HAND-MAINTAINED
 │   ├── milestones.json      SAG points, the finish line — HAND-MAINTAINED
-│   └── manual-pois.json     stops OSM misses            — HAND-MAINTAINED
+│   ├── manual-pois.json     stops OSM misses            — HAND-MAINTAINED
+│   ├── dining.json          restaurants at each hotel   — HAND-MAINTAINED
+│   └── rwgps.json           Ride with GPS route per day — HAND-MAINTAINED
 ├── js/
 │   ├── config.js            Mapbox public token (see "Maps and the Mapbox token")
 │   ├── basemap.js           shared Leaflet basemaps, layer switcher, map handoff
@@ -90,7 +92,8 @@ deployable output: the rendered HTML plus symlinks (`css`, `js`, `fonts`,
 self-contained folder you can serve from any path.
 
 Three files under `data/` are hand-maintained and never written by a script:
-`roster.json`, `notes.json`, `lodging.json` and `manual-pois.json`. Edits there survive any
+`roster.json`, `notes.json`, `lodging.json`, `manual-pois.json`, `dining.json`
+and `rwgps.json`. Edits there survive any
 rebuild.
 
 ## Building
@@ -426,6 +429,33 @@ Anything past `MAX_OFFSET_MI` therefore prints its distance under the name
 same number before they got here. If a stop needs that line, it is worth asking
 whether it should be in the file at all: the two Santa Cruz wharf and West Cliff
 places are there because somebody asked for them by name, knowing the detour.
+
+## Opening a day somewhere else
+
+Each day page carries one button beside the GPX download: **Open in Ride with
+GPS**, pointing at that day's route in the
+[LA-LA Tour 2026 collection](https://ridewithgps.com/collections/11381453). The
+ids live in `data/rwgps.json`, keyed by day; a day with no id shows no button
+rather than a broken link.
+
+It used to be two buttons, "Open in Google Maps" and "Open in Apple Maps", and
+they were wrong. Both URL schemes take an origin and a destination and nothing
+else — there is no way to hand either one a track — so each asked that service
+to invent a bicycle route between two town names. Sitting in the same row as
+"Download GPX" they read as three ways to get the same route, and they were not:
+Google's bicycling mode avoids motorways, so it could not reproduce day 4's
+Salinas Valley line at all, and nothing would have sent day 7 through UCSB. A
+button that quietly draws a different route than the page describes is worse
+than no button on a ride somebody is following.
+
+Google My Maps does import a GPX, but only through a signed-in manual flow, so
+Ride with GPS is the only way to show *this* route in an interactive map hosted
+by somebody else.
+
+**The routes there are copies, not a live view of `gpx/`.** Re-upload after
+changing a track, or the button shows the old line while the download beside it
+gives the new one. The per-stop Google and Apple links are unaffected — those
+hand over a single coordinate, which both services do handle correctly.
 
 ## Milestones
 
